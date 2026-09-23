@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90899 (5347 per locale)
+/// Strings: 92123 (5419 per locale)
 ///
-/// Built on 2026-09-22 at 18:00 UTC
+/// Built on 2026-09-23 at 02:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7478,6 +7478,110 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_stream_keys_hint =>
       'These key mappings apply only to this streaming session.';
   String get game_stream_key_default => 'Default';
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  String get game_stream_host_connecting => 'Connecting…';
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  String get game_stream_host_rejected => 'The host rejected the request';
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  String get game_stream_active_sessions => 'Streaming now';
+  String get game_stream_running => 'Running';
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  String get game_stream_launch_starting => 'Starting the game…';
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  String get game_stream_audio_mute => 'Mute game audio';
+  String get game_stream_audio_unmute => 'Play game audio';
+  String get game_stream_input_failed => 'Input was not delivered';
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  String get game_stream_keyboard => 'Keyboard';
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  String get game_stream_more => 'More';
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  String get game_stream_settings_audio => 'Play game audio';
+  String get game_stream_settings_bitrate => 'Bitrate';
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  String get game_stream_settings_codec => 'Video codec';
+  String get game_stream_settings_codec_auto => 'Auto';
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  String get game_stream_settings_fps => 'Frame rate';
+  String get game_stream_settings_input_background => 'Window only';
+  String get game_stream_settings_input_focus => 'Game window input';
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  String get game_stream_settings_reset => 'Recommended';
+  String get game_stream_settings_resolution => 'Resolution limit';
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  String get game_stream_settings_save => 'Save';
+  String get game_stream_settings_title => 'Stream settings';
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  String get game_stream_stats_dropped => 'Dropped frames';
+  String get game_stream_stats_hide => 'Hide performance stats';
+  String get game_stream_stats_loss => 'Packet loss';
+  String get game_stream_stats_show => 'Show performance stats';
+  String get game_stream_stats_target => 'Target';
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -20129,6 +20233,182 @@ class _StringsAr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -33008,6 +33288,182 @@ class _StringsDe extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -45940,6 +46396,182 @@ class _StringsEs extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -58909,6 +59541,182 @@ class _StringsFr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -71677,6 +72485,182 @@ class _StringsId extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -84537,6 +85521,182 @@ class _StringsIt extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -96778,6 +97938,182 @@ class _StringsJa extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -109029,6 +110365,182 @@ class _StringsKo extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -121849,6 +123361,182 @@ class _StringsNl extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -134722,6 +136410,182 @@ class _StringsPtBr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -147570,6 +149434,182 @@ class _StringsRu extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -160219,6 +162259,182 @@ class _StringsTh extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -172982,6 +175198,182 @@ class _StringsTr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -185718,6 +188110,182 @@ class _StringsVi extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 // Path: <root>
@@ -197385,6 +199953,154 @@ class _StringsZhCn extends _StringsEn {
   String get game_stream_keys_hint => '按键映射仅用于本次串流会话。';
   @override
   String get game_stream_key_default => '默认';
+  @override
+  String get game_stream_library_subtitle => '在电脑上启动游戏并串流到这里';
+  @override
+  String get game_stream_module_hint => '从 Windows 电脑启动并串流游戏';
+  @override
+  String get game_stream_no_hosts => '还没有配对的 Windows 主机。请先在「互联」设置中与电脑配对。';
+  @override
+  String get game_stream_open_interconnect => '打开互联设置';
+  @override
+  String get game_stream_host_connecting => '正在连接…';
+  @override
+  String game_stream_host_online({required Object n}) => '在线 · ${n} 款游戏';
+  @override
+  String get game_stream_host_outdated => '主机版本过旧，没有游戏库。请更新 Windows 端 Fushi。';
+  @override
+  String get game_stream_host_rejected => '主机拒绝了请求';
+  @override
+  String get game_stream_host_launch_off => '这台主机未开启远程启动，仍可加入电脑上已开始的串流。';
+  @override
+  String get game_stream_library_empty => '主机游戏库是空的，请先在 Windows 端添加游戏。';
+  @override
+  String get game_stream_active_sessions => '正在串流';
+  @override
+  String get game_stream_running => '运行中';
+  @override
+  String game_stream_last_played({required Object time}) => '${time}游玩';
+  @override
+  String get game_stream_launch_starting => '正在启动游戏…';
+  @override
+  String get game_stream_launch_waiting_window => '等待游戏窗口…';
+  @override
+  String get game_stream_launch_connecting => '正在连接串流…';
+  @override
+  String get game_stream_launch_disabled =>
+      '这台主机未开启远程启动。请在 Windows 端的「互联」设置里打开「允许远程启动」。';
+  @override
+  String get game_stream_launch_busy => '主机正在运行另一款游戏。请先在电脑上关闭它，或加入它的串流。';
+  @override
+  String get game_stream_launch_exe_missing => '主机上找不到这款游戏的可执行文件。';
+  @override
+  String get game_stream_launch_helper_missing =>
+      '主机缺少捕获组件，请在 Windows 端重新安装或更新 Fushi。';
+  @override
+  String get game_stream_launch_window_missing => '游戏已启动，但游戏窗口没有及时出现。';
+  @override
+  String get game_stream_launch_stream_failed => '游戏已运行，但主机无法开始串流。';
+  @override
+  String get game_stream_launch_failed => '主机无法启动这款游戏。';
+  @override
+  String get game_stream_launch_unknown_game => '这款游戏已不在主机游戏库中，请刷新后重试。';
+  @override
+  String get game_stream_launch_superseded => '此次启动已被另一次启动取代。';
+  @override
+  String get game_stream_launch_timeout => '主机未能在限定时间内完成启动。';
+  @override
+  String get game_stream_audio_mute => '静音游戏声音';
+  @override
+  String get game_stream_audio_unmute => '播放游戏声音';
+  @override
+  String get game_stream_input_failed => '输入未送达';
+  @override
+  String get game_stream_input_pointer_unsupported => '该游戏不接受触控点击，请使用手柄按键';
+  @override
+  String get game_stream_input_window_hidden => '主机上的游戏窗口已最小化或隐藏';
+  @override
+  String get game_stream_keyboard => '键盘';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      '这句台词没有对应语音，而主机设置为只用游戏原始语音制卡';
+  @override
+  String get game_stream_mine_capture_failed => '主机未能截取这张卡的媒体';
+  @override
+  String get game_stream_mine_duplicate => '主机的 Anki 中已有这张卡';
+  @override
+  String get game_stream_mine_host_error => '主机制卡失败，请检查主机上的 Anki';
+  @override
+  String get game_stream_mine_line_expired => '这句台词在主机上已过期，请对当前台词查词';
+  @override
+  String get game_stream_mine_snapshot_missing => '主机没有这句台词的画面，请对当前台词查词制卡';
+  @override
+  String get game_stream_more => '更多';
+  @override
+  String get game_stream_settings_adaptive => '自适应码率';
+  @override
+  String get game_stream_settings_adaptive_hint => '网络拥塞时自动降低码率';
+  @override
+  String get game_stream_settings_apply_failed => '未能应用串流设置';
+  @override
+  String get game_stream_settings_audio => '播放游戏声音';
+  @override
+  String get game_stream_settings_bitrate => '码率';
+  @override
+  String get game_stream_settings_capped => '主机当前的采集上限更低，需重新开始串流才能提高';
+  @override
+  String get game_stream_settings_codec => '视频编码';
+  @override
+  String get game_stream_settings_codec_auto => '自动';
+  @override
+  String get game_stream_settings_codec_hint => '下次连接生效；设备不支持时自动回退';
+  @override
+  String get game_stream_settings_degradation => '带宽不足时';
+  @override
+  String get game_stream_settings_degradation_balanced => '均衡';
+  @override
+  String get game_stream_settings_degradation_framerate => '保持帧率';
+  @override
+  String get game_stream_settings_degradation_resolution => '保持清晰度';
+  @override
+  String get game_stream_settings_fps => '帧率';
+  @override
+  String get game_stream_settings_input_background => '仅窗口';
+  @override
+  String get game_stream_settings_input_focus => '游戏窗口输入';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      '「仅窗口」时游戏可留在后台。部分引擎在后台不接收输入，触控无效时改为「切到前台」。';
+  @override
+  String get game_stream_settings_input_foreground => '切到前台';
+  @override
+  String get game_stream_settings_reset => '推荐值';
+  @override
+  String get game_stream_settings_resolution => '分辨率上限';
+  @override
+  String get game_stream_settings_resolution_hint => '不会超过主机窗口尺寸放大';
+  @override
+  String get game_stream_settings_save => '保存';
+  @override
+  String get game_stream_settings_title => '串流设置';
+  @override
+  String get game_stream_stats_codec_fallback => '首选编码不可用，已使用默认编码';
+  @override
+  String get game_stream_stats_dropped => '丢帧';
+  @override
+  String get game_stream_stats_hide => '隐藏性能统计';
+  @override
+  String get game_stream_stats_loss => '丢包';
+  @override
+  String get game_stream_stats_show => '显示性能统计';
+  @override
+  String get game_stream_stats_target => '目标';
+  @override
+  String get game_stream_touch_direct => '切换为直接点击';
+  @override
+  String get game_stream_touch_trackpad => '切换为触控板';
+  @override
+  String get game_stream_remote_launch_title => '允许远程启动';
+  @override
+  String get game_stream_remote_launch_hint => '已配对的安卓设备可从本机游戏库启动游戏并直接串流';
 }
 
 // Path: <root>
@@ -209310,6 +212026,182 @@ class _StringsZhHk extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get game_stream_library_subtitle =>
+      'Launch games on your PC and stream them here';
+  @override
+  String get game_stream_module_hint =>
+      'Launch and stream games from your Windows PC';
+  @override
+  String get game_stream_no_hosts =>
+      'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+  @override
+  String get game_stream_open_interconnect => 'Open Interconnect settings';
+  @override
+  String get game_stream_host_connecting => 'Connecting…';
+  @override
+  String game_stream_host_online({required Object n}) => 'Online · ${n} games';
+  @override
+  String get game_stream_host_outdated =>
+      'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+  @override
+  String get game_stream_host_rejected => 'The host rejected the request';
+  @override
+  String get game_stream_host_launch_off =>
+      'Remote launch is off on this host. You can still join streams started on the PC.';
+  @override
+  String get game_stream_library_empty =>
+      'This host has no games. Add games on the Windows PC first.';
+  @override
+  String get game_stream_active_sessions => 'Streaming now';
+  @override
+  String get game_stream_running => 'Running';
+  @override
+  String game_stream_last_played({required Object time}) => 'Played ${time}';
+  @override
+  String get game_stream_launch_starting => 'Starting the game…';
+  @override
+  String get game_stream_launch_waiting_window =>
+      'Waiting for the game window…';
+  @override
+  String get game_stream_launch_connecting => 'Connecting to the stream…';
+  @override
+  String get game_stream_launch_disabled =>
+      'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+  @override
+  String get game_stream_launch_busy =>
+      'The host is already running another game. Close it on the PC or join its stream.';
+  @override
+  String get game_stream_launch_exe_missing =>
+      'The game executable was not found on the host.';
+  @override
+  String get game_stream_launch_helper_missing =>
+      'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+  @override
+  String get game_stream_launch_window_missing =>
+      'The game started, but its window did not appear in time.';
+  @override
+  String get game_stream_launch_stream_failed =>
+      'The game is running, but the host could not start streaming.';
+  @override
+  String get game_stream_launch_failed => 'The host could not start the game.';
+  @override
+  String get game_stream_launch_unknown_game =>
+      'This game is no longer in the host library. Refresh and try again.';
+  @override
+  String get game_stream_launch_superseded =>
+      'Another launch replaced this one.';
+  @override
+  String get game_stream_launch_timeout =>
+      'The host did not finish launching in time.';
+  @override
+  String get game_stream_audio_mute => 'Mute game audio';
+  @override
+  String get game_stream_audio_unmute => 'Play game audio';
+  @override
+  String get game_stream_input_failed => 'Input was not delivered';
+  @override
+  String get game_stream_input_pointer_unsupported =>
+      'This game does not accept touch clicks; use the pad buttons';
+  @override
+  String get game_stream_input_window_hidden =>
+      'The game window is minimized or hidden on the host';
+  @override
+  String get game_stream_keyboard => 'Keyboard';
+  @override
+  String get game_stream_mine_audio_fallback_disabled =>
+      'This line has no voice clip and the host only mines with the game\'s own voice';
+  @override
+  String get game_stream_mine_capture_failed =>
+      'The host could not capture media for this card';
+  @override
+  String get game_stream_mine_duplicate =>
+      'This card is already in the host\'s Anki';
+  @override
+  String get game_stream_mine_host_error =>
+      'The host failed to add the card; check Anki on the host';
+  @override
+  String get game_stream_mine_line_expired =>
+      'This line has expired on the host; look up the current line';
+  @override
+  String get game_stream_mine_snapshot_missing =>
+      'The host has no screenshot for this line; look up the current line';
+  @override
+  String get game_stream_more => 'More';
+  @override
+  String get game_stream_settings_adaptive => 'Adaptive bitrate';
+  @override
+  String get game_stream_settings_adaptive_hint =>
+      'Lower the bitrate when the network is congested';
+  @override
+  String get game_stream_settings_apply_failed =>
+      'Could not apply stream settings';
+  @override
+  String get game_stream_settings_audio => 'Play game audio';
+  @override
+  String get game_stream_settings_bitrate => 'Bitrate';
+  @override
+  String get game_stream_settings_capped =>
+      'The host is capturing at a lower limit; restart the stream to go higher';
+  @override
+  String get game_stream_settings_codec => 'Video codec';
+  @override
+  String get game_stream_settings_codec_auto => 'Auto';
+  @override
+  String get game_stream_settings_codec_hint =>
+      'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+  @override
+  String get game_stream_settings_degradation => 'When bandwidth is short';
+  @override
+  String get game_stream_settings_degradation_balanced => 'Balanced';
+  @override
+  String get game_stream_settings_degradation_framerate => 'Keep frame rate';
+  @override
+  String get game_stream_settings_degradation_resolution => 'Keep resolution';
+  @override
+  String get game_stream_settings_fps => 'Frame rate';
+  @override
+  String get game_stream_settings_input_background => 'Window only';
+  @override
+  String get game_stream_settings_input_focus => 'Game window input';
+  @override
+  String get game_stream_settings_input_focus_hint =>
+      'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+  @override
+  String get game_stream_settings_input_foreground => 'Bring to front';
+  @override
+  String get game_stream_settings_reset => 'Recommended';
+  @override
+  String get game_stream_settings_resolution => 'Resolution limit';
+  @override
+  String get game_stream_settings_resolution_hint =>
+      'Never upscales beyond the host\'s window size';
+  @override
+  String get game_stream_settings_save => 'Save';
+  @override
+  String get game_stream_settings_title => 'Stream settings';
+  @override
+  String get game_stream_stats_codec_fallback =>
+      'Preferred codec unavailable; using the default';
+  @override
+  String get game_stream_stats_dropped => 'Dropped frames';
+  @override
+  String get game_stream_stats_hide => 'Hide performance stats';
+  @override
+  String get game_stream_stats_loss => 'Packet loss';
+  @override
+  String get game_stream_stats_show => 'Show performance stats';
+  @override
+  String get game_stream_stats_target => 'Target';
+  @override
+  String get game_stream_touch_direct => 'Switch to direct touch';
+  @override
+  String get game_stream_touch_trackpad => 'Switch to trackpad';
+  @override
+  String get game_stream_remote_launch_title => 'Allow remote launch';
+  @override
+  String get game_stream_remote_launch_hint =>
+      'Paired Android devices can start games from this PC\'s library and stream them';
 }
 
 /// Flat map(s) containing all translations.
@@ -220336,6 +223228,150 @@ extension on _StringsEn {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -231357,6 +234393,150 @@ extension on _StringsAr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -242423,6 +245603,150 @@ extension on _StringsDe {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -253480,6 +256804,150 @@ extension on _StringsEs {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -264546,6 +268014,150 @@ extension on _StringsFr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -275583,6 +279195,150 @@ extension on _StringsId {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -286642,6 +290398,150 @@ extension on _StringsIt {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -297628,6 +301528,150 @@ extension on _StringsJa {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -308618,6 +312662,150 @@ extension on _StringsKo {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -319670,6 +323858,150 @@ extension on _StringsNl {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -330717,6 +335049,150 @@ extension on _StringsPtBr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -341771,6 +346247,150 @@ extension on _StringsRu {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -352797,6 +357417,150 @@ extension on _StringsTh {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -363838,6 +368602,150 @@ extension on _StringsTr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -374873,6 +379781,150 @@ extension on _StringsVi {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
@@ -385803,6 +390855,150 @@ extension on _StringsZhCn {
         return '按键映射仅用于本次串流会话。';
       case 'game_stream_key_default':
         return '默认';
+      case 'game_stream_library_subtitle':
+        return '在电脑上启动游戏并串流到这里';
+      case 'game_stream_module_hint':
+        return '从 Windows 电脑启动并串流游戏';
+      case 'game_stream_no_hosts':
+        return '还没有配对的 Windows 主机。请先在「互联」设置中与电脑配对。';
+      case 'game_stream_open_interconnect':
+        return '打开互联设置';
+      case 'game_stream_host_connecting':
+        return '正在连接…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => '在线 · ${n} 款游戏';
+      case 'game_stream_host_outdated':
+        return '主机版本过旧，没有游戏库。请更新 Windows 端 Fushi。';
+      case 'game_stream_host_rejected':
+        return '主机拒绝了请求';
+      case 'game_stream_host_launch_off':
+        return '这台主机未开启远程启动，仍可加入电脑上已开始的串流。';
+      case 'game_stream_library_empty':
+        return '主机游戏库是空的，请先在 Windows 端添加游戏。';
+      case 'game_stream_active_sessions':
+        return '正在串流';
+      case 'game_stream_running':
+        return '运行中';
+      case 'game_stream_last_played':
+        return ({required Object time}) => '${time}游玩';
+      case 'game_stream_launch_starting':
+        return '正在启动游戏…';
+      case 'game_stream_launch_waiting_window':
+        return '等待游戏窗口…';
+      case 'game_stream_launch_connecting':
+        return '正在连接串流…';
+      case 'game_stream_launch_disabled':
+        return '这台主机未开启远程启动。请在 Windows 端的「互联」设置里打开「允许远程启动」。';
+      case 'game_stream_launch_busy':
+        return '主机正在运行另一款游戏。请先在电脑上关闭它，或加入它的串流。';
+      case 'game_stream_launch_exe_missing':
+        return '主机上找不到这款游戏的可执行文件。';
+      case 'game_stream_launch_helper_missing':
+        return '主机缺少捕获组件，请在 Windows 端重新安装或更新 Fushi。';
+      case 'game_stream_launch_window_missing':
+        return '游戏已启动，但游戏窗口没有及时出现。';
+      case 'game_stream_launch_stream_failed':
+        return '游戏已运行，但主机无法开始串流。';
+      case 'game_stream_launch_failed':
+        return '主机无法启动这款游戏。';
+      case 'game_stream_launch_unknown_game':
+        return '这款游戏已不在主机游戏库中，请刷新后重试。';
+      case 'game_stream_launch_superseded':
+        return '此次启动已被另一次启动取代。';
+      case 'game_stream_launch_timeout':
+        return '主机未能在限定时间内完成启动。';
+      case 'game_stream_audio_mute':
+        return '静音游戏声音';
+      case 'game_stream_audio_unmute':
+        return '播放游戏声音';
+      case 'game_stream_input_failed':
+        return '输入未送达';
+      case 'game_stream_input_pointer_unsupported':
+        return '该游戏不接受触控点击，请使用手柄按键';
+      case 'game_stream_input_window_hidden':
+        return '主机上的游戏窗口已最小化或隐藏';
+      case 'game_stream_keyboard':
+        return '键盘';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return '这句台词没有对应语音，而主机设置为只用游戏原始语音制卡';
+      case 'game_stream_mine_capture_failed':
+        return '主机未能截取这张卡的媒体';
+      case 'game_stream_mine_duplicate':
+        return '主机的 Anki 中已有这张卡';
+      case 'game_stream_mine_host_error':
+        return '主机制卡失败，请检查主机上的 Anki';
+      case 'game_stream_mine_line_expired':
+        return '这句台词在主机上已过期，请对当前台词查词';
+      case 'game_stream_mine_snapshot_missing':
+        return '主机没有这句台词的画面，请对当前台词查词制卡';
+      case 'game_stream_more':
+        return '更多';
+      case 'game_stream_settings_adaptive':
+        return '自适应码率';
+      case 'game_stream_settings_adaptive_hint':
+        return '网络拥塞时自动降低码率';
+      case 'game_stream_settings_apply_failed':
+        return '未能应用串流设置';
+      case 'game_stream_settings_audio':
+        return '播放游戏声音';
+      case 'game_stream_settings_bitrate':
+        return '码率';
+      case 'game_stream_settings_capped':
+        return '主机当前的采集上限更低，需重新开始串流才能提高';
+      case 'game_stream_settings_codec':
+        return '视频编码';
+      case 'game_stream_settings_codec_auto':
+        return '自动';
+      case 'game_stream_settings_codec_hint':
+        return '下次连接生效；设备不支持时自动回退';
+      case 'game_stream_settings_degradation':
+        return '带宽不足时';
+      case 'game_stream_settings_degradation_balanced':
+        return '均衡';
+      case 'game_stream_settings_degradation_framerate':
+        return '保持帧率';
+      case 'game_stream_settings_degradation_resolution':
+        return '保持清晰度';
+      case 'game_stream_settings_fps':
+        return '帧率';
+      case 'game_stream_settings_input_background':
+        return '仅窗口';
+      case 'game_stream_settings_input_focus':
+        return '游戏窗口输入';
+      case 'game_stream_settings_input_focus_hint':
+        return '「仅窗口」时游戏可留在后台。部分引擎在后台不接收输入，触控无效时改为「切到前台」。';
+      case 'game_stream_settings_input_foreground':
+        return '切到前台';
+      case 'game_stream_settings_reset':
+        return '推荐值';
+      case 'game_stream_settings_resolution':
+        return '分辨率上限';
+      case 'game_stream_settings_resolution_hint':
+        return '不会超过主机窗口尺寸放大';
+      case 'game_stream_settings_save':
+        return '保存';
+      case 'game_stream_settings_title':
+        return '串流设置';
+      case 'game_stream_stats_codec_fallback':
+        return '首选编码不可用，已使用默认编码';
+      case 'game_stream_stats_dropped':
+        return '丢帧';
+      case 'game_stream_stats_hide':
+        return '隐藏性能统计';
+      case 'game_stream_stats_loss':
+        return '丢包';
+      case 'game_stream_stats_show':
+        return '显示性能统计';
+      case 'game_stream_stats_target':
+        return '目标';
+      case 'game_stream_touch_direct':
+        return '切换为直接点击';
+      case 'game_stream_touch_trackpad':
+        return '切换为触控板';
+      case 'game_stream_remote_launch_title':
+        return '允许远程启动';
+      case 'game_stream_remote_launch_hint':
+        return '已配对的安卓设备可从本机游戏库启动游戏并直接串流';
       default:
         return null;
     }
@@ -396767,6 +401963,150 @@ extension on _StringsZhHk {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'game_stream_library_subtitle':
+        return 'Launch games on your PC and stream them here';
+      case 'game_stream_module_hint':
+        return 'Launch and stream games from your Windows PC';
+      case 'game_stream_no_hosts':
+        return 'No paired Windows host yet. Pair this device with your PC in Interconnect settings.';
+      case 'game_stream_open_interconnect':
+        return 'Open Interconnect settings';
+      case 'game_stream_host_connecting':
+        return 'Connecting…';
+      case 'game_stream_host_online':
+        return ({required Object n}) => 'Online · ${n} games';
+      case 'game_stream_host_outdated':
+        return 'This host runs an older Fushi without the game library. Update Fushi on Windows.';
+      case 'game_stream_host_rejected':
+        return 'The host rejected the request';
+      case 'game_stream_host_launch_off':
+        return 'Remote launch is off on this host. You can still join streams started on the PC.';
+      case 'game_stream_library_empty':
+        return 'This host has no games. Add games on the Windows PC first.';
+      case 'game_stream_active_sessions':
+        return 'Streaming now';
+      case 'game_stream_running':
+        return 'Running';
+      case 'game_stream_last_played':
+        return ({required Object time}) => 'Played ${time}';
+      case 'game_stream_launch_starting':
+        return 'Starting the game…';
+      case 'game_stream_launch_waiting_window':
+        return 'Waiting for the game window…';
+      case 'game_stream_launch_connecting':
+        return 'Connecting to the stream…';
+      case 'game_stream_launch_disabled':
+        return 'Remote launch is off on this host. On the Windows PC, turn on “Allow remote launch” in Interconnect settings.';
+      case 'game_stream_launch_busy':
+        return 'The host is already running another game. Close it on the PC or join its stream.';
+      case 'game_stream_launch_exe_missing':
+        return 'The game executable was not found on the host.';
+      case 'game_stream_launch_helper_missing':
+        return 'The host is missing its capture helper. Reinstall or update Fushi on Windows.';
+      case 'game_stream_launch_window_missing':
+        return 'The game started, but its window did not appear in time.';
+      case 'game_stream_launch_stream_failed':
+        return 'The game is running, but the host could not start streaming.';
+      case 'game_stream_launch_failed':
+        return 'The host could not start the game.';
+      case 'game_stream_launch_unknown_game':
+        return 'This game is no longer in the host library. Refresh and try again.';
+      case 'game_stream_launch_superseded':
+        return 'Another launch replaced this one.';
+      case 'game_stream_launch_timeout':
+        return 'The host did not finish launching in time.';
+      case 'game_stream_audio_mute':
+        return 'Mute game audio';
+      case 'game_stream_audio_unmute':
+        return 'Play game audio';
+      case 'game_stream_input_failed':
+        return 'Input was not delivered';
+      case 'game_stream_input_pointer_unsupported':
+        return 'This game does not accept touch clicks; use the pad buttons';
+      case 'game_stream_input_window_hidden':
+        return 'The game window is minimized or hidden on the host';
+      case 'game_stream_keyboard':
+        return 'Keyboard';
+      case 'game_stream_mine_audio_fallback_disabled':
+        return 'This line has no voice clip and the host only mines with the game\'s own voice';
+      case 'game_stream_mine_capture_failed':
+        return 'The host could not capture media for this card';
+      case 'game_stream_mine_duplicate':
+        return 'This card is already in the host\'s Anki';
+      case 'game_stream_mine_host_error':
+        return 'The host failed to add the card; check Anki on the host';
+      case 'game_stream_mine_line_expired':
+        return 'This line has expired on the host; look up the current line';
+      case 'game_stream_mine_snapshot_missing':
+        return 'The host has no screenshot for this line; look up the current line';
+      case 'game_stream_more':
+        return 'More';
+      case 'game_stream_settings_adaptive':
+        return 'Adaptive bitrate';
+      case 'game_stream_settings_adaptive_hint':
+        return 'Lower the bitrate when the network is congested';
+      case 'game_stream_settings_apply_failed':
+        return 'Could not apply stream settings';
+      case 'game_stream_settings_audio':
+        return 'Play game audio';
+      case 'game_stream_settings_bitrate':
+        return 'Bitrate';
+      case 'game_stream_settings_capped':
+        return 'The host is capturing at a lower limit; restart the stream to go higher';
+      case 'game_stream_settings_codec':
+        return 'Video codec';
+      case 'game_stream_settings_codec_auto':
+        return 'Auto';
+      case 'game_stream_settings_codec_hint':
+        return 'Takes effect on the next connection; falls back automatically if the device cannot decode it';
+      case 'game_stream_settings_degradation':
+        return 'When bandwidth is short';
+      case 'game_stream_settings_degradation_balanced':
+        return 'Balanced';
+      case 'game_stream_settings_degradation_framerate':
+        return 'Keep frame rate';
+      case 'game_stream_settings_degradation_resolution':
+        return 'Keep resolution';
+      case 'game_stream_settings_fps':
+        return 'Frame rate';
+      case 'game_stream_settings_input_background':
+        return 'Window only';
+      case 'game_stream_settings_input_focus':
+        return 'Game window input';
+      case 'game_stream_settings_input_focus_hint':
+        return 'Window only lets the game stay in the background. Some engines ignore input while unfocused; switch to Bring to front if taps do nothing.';
+      case 'game_stream_settings_input_foreground':
+        return 'Bring to front';
+      case 'game_stream_settings_reset':
+        return 'Recommended';
+      case 'game_stream_settings_resolution':
+        return 'Resolution limit';
+      case 'game_stream_settings_resolution_hint':
+        return 'Never upscales beyond the host\'s window size';
+      case 'game_stream_settings_save':
+        return 'Save';
+      case 'game_stream_settings_title':
+        return 'Stream settings';
+      case 'game_stream_stats_codec_fallback':
+        return 'Preferred codec unavailable; using the default';
+      case 'game_stream_stats_dropped':
+        return 'Dropped frames';
+      case 'game_stream_stats_hide':
+        return 'Hide performance stats';
+      case 'game_stream_stats_loss':
+        return 'Packet loss';
+      case 'game_stream_stats_show':
+        return 'Show performance stats';
+      case 'game_stream_stats_target':
+        return 'Target';
+      case 'game_stream_touch_direct':
+        return 'Switch to direct touch';
+      case 'game_stream_touch_trackpad':
+        return 'Switch to trackpad';
+      case 'game_stream_remote_launch_title':
+        return 'Allow remote launch';
+      case 'game_stream_remote_launch_hint':
+        return 'Paired Android devices can start games from this PC\'s library and stream them';
       default:
         return null;
     }
