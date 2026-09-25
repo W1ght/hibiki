@@ -81,7 +81,7 @@ DictionarySearchResult _result(String term) => DictionarySearchResult(
     );
 
 class _Harness extends StatefulWidget {
-  const _Harness({required this.webViewKey, required this.calls});
+  const _Harness({super.key, required this.webViewKey, required this.calls});
 
   final GlobalKey<DictionaryPopupWebViewState> webViewKey;
   final List<String> calls;
