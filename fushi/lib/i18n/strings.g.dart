@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 94316 (5548 per locale)
+/// Strings: 94333 (5549 per locale)
 ///
-/// Built on 2026-09-25 at 07:58 UTC
+/// Built on 2026-09-25 at 07:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7884,6 +7884,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_samples_auto_align => 'Align from screenshot';
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -21139,6 +21141,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -34635,6 +34640,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -48182,6 +48190,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -61767,6 +61778,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -75142,6 +75156,9 @@ class _StringsId extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -88618,6 +88635,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -101455,6 +101475,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -114302,6 +114325,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -127732,6 +127758,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -141216,6 +141245,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -154674,6 +154706,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -167928,6 +167963,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -181297,6 +181335,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -194637,6 +194678,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 // Path: <root>
@@ -206836,6 +206880,9 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_samples_auto_align => '从截图自动对齐';
   @override
   String get game_lookup_samples_hint => '等台词完整显示后再采集。先采集几句不同台词，再调整排版。';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      '查词层正在切换状态，暂时不能采集。请等一两秒再试；如果一直失败，请重新附着游戏。';
 }
 
 // Path: <root>
@@ -219355,6 +219402,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_lookup_samples_hint =>
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+  @override
+  String get game_lookup_samples_capture_surface_not_ready =>
+      'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
 }
 
 /// Flat map(s) containing all translations.
@@ -230791,6 +230841,8 @@ extension on _StringsEn {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -242222,6 +242274,8 @@ extension on _StringsAr {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -253702,6 +253756,8 @@ extension on _StringsDe {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -265172,6 +265228,8 @@ extension on _StringsEs {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -276650,6 +276708,8 @@ extension on _StringsFr {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -288098,6 +288158,8 @@ extension on _StringsId {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -299569,6 +299631,8 @@ extension on _StringsIt {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -310964,6 +311028,8 @@ extension on _StringsJa {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -322364,6 +322430,8 @@ extension on _StringsKo {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -333830,6 +333898,8 @@ extension on _StringsNl {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -345291,6 +345361,8 @@ extension on _StringsPtBr {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -356758,6 +356830,8 @@ extension on _StringsRu {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -368194,6 +368268,8 @@ extension on _StringsTh {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -379646,6 +379722,8 @@ extension on _StringsTr {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -391092,6 +391170,8 @@ extension on _StringsVi {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
@@ -402430,6 +402510,8 @@ extension on _StringsZhCn {
         return '从截图自动对齐';
       case 'game_lookup_samples_hint':
         return '等台词完整显示后再采集。先采集几句不同台词，再调整排版。';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return '查词层正在切换状态，暂时不能采集。请等一两秒再试；如果一直失败，请重新附着游戏。';
       default:
         return null;
     }
@@ -413803,6 +413885,8 @@ extension on _StringsZhHk {
         return 'Align from screenshot';
       case 'game_lookup_samples_hint':
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
+      case 'game_lookup_samples_capture_surface_not_ready':
+        return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
       default:
         return null;
     }
