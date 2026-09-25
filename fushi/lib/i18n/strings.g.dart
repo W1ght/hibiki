@@ -5603,7 +5603,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_hdr_output_always => 'Always';
   String get video_setting_hdr_output_auto => 'Auto';
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window (Dolby Vision profile 5 always uses it, since only that renderer shows its colors correctly); Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
   String get video_setting_hdr_output_off => 'Off';
   String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
   String get video_setting_hdr_tone_mapping_hint =>
@@ -204965,7 +204965,7 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_hdr_output_auto => '自动';
   @override
   String get video_setting_hdr_output_hint =>
-      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通（杜比视界 Profile 5 片源不论显示器都走它，只有它能正确还原颜色）；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
   @override
   String get video_setting_hdr_output_off => '关闭';
   @override
@@ -229406,7 +229406,7 @@ extension on _StringsEn {
       case 'video_setting_hdr_output_auto':
         return 'Auto';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window (Dolby Vision profile 5 always uses it, since only that renderer shows its colors correctly); Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
       case 'video_setting_hdr_output_off':
         return 'Off';
       case 'video_setting_hdr_tone_mapping':
@@ -402491,7 +402491,7 @@ extension on _StringsZhCn {
       case 'video_setting_hdr_output_auto':
         return '自动';
       case 'video_setting_hdr_output_hint':
-        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通（杜比视界 Profile 5 片源不论显示器都走它，只有它能正确还原颜色）；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
       case 'video_setting_hdr_output_off':
         return '关闭';
       case 'video_setting_hdr_tone_mapping':
