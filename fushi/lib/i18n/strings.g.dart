@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 94367 (5551 per locale)
+/// Strings: 94384 (5552 per locale)
 ///
 /// Built on 2026-09-25 at 08:00 UTC
 
@@ -7888,6 +7888,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_samples_grid_advance_decrease =>
       'Narrow cells by 0.1%';
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -21151,6 +21153,9 @@ class _StringsAr extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -34655,6 +34660,9 @@ class _StringsDe extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -48210,6 +48218,9 @@ class _StringsEs extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -61803,6 +61814,9 @@ class _StringsFr extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -75186,6 +75200,9 @@ class _StringsId extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -88670,6 +88687,9 @@ class _StringsIt extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -101515,6 +101535,9 @@ class _StringsJa extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -114370,6 +114393,9 @@ class _StringsKo extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -127808,6 +127834,9 @@ class _StringsNl extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -141300,6 +141329,9 @@ class _StringsPtBr extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -154766,6 +154798,9 @@ class _StringsRu extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -168028,6 +168063,9 @@ class _StringsTh extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -181405,6 +181443,9 @@ class _StringsTr extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -194753,6 +194794,9 @@ class _StringsVi extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
 }
 
 // Path: <root>
@@ -206962,6 +207006,9 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_samples_grid_advance_decrease => '格宽减小 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => '格宽增大 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      '这款游戏现在由引擎直接提供字的位置，查词不需要校准。这里做的校准会作为备用，只在引擎位置不可用时使用。';
 }
 
 // Path: <root>
@@ -219488,6 +219535,9 @@ class _StringsZhHk extends _StringsEn {
       'Narrow cells by 0.1%';
   @override
   String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
+  @override
+  String get game_lookup_samples_native_fallback_hint =>
+      '這款遊戲現在由引擎直接提供字的位置，查詞不需要校準。這裡做的校準會作為備用，只在引擎位置不可用時使用。';
 }
 
 /// Flat map(s) containing all translations.
@@ -230930,6 +230980,8 @@ extension on _StringsEn {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -242367,6 +242419,8 @@ extension on _StringsAr {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -253853,6 +253907,8 @@ extension on _StringsDe {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -265329,6 +265385,8 @@ extension on _StringsEs {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -276813,6 +276871,8 @@ extension on _StringsFr {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -288267,6 +288327,8 @@ extension on _StringsId {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -299744,6 +299806,8 @@ extension on _StringsIt {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -311145,6 +311209,8 @@ extension on _StringsJa {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -322551,6 +322617,8 @@ extension on _StringsKo {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -334023,6 +334091,8 @@ extension on _StringsNl {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -345490,6 +345560,8 @@ extension on _StringsPtBr {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -356963,6 +357035,8 @@ extension on _StringsRu {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -368405,6 +368479,8 @@ extension on _StringsTh {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -379863,6 +379939,8 @@ extension on _StringsTr {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -391315,6 +391393,8 @@ extension on _StringsVi {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return 'This game currently provides character positions from the engine, so lookup works without calibration. A calibration made here is kept as a fallback for when the engine positions are unavailable.';
       default:
         return null;
     }
@@ -402659,6 +402739,8 @@ extension on _StringsZhCn {
         return '格宽减小 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return '格宽增大 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return '这款游戏现在由引擎直接提供字的位置，查词不需要校准。这里做的校准会作为备用，只在引擎位置不可用时使用。';
       default:
         return null;
     }
@@ -414038,6 +414120,8 @@ extension on _StringsZhHk {
         return 'Narrow cells by 0.1%';
       case 'game_lookup_samples_grid_advance_increase':
         return 'Widen cells by 0.1%';
+      case 'game_lookup_samples_native_fallback_hint':
+        return '這款遊戲現在由引擎直接提供字的位置，查詞不需要校準。這裡做的校準會作為備用，只在引擎位置不可用時使用。';
       default:
         return null;
     }
