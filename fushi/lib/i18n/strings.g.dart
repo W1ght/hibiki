@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 94333 (5549 per locale)
+/// Strings: 94367 (5551 per locale)
 ///
 /// Built on 2026-09-25 at 07:59 UTC
 
@@ -7886,6 +7886,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -21144,6 +21147,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -34643,6 +34651,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -48193,6 +48206,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -61781,6 +61799,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -75159,6 +75182,11 @@ class _StringsId extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -88638,6 +88666,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -101478,6 +101511,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -114328,6 +114366,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -127761,6 +127804,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -141248,6 +141296,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -154709,6 +154762,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -167966,6 +168024,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -181338,6 +181401,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -194681,6 +194749,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 // Path: <root>
@@ -206883,6 +206956,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       '查词层正在切换状态，暂时不能采集。请等一两秒再试；如果一直失败，请重新附着游戏。';
+  @override
+  String get game_lookup_samples_grid_advance_decrease => '格宽减小 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => '格宽增大 0.1%';
 }
 
 // Path: <root>
@@ -219405,6 +219482,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_lookup_samples_capture_surface_not_ready =>
       'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+  @override
+  String get game_lookup_samples_grid_advance_decrease =>
+      'Narrow cells by 0.1%';
+  @override
+  String get game_lookup_samples_grid_advance_increase => 'Widen cells by 0.1%';
 }
 
 /// Flat map(s) containing all translations.
@@ -230843,6 +230925,10 @@ extension on _StringsEn {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -242276,6 +242362,10 @@ extension on _StringsAr {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -253758,6 +253848,10 @@ extension on _StringsDe {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -265230,6 +265324,10 @@ extension on _StringsEs {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -276710,6 +276808,10 @@ extension on _StringsFr {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -288160,6 +288262,10 @@ extension on _StringsId {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -299633,6 +299739,10 @@ extension on _StringsIt {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -311030,6 +311140,10 @@ extension on _StringsJa {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -322432,6 +322546,10 @@ extension on _StringsKo {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -333900,6 +334018,10 @@ extension on _StringsNl {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -345363,6 +345485,10 @@ extension on _StringsPtBr {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -356832,6 +356958,10 @@ extension on _StringsRu {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -368270,6 +368400,10 @@ extension on _StringsTh {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -379724,6 +379858,10 @@ extension on _StringsTr {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -391172,6 +391310,10 @@ extension on _StringsVi {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
@@ -402512,6 +402654,10 @@ extension on _StringsZhCn {
         return '等台词完整显示后再采集。先采集几句不同台词，再调整排版。';
       case 'game_lookup_samples_capture_surface_not_ready':
         return '查词层正在切换状态，暂时不能采集。请等一两秒再试；如果一直失败，请重新附着游戏。';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return '格宽减小 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return '格宽增大 0.1%';
       default:
         return null;
     }
@@ -413887,6 +414033,10 @@ extension on _StringsZhHk {
         return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       case 'game_lookup_samples_capture_surface_not_ready':
         return 'The lookup layer is switching state and cannot capture right now. Wait a second or two and try again; if it keeps failing, reattach the game.';
+      case 'game_lookup_samples_grid_advance_decrease':
+        return 'Narrow cells by 0.1%';
+      case 'game_lookup_samples_grid_advance_increase':
+        return 'Widen cells by 0.1%';
       default:
         return null;
     }
