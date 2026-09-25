@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92990 (5470 per locale)
+/// Strings: 93007 (5471 per locale)
 ///
-/// Built on 2026-09-25 at 09:29 UTC
+/// Built on 2026-09-25 at 11:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7734,6 +7734,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_cuda_desc =>
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   String get updates_history_clear => 'Clear history';
   String get updates_history_clear_confirm_title => 'Clear update history?';
   String updates_history_clear_confirm_body({required Object scope}) =>
@@ -20763,6 +20765,9 @@ class _StringsAr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -34038,6 +34043,9 @@ class _StringsDe extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -47364,6 +47372,9 @@ class _StringsEs extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -60729,6 +60740,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
   String get updates_history_clear => 'Clear history';
   @override
   String get updates_history_clear_confirm_title => 'Clear update history?';
@@ -73882,6 +73896,9 @@ class _StringsId extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -87138,6 +87155,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
   String get updates_history_clear => 'Clear history';
   @override
   String get updates_history_clear_confirm_title => 'Clear update history?';
@@ -99753,6 +99773,9 @@ class _StringsJa extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      '動画ファイルのみドロップできます。ドロップした動画は読み込まれ、このコレクションに直接追加されます。';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -112379,6 +112402,9 @@ class _StringsKo extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -125588,6 +125614,9 @@ class _StringsNl extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -138852,6 +138881,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
   String get updates_history_clear => 'Clear history';
   @override
   String get updates_history_clear_confirm_title => 'Clear update history?';
@@ -152089,6 +152121,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
   String get updates_history_clear => 'Clear history';
   @override
   String get updates_history_clear_confirm_title => 'Clear update history?';
@@ -165121,6 +165156,9 @@ class _StringsTh extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
   @override
   String get updates_history_clear => 'Clear history';
   @override
@@ -178270,6 +178308,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
   String get updates_history_clear => 'Clear history';
   @override
   String get updates_history_clear_confirm_title => 'Clear update history?';
@@ -191389,6 +191430,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
   String get updates_history_clear => 'Clear history';
   @override
   String get updates_history_clear_confirm_title => 'Clear update history?';
@@ -203391,6 +203435,9 @@ class _StringsZhCn extends _StringsEn {
       '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
   @override
   String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      '只能拖入视频文件：拖进来的视频会导入并直接加入本合集。';
   @override
   String get updates_history_clear => '清空记录';
   @override
@@ -215689,6 +215736,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get drag_drop_unsupported_on_collection =>
+      '只能拖入影片檔案：拖進來的影片會匯入並直接加入本合集。';
+  @override
   String get updates_history_clear => '清空記錄';
   @override
   String get updates_history_clear_confirm_title => '清空更新記錄？';
@@ -226967,6 +227017,8 @@ extension on _StringsEn {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -238241,6 +238293,8 @@ extension on _StringsAr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -249564,6 +249618,8 @@ extension on _StringsDe {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -260877,6 +260933,8 @@ extension on _StringsEs {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -272198,6 +272256,8 @@ extension on _StringsFr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -283489,6 +283549,8 @@ extension on _StringsId {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -294803,6 +294865,8 @@ extension on _StringsIt {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -306041,6 +306105,8 @@ extension on _StringsJa {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return '動画ファイルのみドロップできます。ドロップした動画は読み込まれ、このコレクションに直接追加されます。';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -317284,6 +317350,8 @@ extension on _StringsKo {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -328593,6 +328661,8 @@ extension on _StringsNl {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -339897,6 +339967,8 @@ extension on _StringsPtBr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -351207,6 +351279,8 @@ extension on _StringsRu {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -362486,6 +362560,8 @@ extension on _StringsTh {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -373781,6 +373857,8 @@ extension on _StringsTr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -385070,6 +385148,8 @@ extension on _StringsVi {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_title':
@@ -396251,6 +396331,8 @@ extension on _StringsZhCn {
         return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
       case 'manga_ocr_runtime_installing':
         return '正在安装本地 OCR 引擎…';
+      case 'drag_drop_unsupported_on_collection':
+        return '只能拖入视频文件：拖进来的视频会导入并直接加入本合集。';
       case 'updates_history_clear':
         return '清空记录';
       case 'updates_history_clear_confirm_title':
@@ -407467,6 +407549,8 @@ extension on _StringsZhHk {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'drag_drop_unsupported_on_collection':
+        return '只能拖入影片檔案：拖進來的影片會匯入並直接加入本合集。';
       case 'updates_history_clear':
         return '清空記錄';
       case 'updates_history_clear_confirm_title':
