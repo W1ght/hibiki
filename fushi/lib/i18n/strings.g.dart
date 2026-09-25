@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 92905 (5465 per locale)
 ///
-/// Built on 2026-09-23 at 15:22 UTC
+/// Built on 2026-09-25 at 09:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7173,8 +7173,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Back key on the lookup page minimizes the window';
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   String get video_extensions_title => 'Video source extensions';
@@ -7734,6 +7732,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_cuda_desc =>
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -19798,9 +19798,6 @@ class _StringsAr extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -20756,6 +20753,9 @@ class _StringsAr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -33057,9 +33057,6 @@ class _StringsDe extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -34019,6 +34016,9 @@ class _StringsDe extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -46370,9 +46370,6 @@ class _StringsEs extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -47333,6 +47330,9 @@ class _StringsEs extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -59720,9 +59720,6 @@ class _StringsFr extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -60685,6 +60682,9 @@ class _StringsFr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -72868,9 +72868,6 @@ class _StringsId extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -73827,6 +73824,9 @@ class _StringsId extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -86107,9 +86107,6 @@ class _StringsIt extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -87070,6 +87067,9 @@ class _StringsIt extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -98718,9 +98718,6 @@ class _StringsJa extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -99674,6 +99671,9 @@ class _StringsJa extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -111332,9 +111332,6 @@ class _StringsKo extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -112288,6 +112285,9 @@ class _StringsKo extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -124524,9 +124524,6 @@ class _StringsNl extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -125485,6 +125482,9 @@ class _StringsNl extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -137775,9 +137775,6 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -138736,6 +138733,9 @@ class _StringsPtBr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -151001,9 +151001,6 @@ class _StringsRu extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -151961,6 +151958,9 @@ class _StringsRu extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -164024,9 +164024,6 @@ class _StringsTh extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -164982,6 +164979,9 @@ class _StringsTh extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -177161,9 +177161,6 @@ class _StringsTr extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -178118,6 +178115,9 @@ class _StringsTr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -190268,9 +190268,6 @@ class _StringsVi extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -191225,6 +191222,9 @@ class _StringsVi extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 // Path: <root>
@@ -202347,9 +202347,6 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       '置顶快捷键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
-  @override
   String get video_anidb_login_test_failed_backoff => 'AniDB 连续无应答，正在退避，请稍后再试';
   @override
   String get video_extensions_title => '视频源扩展';
@@ -203216,6 +203213,9 @@ class _StringsZhCn extends _StringsEn {
       '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
   @override
   String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      '服务器无法抽取该字幕轨，改由播放器边播边解码（字幕随播放逐句出现，可查词）：${label}';
 }
 
 // Path: <root>
@@ -214546,9 +214546,6 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   @override
-  String video_subtitle_remote_player_rendered({required Object label}) =>
-      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
-  @override
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   @override
@@ -215502,6 +215499,9 @@ class _StringsZhHk extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String video_subtitle_remote_player_decoded({required Object label}) =>
+      'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
 }
 
 /// Flat map(s) containing all translations.
@@ -225954,9 +225954,6 @@ extension on _StringsEn {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -226770,6 +226767,9 @@ extension on _StringsEn {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -237217,9 +237217,6 @@ extension on _StringsAr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -238033,6 +238030,9 @@ extension on _StringsAr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -248529,9 +248529,6 @@ extension on _StringsDe {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -249345,6 +249342,9 @@ extension on _StringsDe {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -259831,9 +259831,6 @@ extension on _StringsEs {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -260647,6 +260644,9 @@ extension on _StringsEs {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -271141,9 +271141,6 @@ extension on _StringsFr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -271957,6 +271954,9 @@ extension on _StringsFr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -282421,9 +282421,6 @@ extension on _StringsId {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -283237,6 +283234,9 @@ extension on _StringsId {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -293724,9 +293724,6 @@ extension on _StringsIt {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -294540,6 +294537,9 @@ extension on _StringsIt {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -304951,9 +304951,6 @@ extension on _StringsJa {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -305767,6 +305764,9 @@ extension on _StringsJa {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -316183,9 +316183,6 @@ extension on _StringsKo {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -316999,6 +316996,9 @@ extension on _StringsKo {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -327481,9 +327481,6 @@ extension on _StringsNl {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -328297,6 +328294,9 @@ extension on _StringsNl {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -338774,9 +338774,6 @@ extension on _StringsPtBr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -339590,6 +339587,9 @@ extension on _StringsPtBr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -350073,9 +350073,6 @@ extension on _StringsRu {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -350889,6 +350886,9 @@ extension on _StringsRu {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -361341,9 +361341,6 @@ extension on _StringsTh {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -362157,6 +362154,9 @@ extension on _StringsTh {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -372625,9 +372625,6 @@ extension on _StringsTr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -373441,6 +373438,9 @@ extension on _StringsTr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -383903,9 +383903,6 @@ extension on _StringsVi {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -384719,6 +384716,9 @@ extension on _StringsVi {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
@@ -395084,9 +395084,6 @@ extension on _StringsZhCn {
         return '查词页按返回键最小化窗口';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return '置顶快捷键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB 连续无应答，正在退避，请稍后再试';
       case 'video_extensions_title':
@@ -395889,6 +395886,9 @@ extension on _StringsZhCn {
         return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
       case 'manga_ocr_runtime_installing':
         return '正在安装本地 OCR 引擎…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            '服务器无法抽取该字幕轨，改由播放器边播边解码（字幕随播放逐句出现，可查词）：${label}';
       default:
         return null;
     }
@@ -406278,9 +406278,6 @@ extension on _StringsZhHk {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
-      case 'video_subtitle_remote_player_rendered':
-        return ({required Object label}) =>
-            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
       case 'video_anidb_login_test_failed_backoff':
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
@@ -407094,6 +407091,9 @@ extension on _StringsZhHk {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_subtitle_remote_player_decoded':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
       default:
         return null;
     }
