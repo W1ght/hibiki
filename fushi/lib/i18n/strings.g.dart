@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 94333 (5549 per locale)
+/// Strings: 94299 (5547 per locale)
 ///
-/// Built on 2026-09-25 at 07:51 UTC
+/// Built on 2026-09-25 at 07:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7843,9 +7843,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_samples_narration => 'Narration calibration';
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   String get game_lookup_samples_remove => 'Remove sample';
@@ -21076,11 +21073,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -34577,11 +34569,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -48129,11 +48116,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -61720,11 +61702,6 @@ class _StringsFr extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -75099,11 +75076,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -88581,11 +88553,6 @@ class _StringsIt extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -101422,11 +101389,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -114274,11 +114236,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -127709,11 +127666,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -141199,11 +141151,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -154662,11 +154609,6 @@ class _StringsRu extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -167920,11 +167862,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-  @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
   @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
@@ -181295,11 +181232,6 @@ class _StringsTr extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -194640,11 +194572,6 @@ class _StringsVi extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -206852,10 +206779,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_lookup_samples_narration_hint =>
       '只有台词和旁白的文字排版不一致时才需要单独校准；排版一致时无需进行旁白校准。';
-  @override
-  String get game_lookup_samples_quoted_text_only => '只用「」内台词';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint => '过滤掉「…」以外的人名等字符。';
   @override
   String get game_lookup_samples_region_hint =>
       '拖动橙色外框内部可移动，拖动边角可缩放。宽高控制排版空间和换行，不改变单个字框大小。';
@@ -219368,11 +219291,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_lookup_samples_narration_hint =>
       'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
   @override
-  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
-  @override
-  String get game_lookup_samples_quoted_text_only_hint =>
-      'Filter speaker names and other characters outside 「…」.';
-  @override
   String get game_lookup_samples_region_hint =>
       'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
   @override
@@ -230824,10 +230742,6 @@ extension on _StringsEn {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -242258,10 +242172,6 @@ extension on _StringsAr {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -253741,10 +253651,6 @@ extension on _StringsDe {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -265214,10 +265120,6 @@ extension on _StringsEs {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -276695,10 +276597,6 @@ extension on _StringsFr {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -288146,10 +288044,6 @@ extension on _StringsId {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -299620,10 +299514,6 @@ extension on _StringsIt {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -311018,10 +310908,6 @@ extension on _StringsJa {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -322421,10 +322307,6 @@ extension on _StringsKo {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -333890,10 +333772,6 @@ extension on _StringsNl {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -345354,10 +345232,6 @@ extension on _StringsPtBr {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -356824,10 +356698,6 @@ extension on _StringsRu {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -368263,10 +368133,6 @@ extension on _StringsTh {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -379718,10 +379584,6 @@ extension on _StringsTr {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -391167,10 +391029,6 @@ extension on _StringsVi {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
@@ -402508,10 +402366,6 @@ extension on _StringsZhCn {
         return '旁白校准';
       case 'game_lookup_samples_narration_hint':
         return '只有台词和旁白的文字排版不一致时才需要单独校准；排版一致时无需进行旁白校准。';
-      case 'game_lookup_samples_quoted_text_only':
-        return '只用「」内台词';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return '过滤掉「…」以外的人名等字符。';
       case 'game_lookup_samples_region_hint':
         return '拖动橙色外框内部可移动，拖动边角可缩放。宽高控制排版空间和换行，不改变单个字框大小。';
       case 'game_lookup_samples_remove':
@@ -413884,10 +413738,6 @@ extension on _StringsZhHk {
         return 'Narration calibration';
       case 'game_lookup_samples_narration_hint':
         return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
-      case 'game_lookup_samples_quoted_text_only':
-        return 'Use text inside 「」 only';
-      case 'game_lookup_samples_quoted_text_only_hint':
-        return 'Filter speaker names and other characters outside 「…」.';
       case 'game_lookup_samples_region_hint':
         return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
       case 'game_lookup_samples_remove':
