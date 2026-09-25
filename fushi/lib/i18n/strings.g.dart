@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 94299 (5547 per locale)
+/// Strings: 94316 (5548 per locale)
 ///
-/// Built on 2026-09-25 at 07:52 UTC
+/// Built on 2026-09-25 at 07:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7769,7 +7769,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_samples_auto_multiline =>
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
   String get game_lookup_samples_auto_preview_text_overflow =>
@@ -7777,7 +7777,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_samples_auto_preview_unavailable =>
       'The native layout preview was unavailable.';
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
     required Object reason,
@@ -7814,10 +7814,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_samples_continuation_label => 'Text continuation';
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   String game_lookup_samples_diagnostic({
     required Object reason,
     required Object detail,
@@ -7885,6 +7881,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -20961,7 +20960,7 @@ class _StringsAr extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -20973,7 +20972,7 @@ class _StringsAr extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -21029,11 +21028,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -21140,6 +21134,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -34457,7 +34456,7 @@ class _StringsDe extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -34469,7 +34468,7 @@ class _StringsDe extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -34525,11 +34524,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -34636,6 +34630,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -48004,7 +48003,7 @@ class _StringsEs extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -48016,7 +48015,7 @@ class _StringsEs extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -48072,11 +48071,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -48183,6 +48177,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -61589,7 +61588,7 @@ class _StringsFr extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -61601,7 +61600,7 @@ class _StringsFr extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -61657,11 +61656,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -61768,6 +61762,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -74964,7 +74963,7 @@ class _StringsId extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -74976,7 +74975,7 @@ class _StringsId extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -75032,11 +75031,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -75143,6 +75137,11 @@ class _StringsId extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -88440,7 +88439,7 @@ class _StringsIt extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -88452,7 +88451,7 @@ class _StringsIt extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -88508,11 +88507,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -88619,6 +88613,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -101277,7 +101276,7 @@ class _StringsJa extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -101289,7 +101288,7 @@ class _StringsJa extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -101345,11 +101344,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -101456,6 +101450,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -114124,7 +114123,7 @@ class _StringsKo extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -114136,7 +114135,7 @@ class _StringsKo extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -114192,11 +114191,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -114303,6 +114297,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -127554,7 +127553,7 @@ class _StringsNl extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -127566,7 +127565,7 @@ class _StringsNl extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -127622,11 +127621,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -127733,6 +127727,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -141038,7 +141037,7 @@ class _StringsPtBr extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -141050,7 +141049,7 @@ class _StringsPtBr extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -141106,11 +141105,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -141217,6 +141211,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -154496,7 +154495,7 @@ class _StringsRu extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -154508,7 +154507,7 @@ class _StringsRu extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -154564,11 +154563,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -154675,6 +154669,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -167750,7 +167749,7 @@ class _StringsTh extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -167762,7 +167761,7 @@ class _StringsTh extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -167818,11 +167817,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -167929,6 +167923,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -181119,7 +181118,7 @@ class _StringsTr extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -181131,7 +181130,7 @@ class _StringsTr extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -181187,11 +181186,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -181298,6 +181292,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -194459,7 +194458,7 @@ class _StringsVi extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -194471,7 +194470,7 @@ class _StringsVi extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -194527,11 +194526,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -194638,6 +194632,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 // Path: <root>
@@ -206676,7 +206675,7 @@ class _StringsZhCn extends _StringsEn {
       '请选择或采集一张完整的两行或三行台词；短句无法确定换行位置。';
   @override
   String get game_lookup_samples_auto_pending =>
-      '尚未自动对齐。黄框只需包含各行正文，点击“自动对齐”；无需先调字号、字距或逐字点中心。';
+      '尚未自动对齐。橙框只需包含各行正文，点击“自动对齐”；无需先调字号、字距或逐字点中心。';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       '自动测量结果未能通过完整台词校验，未应用此次结果。';
@@ -206686,7 +206685,7 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_samples_auto_preview_unavailable => '原生排版预览不可用。';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      '未找到清晰的正文行。请检查黄框是否包含完整正文，且未包含姓名或界面按钮。';
+      '未找到清晰的正文行。请检查橙框是否包含完整正文，且未包含姓名或界面按钮。';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -206741,11 +206740,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_samples_continuation_label => '文本续行';
   @override
   String get game_lookup_samples_continuation_title => '续行起点';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => '当前样本：第 ${sample} / ${total} 张';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -206838,6 +206832,10 @@ class _StringsZhCn extends _StringsEn {
       '校准暂不可用。请停止点击游戏台词，调整参数或取消校准。';
   @override
   String get game_line_bulk_text_hint => '检测到批量文本，已暂停逐字查词以避免卡顿。';
+  @override
+  String get game_lookup_samples_auto_align => '从截图自动对齐';
+  @override
+  String get game_lookup_samples_hint => '等台词完整显示后再采集。先采集几句不同台词，再调整排版。';
 }
 
 // Path: <root>
@@ -219178,7 +219176,7 @@ class _StringsZhHk extends _StringsEn {
       'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
   @override
   String get game_lookup_samples_auto_pending =>
-      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
   @override
   String get game_lookup_samples_auto_preview_failed =>
       'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
@@ -219190,7 +219188,7 @@ class _StringsZhHk extends _StringsEn {
       'The native layout preview was unavailable.';
   @override
   String get game_lookup_samples_auto_rows_missing =>
-      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
   @override
   String game_lookup_samples_auto_sample_failed({
     required Object sample,
@@ -219246,11 +219244,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_lookup_samples_continuation_title =>
       'Continuation line start';
-  @override
-  String game_lookup_samples_current({
-    required Object sample,
-    required Object total,
-  }) => 'Current sample: ${sample} of ${total}';
   @override
   String game_lookup_samples_diagnostic({
     required Object reason,
@@ -219357,6 +219350,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_line_bulk_text_hint =>
       'Bulk text detected. Character lookup is paused.';
+  @override
+  String get game_lookup_samples_auto_align => 'Align from screenshot';
+  @override
+  String get game_lookup_samples_hint =>
+      'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
 }
 
 /// Flat map(s) containing all translations.
@@ -230662,7 +230660,7 @@ extension on _StringsEn {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -230670,7 +230668,7 @@ extension on _StringsEn {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -230710,9 +230708,6 @@ extension on _StringsEn {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -230792,6 +230787,10 @@ extension on _StringsEn {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -242092,7 +242091,7 @@ extension on _StringsAr {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -242100,7 +242099,7 @@ extension on _StringsAr {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -242140,9 +242139,6 @@ extension on _StringsAr {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -242222,6 +242218,10 @@ extension on _StringsAr {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -253571,7 +253571,7 @@ extension on _StringsDe {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -253579,7 +253579,7 @@ extension on _StringsDe {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -253619,9 +253619,6 @@ extension on _StringsDe {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -253701,6 +253698,10 @@ extension on _StringsDe {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -265040,7 +265041,7 @@ extension on _StringsEs {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -265048,7 +265049,7 @@ extension on _StringsEs {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -265088,9 +265089,6 @@ extension on _StringsEs {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -265170,6 +265168,10 @@ extension on _StringsEs {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -276517,7 +276519,7 @@ extension on _StringsFr {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -276525,7 +276527,7 @@ extension on _StringsFr {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -276565,9 +276567,6 @@ extension on _StringsFr {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -276647,6 +276646,10 @@ extension on _StringsFr {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -287964,7 +287967,7 @@ extension on _StringsId {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -287972,7 +287975,7 @@ extension on _StringsId {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -288012,9 +288015,6 @@ extension on _StringsId {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -288094,6 +288094,10 @@ extension on _StringsId {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -299434,7 +299438,7 @@ extension on _StringsIt {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -299442,7 +299446,7 @@ extension on _StringsIt {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -299482,9 +299486,6 @@ extension on _StringsIt {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -299564,6 +299565,10 @@ extension on _StringsIt {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -310828,7 +310833,7 @@ extension on _StringsJa {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -310836,7 +310841,7 @@ extension on _StringsJa {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -310876,9 +310881,6 @@ extension on _StringsJa {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -310958,6 +310960,10 @@ extension on _StringsJa {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -322227,7 +322233,7 @@ extension on _StringsKo {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -322235,7 +322241,7 @@ extension on _StringsKo {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -322275,9 +322281,6 @@ extension on _StringsKo {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -322357,6 +322360,10 @@ extension on _StringsKo {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -333692,7 +333699,7 @@ extension on _StringsNl {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -333700,7 +333707,7 @@ extension on _StringsNl {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -333740,9 +333747,6 @@ extension on _StringsNl {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -333822,6 +333826,10 @@ extension on _StringsNl {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -345152,7 +345160,7 @@ extension on _StringsPtBr {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -345160,7 +345168,7 @@ extension on _StringsPtBr {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -345200,9 +345208,6 @@ extension on _StringsPtBr {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -345282,6 +345287,10 @@ extension on _StringsPtBr {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -356618,7 +356627,7 @@ extension on _StringsRu {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -356626,7 +356635,7 @@ extension on _StringsRu {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -356666,9 +356675,6 @@ extension on _StringsRu {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -356748,6 +356754,10 @@ extension on _StringsRu {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -368053,7 +368063,7 @@ extension on _StringsTh {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -368061,7 +368071,7 @@ extension on _StringsTh {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -368101,9 +368111,6 @@ extension on _StringsTh {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -368183,6 +368190,10 @@ extension on _StringsTh {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -379504,7 +379515,7 @@ extension on _StringsTr {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -379512,7 +379523,7 @@ extension on _StringsTr {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -379552,9 +379563,6 @@ extension on _StringsTr {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -379634,6 +379642,10 @@ extension on _StringsTr {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -390949,7 +390961,7 @@ extension on _StringsVi {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -390957,7 +390969,7 @@ extension on _StringsVi {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -390997,9 +391009,6 @@ extension on _StringsVi {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -391079,6 +391088,10 @@ extension on _StringsVi {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
@@ -402286,7 +402299,7 @@ extension on _StringsZhCn {
       case 'game_lookup_samples_auto_multiline':
         return '请选择或采集一张完整的两行或三行台词；短句无法确定换行位置。';
       case 'game_lookup_samples_auto_pending':
-        return '尚未自动对齐。黄框只需包含各行正文，点击“自动对齐”；无需先调字号、字距或逐字点中心。';
+        return '尚未自动对齐。橙框只需包含各行正文，点击“自动对齐”；无需先调字号、字距或逐字点中心。';
       case 'game_lookup_samples_auto_preview_failed':
         return '自动测量结果未能通过完整台词校验，未应用此次结果。';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -402294,7 +402307,7 @@ extension on _StringsZhCn {
       case 'game_lookup_samples_auto_preview_unavailable':
         return '原生排版预览不可用。';
       case 'game_lookup_samples_auto_rows_missing':
-        return '未找到清晰的正文行。请检查黄框是否包含完整正文，且未包含姓名或界面按钮。';
+        return '未找到清晰的正文行。请检查橙框是否包含完整正文，且未包含姓名或界面按钮。';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             '样本 ${sample}：${reason}';
@@ -402334,9 +402347,6 @@ extension on _StringsZhCn {
         return '文本续行';
       case 'game_lookup_samples_continuation_title':
         return '续行起点';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            '当前样本：第 ${sample} / ${total} 张';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             '诊断：${reason}${detail}';
@@ -402416,6 +402426,10 @@ extension on _StringsZhCn {
         return '校准暂不可用。请停止点击游戏台词，调整参数或取消校准。';
       case 'game_line_bulk_text_hint':
         return '检测到批量文本，已暂停逐字查词以避免卡顿。';
+      case 'game_lookup_samples_auto_align':
+        return '从截图自动对齐';
+      case 'game_lookup_samples_hint':
+        return '等台词完整显示后再采集。先采集几句不同台词，再调整排版。';
       default:
         return null;
     }
@@ -413658,7 +413672,7 @@ extension on _StringsZhHk {
       case 'game_lookup_samples_auto_multiline':
         return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
       case 'game_lookup_samples_auto_pending':
-        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+        return 'Not automatically aligned yet. Let the orange frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
       case 'game_lookup_samples_auto_preview_failed':
         return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
       case 'game_lookup_samples_auto_preview_text_overflow':
@@ -413666,7 +413680,7 @@ extension on _StringsZhHk {
       case 'game_lookup_samples_auto_preview_unavailable':
         return 'The native layout preview was unavailable.';
       case 'game_lookup_samples_auto_rows_missing':
-        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+        return 'No clear dialogue lines were found. Check that the orange frame contains the complete dialogue but not the speaker name or interface buttons.';
       case 'game_lookup_samples_auto_sample_failed':
         return ({required Object sample, required Object reason}) =>
             'Sample ${sample}: ${reason}';
@@ -413706,9 +413720,6 @@ extension on _StringsZhHk {
         return 'Text continuation';
       case 'game_lookup_samples_continuation_title':
         return 'Continuation line start';
-      case 'game_lookup_samples_current':
-        return ({required Object sample, required Object total}) =>
-            'Current sample: ${sample} of ${total}';
       case 'game_lookup_samples_diagnostic':
         return ({required Object reason, required Object detail}) =>
             'Diagnostic: ${reason}${detail}';
@@ -413788,6 +413799,10 @@ extension on _StringsZhHk {
         return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
       case 'game_line_bulk_text_hint':
         return 'Bulk text detected. Character lookup is paused.';
+      case 'game_lookup_samples_auto_align':
+        return 'Align from screenshot';
+      case 'game_lookup_samples_hint':
+        return 'Wait until the line is fully visible, then capture it. Capture several different lines before adjusting the layout.';
       default:
         return null;
     }
