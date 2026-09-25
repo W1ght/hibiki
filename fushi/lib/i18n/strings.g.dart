@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95183 (5599 per locale)
+/// Strings: 95030 (5590 per locale)
 ///
-/// Built on 2026-09-25 at 17:17 UTC
+/// Built on 2026-09-25 at 19:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2990,21 +2990,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_direction_ltr => 'Left to right';
   String get manga_direction_rtl => 'Right to left';
   String get manga_discovery_load_failed => 'Couldn\'t load the discover feed.';
-  String get manga_discovery_match_none => 'No match found in enabled sources.';
-  String get manga_discovery_match_running =>
-      'Matching in your enabled sources...';
-  String get manga_discovery_match_section => 'Read from a source';
-  String get manga_discovery_section_latest_finished => 'Recently completed';
-  String get manga_discovery_section_popular => 'Popular';
-  String get manga_discovery_section_top_rated => 'Top rated';
   String manga_discovery_source_popular({required Object source}) =>
       'Popular on ${source}';
   String get manga_discovery_sources_browse => 'Browse a source';
-  String get manga_discovery_status_cancelled => 'Cancelled';
-  String get manga_discovery_status_finished => 'Completed';
-  String get manga_discovery_status_hiatus => 'On hiatus';
-  String get manga_discovery_status_not_yet_released => 'Not yet released';
-  String get manga_discovery_status_releasing => 'Ongoing';
   String get manga_global_search_hint => 'Search every enabled source';
   String get manga_global_search_no_sources =>
       'No enabled manga sources yet. Add one in the Import tab.';
@@ -6289,7 +6277,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_field_rating => 'Rating';
   String get video_work_field_cover => 'Cover';
   String get video_work_field_backdrop => 'Backdrop';
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
   String get local_audio_file_unavailable =>
       'Audio database unavailable. Select the original DB file again.';
   String get local_audio_file_reselect => 'Select audio database again';
@@ -7964,6 +7951,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Glossary (first ${count})';
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  String get manga_discovery_view_all => 'View all';
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -12812,34 +12802,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_discovery_load_failed => 'تعذّر تحميل موجز الاكتشاف.';
   @override
-  String get manga_discovery_match_none =>
-      'لم يتم العثور على تطابق في المصادر المُفعّلة.';
-  @override
-  String get manga_discovery_match_running =>
-      'جارٍ المطابقة في مصادرك المُفعّلة...';
-  @override
-  String get manga_discovery_match_section => 'اقرأ من مصدر';
-  @override
-  String get manga_discovery_section_latest_finished => 'مكتمل مؤخراً';
-  @override
-  String get manga_discovery_section_popular => 'شائع';
-  @override
-  String get manga_discovery_section_top_rated => 'الأعلى تقييماً';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'شائع على ${source}';
   @override
   String get manga_discovery_sources_browse => 'تصفح مصدر';
-  @override
-  String get manga_discovery_status_cancelled => 'مُلغى';
-  @override
-  String get manga_discovery_status_finished => 'مكتمل';
-  @override
-  String get manga_discovery_status_hiatus => 'متوقف مؤقتاً';
-  @override
-  String get manga_discovery_status_not_yet_released => 'لم يصدر بعد';
-  @override
-  String get manga_discovery_status_releasing => 'مستمر';
   @override
   String get manga_global_search_hint => 'بحث في كل مصدر مُفعّل';
   @override
@@ -18557,8 +18523,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'قاعدة بيانات الصوت غير متاحة. حدد ملف DB الأصلي مرة أخرى.';
   @override
@@ -21351,6 +21315,12 @@ class _StringsAr extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -26302,35 +26272,10 @@ class _StringsDe extends _StringsEn {
   String get manga_discovery_load_failed =>
       'Der Entdecken-Feed konnte nicht geladen werden.';
   @override
-  String get manga_discovery_match_none =>
-      'Kein Treffer in aktivierten Quellen gefunden.';
-  @override
-  String get manga_discovery_match_running =>
-      'Suche in Ihren aktivierten Quellen...';
-  @override
-  String get manga_discovery_match_section => 'Aus einer Quelle lesen';
-  @override
-  String get manga_discovery_section_latest_finished =>
-      'Kürzlich abgeschlossen';
-  @override
-  String get manga_discovery_section_popular => 'Beliebt';
-  @override
-  String get manga_discovery_section_top_rated => 'Bestbewertet';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Beliebt auf ${source}';
   @override
   String get manga_discovery_sources_browse => 'Eine Quelle durchstöbern';
-  @override
-  String get manga_discovery_status_cancelled => 'Eingestellt';
-  @override
-  String get manga_discovery_status_finished => 'Abgeschlossen';
-  @override
-  String get manga_discovery_status_hiatus => 'Pausiert';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Noch nicht erschienen';
-  @override
-  String get manga_discovery_status_releasing => 'Laufend';
   @override
   String get manga_global_search_hint => 'Jede aktivierte Quelle durchsuchen';
   @override
@@ -32178,8 +32123,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Audiodatenbank nicht verfügbar. Wähle die ursprüngliche DB-Datei erneut aus.';
   @override
@@ -34979,6 +34922,12 @@ class _StringsDe extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -39952,35 +39901,10 @@ class _StringsEs extends _StringsEn {
   String get manga_discovery_load_failed =>
       'No se pudo cargar el feed de descubrimiento.';
   @override
-  String get manga_discovery_match_none =>
-      'No se encontró coincidencia en las fuentes activas.';
-  @override
-  String get manga_discovery_match_running =>
-      'Buscando en sus fuentes activas...';
-  @override
-  String get manga_discovery_match_section => 'Leer desde una fuente';
-  @override
-  String get manga_discovery_section_latest_finished =>
-      'Completados recientemente';
-  @override
-  String get manga_discovery_section_popular => 'Popular';
-  @override
-  String get manga_discovery_section_top_rated => 'Mejor puntuados';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Popular en ${source}';
   @override
   String get manga_discovery_sources_browse => 'Explorar una fuente';
-  @override
-  String get manga_discovery_status_cancelled => 'Cancelado';
-  @override
-  String get manga_discovery_status_finished => 'Completado';
-  @override
-  String get manga_discovery_status_hiatus => 'En pausa';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Aún no publicado';
-  @override
-  String get manga_discovery_status_releasing => 'En emisión';
   @override
   String get manga_global_search_hint => 'Buscar en todas las fuentes activas';
   @override
@@ -45856,8 +45780,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'La base de datos de audio no está disponible. Selecciona de nuevo el archivo DB original.';
   @override
@@ -48658,6 +48580,12 @@ class _StringsEs extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -53642,34 +53570,10 @@ class _StringsFr extends _StringsEn {
   String get manga_discovery_load_failed =>
       'Impossible de charger le flux de découverte.';
   @override
-  String get manga_discovery_match_none =>
-      'Aucune correspondance trouvée dans les sources activées.';
-  @override
-  String get manga_discovery_match_running =>
-      'Recherche dans vos sources activées…';
-  @override
-  String get manga_discovery_match_section => 'Lire depuis une source';
-  @override
-  String get manga_discovery_section_latest_finished => 'Terminés récemment';
-  @override
-  String get manga_discovery_section_popular => 'Populaires';
-  @override
-  String get manga_discovery_section_top_rated => 'Mieux notés';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Populaire sur ${source}';
   @override
   String get manga_discovery_sources_browse => 'Parcourir une source';
-  @override
-  String get manga_discovery_status_cancelled => 'Annulé';
-  @override
-  String get manga_discovery_status_finished => 'Terminé';
-  @override
-  String get manga_discovery_status_hiatus => 'En pause';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Pas encore sorti';
-  @override
-  String get manga_discovery_status_releasing => 'En cours';
   @override
   String get manga_global_search_hint =>
       'Rechercher dans chaque source activée';
@@ -59567,8 +59471,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Base de données audio indisponible. Sélectionnez à nouveau le fichier DB d’origine.';
   @override
@@ -62375,6 +62277,12 @@ class _StringsFr extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -67273,34 +67181,10 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_discovery_load_failed => 'Tidak bisa memuat umpan jelajahi.';
   @override
-  String get manga_discovery_match_none =>
-      'Tidak ditemukan kecocokan di sumber yang aktif.';
-  @override
-  String get manga_discovery_match_running =>
-      'Mencocokkan di sumber Anda yang aktif...';
-  @override
-  String get manga_discovery_match_section => 'Baca dari sumber';
-  @override
-  String get manga_discovery_section_latest_finished => 'Baru selesai';
-  @override
-  String get manga_discovery_section_popular => 'Populer';
-  @override
-  String get manga_discovery_section_top_rated => 'Rating tertinggi';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Populer di ${source}';
   @override
   String get manga_discovery_sources_browse => 'Jelajahi sumber';
-  @override
-  String get manga_discovery_status_cancelled => 'Dibatalkan';
-  @override
-  String get manga_discovery_status_finished => 'Selesai';
-  @override
-  String get manga_discovery_status_hiatus => 'Hiatus';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Belum dirilis';
-  @override
-  String get manga_discovery_status_releasing => 'Berlanjut';
   @override
   String get manga_global_search_hint => 'Cari setiap sumber yang aktif';
   @override
@@ -73086,8 +72970,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Basis data audio tidak tersedia. Pilih kembali file DB asli.';
   @override
@@ -75882,6 +75764,12 @@ class _StringsId extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -80819,34 +80707,10 @@ class _StringsIt extends _StringsEn {
   String get manga_discovery_load_failed =>
       'Impossibile caricare il feed di scoperta.';
   @override
-  String get manga_discovery_match_none =>
-      'Nessuna corrispondenza nelle fonti abilitate.';
-  @override
-  String get manga_discovery_match_running =>
-      'Ricerca nelle fonti abilitate...';
-  @override
-  String get manga_discovery_match_section => 'Leggi da una fonte';
-  @override
-  String get manga_discovery_section_latest_finished => 'Completati di recente';
-  @override
-  String get manga_discovery_section_popular => 'Popolari';
-  @override
-  String get manga_discovery_section_top_rated => 'Più votati';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Popolari su ${source}';
   @override
   String get manga_discovery_sources_browse => 'Sfoglia una fonte';
-  @override
-  String get manga_discovery_status_cancelled => 'Annullato';
-  @override
-  String get manga_discovery_status_finished => 'Completato';
-  @override
-  String get manga_discovery_status_hiatus => 'In pausa';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Non ancora pubblicato';
-  @override
-  String get manga_discovery_status_releasing => 'In corso';
   @override
   String get manga_global_search_hint => 'Cerca in ogni fonte abilitata';
   @override
@@ -86687,8 +86551,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Database audio non disponibile. Seleziona di nuovo il file DB originale.';
   @override
@@ -89490,6 +89352,12 @@ class _StringsIt extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -94163,32 +94031,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_discovery_load_failed => '発見フィードを読み込めませんでした。';
   @override
-  String get manga_discovery_match_none => '有効なソースで一致するものが見つかりませんでした。';
-  @override
-  String get manga_discovery_match_running => '有効なソースでマッチング中…';
-  @override
-  String get manga_discovery_match_section => 'ソースから読む';
-  @override
-  String get manga_discovery_section_latest_finished => '最近完結';
-  @override
-  String get manga_discovery_section_popular => '人気';
-  @override
-  String get manga_discovery_section_top_rated => '高評価';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source}で人気';
   @override
   String get manga_discovery_sources_browse => 'ソースを閲覧';
-  @override
-  String get manga_discovery_status_cancelled => '打ち切り';
-  @override
-  String get manga_discovery_status_finished => '完結';
-  @override
-  String get manga_discovery_status_hiatus => '休載中';
-  @override
-  String get manga_discovery_status_not_yet_released => '未発売';
-  @override
-  String get manga_discovery_status_releasing => '連載中';
   @override
   String get manga_global_search_hint => 'すべてのソースを検索';
   @override
@@ -99672,8 +99518,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       '音声データベースを利用できません。元の DB ファイルを選択し直してください。';
   @override
@@ -102454,6 +102298,12 @@ class _StringsJa extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -107123,32 +106973,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_discovery_load_failed => '발견 피드를 불러올 수 없습니다.';
   @override
-  String get manga_discovery_match_none => '활성화된 소스에서 일치하는 항목을 찾을 수 없습니다.';
-  @override
-  String get manga_discovery_match_running => '활성화된 소스에서 매칭 중...';
-  @override
-  String get manga_discovery_match_section => '소스에서 읽기';
-  @override
-  String get manga_discovery_section_latest_finished => '최근 완결';
-  @override
-  String get manga_discovery_section_popular => '인기';
-  @override
-  String get manga_discovery_section_top_rated => '최고 평점';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source}에서 인기';
   @override
   String get manga_discovery_sources_browse => '소스 탐색';
-  @override
-  String get manga_discovery_status_cancelled => '취소됨';
-  @override
-  String get manga_discovery_status_finished => '완결';
-  @override
-  String get manga_discovery_status_hiatus => '휴재 중';
-  @override
-  String get manga_discovery_status_not_yet_released => '미출시';
-  @override
-  String get manga_discovery_status_releasing => '연재 중';
   @override
   String get manga_global_search_hint => '활성화된 모든 소스 검색';
   @override
@@ -112645,8 +112473,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       '음성 데이터베이스를 사용할 수 없습니다. 원본 DB 파일을 다시 선택하세요.';
   @override
@@ -115432,6 +115258,12 @@ class _StringsKo extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -120347,34 +120179,10 @@ class _StringsNl extends _StringsEn {
   String get manga_discovery_load_failed =>
       'Kon de ontdekkingsfeed niet laden.';
   @override
-  String get manga_discovery_match_none =>
-      'Geen match gevonden in ingeschakelde bronnen.';
-  @override
-  String get manga_discovery_match_running =>
-      'Matchen in je ingeschakelde bronnen...';
-  @override
-  String get manga_discovery_match_section => 'Lezen vanaf een bron';
-  @override
-  String get manga_discovery_section_latest_finished => 'Recent voltooid';
-  @override
-  String get manga_discovery_section_popular => 'Populair';
-  @override
-  String get manga_discovery_section_top_rated => 'Hoogst beoordeeld';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Populair op ${source}';
   @override
   String get manga_discovery_sources_browse => 'Door een bron bladeren';
-  @override
-  String get manga_discovery_status_cancelled => 'Geannuleerd';
-  @override
-  String get manga_discovery_status_finished => 'Voltooid';
-  @override
-  String get manga_discovery_status_hiatus => 'Onderbroken';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Nog niet uitgebracht';
-  @override
-  String get manga_discovery_status_releasing => 'Lopend';
   @override
   String get manga_global_search_hint => 'Doorzoek elke ingeschakelde bron';
   @override
@@ -126193,8 +126001,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Audiodatabase niet beschikbaar. Selecteer het oorspronkelijke DB-bestand opnieuw.';
   @override
@@ -128994,6 +128800,12 @@ class _StringsNl extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -133937,35 +133749,10 @@ class _StringsPtBr extends _StringsEn {
   String get manga_discovery_load_failed =>
       'Não foi possível carregar o feed de descoberta.';
   @override
-  String get manga_discovery_match_none =>
-      'Nenhuma correspondência encontrada nas fontes ativadas.';
-  @override
-  String get manga_discovery_match_running =>
-      'Correspondendo nas suas fontes ativadas...';
-  @override
-  String get manga_discovery_match_section => 'Ler de uma fonte';
-  @override
-  String get manga_discovery_section_latest_finished =>
-      'Concluídos recentemente';
-  @override
-  String get manga_discovery_section_popular => 'Popular';
-  @override
-  String get manga_discovery_section_top_rated => 'Mais bem avaliados';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Popular em ${source}';
   @override
   String get manga_discovery_sources_browse => 'Navegar em uma fonte';
-  @override
-  String get manga_discovery_status_cancelled => 'Cancelado';
-  @override
-  String get manga_discovery_status_finished => 'Concluído';
-  @override
-  String get manga_discovery_status_hiatus => 'Em hiato';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Ainda não lançado';
-  @override
-  String get manga_discovery_status_releasing => 'Em andamento';
   @override
   String get manga_global_search_hint => 'Buscar em todas as fontes ativadas';
   @override
@@ -139807,8 +139594,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Banco de dados de áudio indisponível. Selecione o arquivo DB original novamente.';
   @override
@@ -142610,6 +142395,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -147530,34 +147321,10 @@ class _StringsRu extends _StringsEn {
   String get manga_discovery_load_failed =>
       'Не удалось загрузить ленту обзора.';
   @override
-  String get manga_discovery_match_none =>
-      'Совпадений в включённых источниках не найдено.';
-  @override
-  String get manga_discovery_match_running =>
-      'Поиск совпадений в включённых источниках...';
-  @override
-  String get manga_discovery_match_section => 'Читать из источника';
-  @override
-  String get manga_discovery_section_latest_finished => 'Недавно завершённые';
-  @override
-  String get manga_discovery_section_popular => 'Популярное';
-  @override
-  String get manga_discovery_section_top_rated => 'Лучшие по оценкам';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Популярное на ${source}';
   @override
   String get manga_discovery_sources_browse => 'Просмотр источника';
-  @override
-  String get manga_discovery_status_cancelled => 'Отменено';
-  @override
-  String get manga_discovery_status_finished => 'Завершено';
-  @override
-  String get manga_discovery_status_hiatus => 'На паузе';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Ещё не выпущено';
-  @override
-  String get manga_discovery_status_releasing => 'Выходит';
   @override
   String get manga_global_search_hint => 'Поиск по всем включённым источникам';
   @override
@@ -153401,8 +153168,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'База аудиоданных недоступна. Выберите исходный файл DB ещё раз.';
   @override
@@ -156200,6 +155965,12 @@ class _StringsRu extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -161037,33 +160808,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_discovery_load_failed => 'ไม่สามารถโหลดฟีดค้นพบได้';
   @override
-  String get manga_discovery_match_none => 'ไม่พบผลลัพธ์ในแหล่งที่เปิดใช้งาน';
-  @override
-  String get manga_discovery_match_running =>
-      'กำลังจับคู่ในแหล่งที่เปิดใช้งาน...';
-  @override
-  String get manga_discovery_match_section => 'อ่านจากแหล่ง';
-  @override
-  String get manga_discovery_section_latest_finished => 'จบล่าสุด';
-  @override
-  String get manga_discovery_section_popular => 'ยอดนิยม';
-  @override
-  String get manga_discovery_section_top_rated => 'คะแนนสูงสุด';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'ยอดนิยมบน ${source}';
   @override
   String get manga_discovery_sources_browse => 'เรียกดูแหล่ง';
-  @override
-  String get manga_discovery_status_cancelled => 'ยกเลิก';
-  @override
-  String get manga_discovery_status_finished => 'จบแล้ว';
-  @override
-  String get manga_discovery_status_hiatus => 'พักชั่วคราว';
-  @override
-  String get manga_discovery_status_not_yet_released => 'ยังไม่เผยแพร่';
-  @override
-  String get manga_discovery_status_releasing => 'กำลังตีพิมพ์';
   @override
   String get manga_global_search_hint => 'ค้นหาทุกแหล่งที่เปิดใช้งาน';
   @override
@@ -166791,8 +166539,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'ไม่สามารถใช้ฐานข้อมูลเสียงได้ โปรดเลือกไฟล์ DB ต้นฉบับอีกครั้ง';
   @override
@@ -169586,6 +169332,12 @@ class _StringsTh extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -174485,34 +174237,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_discovery_load_failed => 'Keşif akışı yüklenemedi.';
   @override
-  String get manga_discovery_match_none =>
-      'Etkin kaynaklarda eşleşme bulunamadı.';
-  @override
-  String get manga_discovery_match_running =>
-      'Etkin kaynaklarınızda eşleştiriliyor...';
-  @override
-  String get manga_discovery_match_section => 'Bir kaynaktan oku';
-  @override
-  String get manga_discovery_section_latest_finished => 'Son tamamlananlar';
-  @override
-  String get manga_discovery_section_popular => 'Popüler';
-  @override
-  String get manga_discovery_section_top_rated => 'En yüksek puanlı';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source} üzerinde popüler';
   @override
   String get manga_discovery_sources_browse => 'Bir kaynağa göz at';
-  @override
-  String get manga_discovery_status_cancelled => 'İptal edildi';
-  @override
-  String get manga_discovery_status_finished => 'Tamamlandı';
-  @override
-  String get manga_discovery_status_hiatus => 'Ara verildi';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Henüz yayınlanmadı';
-  @override
-  String get manga_discovery_status_releasing => 'Devam ediyor';
   @override
   String get manga_global_search_hint => 'Etkin tüm kaynaklarda ara';
   @override
@@ -180293,8 +180021,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Ses veritabanı kullanılamıyor. Orijinal DB dosyasını yeniden seçin.';
   @override
@@ -183087,6 +182813,12 @@ class _StringsTr extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -187981,34 +187713,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_discovery_load_failed => 'Không thể tải nội dung khám phá.';
   @override
-  String get manga_discovery_match_none =>
-      'Không tìm thấy kết quả trong các nguồn đã bật.';
-  @override
-  String get manga_discovery_match_running =>
-      'Đang tìm trong các nguồn đã bật...';
-  @override
-  String get manga_discovery_match_section => 'Đọc từ nguồn';
-  @override
-  String get manga_discovery_section_latest_finished => 'Hoàn thành gần đây';
-  @override
-  String get manga_discovery_section_popular => 'Phổ biến';
-  @override
-  String get manga_discovery_section_top_rated => 'Đánh giá cao nhất';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       'Phổ biến trên ${source}';
   @override
   String get manga_discovery_sources_browse => 'Duyệt nguồn';
-  @override
-  String get manga_discovery_status_cancelled => 'Đã hủy';
-  @override
-  String get manga_discovery_status_finished => 'Hoàn thành';
-  @override
-  String get manga_discovery_status_hiatus => 'Tạm ngưng';
-  @override
-  String get manga_discovery_status_not_yet_released => 'Chưa phát hành';
-  @override
-  String get manga_discovery_status_releasing => 'Đang phát hành';
   @override
   String get manga_global_search_hint => 'Tìm kiếm mọi nguồn đã bật';
   @override
@@ -193762,8 +193470,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable =>
       'Không thể sử dụng cơ sở dữ liệu âm thanh. Vui lòng chọn lại tệp DB gốc.';
   @override
@@ -196559,6 +196265,12 @@ class _StringsVi extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 // Path: <root>
@@ -201051,32 +200763,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_discovery_load_failed => '发现内容加载失败。';
   @override
-  String get manga_discovery_match_none => '已启用来源中未找到匹配。';
-  @override
-  String get manga_discovery_match_running => '正在已启用来源中匹配…';
-  @override
-  String get manga_discovery_match_section => '来源匹配';
-  @override
-  String get manga_discovery_section_latest_finished => '最新完结';
-  @override
-  String get manga_discovery_section_popular => '热门';
-  @override
-  String get manga_discovery_section_top_rated => '高分';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source} · 热门';
   @override
   String get manga_discovery_sources_browse => '浏览来源';
-  @override
-  String get manga_discovery_status_cancelled => '已腰斩';
-  @override
-  String get manga_discovery_status_finished => '已完结';
-  @override
-  String get manga_discovery_status_hiatus => '休刊中';
-  @override
-  String get manga_discovery_status_not_yet_released => '未发售';
-  @override
-  String get manga_discovery_status_releasing => '连载中';
   @override
   String get manga_global_search_hint => '搜索所有已启用来源';
   @override
@@ -206356,8 +206046,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_work_field_backdrop => '背景图';
   @override
-  String get manga_discovery_section_publishing => '连载热门';
-  @override
   String get local_audio_file_unavailable => '发音库文件不可用，请重新选择原始 DB 文件。';
   @override
   String get local_audio_file_reselect => '重新选择发音库';
@@ -208883,6 +208571,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       '服务器无法抽取该字幕轨，改由播放器边播边解码（字幕随播放逐句出现，可查词）：${label}';
+  @override
+  String get manga_discovery_view_all => '查看全部';
+  @override
+  String get manga_discovery_empty_title => '还没有可发现的漫画来源';
+  @override
+  String get manga_discovery_empty_action => '管理来源';
 }
 
 // Path: <root>
@@ -213413,32 +213107,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_discovery_load_failed => '發現內容加載失敗。';
   @override
-  String get manga_discovery_match_none => '已啟用來源中未找到匹配。';
-  @override
-  String get manga_discovery_match_running => '正在已啟用來源中匹配…';
-  @override
-  String get manga_discovery_match_section => '來源匹配';
-  @override
-  String get manga_discovery_section_latest_finished => '最新完結';
-  @override
-  String get manga_discovery_section_popular => '熱門';
-  @override
-  String get manga_discovery_section_top_rated => '高分';
-  @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source} · 熱門';
   @override
   String get manga_discovery_sources_browse => '瀏覽來源';
-  @override
-  String get manga_discovery_status_cancelled => '已腰斬';
-  @override
-  String get manga_discovery_status_finished => '已完結';
-  @override
-  String get manga_discovery_status_hiatus => '休刊中';
-  @override
-  String get manga_discovery_status_not_yet_released => '未發售';
-  @override
-  String get manga_discovery_status_releasing => '連載中';
   @override
   String get manga_global_search_hint => '搜索所有已啟用來源';
   @override
@@ -218756,8 +218428,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_work_field_backdrop => 'Backdrop';
   @override
-  String get manga_discovery_section_publishing => 'Popular publishing manga';
-  @override
   String get local_audio_file_unavailable => '發音庫檔案無法使用，請重新選擇原始 DB 檔案。';
   @override
   String get local_audio_file_reselect => '重新選擇發音庫';
@@ -221530,6 +221200,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_subtitle_remote_player_decoded({required Object label}) =>
       'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+  @override
+  String get manga_discovery_view_all => 'View all';
+  @override
+  String get manga_discovery_empty_title => 'No manga sources to discover yet';
+  @override
+  String get manga_discovery_empty_action => 'Manage sources';
 }
 
 /// Flat map(s) containing all translations.
@@ -225733,32 +225409,10 @@ extension on _StringsEn {
         return 'Right to left';
       case 'manga_discovery_load_failed':
         return 'Couldn\'t load the discover feed.';
-      case 'manga_discovery_match_none':
-        return 'No match found in enabled sources.';
-      case 'manga_discovery_match_running':
-        return 'Matching in your enabled sources...';
-      case 'manga_discovery_match_section':
-        return 'Read from a source';
-      case 'manga_discovery_section_latest_finished':
-        return 'Recently completed';
-      case 'manga_discovery_section_popular':
-        return 'Popular';
-      case 'manga_discovery_section_top_rated':
-        return 'Top rated';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popular on ${source}';
       case 'manga_discovery_sources_browse':
         return 'Browse a source';
-      case 'manga_discovery_status_cancelled':
-        return 'Cancelled';
-      case 'manga_discovery_status_finished':
-        return 'Completed';
-      case 'manga_discovery_status_hiatus':
-        return 'On hiatus';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Not yet released';
-      case 'manga_discovery_status_releasing':
-        return 'Ongoing';
       case 'manga_global_search_hint':
         return 'Search every enabled source';
       case 'manga_global_search_no_sources':
@@ -230759,8 +230413,6 @@ extension on _StringsEn {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Audio database unavailable. Select the original DB file again.';
       case 'local_audio_file_reselect':
@@ -233078,6 +232730,12 @@ extension on _StringsEn {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -237278,32 +236936,10 @@ extension on _StringsAr {
         return 'من اليمين إلى اليسار';
       case 'manga_discovery_load_failed':
         return 'تعذّر تحميل موجز الاكتشاف.';
-      case 'manga_discovery_match_none':
-        return 'لم يتم العثور على تطابق في المصادر المُفعّلة.';
-      case 'manga_discovery_match_running':
-        return 'جارٍ المطابقة في مصادرك المُفعّلة...';
-      case 'manga_discovery_match_section':
-        return 'اقرأ من مصدر';
-      case 'manga_discovery_section_latest_finished':
-        return 'مكتمل مؤخراً';
-      case 'manga_discovery_section_popular':
-        return 'شائع';
-      case 'manga_discovery_section_top_rated':
-        return 'الأعلى تقييماً';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'شائع على ${source}';
       case 'manga_discovery_sources_browse':
         return 'تصفح مصدر';
-      case 'manga_discovery_status_cancelled':
-        return 'مُلغى';
-      case 'manga_discovery_status_finished':
-        return 'مكتمل';
-      case 'manga_discovery_status_hiatus':
-        return 'متوقف مؤقتاً';
-      case 'manga_discovery_status_not_yet_released':
-        return 'لم يصدر بعد';
-      case 'manga_discovery_status_releasing':
-        return 'مستمر';
       case 'manga_global_search_hint':
         return 'بحث في كل مصدر مُفعّل';
       case 'manga_global_search_no_sources':
@@ -242302,8 +241938,6 @@ extension on _StringsAr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'قاعدة بيانات الصوت غير متاحة. حدد ملف DB الأصلي مرة أخرى.';
       case 'local_audio_file_reselect':
@@ -244621,6 +244255,12 @@ extension on _StringsAr {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -248845,32 +248485,10 @@ extension on _StringsDe {
         return 'Rechts nach links';
       case 'manga_discovery_load_failed':
         return 'Der Entdecken-Feed konnte nicht geladen werden.';
-      case 'manga_discovery_match_none':
-        return 'Kein Treffer in aktivierten Quellen gefunden.';
-      case 'manga_discovery_match_running':
-        return 'Suche in Ihren aktivierten Quellen...';
-      case 'manga_discovery_match_section':
-        return 'Aus einer Quelle lesen';
-      case 'manga_discovery_section_latest_finished':
-        return 'Kürzlich abgeschlossen';
-      case 'manga_discovery_section_popular':
-        return 'Beliebt';
-      case 'manga_discovery_section_top_rated':
-        return 'Bestbewertet';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Beliebt auf ${source}';
       case 'manga_discovery_sources_browse':
         return 'Eine Quelle durchstöbern';
-      case 'manga_discovery_status_cancelled':
-        return 'Eingestellt';
-      case 'manga_discovery_status_finished':
-        return 'Abgeschlossen';
-      case 'manga_discovery_status_hiatus':
-        return 'Pausiert';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Noch nicht erschienen';
-      case 'manga_discovery_status_releasing':
-        return 'Laufend';
       case 'manga_global_search_hint':
         return 'Jede aktivierte Quelle durchsuchen';
       case 'manga_global_search_no_sources':
@@ -253894,8 +253512,6 @@ extension on _StringsDe {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Audiodatenbank nicht verfügbar. Wähle die ursprüngliche DB-Datei erneut aus.';
       case 'local_audio_file_reselect':
@@ -256213,6 +255829,12 @@ extension on _StringsDe {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -260429,32 +260051,10 @@ extension on _StringsEs {
         return 'Derecha a izquierda';
       case 'manga_discovery_load_failed':
         return 'No se pudo cargar el feed de descubrimiento.';
-      case 'manga_discovery_match_none':
-        return 'No se encontró coincidencia en las fuentes activas.';
-      case 'manga_discovery_match_running':
-        return 'Buscando en sus fuentes activas...';
-      case 'manga_discovery_match_section':
-        return 'Leer desde una fuente';
-      case 'manga_discovery_section_latest_finished':
-        return 'Completados recientemente';
-      case 'manga_discovery_section_popular':
-        return 'Popular';
-      case 'manga_discovery_section_top_rated':
-        return 'Mejor puntuados';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popular en ${source}';
       case 'manga_discovery_sources_browse':
         return 'Explorar una fuente';
-      case 'manga_discovery_status_cancelled':
-        return 'Cancelado';
-      case 'manga_discovery_status_finished':
-        return 'Completado';
-      case 'manga_discovery_status_hiatus':
-        return 'En pausa';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Aún no publicado';
-      case 'manga_discovery_status_releasing':
-        return 'En emisión';
       case 'manga_global_search_hint':
         return 'Buscar en todas las fuentes activas';
       case 'manga_global_search_no_sources':
@@ -265476,8 +265076,6 @@ extension on _StringsEs {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'La base de datos de audio no está disponible. Selecciona de nuevo el archivo DB original.';
       case 'local_audio_file_reselect':
@@ -267795,6 +267393,12 @@ extension on _StringsEs {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -272018,32 +271622,10 @@ extension on _StringsFr {
         return 'Droite à gauche';
       case 'manga_discovery_load_failed':
         return 'Impossible de charger le flux de découverte.';
-      case 'manga_discovery_match_none':
-        return 'Aucune correspondance trouvée dans les sources activées.';
-      case 'manga_discovery_match_running':
-        return 'Recherche dans vos sources activées…';
-      case 'manga_discovery_match_section':
-        return 'Lire depuis une source';
-      case 'manga_discovery_section_latest_finished':
-        return 'Terminés récemment';
-      case 'manga_discovery_section_popular':
-        return 'Populaires';
-      case 'manga_discovery_section_top_rated':
-        return 'Mieux notés';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Populaire sur ${source}';
       case 'manga_discovery_sources_browse':
         return 'Parcourir une source';
-      case 'manga_discovery_status_cancelled':
-        return 'Annulé';
-      case 'manga_discovery_status_finished':
-        return 'Terminé';
-      case 'manga_discovery_status_hiatus':
-        return 'En pause';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Pas encore sorti';
-      case 'manga_discovery_status_releasing':
-        return 'En cours';
       case 'manga_global_search_hint':
         return 'Rechercher dans chaque source activée';
       case 'manga_global_search_no_sources':
@@ -277066,8 +276648,6 @@ extension on _StringsFr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Base de données audio indisponible. Sélectionnez à nouveau le fichier DB d’origine.';
       case 'local_audio_file_reselect':
@@ -279385,6 +278965,12 @@ extension on _StringsFr {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -283596,32 +283182,10 @@ extension on _StringsId {
         return 'Kanan ke kiri';
       case 'manga_discovery_load_failed':
         return 'Tidak bisa memuat umpan jelajahi.';
-      case 'manga_discovery_match_none':
-        return 'Tidak ditemukan kecocokan di sumber yang aktif.';
-      case 'manga_discovery_match_running':
-        return 'Mencocokkan di sumber Anda yang aktif...';
-      case 'manga_discovery_match_section':
-        return 'Baca dari sumber';
-      case 'manga_discovery_section_latest_finished':
-        return 'Baru selesai';
-      case 'manga_discovery_section_popular':
-        return 'Populer';
-      case 'manga_discovery_section_top_rated':
-        return 'Rating tertinggi';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Populer di ${source}';
       case 'manga_discovery_sources_browse':
         return 'Jelajahi sumber';
-      case 'manga_discovery_status_cancelled':
-        return 'Dibatalkan';
-      case 'manga_discovery_status_finished':
-        return 'Selesai';
-      case 'manga_discovery_status_hiatus':
-        return 'Hiatus';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Belum dirilis';
-      case 'manga_discovery_status_releasing':
-        return 'Berlanjut';
       case 'manga_global_search_hint':
         return 'Cari setiap sumber yang aktif';
       case 'manga_global_search_no_sources':
@@ -288626,8 +288190,6 @@ extension on _StringsId {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Basis data audio tidak tersedia. Pilih kembali file DB asli.';
       case 'local_audio_file_reselect':
@@ -290945,6 +290507,12 @@ extension on _StringsId {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -295162,32 +294730,10 @@ extension on _StringsIt {
         return 'Da destra a sinistra';
       case 'manga_discovery_load_failed':
         return 'Impossibile caricare il feed di scoperta.';
-      case 'manga_discovery_match_none':
-        return 'Nessuna corrispondenza nelle fonti abilitate.';
-      case 'manga_discovery_match_running':
-        return 'Ricerca nelle fonti abilitate...';
-      case 'manga_discovery_match_section':
-        return 'Leggi da una fonte';
-      case 'manga_discovery_section_latest_finished':
-        return 'Completati di recente';
-      case 'manga_discovery_section_popular':
-        return 'Popolari';
-      case 'manga_discovery_section_top_rated':
-        return 'Più votati';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popolari su ${source}';
       case 'manga_discovery_sources_browse':
         return 'Sfoglia una fonte';
-      case 'manga_discovery_status_cancelled':
-        return 'Annullato';
-      case 'manga_discovery_status_finished':
-        return 'Completato';
-      case 'manga_discovery_status_hiatus':
-        return 'In pausa';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Non ancora pubblicato';
-      case 'manga_discovery_status_releasing':
-        return 'In corso';
       case 'manga_global_search_hint':
         return 'Cerca in ogni fonte abilitata';
       case 'manga_global_search_no_sources':
@@ -300209,8 +299755,6 @@ extension on _StringsIt {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Database audio non disponibile. Seleziona di nuovo il file DB originale.';
       case 'local_audio_file_reselect':
@@ -302528,6 +302072,12 @@ extension on _StringsIt {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -306714,32 +306264,10 @@ extension on _StringsJa {
         return '右から左';
       case 'manga_discovery_load_failed':
         return '発見フィードを読み込めませんでした。';
-      case 'manga_discovery_match_none':
-        return '有効なソースで一致するものが見つかりませんでした。';
-      case 'manga_discovery_match_running':
-        return '有効なソースでマッチング中…';
-      case 'manga_discovery_match_section':
-        return 'ソースから読む';
-      case 'manga_discovery_section_latest_finished':
-        return '最近完結';
-      case 'manga_discovery_section_popular':
-        return '人気';
-      case 'manga_discovery_section_top_rated':
-        return '高評価';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source}で人気';
       case 'manga_discovery_sources_browse':
         return 'ソースを閲覧';
-      case 'manga_discovery_status_cancelled':
-        return '打ち切り';
-      case 'manga_discovery_status_finished':
-        return '完結';
-      case 'manga_discovery_status_hiatus':
-        return '休載中';
-      case 'manga_discovery_status_not_yet_released':
-        return '未発売';
-      case 'manga_discovery_status_releasing':
-        return '連載中';
       case 'manga_global_search_hint':
         return 'すべてのソースを検索';
       case 'manga_global_search_no_sources':
@@ -311716,8 +311244,6 @@ extension on _StringsJa {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return '音声データベースを利用できません。元の DB ファイルを選択し直してください。';
       case 'local_audio_file_reselect':
@@ -314034,6 +313560,12 @@ extension on _StringsJa {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -318221,32 +317753,10 @@ extension on _StringsKo {
         return '오른쪽에서 왼쪽';
       case 'manga_discovery_load_failed':
         return '발견 피드를 불러올 수 없습니다.';
-      case 'manga_discovery_match_none':
-        return '활성화된 소스에서 일치하는 항목을 찾을 수 없습니다.';
-      case 'manga_discovery_match_running':
-        return '활성화된 소스에서 매칭 중...';
-      case 'manga_discovery_match_section':
-        return '소스에서 읽기';
-      case 'manga_discovery_section_latest_finished':
-        return '최근 완결';
-      case 'manga_discovery_section_popular':
-        return '인기';
-      case 'manga_discovery_section_top_rated':
-        return '최고 평점';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source}에서 인기';
       case 'manga_discovery_sources_browse':
         return '소스 탐색';
-      case 'manga_discovery_status_cancelled':
-        return '취소됨';
-      case 'manga_discovery_status_finished':
-        return '완결';
-      case 'manga_discovery_status_hiatus':
-        return '휴재 중';
-      case 'manga_discovery_status_not_yet_released':
-        return '미출시';
-      case 'manga_discovery_status_releasing':
-        return '연재 중';
       case 'manga_global_search_hint':
         return '활성화된 모든 소스 검색';
       case 'manga_global_search_no_sources':
@@ -323227,8 +322737,6 @@ extension on _StringsKo {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return '음성 데이터베이스를 사용할 수 없습니다. 원본 DB 파일을 다시 선택하세요.';
       case 'local_audio_file_reselect':
@@ -325546,6 +325054,12 @@ extension on _StringsKo {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -329761,32 +329275,10 @@ extension on _StringsNl {
         return 'Rechts naar links';
       case 'manga_discovery_load_failed':
         return 'Kon de ontdekkingsfeed niet laden.';
-      case 'manga_discovery_match_none':
-        return 'Geen match gevonden in ingeschakelde bronnen.';
-      case 'manga_discovery_match_running':
-        return 'Matchen in je ingeschakelde bronnen...';
-      case 'manga_discovery_match_section':
-        return 'Lezen vanaf een bron';
-      case 'manga_discovery_section_latest_finished':
-        return 'Recent voltooid';
-      case 'manga_discovery_section_popular':
-        return 'Populair';
-      case 'manga_discovery_section_top_rated':
-        return 'Hoogst beoordeeld';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Populair op ${source}';
       case 'manga_discovery_sources_browse':
         return 'Door een bron bladeren';
-      case 'manga_discovery_status_cancelled':
-        return 'Geannuleerd';
-      case 'manga_discovery_status_finished':
-        return 'Voltooid';
-      case 'manga_discovery_status_hiatus':
-        return 'Onderbroken';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Nog niet uitgebracht';
-      case 'manga_discovery_status_releasing':
-        return 'Lopend';
       case 'manga_global_search_hint':
         return 'Doorzoek elke ingeschakelde bron';
       case 'manga_global_search_no_sources':
@@ -334805,8 +334297,6 @@ extension on _StringsNl {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Audiodatabase niet beschikbaar. Selecteer het oorspronkelijke DB-bestand opnieuw.';
       case 'local_audio_file_reselect':
@@ -337124,6 +336614,12 @@ extension on _StringsNl {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -341339,32 +340835,10 @@ extension on _StringsPtBr {
         return 'Direita para esquerda';
       case 'manga_discovery_load_failed':
         return 'Não foi possível carregar o feed de descoberta.';
-      case 'manga_discovery_match_none':
-        return 'Nenhuma correspondência encontrada nas fontes ativadas.';
-      case 'manga_discovery_match_running':
-        return 'Correspondendo nas suas fontes ativadas...';
-      case 'manga_discovery_match_section':
-        return 'Ler de uma fonte';
-      case 'manga_discovery_section_latest_finished':
-        return 'Concluídos recentemente';
-      case 'manga_discovery_section_popular':
-        return 'Popular';
-      case 'manga_discovery_section_top_rated':
-        return 'Mais bem avaliados';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popular em ${source}';
       case 'manga_discovery_sources_browse':
         return 'Navegar em uma fonte';
-      case 'manga_discovery_status_cancelled':
-        return 'Cancelado';
-      case 'manga_discovery_status_finished':
-        return 'Concluído';
-      case 'manga_discovery_status_hiatus':
-        return 'Em hiato';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Ainda não lançado';
-      case 'manga_discovery_status_releasing':
-        return 'Em andamento';
       case 'manga_global_search_hint':
         return 'Buscar em todas as fontes ativadas';
       case 'manga_global_search_no_sources':
@@ -346378,8 +345852,6 @@ extension on _StringsPtBr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Banco de dados de áudio indisponível. Selecione o arquivo DB original novamente.';
       case 'local_audio_file_reselect':
@@ -348697,6 +348169,12 @@ extension on _StringsPtBr {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -352919,32 +352397,10 @@ extension on _StringsRu {
         return 'Справа налево';
       case 'manga_discovery_load_failed':
         return 'Не удалось загрузить ленту обзора.';
-      case 'manga_discovery_match_none':
-        return 'Совпадений в включённых источниках не найдено.';
-      case 'manga_discovery_match_running':
-        return 'Поиск совпадений в включённых источниках...';
-      case 'manga_discovery_match_section':
-        return 'Читать из источника';
-      case 'manga_discovery_section_latest_finished':
-        return 'Недавно завершённые';
-      case 'manga_discovery_section_popular':
-        return 'Популярное';
-      case 'manga_discovery_section_top_rated':
-        return 'Лучшие по оценкам';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Популярное на ${source}';
       case 'manga_discovery_sources_browse':
         return 'Просмотр источника';
-      case 'manga_discovery_status_cancelled':
-        return 'Отменено';
-      case 'manga_discovery_status_finished':
-        return 'Завершено';
-      case 'manga_discovery_status_hiatus':
-        return 'На паузе';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Ещё не выпущено';
-      case 'manga_discovery_status_releasing':
-        return 'Выходит';
       case 'manga_global_search_hint':
         return 'Поиск по всем включённым источникам';
       case 'manga_global_search_no_sources':
@@ -357957,8 +357413,6 @@ extension on _StringsRu {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'База аудиоданных недоступна. Выберите исходный файл DB ещё раз.';
       case 'local_audio_file_reselect':
@@ -360276,6 +359730,12 @@ extension on _StringsRu {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -364480,32 +363940,10 @@ extension on _StringsTh {
         return 'ขวาไปซ้าย';
       case 'manga_discovery_load_failed':
         return 'ไม่สามารถโหลดฟีดค้นพบได้';
-      case 'manga_discovery_match_none':
-        return 'ไม่พบผลลัพธ์ในแหล่งที่เปิดใช้งาน';
-      case 'manga_discovery_match_running':
-        return 'กำลังจับคู่ในแหล่งที่เปิดใช้งาน...';
-      case 'manga_discovery_match_section':
-        return 'อ่านจากแหล่ง';
-      case 'manga_discovery_section_latest_finished':
-        return 'จบล่าสุด';
-      case 'manga_discovery_section_popular':
-        return 'ยอดนิยม';
-      case 'manga_discovery_section_top_rated':
-        return 'คะแนนสูงสุด';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'ยอดนิยมบน ${source}';
       case 'manga_discovery_sources_browse':
         return 'เรียกดูแหล่ง';
-      case 'manga_discovery_status_cancelled':
-        return 'ยกเลิก';
-      case 'manga_discovery_status_finished':
-        return 'จบแล้ว';
-      case 'manga_discovery_status_hiatus':
-        return 'พักชั่วคราว';
-      case 'manga_discovery_status_not_yet_released':
-        return 'ยังไม่เผยแพร่';
-      case 'manga_discovery_status_releasing':
-        return 'กำลังตีพิมพ์';
       case 'manga_global_search_hint':
         return 'ค้นหาทุกแหล่งที่เปิดใช้งาน';
       case 'manga_global_search_no_sources':
@@ -369505,8 +368943,6 @@ extension on _StringsTh {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'ไม่สามารถใช้ฐานข้อมูลเสียงได้ โปรดเลือกไฟล์ DB ต้นฉบับอีกครั้ง';
       case 'local_audio_file_reselect':
@@ -371824,6 +371260,12 @@ extension on _StringsTh {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -376036,32 +375478,10 @@ extension on _StringsTr {
         return 'Sağdan sola';
       case 'manga_discovery_load_failed':
         return 'Keşif akışı yüklenemedi.';
-      case 'manga_discovery_match_none':
-        return 'Etkin kaynaklarda eşleşme bulunamadı.';
-      case 'manga_discovery_match_running':
-        return 'Etkin kaynaklarınızda eşleştiriliyor...';
-      case 'manga_discovery_match_section':
-        return 'Bir kaynaktan oku';
-      case 'manga_discovery_section_latest_finished':
-        return 'Son tamamlananlar';
-      case 'manga_discovery_section_popular':
-        return 'Popüler';
-      case 'manga_discovery_section_top_rated':
-        return 'En yüksek puanlı';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source} üzerinde popüler';
       case 'manga_discovery_sources_browse':
         return 'Bir kaynağa göz at';
-      case 'manga_discovery_status_cancelled':
-        return 'İptal edildi';
-      case 'manga_discovery_status_finished':
-        return 'Tamamlandı';
-      case 'manga_discovery_status_hiatus':
-        return 'Ara verildi';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Henüz yayınlanmadı';
-      case 'manga_discovery_status_releasing':
-        return 'Devam ediyor';
       case 'manga_global_search_hint':
         return 'Etkin tüm kaynaklarda ara';
       case 'manga_global_search_no_sources':
@@ -381069,8 +380489,6 @@ extension on _StringsTr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Ses veritabanı kullanılamıyor. Orijinal DB dosyasını yeniden seçin.';
       case 'local_audio_file_reselect':
@@ -383388,6 +382806,12 @@ extension on _StringsTr {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -387598,32 +387022,10 @@ extension on _StringsVi {
         return 'Phải sang trái';
       case 'manga_discovery_load_failed':
         return 'Không thể tải nội dung khám phá.';
-      case 'manga_discovery_match_none':
-        return 'Không tìm thấy kết quả trong các nguồn đã bật.';
-      case 'manga_discovery_match_running':
-        return 'Đang tìm trong các nguồn đã bật...';
-      case 'manga_discovery_match_section':
-        return 'Đọc từ nguồn';
-      case 'manga_discovery_section_latest_finished':
-        return 'Hoàn thành gần đây';
-      case 'manga_discovery_section_popular':
-        return 'Phổ biến';
-      case 'manga_discovery_section_top_rated':
-        return 'Đánh giá cao nhất';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Phổ biến trên ${source}';
       case 'manga_discovery_sources_browse':
         return 'Duyệt nguồn';
-      case 'manga_discovery_status_cancelled':
-        return 'Đã hủy';
-      case 'manga_discovery_status_finished':
-        return 'Hoàn thành';
-      case 'manga_discovery_status_hiatus':
-        return 'Tạm ngưng';
-      case 'manga_discovery_status_not_yet_released':
-        return 'Chưa phát hành';
-      case 'manga_discovery_status_releasing':
-        return 'Đang phát hành';
       case 'manga_global_search_hint':
         return 'Tìm kiếm mọi nguồn đã bật';
       case 'manga_global_search_no_sources':
@@ -392627,8 +392029,6 @@ extension on _StringsVi {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return 'Không thể sử dụng cơ sở dữ liệu âm thanh. Vui lòng chọn lại tệp DB gốc.';
       case 'local_audio_file_reselect':
@@ -394946,6 +394346,12 @@ extension on _StringsVi {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
@@ -399116,32 +398522,10 @@ extension on _StringsZhCn {
         return '从右到左';
       case 'manga_discovery_load_failed':
         return '发现内容加载失败。';
-      case 'manga_discovery_match_none':
-        return '已启用来源中未找到匹配。';
-      case 'manga_discovery_match_running':
-        return '正在已启用来源中匹配…';
-      case 'manga_discovery_match_section':
-        return '来源匹配';
-      case 'manga_discovery_section_latest_finished':
-        return '最新完结';
-      case 'manga_discovery_section_popular':
-        return '热门';
-      case 'manga_discovery_section_top_rated':
-        return '高分';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source} · 热门';
       case 'manga_discovery_sources_browse':
         return '浏览来源';
-      case 'manga_discovery_status_cancelled':
-        return '已腰斩';
-      case 'manga_discovery_status_finished':
-        return '已完结';
-      case 'manga_discovery_status_hiatus':
-        return '休刊中';
-      case 'manga_discovery_status_not_yet_released':
-        return '未发售';
-      case 'manga_discovery_status_releasing':
-        return '连载中';
       case 'manga_global_search_hint':
         return '搜索所有已启用来源';
       case 'manga_global_search_no_sources':
@@ -404101,8 +403485,6 @@ extension on _StringsZhCn {
         return '封面';
       case 'video_work_field_backdrop':
         return '背景图';
-      case 'manga_discovery_section_publishing':
-        return '连载热门';
       case 'local_audio_file_unavailable':
         return '发音库文件不可用，请重新选择原始 DB 文件。';
       case 'local_audio_file_reselect':
@@ -406394,6 +405776,12 @@ extension on _StringsZhCn {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             '服务器无法抽取该字幕轨，改由播放器边播边解码（字幕随播放逐句出现，可查词）：${label}';
+      case 'manga_discovery_view_all':
+        return '查看全部';
+      case 'manga_discovery_empty_title':
+        return '还没有可发现的漫画来源';
+      case 'manga_discovery_empty_action':
+        return '管理来源';
       default:
         return null;
     }
@@ -410570,32 +409958,10 @@ extension on _StringsZhHk {
         return '從右到左';
       case 'manga_discovery_load_failed':
         return '發現內容加載失敗。';
-      case 'manga_discovery_match_none':
-        return '已啟用來源中未找到匹配。';
-      case 'manga_discovery_match_running':
-        return '正在已啟用來源中匹配…';
-      case 'manga_discovery_match_section':
-        return '來源匹配';
-      case 'manga_discovery_section_latest_finished':
-        return '最新完結';
-      case 'manga_discovery_section_popular':
-        return '熱門';
-      case 'manga_discovery_section_top_rated':
-        return '高分';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source} · 熱門';
       case 'manga_discovery_sources_browse':
         return '瀏覽來源';
-      case 'manga_discovery_status_cancelled':
-        return '已腰斬';
-      case 'manga_discovery_status_finished':
-        return '已完結';
-      case 'manga_discovery_status_hiatus':
-        return '休刊中';
-      case 'manga_discovery_status_not_yet_released':
-        return '未發售';
-      case 'manga_discovery_status_releasing':
-        return '連載中';
       case 'manga_global_search_hint':
         return '搜索所有已啟用來源';
       case 'manga_global_search_no_sources':
@@ -415560,8 +414926,6 @@ extension on _StringsZhHk {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
-      case 'manga_discovery_section_publishing':
-        return 'Popular publishing manga';
       case 'local_audio_file_unavailable':
         return '發音庫檔案無法使用，請重新選擇原始 DB 檔案。';
       case 'local_audio_file_reselect':
@@ -417879,6 +417243,12 @@ extension on _StringsZhHk {
       case 'video_subtitle_remote_player_decoded':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player decodes it during playback, so lines appear as you watch: ${label}';
+      case 'manga_discovery_view_all':
+        return 'View all';
+      case 'manga_discovery_empty_title':
+        return 'No manga sources to discover yet';
+      case 'manga_discovery_empty_action':
+        return 'Manage sources';
       default:
         return null;
     }
