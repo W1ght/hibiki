@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92905 (5465 per locale)
+/// Strings: 92973 (5469 per locale)
 ///
-/// Built on 2026-09-23 at 15:22 UTC
+/// Built on 2026-09-25 at 10:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7734,6 +7734,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_cuda_desc =>
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -20756,6 +20763,17 @@ class _StringsAr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -34019,6 +34037,17 @@ class _StringsDe extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -47333,6 +47362,17 @@ class _StringsEs extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -60685,6 +60725,17 @@ class _StringsFr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -73827,6 +73878,17 @@ class _StringsId extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -87070,6 +87132,17 @@ class _StringsIt extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -99674,6 +99747,16 @@ class _StringsJa extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture => 'スワイプで明るさ調整';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      '画面の左半分を上下にスワイプして画面の明るさを変更します。オフにするとシステムの明るさスライダーを使います';
+  @override
+  String get video_setting_volume_swipe_gesture => 'スワイプで音量調整';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      '画面の右半分を上下にスワイプして音量を変更します。オフにすると本体の音量ボタンを使います';
 }
 
 // Path: <root>
@@ -112288,6 +112371,17 @@ class _StringsKo extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -125485,6 +125579,17 @@ class _StringsNl extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -138736,6 +138841,17 @@ class _StringsPtBr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -151961,6 +152077,17 @@ class _StringsRu extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -164982,6 +165109,17 @@ class _StringsTh extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -178118,6 +178256,17 @@ class _StringsTr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -191225,6 +191374,17 @@ class _StringsVi extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
 }
 
 // Path: <root>
@@ -203216,6 +203376,16 @@ class _StringsZhCn extends _StringsEn {
       '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
   @override
   String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
+  @override
+  String get video_setting_brightness_swipe_gesture => '竖滑调节亮度';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      '在画面左半边上下滑动调节屏幕亮度；关闭后改用系统亮度条';
+  @override
+  String get video_setting_volume_swipe_gesture => '竖滑调节音量';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      '在画面右半边上下滑动调节音量；关闭后改用实体音量键';
 }
 
 // Path: <root>
@@ -215502,6 +215672,16 @@ class _StringsZhHk extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get video_setting_brightness_swipe_gesture => '垂直滑動調節亮度';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      '在畫面左半邊上下滑動調節螢幕亮度；關閉後改用系統亮度條';
+  @override
+  String get video_setting_volume_swipe_gesture => '垂直滑動調節音量';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      '在畫面右半邊上下滑動調節音量；關閉後改用實體音量鍵';
 }
 
 /// Flat map(s) containing all translations.
@@ -226770,6 +226950,14 @@ extension on _StringsEn {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -238033,6 +238221,14 @@ extension on _StringsAr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -249345,6 +249541,14 @@ extension on _StringsDe {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -260647,6 +260851,14 @@ extension on _StringsEs {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -271957,6 +272169,14 @@ extension on _StringsFr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -283237,6 +283457,14 @@ extension on _StringsId {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -294540,6 +294768,14 @@ extension on _StringsIt {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -305767,6 +306003,14 @@ extension on _StringsJa {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'スワイプで明るさ調整';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return '画面の左半分を上下にスワイプして画面の明るさを変更します。オフにするとシステムの明るさスライダーを使います';
+      case 'video_setting_volume_swipe_gesture':
+        return 'スワイプで音量調整';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return '画面の右半分を上下にスワイプして音量を変更します。オフにすると本体の音量ボタンを使います';
       default:
         return null;
     }
@@ -316999,6 +317243,14 @@ extension on _StringsKo {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -328297,6 +328549,14 @@ extension on _StringsNl {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -339590,6 +339850,14 @@ extension on _StringsPtBr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -350889,6 +351157,14 @@ extension on _StringsRu {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -362157,6 +362433,14 @@ extension on _StringsTh {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -373441,6 +373725,14 @@ extension on _StringsTr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -384719,6 +385011,14 @@ extension on _StringsVi {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
       default:
         return null;
     }
@@ -395889,6 +396189,14 @@ extension on _StringsZhCn {
         return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
       case 'manga_ocr_runtime_installing':
         return '正在安装本地 OCR 引擎…';
+      case 'video_setting_brightness_swipe_gesture':
+        return '竖滑调节亮度';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return '在画面左半边上下滑动调节屏幕亮度；关闭后改用系统亮度条';
+      case 'video_setting_volume_swipe_gesture':
+        return '竖滑调节音量';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return '在画面右半边上下滑动调节音量；关闭后改用实体音量键';
       default:
         return null;
     }
@@ -407094,6 +407402,14 @@ extension on _StringsZhHk {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'video_setting_brightness_swipe_gesture':
+        return '垂直滑動調節亮度';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return '在畫面左半邊上下滑動調節螢幕亮度；關閉後改用系統亮度條';
+      case 'video_setting_volume_swipe_gesture':
+        return '垂直滑動調節音量';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return '在畫面右半邊上下滑動調節音量；關閉後改用實體音量鍵';
       default:
         return null;
     }
