@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92905 (5465 per locale)
+/// Strings: 92973 (5469 per locale)
 ///
-/// Built on 2026-09-23 at 15:22 UTC
+/// Built on 2026-09-25 at 10:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7734,6 +7734,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_cuda_desc =>
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -20756,6 +20762,16 @@ class _StringsAr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -34019,6 +34035,16 @@ class _StringsDe extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -47333,6 +47359,16 @@ class _StringsEs extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -60685,6 +60721,16 @@ class _StringsFr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -73827,6 +73873,16 @@ class _StringsId extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -87070,6 +87126,16 @@ class _StringsIt extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -99674,6 +99740,16 @@ class _StringsJa extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -112288,6 +112364,16 @@ class _StringsKo extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -125485,6 +125571,16 @@ class _StringsNl extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -138736,6 +138832,16 @@ class _StringsPtBr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -151961,6 +152067,16 @@ class _StringsRu extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -164982,6 +165098,16 @@ class _StringsTh extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -178118,6 +178244,16 @@ class _StringsTr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -191225,6 +191361,16 @@ class _StringsVi extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 // Path: <root>
@@ -203216,6 +203362,16 @@ class _StringsZhCn extends _StringsEn {
       '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
   @override
   String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
+  @override
+  String get anki_backup_import => '导入 Anki 备份用于查重';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '已导入 ${count} 个词。从 AnkiMobile 导出 .colpkg 或 .apkg 备份后在这里导入，查词即可认出 Anki 里已有的卡；建议不时重新导入。';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      '已从 Anki 备份导入 ${count} 个词';
+  @override
+  String get anki_backup_import_failed => '无法读取这个 Anki 备份';
 }
 
 // Path: <root>
@@ -215502,6 +215658,16 @@ class _StringsZhHk extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get anki_backup_import => 'Import Anki backup for duplicate check';
+  @override
+  String anki_backup_import_hint({required Object count}) =>
+      '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+  @override
+  String anki_backup_import_done({required Object count}) =>
+      'Imported ${count} words from the Anki backup';
+  @override
+  String get anki_backup_import_failed => 'Could not read this Anki backup';
 }
 
 /// Flat map(s) containing all translations.
@@ -226770,6 +226936,16 @@ extension on _StringsEn {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -238033,6 +238209,16 @@ extension on _StringsAr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -249345,6 +249531,16 @@ extension on _StringsDe {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -260647,6 +260843,16 @@ extension on _StringsEs {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -271957,6 +272163,16 @@ extension on _StringsFr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -283237,6 +283453,16 @@ extension on _StringsId {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -294540,6 +294766,16 @@ extension on _StringsIt {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -305767,6 +306003,16 @@ extension on _StringsJa {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -316999,6 +317245,16 @@ extension on _StringsKo {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -328297,6 +328553,16 @@ extension on _StringsNl {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -339590,6 +339856,16 @@ extension on _StringsPtBr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -350889,6 +351165,16 @@ extension on _StringsRu {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -362157,6 +362443,16 @@ extension on _StringsTh {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -373441,6 +373737,16 @@ extension on _StringsTr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -384719,6 +385025,16 @@ extension on _StringsVi {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
@@ -395889,6 +396205,15 @@ extension on _StringsZhCn {
         return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
       case 'manga_ocr_runtime_installing':
         return '正在安装本地 OCR 引擎…';
+      case 'anki_backup_import':
+        return '导入 Anki 备份用于查重';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '已导入 ${count} 个词。从 AnkiMobile 导出 .colpkg 或 .apkg 备份后在这里导入，查词即可认出 Anki 里已有的卡；建议不时重新导入。';
+      case 'anki_backup_import_done':
+        return ({required Object count}) => '已从 Anki 备份导入 ${count} 个词';
+      case 'anki_backup_import_failed':
+        return '无法读取这个 Anki 备份';
       default:
         return null;
     }
@@ -407094,6 +407419,16 @@ extension on _StringsZhHk {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'anki_backup_import':
+        return 'Import Anki backup for duplicate check';
+      case 'anki_backup_import_hint':
+        return ({required Object count}) =>
+            '${count} words imported. Export a .colpkg or .apkg backup from AnkiMobile and import it here so lookups recognize cards already in Anki. Re-import now and then to stay current.';
+      case 'anki_backup_import_done':
+        return ({required Object count}) =>
+            'Imported ${count} words from the Anki backup';
+      case 'anki_backup_import_failed':
+        return 'Could not read this Anki backup';
       default:
         return null;
     }
