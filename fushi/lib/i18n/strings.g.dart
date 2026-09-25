@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95166 (5598 per locale)
+/// Strings: 95183 (5599 per locale)
 ///
-/// Built on 2026-09-25 at 14:39 UTC
+/// Built on 2026-09-25 at 16:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7962,6 +7962,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get novel_status_publishing_finished => 'Publishing finished';
   String get novel_status_cancelled => 'Cancelled';
   String get novel_status_on_hiatus => 'On hiatus';
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -21346,6 +21348,9 @@ class _StringsAr extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -34971,6 +34976,9 @@ class _StringsDe extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -48647,6 +48655,9 @@ class _StringsEs extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -62361,6 +62372,9 @@ class _StringsFr extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -75865,6 +75879,9 @@ class _StringsId extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -89470,6 +89487,9 @@ class _StringsIt extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -102431,6 +102451,9 @@ class _StringsJa extends _StringsEn {
   String get novel_status_cancelled => '打ち切り';
   @override
   String get novel_status_on_hiatus => '休載中';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      '用語集（最初の ${count} 件）';
 }
 
 // Path: <root>
@@ -115406,6 +115429,9 @@ class _StringsKo extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -128965,6 +128991,9 @@ class _StringsNl extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -142578,6 +142607,9 @@ class _StringsPtBr extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -156165,6 +156197,9 @@ class _StringsRu extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -169548,6 +169583,9 @@ class _StringsTh extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -183046,6 +183084,9 @@ class _StringsTr extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -196515,6 +196556,9 @@ class _StringsVi extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      'Glossary (first ${count})';
 }
 
 // Path: <root>
@@ -208836,6 +208880,9 @@ class _StringsZhCn extends _StringsEn {
   String get novel_status_cancelled => '已中止';
   @override
   String get novel_status_on_hiatus => '停更中';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      '释义（前 ${count} 条）';
 }
 
 // Path: <root>
@@ -221480,6 +221527,9 @@ class _StringsZhHk extends _StringsEn {
   String get novel_status_cancelled => 'Cancelled';
   @override
   String get novel_status_on_hiatus => 'On hiatus';
+  @override
+  String handlebar_glossary_first_n({required Object count}) =>
+      '釋義（前 ${count} 條）';
 }
 
 /// Flat map(s) containing all translations.
@@ -233026,6 +233076,8 @@ extension on _StringsEn {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -244567,6 +244619,8 @@ extension on _StringsAr {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -256157,6 +256211,8 @@ extension on _StringsDe {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -267737,6 +267793,8 @@ extension on _StringsEs {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -279325,6 +279383,8 @@ extension on _StringsFr {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -290883,6 +290943,8 @@ extension on _StringsId {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -302464,6 +302526,8 @@ extension on _StringsIt {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -313968,6 +314032,8 @@ extension on _StringsJa {
         return '打ち切り';
       case 'novel_status_on_hiatus':
         return '休載中';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => '用語集（最初の ${count} 件）';
       default:
         return null;
     }
@@ -325478,6 +325544,8 @@ extension on _StringsKo {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -337054,6 +337122,8 @@ extension on _StringsNl {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -348625,6 +348695,8 @@ extension on _StringsPtBr {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -360202,6 +360274,8 @@ extension on _StringsRu {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -371748,6 +371822,8 @@ extension on _StringsTh {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -383310,6 +383386,8 @@ extension on _StringsTr {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -394866,6 +394944,8 @@ extension on _StringsVi {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => 'Glossary (first ${count})';
       default:
         return null;
     }
@@ -406312,6 +406392,8 @@ extension on _StringsZhCn {
         return '已中止';
       case 'novel_status_on_hiatus':
         return '停更中';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => '释义（前 ${count} 条）';
       default:
         return null;
     }
@@ -417795,6 +417877,8 @@ extension on _StringsZhHk {
         return 'Cancelled';
       case 'novel_status_on_hiatus':
         return 'On hiatus';
+      case 'handlebar_glossary_first_n':
+        return ({required Object count}) => '釋義（前 ${count} 條）';
       default:
         return null;
     }
