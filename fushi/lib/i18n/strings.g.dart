@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 93177 (5481 per locale)
+/// Strings: 93687 (5511 per locale)
 ///
-/// Built on 2026-09-25 at 12:39 UTC
+/// Built on 2026-09-25 at 12:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7759,6 +7759,53 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_history_clear_confirm_action => 'Clear';
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  String get novel_extensions_search_hint => 'Search plugins';
+  String get novel_store_builtin_label => 'Built-in';
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  String get novel_store_empty => 'No plugin repositories.';
+  String get novel_source_search_hint => 'Search novels';
+  String get novel_source_no_results => 'No novels found.';
+  String get novel_source_filters_title => 'Filters';
+  String get novel_source_filters_reset => 'Reset';
+  String get novel_source_filters_apply => 'Apply';
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  String get novel_detail_library_add => 'Add to bookshelf';
+  String get novel_download_range_title => 'Download chapters';
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  String get novel_download_range_all => 'All chapters';
+  String get novel_download_start => 'Download';
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  String get novel_download_building => 'Building EPUB…';
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  String get novel_download_cancelled => 'Download cancelled';
+  String get novel_status_ongoing => 'Ongoing';
+  String get novel_status_completed => 'Completed';
+  String get novel_status_licensed => 'Licensed';
+  String get novel_status_publishing_finished => 'Publishing finished';
+  String get novel_status_cancelled => 'Cancelled';
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -20822,6 +20869,83 @@ class _StringsAr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -34126,6 +34250,83 @@ class _StringsDe extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -47481,6 +47682,83 @@ class _StringsEs extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -60874,6 +61152,83 @@ class _StringsFr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -74057,6 +74412,83 @@ class _StringsId extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -87341,6 +87773,83 @@ class _StringsIt extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -99984,6 +100493,80 @@ class _StringsJa extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'サードパーティの LNReader プラグインです。内容は各サイトから取得され、ダウンロードした小説は EPUB として本棚に保存されます。';
+  @override
+  String get novel_online_sources_empty =>
+      '小説ソースがまだありません。先に「拡張」でプラグインをインストールしてください。';
+  @override
+  String get novel_extensions_search_hint => 'プラグインを検索';
+  @override
+  String get novel_store_builtin_label => '内蔵';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader プラグインは Web サイトからコンテンツを取得するサードパーティのスクリプトです。信頼できるリポジトリだけを追加してください。';
+  @override
+  String get novel_store_empty => 'プラグインリポジトリがありません。';
+  @override
+  String get novel_source_search_hint => '小説を検索';
+  @override
+  String get novel_source_no_results => '小説が見つかりません。';
+  @override
+  String get novel_source_filters_title => '絞り込み';
+  @override
+  String get novel_source_filters_reset => 'リセット';
+  @override
+  String get novel_source_filters_apply => '適用';
+  @override
+  String get novel_source_clear_data_hint =>
+      'このプラグインが保存したデータ（トークンなど）を消去します。プラグイン自体はアンインストールされません。';
+  @override
+  String novel_detail_chapters_title({required Object count}) => '章（${count}）';
+  @override
+  String get novel_detail_chapters_empty => '章が見つかりません。';
+  @override
+  String get novel_detail_library_add => '本棚に追加';
+  @override
+  String get novel_download_range_title => '章をダウンロード';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) => '第 ${from}–${to} 章（全 ${count} 章）を 1 冊の EPUB として本棚に保存します。';
+  @override
+  String get novel_download_range_all => 'すべての章';
+  @override
+  String get novel_download_start => 'ダウンロード';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => '第 ${done}/${total} 章をダウンロード中';
+  @override
+  String get novel_download_building => 'EPUB を作成中…';
+  @override
+  String novel_download_done({required Object title}) => '本棚に追加しました：${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => '「${chapter}」でダウンロードに失敗しました：${error}';
+  @override
+  String get novel_download_cancelled => 'ダウンロードをキャンセルしました';
+  @override
+  String get novel_status_ongoing => '連載中';
+  @override
+  String get novel_status_completed => '完結済み';
+  @override
+  String get novel_status_licensed => '書籍化済み';
+  @override
+  String get novel_status_publishing_finished => '刊行完了';
+  @override
+  String get novel_status_cancelled => '打ち切り';
+  @override
+  String get novel_status_on_hiatus => '休載中';
 }
 
 // Path: <root>
@@ -112638,6 +113221,83 @@ class _StringsKo extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -125876,6 +126536,83 @@ class _StringsNl extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -139168,6 +139905,83 @@ class _StringsPtBr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -152434,6 +153248,83 @@ class _StringsRu extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -165496,6 +166387,83 @@ class _StringsTh extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -178673,6 +179641,83 @@ class _StringsTr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -191821,6 +192866,83 @@ class _StringsVi extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -203850,6 +204972,77 @@ class _StringsZhCn extends _StringsEn {
   String get updates_history_clear_confirm_action => '清空';
   @override
   String updates_history_cleared({required Object count}) => '已清除 ${count} 条记录';
+  @override
+  String get novel_online_sources_hint =>
+      '第三方 LNReader 插件。内容来自源站；下载的小说以 EPUB 存进书架。';
+  @override
+  String get novel_online_sources_empty => '还没有小说源。请先在「扩展」里安装插件。';
+  @override
+  String get novel_extensions_search_hint => '搜索插件';
+  @override
+  String get novel_store_builtin_label => '内置';
+  @override
+  String get novel_store_add_warning => 'LNReader 插件是从网站抓取内容的第三方脚本。只添加你信任的仓库。';
+  @override
+  String get novel_store_empty => '没有插件仓库。';
+  @override
+  String get novel_source_search_hint => '搜索小说';
+  @override
+  String get novel_source_no_results => '没有找到小说。';
+  @override
+  String get novel_source_filters_title => '筛选';
+  @override
+  String get novel_source_filters_reset => '重置';
+  @override
+  String get novel_source_filters_apply => '应用';
+  @override
+  String get novel_source_clear_data_hint => '清除该插件保存的数据（如令牌）。插件本身不会卸载。';
+  @override
+  String novel_detail_chapters_title({required Object count}) => '章节（${count}）';
+  @override
+  String get novel_detail_chapters_empty => '没有找到章节。';
+  @override
+  String get novel_detail_library_add => '加入书架';
+  @override
+  String get novel_download_range_title => '下载章节';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) => '将把第 ${from}–${to} 章（共 ${count} 章）存成一本 EPUB 放进书架。';
+  @override
+  String get novel_download_range_all => '全部章节';
+  @override
+  String get novel_download_start => '下载';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => '正在下载第 ${done}/${total} 章';
+  @override
+  String get novel_download_building => '正在生成 EPUB…';
+  @override
+  String novel_download_done({required Object title}) => '已加入书架：${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => '下载在「${chapter}」失败：${error}';
+  @override
+  String get novel_download_cancelled => '已取消下载';
+  @override
+  String get novel_status_ongoing => '连载中';
+  @override
+  String get novel_status_completed => '已完结';
+  @override
+  String get novel_status_licensed => '已授权出版';
+  @override
+  String get novel_status_publishing_finished => '出版已完结';
+  @override
+  String get novel_status_cancelled => '已中止';
+  @override
+  String get novel_status_on_hiatus => '停更中';
 }
 
 // Path: <root>
@@ -216174,6 +217367,83 @@ class _StringsZhHk extends _StringsEn {
   String get updates_history_clear_confirm_action => '清空';
   @override
   String updates_history_cleared({required Object count}) => '已清除 ${count} 條記錄';
+  @override
+  String get novel_online_sources_hint =>
+      'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+  @override
+  String get novel_online_sources_empty =>
+      'No novel sources yet. Install a plugin under Extensions first.';
+  @override
+  String get novel_extensions_search_hint => 'Search plugins';
+  @override
+  String get novel_store_builtin_label => 'Built-in';
+  @override
+  String get novel_store_add_warning =>
+      'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+  @override
+  String get novel_store_empty => 'No plugin repositories.';
+  @override
+  String get novel_source_search_hint => 'Search novels';
+  @override
+  String get novel_source_no_results => 'No novels found.';
+  @override
+  String get novel_source_filters_title => 'Filters';
+  @override
+  String get novel_source_filters_reset => 'Reset';
+  @override
+  String get novel_source_filters_apply => 'Apply';
+  @override
+  String get novel_source_clear_data_hint =>
+      'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+  @override
+  String novel_detail_chapters_title({required Object count}) =>
+      'Chapters (${count})';
+  @override
+  String get novel_detail_chapters_empty => 'No chapters found.';
+  @override
+  String get novel_detail_library_add => 'Add to bookshelf';
+  @override
+  String get novel_download_range_title => 'Download chapters';
+  @override
+  String novel_download_range_hint({
+    required Object from,
+    required Object to,
+    required Object count,
+  }) =>
+      'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+  @override
+  String get novel_download_range_all => 'All chapters';
+  @override
+  String get novel_download_start => 'Download';
+  @override
+  String novel_download_progress({
+    required Object done,
+    required Object total,
+  }) => 'Downloading chapter ${done}/${total}';
+  @override
+  String get novel_download_building => 'Building EPUB…';
+  @override
+  String novel_download_done({required Object title}) =>
+      'Added to bookshelf: ${title}';
+  @override
+  String novel_download_failed({
+    required Object chapter,
+    required Object error,
+  }) => 'Download failed at ${chapter}: ${error}';
+  @override
+  String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 /// Flat map(s) containing all translations.
@@ -227477,6 +228747,73 @@ extension on _StringsEn {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -238775,6 +240112,73 @@ extension on _StringsAr {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -250122,6 +251526,73 @@ extension on _StringsDe {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -261459,6 +262930,73 @@ extension on _StringsEs {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -272804,6 +274342,73 @@ extension on _StringsFr {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -284119,6 +285724,73 @@ extension on _StringsId {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -295457,6 +297129,73 @@ extension on _StringsIt {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -306719,6 +308458,72 @@ extension on _StringsJa {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'サードパーティの LNReader プラグインです。内容は各サイトから取得され、ダウンロードした小説は EPUB として本棚に保存されます。';
+      case 'novel_online_sources_empty':
+        return '小説ソースがまだありません。先に「拡張」でプラグインをインストールしてください。';
+      case 'novel_extensions_search_hint':
+        return 'プラグインを検索';
+      case 'novel_store_builtin_label':
+        return '内蔵';
+      case 'novel_store_add_warning':
+        return 'LNReader プラグインは Web サイトからコンテンツを取得するサードパーティのスクリプトです。信頼できるリポジトリだけを追加してください。';
+      case 'novel_store_empty':
+        return 'プラグインリポジトリがありません。';
+      case 'novel_source_search_hint':
+        return '小説を検索';
+      case 'novel_source_no_results':
+        return '小説が見つかりません。';
+      case 'novel_source_filters_title':
+        return '絞り込み';
+      case 'novel_source_filters_reset':
+        return 'リセット';
+      case 'novel_source_filters_apply':
+        return '適用';
+      case 'novel_source_clear_data_hint':
+        return 'このプラグインが保存したデータ（トークンなど）を消去します。プラグイン自体はアンインストールされません。';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => '章（${count}）';
+      case 'novel_detail_chapters_empty':
+        return '章が見つかりません。';
+      case 'novel_detail_library_add':
+        return '本棚に追加';
+      case 'novel_download_range_title':
+        return '章をダウンロード';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) => '第 ${from}–${to} 章（全 ${count} 章）を 1 冊の EPUB として本棚に保存します。';
+      case 'novel_download_range_all':
+        return 'すべての章';
+      case 'novel_download_start':
+        return 'ダウンロード';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            '第 ${done}/${total} 章をダウンロード中';
+      case 'novel_download_building':
+        return 'EPUB を作成中…';
+      case 'novel_download_done':
+        return ({required Object title}) => '本棚に追加しました：${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            '「${chapter}」でダウンロードに失敗しました：${error}';
+      case 'novel_download_cancelled':
+        return 'ダウンロードをキャンセルしました';
+      case 'novel_status_ongoing':
+        return '連載中';
+      case 'novel_status_completed':
+        return '完結済み';
+      case 'novel_status_licensed':
+        return '書籍化済み';
+      case 'novel_status_publishing_finished':
+        return '刊行完了';
+      case 'novel_status_cancelled':
+        return '打ち切り';
+      case 'novel_status_on_hiatus':
+        return '休載中';
       default:
         return null;
     }
@@ -317986,6 +319791,73 @@ extension on _StringsKo {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -329319,6 +331191,73 @@ extension on _StringsNl {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -340647,6 +342586,73 @@ extension on _StringsPtBr {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -351981,6 +353987,73 @@ extension on _StringsRu {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -363284,6 +365357,73 @@ extension on _StringsTh {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -374603,6 +376743,73 @@ extension on _StringsTr {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -385916,6 +388123,73 @@ extension on _StringsVi {
         return 'Clear';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -397120,6 +399394,72 @@ extension on _StringsZhCn {
         return '清空';
       case 'updates_history_cleared':
         return ({required Object count}) => '已清除 ${count} 条记录';
+      case 'novel_online_sources_hint':
+        return '第三方 LNReader 插件。内容来自源站；下载的小说以 EPUB 存进书架。';
+      case 'novel_online_sources_empty':
+        return '还没有小说源。请先在「扩展」里安装插件。';
+      case 'novel_extensions_search_hint':
+        return '搜索插件';
+      case 'novel_store_builtin_label':
+        return '内置';
+      case 'novel_store_add_warning':
+        return 'LNReader 插件是从网站抓取内容的第三方脚本。只添加你信任的仓库。';
+      case 'novel_store_empty':
+        return '没有插件仓库。';
+      case 'novel_source_search_hint':
+        return '搜索小说';
+      case 'novel_source_no_results':
+        return '没有找到小说。';
+      case 'novel_source_filters_title':
+        return '筛选';
+      case 'novel_source_filters_reset':
+        return '重置';
+      case 'novel_source_filters_apply':
+        return '应用';
+      case 'novel_source_clear_data_hint':
+        return '清除该插件保存的数据（如令牌）。插件本身不会卸载。';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => '章节（${count}）';
+      case 'novel_detail_chapters_empty':
+        return '没有找到章节。';
+      case 'novel_detail_library_add':
+        return '加入书架';
+      case 'novel_download_range_title':
+        return '下载章节';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) => '将把第 ${from}–${to} 章（共 ${count} 章）存成一本 EPUB 放进书架。';
+      case 'novel_download_range_all':
+        return '全部章节';
+      case 'novel_download_start':
+        return '下载';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            '正在下载第 ${done}/${total} 章';
+      case 'novel_download_building':
+        return '正在生成 EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => '已加入书架：${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            '下载在「${chapter}」失败：${error}';
+      case 'novel_download_cancelled':
+        return '已取消下载';
+      case 'novel_status_ongoing':
+        return '连载中';
+      case 'novel_status_completed':
+        return '已完结';
+      case 'novel_status_licensed':
+        return '已授权出版';
+      case 'novel_status_publishing_finished':
+        return '出版已完结';
+      case 'novel_status_cancelled':
+        return '已中止';
+      case 'novel_status_on_hiatus':
+        return '停更中';
       default:
         return null;
     }
@@ -408360,6 +410700,73 @@ extension on _StringsZhHk {
         return '清空';
       case 'updates_history_cleared':
         return ({required Object count}) => '已清除 ${count} 條記錄';
+      case 'novel_online_sources_hint':
+        return 'Third-party LNReader plugins. Content comes from the source websites; downloaded novels are saved to your bookshelf as EPUB.';
+      case 'novel_online_sources_empty':
+        return 'No novel sources yet. Install a plugin under Extensions first.';
+      case 'novel_extensions_search_hint':
+        return 'Search plugins';
+      case 'novel_store_builtin_label':
+        return 'Built-in';
+      case 'novel_store_add_warning':
+        return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
+      case 'novel_store_empty':
+        return 'No plugin repositories.';
+      case 'novel_source_search_hint':
+        return 'Search novels';
+      case 'novel_source_no_results':
+        return 'No novels found.';
+      case 'novel_source_filters_title':
+        return 'Filters';
+      case 'novel_source_filters_reset':
+        return 'Reset';
+      case 'novel_source_filters_apply':
+        return 'Apply';
+      case 'novel_source_clear_data_hint':
+        return 'Clears data this plugin stored (such as tokens). The plugin stays installed.';
+      case 'novel_detail_chapters_title':
+        return ({required Object count}) => 'Chapters (${count})';
+      case 'novel_detail_chapters_empty':
+        return 'No chapters found.';
+      case 'novel_detail_library_add':
+        return 'Add to bookshelf';
+      case 'novel_download_range_title':
+        return 'Download chapters';
+      case 'novel_download_range_hint':
+        return ({
+          required Object from,
+          required Object to,
+          required Object count,
+        }) =>
+            'Chapters ${from}–${to} (${count}) will be saved to your bookshelf as one EPUB.';
+      case 'novel_download_range_all':
+        return 'All chapters';
+      case 'novel_download_start':
+        return 'Download';
+      case 'novel_download_progress':
+        return ({required Object done, required Object total}) =>
+            'Downloading chapter ${done}/${total}';
+      case 'novel_download_building':
+        return 'Building EPUB…';
+      case 'novel_download_done':
+        return ({required Object title}) => 'Added to bookshelf: ${title}';
+      case 'novel_download_failed':
+        return ({required Object chapter, required Object error}) =>
+            'Download failed at ${chapter}: ${error}';
+      case 'novel_download_cancelled':
+        return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
