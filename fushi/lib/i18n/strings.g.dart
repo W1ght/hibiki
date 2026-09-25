@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 93075 (5475 per locale)
+/// Strings: 93109 (5477 per locale)
 ///
-/// Built on 2026-09-25 at 12:35 UTC
+/// Built on 2026-09-25 at 12:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7734,6 +7734,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_cuda_desc =>
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  String get discovery_source_capability_search_only => 'Search only';
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   String get video_setting_brightness_swipe_gesture_hint =>
@@ -20772,6 +20775,11 @@ class _StringsAr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -34061,6 +34069,11 @@ class _StringsDe extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -47401,6 +47414,11 @@ class _StringsEs extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -60780,6 +60798,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
+  @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   @override
@@ -73947,6 +73970,11 @@ class _StringsId extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -87217,6 +87245,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
+  @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   @override
@@ -99846,6 +99879,10 @@ class _StringsJa extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable => 'フォルダを閲覧、または検索';
+  @override
+  String get discovery_source_capability_search_only => 'キーワード検索のみ';
   @override
   String get video_setting_brightness_swipe_gesture => 'スワイプで明るさ調整';
   @override
@@ -112485,6 +112522,10 @@ class _StringsKo extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable => '폴더 탐색 또는 검색';
+  @override
+  String get discovery_source_capability_search_only => '키워드 검색만 지원';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -125708,6 +125749,11 @@ class _StringsNl extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -138986,6 +139032,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
+  @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   @override
@@ -152237,6 +152288,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
+  @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   @override
@@ -165283,6 +165339,11 @@ class _StringsTh extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
   @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
@@ -178446,6 +178507,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
+  @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   @override
@@ -191579,6 +191645,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable =>
+      'Browse folders or search';
+  @override
+  String get discovery_source_capability_search_only => 'Search only';
+  @override
   String get video_setting_brightness_swipe_gesture =>
       'Swipe to adjust brightness';
   @override
@@ -203595,6 +203666,10 @@ class _StringsZhCn extends _StringsEn {
       '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
   @override
   String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
+  @override
+  String get discovery_source_capability_browsable => '可浏览目录或搜索';
+  @override
+  String get discovery_source_capability_search_only => '仅支持关键词搜索';
   @override
   String get video_setting_brightness_swipe_gesture => '竖滑调节亮度';
   @override
@@ -215906,6 +215981,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
   @override
+  String get discovery_source_capability_browsable => '可瀏覽目錄或搜尋';
+  @override
+  String get discovery_source_capability_search_only => '僅支援關鍵字搜尋';
+  @override
   String get video_setting_brightness_swipe_gesture => '垂直滑動調節亮度';
   @override
   String get video_setting_brightness_swipe_gesture_hint =>
@@ -227197,6 +227276,10 @@ extension on _StringsEn {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -238481,6 +238564,10 @@ extension on _StringsAr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -249814,6 +249901,10 @@ extension on _StringsDe {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -261137,6 +261228,10 @@ extension on _StringsEs {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -272468,6 +272563,10 @@ extension on _StringsFr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -283769,6 +283868,10 @@ extension on _StringsId {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -295093,6 +295196,10 @@ extension on _StringsIt {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -306341,6 +306448,10 @@ extension on _StringsJa {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'フォルダを閲覧、または検索';
+      case 'discovery_source_capability_search_only':
+        return 'キーワード検索のみ';
       case 'video_setting_brightness_swipe_gesture':
         return 'スワイプで明るさ調整';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -317594,6 +317705,10 @@ extension on _StringsKo {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return '폴더 탐색 또는 검색';
+      case 'discovery_source_capability_search_only':
+        return '키워드 검색만 지원';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -328913,6 +329028,10 @@ extension on _StringsNl {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -340227,6 +340346,10 @@ extension on _StringsPtBr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -351547,6 +351670,10 @@ extension on _StringsRu {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -362836,6 +362963,10 @@ extension on _StringsTh {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -374141,6 +374272,10 @@ extension on _StringsTr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -385440,6 +385575,10 @@ extension on _StringsVi {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return 'Browse folders or search';
+      case 'discovery_source_capability_search_only':
+        return 'Search only';
       case 'video_setting_brightness_swipe_gesture':
         return 'Swipe to adjust brightness';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -396631,6 +396770,10 @@ extension on _StringsZhCn {
         return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
       case 'manga_ocr_runtime_installing':
         return '正在安装本地 OCR 引擎…';
+      case 'discovery_source_capability_browsable':
+        return '可浏览目录或搜索';
+      case 'discovery_source_capability_search_only':
+        return '仅支持关键词搜索';
       case 'video_setting_brightness_swipe_gesture':
         return '竖滑调节亮度';
       case 'video_setting_brightness_swipe_gesture_hint':
@@ -407857,6 +408000,10 @@ extension on _StringsZhHk {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'discovery_source_capability_browsable':
+        return '可瀏覽目錄或搜尋';
+      case 'discovery_source_capability_search_only':
+        return '僅支援關鍵字搜尋';
       case 'video_setting_brightness_swipe_gesture':
         return '垂直滑動調節亮度';
       case 'video_setting_brightness_swipe_gesture_hint':
