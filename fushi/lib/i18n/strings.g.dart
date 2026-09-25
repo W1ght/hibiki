@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 93585 (5505 per locale)
+/// Strings: 93687 (5511 per locale)
 ///
-/// Built on 2026-09-25 at 12:53 UTC
+/// Built on 2026-09-25 at 12:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7800,6 +7800,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object error,
   }) => 'Download failed at ${chapter}: ${error}';
   String get novel_download_cancelled => 'Download cancelled';
+  String get novel_status_ongoing => 'Ongoing';
+  String get novel_status_completed => 'Completed';
+  String get novel_status_licensed => 'Licensed';
+  String get novel_status_publishing_finished => 'Publishing finished';
+  String get novel_status_cancelled => 'Cancelled';
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -20928,6 +20934,18 @@ class _StringsAr extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -34297,6 +34315,18 @@ class _StringsDe extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -47717,6 +47747,18 @@ class _StringsEs extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -61175,6 +61217,18 @@ class _StringsFr extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -74423,6 +74477,18 @@ class _StringsId extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -87772,6 +87838,18 @@ class _StringsIt extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -100477,6 +100555,18 @@ class _StringsJa extends _StringsEn {
   }) => '「${chapter}」でダウンロードに失敗しました：${error}';
   @override
   String get novel_download_cancelled => 'ダウンロードをキャンセルしました';
+  @override
+  String get novel_status_ongoing => '連載中';
+  @override
+  String get novel_status_completed => '完結済み';
+  @override
+  String get novel_status_licensed => '書籍化済み';
+  @override
+  String get novel_status_publishing_finished => '刊行完了';
+  @override
+  String get novel_status_cancelled => '打ち切り';
+  @override
+  String get novel_status_on_hiatus => '休載中';
 }
 
 // Path: <root>
@@ -113196,6 +113286,18 @@ class _StringsKo extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -126499,6 +126601,18 @@ class _StringsNl extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -139856,6 +139970,18 @@ class _StringsPtBr extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -153187,6 +153313,18 @@ class _StringsRu extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -166314,6 +166452,18 @@ class _StringsTh extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -179556,6 +179706,18 @@ class _StringsTr extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -192769,6 +192931,18 @@ class _StringsVi extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 // Path: <root>
@@ -204857,6 +205031,18 @@ class _StringsZhCn extends _StringsEn {
   }) => '下载在「${chapter}」失败：${error}';
   @override
   String get novel_download_cancelled => '已取消下载';
+  @override
+  String get novel_status_ongoing => '连载中';
+  @override
+  String get novel_status_completed => '已完结';
+  @override
+  String get novel_status_licensed => '已授权出版';
+  @override
+  String get novel_status_publishing_finished => '出版已完结';
+  @override
+  String get novel_status_cancelled => '已中止';
+  @override
+  String get novel_status_on_hiatus => '停更中';
 }
 
 // Path: <root>
@@ -217246,6 +217432,18 @@ class _StringsZhHk extends _StringsEn {
   }) => 'Download failed at ${chapter}: ${error}';
   @override
   String get novel_download_cancelled => 'Download cancelled';
+  @override
+  String get novel_status_ongoing => 'Ongoing';
+  @override
+  String get novel_status_completed => 'Completed';
+  @override
+  String get novel_status_licensed => 'Licensed';
+  @override
+  String get novel_status_publishing_finished => 'Publishing finished';
+  @override
+  String get novel_status_cancelled => 'Cancelled';
+  @override
+  String get novel_status_on_hiatus => 'On hiatus';
 }
 
 /// Flat map(s) containing all translations.
@@ -228604,6 +228802,18 @@ extension on _StringsEn {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -239957,6 +240167,18 @@ extension on _StringsAr {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -251359,6 +251581,18 @@ extension on _StringsDe {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -262751,6 +262985,18 @@ extension on _StringsEs {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -274151,6 +274397,18 @@ extension on _StringsFr {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -285521,6 +285779,18 @@ extension on _StringsId {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -296914,6 +297184,18 @@ extension on _StringsIt {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -308230,6 +308512,18 @@ extension on _StringsJa {
             '「${chapter}」でダウンロードに失敗しました：${error}';
       case 'novel_download_cancelled':
         return 'ダウンロードをキャンセルしました';
+      case 'novel_status_ongoing':
+        return '連載中';
+      case 'novel_status_completed':
+        return '完結済み';
+      case 'novel_status_licensed':
+        return '書籍化済み';
+      case 'novel_status_publishing_finished':
+        return '刊行完了';
+      case 'novel_status_cancelled':
+        return '打ち切り';
+      case 'novel_status_on_hiatus':
+        return '休載中';
       default:
         return null;
     }
@@ -319552,6 +319846,18 @@ extension on _StringsKo {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -330940,6 +331246,18 @@ extension on _StringsNl {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -342323,6 +342641,18 @@ extension on _StringsPtBr {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -353712,6 +354042,18 @@ extension on _StringsRu {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -365070,6 +365412,18 @@ extension on _StringsTh {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -376444,6 +376798,18 @@ extension on _StringsTr {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -387812,6 +388178,18 @@ extension on _StringsVi {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
@@ -399070,6 +399448,18 @@ extension on _StringsZhCn {
             '下载在「${chapter}」失败：${error}';
       case 'novel_download_cancelled':
         return '已取消下载';
+      case 'novel_status_ongoing':
+        return '连载中';
+      case 'novel_status_completed':
+        return '已完结';
+      case 'novel_status_licensed':
+        return '已授权出版';
+      case 'novel_status_publishing_finished':
+        return '出版已完结';
+      case 'novel_status_cancelled':
+        return '已中止';
+      case 'novel_status_on_hiatus':
+        return '停更中';
       default:
         return null;
     }
@@ -410365,6 +410755,18 @@ extension on _StringsZhHk {
             'Download failed at ${chapter}: ${error}';
       case 'novel_download_cancelled':
         return 'Download cancelled';
+      case 'novel_status_ongoing':
+        return 'Ongoing';
+      case 'novel_status_completed':
+        return 'Completed';
+      case 'novel_status_licensed':
+        return 'Licensed';
+      case 'novel_status_publishing_finished':
+        return 'Publishing finished';
+      case 'novel_status_cancelled':
+        return 'Cancelled';
+      case 'novel_status_on_hiatus':
+        return 'On hiatus';
       default:
         return null;
     }
