@@ -69,16 +69,16 @@ class _ProbeAppModel extends AppModel {
 }
 
 DictionarySearchResult _result(String term) => DictionarySearchResult(
-      searchTerm: term,
-      entries: <DictionaryEntry>[
-        DictionaryEntry(
-          dictionaryName: 'd',
-          word: term,
-          reading: 'けんぶつ',
-          meaning: '"sightseeing"',
-        ),
-      ],
-    );
+  searchTerm: term,
+  entries: <DictionaryEntry>[
+    DictionaryEntry(
+      dictionaryName: 'd',
+      word: term,
+      reading: 'けんぶつ',
+      meaning: '"sightseeing"',
+    ),
+  ],
+);
 
 class _Harness extends StatefulWidget {
   const _Harness({super.key, required this.webViewKey, required this.calls});
@@ -165,8 +165,9 @@ void main() {
   }
 
   for (final String mode in <String>['shown-first', 'hidden-then-shown']) {
-    testWidgets('popup paints ✓ when duplicateCheck answers true ($mode)',
-        (WidgetTester tester) async {
+    testWidgets('popup paints ✓ when duplicateCheck answers true ($mode)', (
+      WidgetTester tester,
+    ) async {
       LocaleSettings.setLocale(AppLocale.en);
       final GlobalKey<DictionaryPopupWebViewState> key =
           GlobalKey<DictionaryPopupWebViewState>();
@@ -196,19 +197,22 @@ void main() {
       } else {
         harness.currentState!.update(result: _result('見物'));
         await pumpFor(tester, const Duration(seconds: 2));
-        debugPrint('[dup-probe] $mode while hidden: '
-            '${jsonEncode(await probe(tester, key))} calls=${calls.length}');
+        debugPrint(
+          '[dup-probe] $mode while hidden: '
+          '${jsonEncode(await probe(tester, key))} calls=${calls.length}',
+        );
         harness.currentState!.update(visible: true);
       }
       await pumpFor(tester, const Duration(seconds: 4));
       final Map<String, dynamic> state = await probe(tester, key);
-      debugPrint('[dup-probe] $mode final: ${jsonEncode(state)} '
-          'calls=${calls.length}');
+      debugPrint(
+        '[dup-probe] $mode final: ${jsonEncode(state)} '
+        'calls=${calls.length}',
+      );
 
       expect(state['buttons'], greaterThan(0), reason: '词条必须真的渲染出来');
       expect(calls, isNotEmpty, reason: '渲染后必须发起查重');
-      expect(state['mined'], state['buttons'],
-          reason: '查重答 true，每颗制卡按钮都必须画 ✓');
+      expect(state['mined'], state['buttons'], reason: '查重答 true，每颗制卡按钮都必须画 ✓');
     });
   }
 }
