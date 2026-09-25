@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92939 (5467 per locale)
+/// Strings: 93109 (5477 per locale)
 ///
-/// Built on 2026-09-25 at 10:13 UTC
+/// Built on 2026-09-25 at 12:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7737,6 +7737,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_source_capability_browsable =>
       'Browse folders or search';
   String get discovery_source_capability_search_only => 'Search only';
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  String get updates_history_clear => 'Clear history';
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  String get updates_history_clear_confirm_action => 'Clear';
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -20764,6 +20780,32 @@ class _StringsAr extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -34032,6 +34074,32 @@ class _StringsDe extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -47351,6 +47419,32 @@ class _StringsEs extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -60708,6 +60802,32 @@ class _StringsFr extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -73855,6 +73975,32 @@ class _StringsId extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -87103,6 +87249,32 @@ class _StringsIt extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -99711,6 +99883,31 @@ class _StringsJa extends _StringsEn {
   String get discovery_source_capability_browsable => 'フォルダを閲覧、または検索';
   @override
   String get discovery_source_capability_search_only => 'キーワード検索のみ';
+  @override
+  String get video_setting_brightness_swipe_gesture => 'スワイプで明るさ調整';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      '画面の左半分を上下にスワイプして画面の明るさを変更します。オフにするとシステムの明るさスライダーを使います';
+  @override
+  String get video_setting_volume_swipe_gesture => 'スワイプで音量調整';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      '画面の右半分を上下にスワイプして音量を変更します。オフにすると本体の音量ボタンを使います';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      '動画ファイルのみドロップできます。ドロップした動画は読み込まれ、このコレクションに直接追加されます。';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -112329,6 +112526,32 @@ class _StringsKo extends _StringsEn {
   String get discovery_source_capability_browsable => '폴더 탐색 또는 검색';
   @override
   String get discovery_source_capability_search_only => '키워드 검색만 지원';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -125531,6 +125754,32 @@ class _StringsNl extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -138787,6 +139036,32 @@ class _StringsPtBr extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -152017,6 +152292,32 @@ class _StringsRu extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -165043,6 +165344,32 @@ class _StringsTh extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -178184,6 +178511,32 @@ class _StringsTr extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -191296,6 +191649,32 @@ class _StringsVi extends _StringsEn {
       'Browse folders or search';
   @override
   String get discovery_source_capability_search_only => 'Search only';
+  @override
+  String get video_setting_brightness_swipe_gesture =>
+      'Swipe to adjust brightness';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+  @override
+  String get video_setting_volume_swipe_gesture => 'Swipe to adjust volume';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      'Drop video files here to import them straight into this collection.';
+  @override
+  String get updates_history_clear => 'Clear history';
+  @override
+  String get updates_history_clear_confirm_title => 'Clear update history?';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+  @override
+  String get updates_history_clear_confirm_action => 'Clear';
+  @override
+  String updates_history_cleared({required Object count}) =>
+      'Cleared ${count} entries';
 }
 
 // Path: <root>
@@ -203291,6 +203670,30 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_source_capability_browsable => '可浏览目录或搜索';
   @override
   String get discovery_source_capability_search_only => '仅支持关键词搜索';
+  @override
+  String get video_setting_brightness_swipe_gesture => '竖滑调节亮度';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      '在画面左半边上下滑动调节屏幕亮度；关闭后改用系统亮度条';
+  @override
+  String get video_setting_volume_swipe_gesture => '竖滑调节音量';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      '在画面右半边上下滑动调节音量；关闭后改用实体音量键';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      '只能拖入视频文件：拖进来的视频会导入并直接加入本合集。';
+  @override
+  String get updates_history_clear => '清空记录';
+  @override
+  String get updates_history_clear_confirm_title => '清空更新记录？';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      '移除「${scope}」下的全部记录？仍待处理的更新（例如尚未安装的新版本）会在下次检查时重新出现。';
+  @override
+  String get updates_history_clear_confirm_action => '清空';
+  @override
+  String updates_history_cleared({required Object count}) => '已清除 ${count} 条记录';
 }
 
 // Path: <root>
@@ -215581,6 +215984,30 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_source_capability_browsable => '可瀏覽目錄或搜尋';
   @override
   String get discovery_source_capability_search_only => '僅支援關鍵字搜尋';
+  @override
+  String get video_setting_brightness_swipe_gesture => '垂直滑動調節亮度';
+  @override
+  String get video_setting_brightness_swipe_gesture_hint =>
+      '在畫面左半邊上下滑動調節螢幕亮度；關閉後改用系統亮度條';
+  @override
+  String get video_setting_volume_swipe_gesture => '垂直滑動調節音量';
+  @override
+  String get video_setting_volume_swipe_gesture_hint =>
+      '在畫面右半邊上下滑動調節音量；關閉後改用實體音量鍵';
+  @override
+  String get drag_drop_unsupported_on_collection =>
+      '只能拖入影片檔案：拖進來的影片會匯入並直接加入本合集。';
+  @override
+  String get updates_history_clear => '清空記錄';
+  @override
+  String get updates_history_clear_confirm_title => '清空更新記錄？';
+  @override
+  String updates_history_clear_confirm_body({required Object scope}) =>
+      '移除「${scope}」下的全部記錄？仍待處理的更新（例如尚未安裝的新版本）會在下次檢查時重新出現。';
+  @override
+  String get updates_history_clear_confirm_action => '清空';
+  @override
+  String updates_history_cleared({required Object count}) => '已清除 ${count} 條記錄';
 }
 
 /// Flat map(s) containing all translations.
@@ -226853,6 +227280,27 @@ extension on _StringsEn {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -238120,6 +238568,27 @@ extension on _StringsAr {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -249436,6 +249905,27 @@ extension on _StringsDe {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -260742,6 +261232,27 @@ extension on _StringsEs {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -272056,6 +272567,27 @@ extension on _StringsFr {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -283340,6 +283872,27 @@ extension on _StringsId {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -294647,6 +295200,27 @@ extension on _StringsIt {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -305878,6 +306452,27 @@ extension on _StringsJa {
         return 'フォルダを閲覧、または検索';
       case 'discovery_source_capability_search_only':
         return 'キーワード検索のみ';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'スワイプで明るさ調整';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return '画面の左半分を上下にスワイプして画面の明るさを変更します。オフにするとシステムの明るさスライダーを使います';
+      case 'video_setting_volume_swipe_gesture':
+        return 'スワイプで音量調整';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return '画面の右半分を上下にスワイプして音量を変更します。オフにすると本体の音量ボタンを使います';
+      case 'drag_drop_unsupported_on_collection':
+        return '動画ファイルのみドロップできます。ドロップした動画は読み込まれ、このコレクションに直接追加されます。';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -317114,6 +317709,27 @@ extension on _StringsKo {
         return '폴더 탐색 또는 검색';
       case 'discovery_source_capability_search_only':
         return '키워드 검색만 지원';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -328416,6 +329032,27 @@ extension on _StringsNl {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -339713,6 +340350,27 @@ extension on _StringsPtBr {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -351016,6 +351674,27 @@ extension on _StringsRu {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -362288,6 +362967,27 @@ extension on _StringsTh {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -373576,6 +374276,27 @@ extension on _StringsTr {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -384858,6 +385579,27 @@ extension on _StringsVi {
         return 'Browse folders or search';
       case 'discovery_source_capability_search_only':
         return 'Search only';
+      case 'video_setting_brightness_swipe_gesture':
+        return 'Swipe to adjust brightness';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return 'Swipe up/down on the left half of the video to change screen brightness. Turn off to use the system brightness slider instead';
+      case 'video_setting_volume_swipe_gesture':
+        return 'Swipe to adjust volume';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return 'Swipe up/down on the right half of the video to change volume. Turn off to use the physical volume buttons instead';
+      case 'drag_drop_unsupported_on_collection':
+        return 'Drop video files here to import them straight into this collection.';
+      case 'updates_history_clear':
+        return 'Clear history';
+      case 'updates_history_clear_confirm_title':
+        return 'Clear update history?';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            'Remove all entries under "${scope}"? Updates that are still pending, such as a newer app version you have not installed, will show up again on the next check.';
+      case 'updates_history_clear_confirm_action':
+        return 'Clear';
+      case 'updates_history_cleared':
+        return ({required Object count}) => 'Cleared ${count} entries';
       default:
         return null;
     }
@@ -396032,6 +396774,27 @@ extension on _StringsZhCn {
         return '可浏览目录或搜索';
       case 'discovery_source_capability_search_only':
         return '仅支持关键词搜索';
+      case 'video_setting_brightness_swipe_gesture':
+        return '竖滑调节亮度';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return '在画面左半边上下滑动调节屏幕亮度；关闭后改用系统亮度条';
+      case 'video_setting_volume_swipe_gesture':
+        return '竖滑调节音量';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return '在画面右半边上下滑动调节音量；关闭后改用实体音量键';
+      case 'drag_drop_unsupported_on_collection':
+        return '只能拖入视频文件：拖进来的视频会导入并直接加入本合集。';
+      case 'updates_history_clear':
+        return '清空记录';
+      case 'updates_history_clear_confirm_title':
+        return '清空更新记录？';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            '移除「${scope}」下的全部记录？仍待处理的更新（例如尚未安装的新版本）会在下次检查时重新出现。';
+      case 'updates_history_clear_confirm_action':
+        return '清空';
+      case 'updates_history_cleared':
+        return ({required Object count}) => '已清除 ${count} 条记录';
       default:
         return null;
     }
@@ -407241,6 +408004,27 @@ extension on _StringsZhHk {
         return '可瀏覽目錄或搜尋';
       case 'discovery_source_capability_search_only':
         return '僅支援關鍵字搜尋';
+      case 'video_setting_brightness_swipe_gesture':
+        return '垂直滑動調節亮度';
+      case 'video_setting_brightness_swipe_gesture_hint':
+        return '在畫面左半邊上下滑動調節螢幕亮度；關閉後改用系統亮度條';
+      case 'video_setting_volume_swipe_gesture':
+        return '垂直滑動調節音量';
+      case 'video_setting_volume_swipe_gesture_hint':
+        return '在畫面右半邊上下滑動調節音量；關閉後改用實體音量鍵';
+      case 'drag_drop_unsupported_on_collection':
+        return '只能拖入影片檔案：拖進來的影片會匯入並直接加入本合集。';
+      case 'updates_history_clear':
+        return '清空記錄';
+      case 'updates_history_clear_confirm_title':
+        return '清空更新記錄？';
+      case 'updates_history_clear_confirm_body':
+        return ({required Object scope}) =>
+            '移除「${scope}」下的全部記錄？仍待處理的更新（例如尚未安裝的新版本）會在下次檢查時重新出現。';
+      case 'updates_history_clear_confirm_action':
+        return '清空';
+      case 'updates_history_cleared':
+        return ({required Object count}) => '已清除 ${count} 條記錄';
       default:
         return null;
     }
