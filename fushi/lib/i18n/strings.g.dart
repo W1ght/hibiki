@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95149 (5597 per locale)
+/// Strings: 95183 (5599 per locale)
 ///
-/// Built on 2026-09-26 at 05:48 UTC
+/// Built on 2026-09-26 at 09:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1606,7 +1606,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) => 'Import failed: ${name} (${reason})';
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
-  String get dict_update_check => 'Check for updates';
   String get dict_update_checking => 'Checking for updates…';
   String dict_update_done({required Object name}) => '${name} updated.';
   String dict_update_failed({required Object error}) =>
@@ -1621,7 +1620,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   }) =>
       'The selected file is "${incoming}", but you are updating "${existing}". Replace anyway?';
   String get dict_update_name_mismatch_title => 'Names do not match';
-  String get dict_update_none => 'All dictionaries are up to date.';
   String dict_update_summary({
     required Object updated,
     required Object current,
@@ -7966,6 +7964,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t open online: ${error}';
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  String get dict_update_all => 'Update all dictionaries';
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -10392,8 +10397,6 @@ class _StringsAr extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'التحقق من التحديثات';
-  @override
   String get dict_update_checking => 'جارٍ التحقق من التحديثات…';
   @override
   String dict_update_done({required Object name}) => 'تم تحديث ${name}.';
@@ -10415,8 +10418,6 @@ class _StringsAr extends _StringsEn {
       'الملف المحدد هو "${incoming}"، لكنك تُحدّث "${existing}". هل تريد الاستبدال على أي حال؟';
   @override
   String get dict_update_name_mismatch_title => 'الأسماء غير متطابقة';
-  @override
-  String get dict_update_none => 'جميع القواميس محدّثة.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -21352,6 +21353,17 @@ class _StringsAr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -23824,8 +23836,6 @@ class _StringsDe extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Nach Updates suchen';
-  @override
   String get dict_update_checking => 'Suche nach Updates…';
   @override
   String dict_update_done({required Object name}) => '${name} aktualisiert.';
@@ -23848,8 +23858,6 @@ class _StringsDe extends _StringsEn {
       'Die ausgewählte Datei ist „${incoming}“, aber du aktualisierst „${existing}“. Trotzdem ersetzen?';
   @override
   String get dict_update_name_mismatch_title => 'Namen stimmen nicht überein';
-  @override
-  String get dict_update_none => 'Alle Wörterbücher sind aktuell.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -34978,6 +34986,17 @@ class _StringsDe extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -37458,8 +37477,6 @@ class _StringsEs extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Buscar actualizaciones';
-  @override
   String get dict_update_checking => 'Buscando actualizaciones…';
   @override
   String dict_update_done({required Object name}) => '${name} actualizado.';
@@ -37482,8 +37499,6 @@ class _StringsEs extends _StringsEn {
       'El archivo seleccionado es «${incoming}», pero estás actualizando «${existing}». ¿Reemplazar de todos modos?';
   @override
   String get dict_update_name_mismatch_title => 'Los nombres no coinciden';
-  @override
-  String get dict_update_none => 'Todos los diccionarios están actualizados.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -48655,6 +48670,17 @@ class _StringsEs extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -51147,8 +51173,6 @@ class _StringsFr extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Vérifier les mises à jour';
-  @override
   String get dict_update_checking => 'Recherche de mises à jour…';
   @override
   String dict_update_done({required Object name}) =>
@@ -51172,8 +51196,6 @@ class _StringsFr extends _StringsEn {
       'Le fichier sélectionné est « ${incoming} », mais vous mettez à jour « ${existing} ». Remplacer quand même ?';
   @override
   String get dict_update_name_mismatch_title => 'Les noms ne correspondent pas';
-  @override
-  String get dict_update_none => 'Tous les dictionnaires sont à jour.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -62371,6 +62393,17 @@ class _StringsFr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -64821,8 +64854,6 @@ class _StringsId extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Cek Pembaruan';
-  @override
   String get dict_update_checking => 'Memeriksa pembaruan…';
   @override
   String dict_update_done({required Object name}) => '${name} diperbarui.';
@@ -64845,8 +64876,6 @@ class _StringsId extends _StringsEn {
       'File yang dipilih adalah "${incoming}", tetapi Anda memperbarui "${existing}". Tetap ganti?';
   @override
   String get dict_update_name_mismatch_title => 'Nama tidak cocok';
-  @override
-  String get dict_update_none => 'Semua kamus sudah yang terbaru.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -75877,6 +75906,17 @@ class _StringsId extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -78340,8 +78380,6 @@ class _StringsIt extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Controlla aggiornamenti';
-  @override
   String get dict_update_checking => 'Ricerca aggiornamenti…';
   @override
   String dict_update_done({required Object name}) => '${name} aggiornato.';
@@ -78364,8 +78402,6 @@ class _StringsIt extends _StringsEn {
       'Il file selezionato è «${incoming}», ma stai aggiornando «${existing}». Sostituire comunque?';
   @override
   String get dict_update_name_mismatch_title => 'I nomi non corrispondono';
-  @override
-  String get dict_update_none => 'Tutti i dizionari sono aggiornati.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -89484,6 +89520,17 @@ class _StringsIt extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -91829,8 +91876,6 @@ class _StringsJa extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => '更新を確認';
-  @override
   String get dict_update_checking => '更新を確認中…';
   @override
   String dict_update_done({required Object name}) => '${name} を更新しました。';
@@ -91851,8 +91896,6 @@ class _StringsJa extends _StringsEn {
   }) => '選択したファイルは「${incoming}」ですが、更新対象は「${existing}」です。置き換えますか？';
   @override
   String get dict_update_name_mismatch_title => '名前が一致しません';
-  @override
-  String get dict_update_none => 'すべての辞書は最新です。';
   @override
   String dict_update_summary({
     required Object updated,
@@ -102449,6 +102492,17 @@ class _StringsJa extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       '章を読み込めませんでした：${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -104792,8 +104846,6 @@ class _StringsKo extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => '업데이트 확인';
-  @override
   String get dict_update_checking => '업데이트 확인 중…';
   @override
   String dict_update_done({required Object name}) => '${name} 업데이트됨.';
@@ -104814,8 +104866,6 @@ class _StringsKo extends _StringsEn {
   }) => '선택한 파일은 "${incoming}"이지만 "${existing}"을(를) 업데이트하고 있습니다. 그래도 교체할까요?';
   @override
   String get dict_update_name_mismatch_title => '이름이 일치하지 않습니다';
-  @override
-  String get dict_update_none => '모든 사전이 최신 상태입니다.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -115428,6 +115478,17 @@ class _StringsKo extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -117886,8 +117947,6 @@ class _StringsNl extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Controleren op updates';
-  @override
   String get dict_update_checking => 'Controleren op updates…';
   @override
   String dict_update_done({required Object name}) => '${name} bijgewerkt.';
@@ -117910,8 +117969,6 @@ class _StringsNl extends _StringsEn {
       'Het geselecteerde bestand is "${incoming}", maar je werkt "${existing}" bij. Toch vervangen?';
   @override
   String get dict_update_name_mismatch_title => 'Namen komen niet overeen';
-  @override
-  String get dict_update_none => 'Alle woordenboeken zijn up-to-date.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -128989,6 +129046,17 @@ class _StringsNl extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -131460,8 +131528,6 @@ class _StringsPtBr extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Verificar atualizações';
-  @override
   String get dict_update_checking => 'Verificando atualizações…';
   @override
   String dict_update_done({required Object name}) => '${name} atualizado.';
@@ -131484,8 +131550,6 @@ class _StringsPtBr extends _StringsEn {
       'O arquivo selecionado é "${incoming}", mas você está atualizando "${existing}". Substituir mesmo assim?';
   @override
   String get dict_update_name_mismatch_title => 'Os nomes não coincidem';
-  @override
-  String get dict_update_none => 'Todos os dicionários estão atualizados.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -142603,6 +142667,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -145058,8 +145133,6 @@ class _StringsRu extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Проверить обновления';
-  @override
   String get dict_update_checking => 'Проверка обновлений…';
   @override
   String dict_update_done({required Object name}) => '${name} обновлён.';
@@ -145082,8 +145155,6 @@ class _StringsRu extends _StringsEn {
       'Выбранный файл — «${incoming}», но вы обновляете «${existing}». Всё равно заменить?';
   @override
   String get dict_update_name_mismatch_title => 'Имена не совпадают';
-  @override
-  String get dict_update_none => 'Все словари обновлены.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -156192,6 +156263,17 @@ class _StringsRu extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -158612,8 +158694,6 @@ class _StringsTh extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'ตรวจสอบอัปเดต';
-  @override
   String get dict_update_checking => 'กำลังตรวจสอบอัปเดต…';
   @override
   String dict_update_done({required Object name}) => 'อัปเดต ${name} แล้ว';
@@ -158636,8 +158716,6 @@ class _StringsTh extends _StringsEn {
       'ไฟล์ที่เลือกคือ "${incoming}" แต่คุณกำลังอัปเดต "${existing}" จะแทนที่ต่อไปหรือไม่?';
   @override
   String get dict_update_name_mismatch_title => 'ชื่อไม่ตรงกัน';
-  @override
-  String get dict_update_none => 'พจนานุกรมทั้งหมดเป็นเวอร์ชันล่าสุดแล้ว';
   @override
   String dict_update_summary({
     required Object updated,
@@ -169578,6 +169656,17 @@ class _StringsTh extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -172029,8 +172118,6 @@ class _StringsTr extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Güncellemeleri Denetle';
-  @override
   String get dict_update_checking => 'Güncellemeler denetleniyor…';
   @override
   String dict_update_done({required Object name}) => '${name} güncellendi.';
@@ -172053,8 +172140,6 @@ class _StringsTr extends _StringsEn {
       'Seçilen dosya "${incoming}", ancak "${existing}" sözlüğünü güncelliyorsunuz. Yine de değiştirilsin mi?';
   @override
   String get dict_update_name_mismatch_title => 'Adlar eşleşmiyor';
-  @override
-  String get dict_update_none => 'Tüm sözlükler güncel.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -183078,6 +183163,17 @@ class _StringsTr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -185526,8 +185622,6 @@ class _StringsVi extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => 'Kiểm tra cập nhật';
-  @override
   String get dict_update_checking => 'Đang kiểm tra cập nhật…';
   @override
   String dict_update_done({required Object name}) => 'Đã cập nhật ${name}.';
@@ -185550,8 +185644,6 @@ class _StringsVi extends _StringsEn {
       'Tệp đã chọn là "${incoming}", nhưng bạn đang cập nhật "${existing}". Vẫn thay thế?';
   @override
   String get dict_update_name_mismatch_title => 'Tên không khớp';
-  @override
-  String get dict_update_none => 'Tất cả từ điển đều là mới nhất.';
   @override
   String dict_update_summary({
     required Object updated,
@@ -196549,6 +196641,17 @@ class _StringsVi extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => 'Update all dictionaries';
+  @override
+  String get dict_update_all_no_source =>
+      'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+  @override
+  String get dict_update_check_failed =>
+      'Couldn\'t check for updates. Check your network or proxy settings.';
+  @override
+  String get dict_update_from_file_tooltip =>
+      'Update from a local file (this dictionary has no online update source)';
 }
 
 // Path: <root>
@@ -198804,8 +198907,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String dict_task_failed_summary({required Object n}) => '${n} 本词典处理失败';
   @override
-  String get dict_update_check => '检查更新';
-  @override
   String get dict_update_checking => '正在检查更新…';
   @override
   String dict_update_done({required Object name}) => '${name} 已更新。';
@@ -198826,8 +198927,6 @@ class _StringsZhCn extends _StringsEn {
   }) => '所选文件是「${incoming}」，但你正在更新「${existing}」。仍要替换吗？';
   @override
   String get dict_update_name_mismatch_title => '词典名称不一致';
-  @override
-  String get dict_update_none => '所有词典均为最新。';
   @override
   String dict_update_summary({
     required Object updated,
@@ -208872,6 +208971,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       '章节加载失败：${error}';
+  @override
+  String get dict_update_all => '更新全部词典';
+  @override
+  String get dict_update_all_no_source =>
+      '没有词典声明在线更新地址。index.json 里没有更新地址的词典只能从本地文件更新。';
+  @override
+  String get dict_update_check_failed => '检查更新失败，请检查网络或代理设置。';
+  @override
+  String get dict_update_from_file_tooltip => '从本地文件更新（此词典没有在线更新地址）';
 }
 
 // Path: <root>
@@ -211154,8 +211262,6 @@ class _StringsZhHk extends _StringsEn {
   String dict_task_failed_summary({required Object n}) =>
       '${n} dictionary(s) failed';
   @override
-  String get dict_update_check => '檢查更新';
-  @override
   String get dict_update_checking => '正在檢查更新…';
   @override
   String dict_update_done({required Object name}) => '${name} 已更新。';
@@ -211176,8 +211282,6 @@ class _StringsZhHk extends _StringsEn {
   }) => '所選檔案是「${incoming}」，但你正在更新「${existing}」。仍要替換嗎？';
   @override
   String get dict_update_name_mismatch_title => '詞典名稱不一致';
-  @override
-  String get dict_update_none => '所有詞典均為最新。';
   @override
   String dict_update_summary({
     required Object updated,
@@ -221520,6 +221624,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get dict_update_all => '更新全部詞典';
+  @override
+  String get dict_update_all_no_source =>
+      '沒有詞典聲明線上更新地址。index.json 裡沒有更新地址的詞典只能從本機檔案更新。';
+  @override
+  String get dict_update_check_failed => '檢查更新失敗，請檢查網路或代理設定。';
+  @override
+  String get dict_update_from_file_tooltip => '從本機檔案更新（此詞典沒有線上更新地址）';
 }
 
 /// Flat map(s) containing all translations.
@@ -223609,8 +223722,6 @@ extension on _StringsEn {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Check for updates';
       case 'dict_update_checking':
         return 'Checking for updates…';
       case 'dict_update_done':
@@ -223630,8 +223741,6 @@ extension on _StringsEn {
             'The selected file is "${incoming}", but you are updating "${existing}". Replace anyway?';
       case 'dict_update_name_mismatch_title':
         return 'Names do not match';
-      case 'dict_update_none':
-        return 'All dictionaries are up to date.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -233065,6 +233174,14 @@ extension on _StringsEn {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -235154,8 +235271,6 @@ extension on _StringsAr {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'التحقق من التحديثات';
       case 'dict_update_checking':
         return 'جارٍ التحقق من التحديثات…';
       case 'dict_update_done':
@@ -235175,8 +235290,6 @@ extension on _StringsAr {
             'الملف المحدد هو "${incoming}"، لكنك تُحدّث "${existing}". هل تريد الاستبدال على أي حال؟';
       case 'dict_update_name_mismatch_title':
         return 'الأسماء غير متطابقة';
-      case 'dict_update_none':
-        return 'جميع القواميس محدّثة.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -244605,6 +244718,14 @@ extension on _StringsAr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -246708,8 +246829,6 @@ extension on _StringsDe {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Nach Updates suchen';
       case 'dict_update_checking':
         return 'Suche nach Updates…';
       case 'dict_update_done':
@@ -246729,8 +246848,6 @@ extension on _StringsDe {
             'Die ausgewählte Datei ist „${incoming}“, aber du aktualisierst „${existing}“. Trotzdem ersetzen?';
       case 'dict_update_name_mismatch_title':
         return 'Namen stimmen nicht überein';
-      case 'dict_update_none':
-        return 'Alle Wörterbücher sind aktuell.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -256194,6 +256311,14 @@ extension on _StringsDe {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -258293,8 +258418,6 @@ extension on _StringsEs {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Buscar actualizaciones';
       case 'dict_update_checking':
         return 'Buscando actualizaciones…';
       case 'dict_update_done':
@@ -258314,8 +258437,6 @@ extension on _StringsEs {
             'El archivo seleccionado es «${incoming}», pero estás actualizando «${existing}». ¿Reemplazar de todos modos?';
       case 'dict_update_name_mismatch_title':
         return 'Los nombres no coinciden';
-      case 'dict_update_none':
-        return 'Todos los diccionarios están actualizados.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -267773,6 +267894,14 @@ extension on _StringsEs {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -269875,8 +270004,6 @@ extension on _StringsFr {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Vérifier les mises à jour';
       case 'dict_update_checking':
         return 'Recherche de mises à jour…';
       case 'dict_update_done':
@@ -269897,8 +270024,6 @@ extension on _StringsFr {
             'Le fichier sélectionné est « ${incoming} », mais vous mettez à jour « ${existing} ». Remplacer quand même ?';
       case 'dict_update_name_mismatch_title':
         return 'Les noms ne correspondent pas';
-      case 'dict_update_none':
-        return 'Tous les dictionnaires sont à jour.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -279360,6 +279485,14 @@ extension on _StringsFr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -281456,8 +281589,6 @@ extension on _StringsId {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Cek Pembaruan';
       case 'dict_update_checking':
         return 'Memeriksa pembaruan…';
       case 'dict_update_done':
@@ -281477,8 +281608,6 @@ extension on _StringsId {
             'File yang dipilih adalah "${incoming}", tetapi Anda memperbarui "${existing}". Tetap ganti?';
       case 'dict_update_name_mismatch_title':
         return 'Nama tidak cocok';
-      case 'dict_update_none':
-        return 'Semua kamus sudah yang terbaru.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -290917,6 +291046,14 @@ extension on _StringsId {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -293014,8 +293151,6 @@ extension on _StringsIt {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Controlla aggiornamenti';
       case 'dict_update_checking':
         return 'Ricerca aggiornamenti…';
       case 'dict_update_done':
@@ -293036,8 +293171,6 @@ extension on _StringsIt {
             'Il file selezionato è «${incoming}», ma stai aggiornando «${existing}». Sostituire comunque?';
       case 'dict_update_name_mismatch_title':
         return 'I nomi non corrispondono';
-      case 'dict_update_none':
-        return 'Tutti i dizionari sono aggiornati.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -302497,6 +302630,14 @@ extension on _StringsIt {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -304577,8 +304718,6 @@ extension on _StringsJa {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return '更新を確認';
       case 'dict_update_checking':
         return '更新を確認中…';
       case 'dict_update_done':
@@ -304598,8 +304737,6 @@ extension on _StringsJa {
             '選択したファイルは「${incoming}」ですが、更新対象は「${existing}」です。置き換えますか？';
       case 'dict_update_name_mismatch_title':
         return '名前が一致しません';
-      case 'dict_update_none':
-        return 'すべての辞書は最新です。';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -313999,6 +314136,14 @@ extension on _StringsJa {
         return ({required Object error}) => 'オンラインで開けませんでした：${error}';
       case 'novel_online_chapter_failed':
         return ({required Object error}) => '章を読み込めませんでした：${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -316079,8 +316224,6 @@ extension on _StringsKo {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return '업데이트 확인';
       case 'dict_update_checking':
         return '업데이트 확인 중…';
       case 'dict_update_done':
@@ -316100,8 +316243,6 @@ extension on _StringsKo {
             '선택한 파일은 "${incoming}"이지만 "${existing}"을(를) 업데이트하고 있습니다. 그래도 교체할까요?';
       case 'dict_update_name_mismatch_title':
         return '이름이 일치하지 않습니다';
-      case 'dict_update_none':
-        return '모든 사전이 최신 상태입니다.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -325508,6 +325649,14 @@ extension on _StringsKo {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -327606,8 +327755,6 @@ extension on _StringsNl {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Controleren op updates';
       case 'dict_update_checking':
         return 'Controleren op updates…';
       case 'dict_update_done':
@@ -327627,8 +327774,6 @@ extension on _StringsNl {
             'Het geselecteerde bestand is "${incoming}", maar je werkt "${existing}" bij. Toch vervangen?';
       case 'dict_update_name_mismatch_title':
         return 'Namen komen niet overeen';
-      case 'dict_update_none':
-        return 'Alle woordenboeken zijn up-to-date.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -337083,6 +337228,14 @@ extension on _StringsNl {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -339181,8 +339334,6 @@ extension on _StringsPtBr {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Verificar atualizações';
       case 'dict_update_checking':
         return 'Verificando atualizações…';
       case 'dict_update_done':
@@ -339202,8 +339353,6 @@ extension on _StringsPtBr {
             'O arquivo selecionado é "${incoming}", mas você está atualizando "${existing}". Substituir mesmo assim?';
       case 'dict_update_name_mismatch_title':
         return 'Os nomes não coincidem';
-      case 'dict_update_none':
-        return 'Todos os dicionários estão atualizados.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -348653,6 +348802,14 @@ extension on _StringsPtBr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -350756,8 +350913,6 @@ extension on _StringsRu {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Проверить обновления';
       case 'dict_update_checking':
         return 'Проверка обновлений…';
       case 'dict_update_done':
@@ -350777,8 +350932,6 @@ extension on _StringsRu {
             'Выбранный файл — «${incoming}», но вы обновляете «${existing}». Всё равно заменить?';
       case 'dict_update_name_mismatch_title':
         return 'Имена не совпадают';
-      case 'dict_update_none':
-        return 'Все словари обновлены.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -360229,6 +360382,14 @@ extension on _StringsRu {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -362318,8 +362479,6 @@ extension on _StringsTh {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'ตรวจสอบอัปเดต';
       case 'dict_update_checking':
         return 'กำลังตรวจสอบอัปเดต…';
       case 'dict_update_done':
@@ -362339,8 +362498,6 @@ extension on _StringsTh {
             'ไฟล์ที่เลือกคือ "${incoming}" แต่คุณกำลังอัปเดต "${existing}" จะแทนที่ต่อไปหรือไม่?';
       case 'dict_update_name_mismatch_title':
         return 'ชื่อไม่ตรงกัน';
-      case 'dict_update_none':
-        return 'พจนานุกรมทั้งหมดเป็นเวอร์ชันล่าสุดแล้ว';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -371774,6 +371931,14 @@ extension on _StringsTh {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -373872,8 +374037,6 @@ extension on _StringsTr {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Güncellemeleri Denetle';
       case 'dict_update_checking':
         return 'Güncellemeler denetleniyor…';
       case 'dict_update_done':
@@ -373893,8 +374056,6 @@ extension on _StringsTr {
             'Seçilen dosya "${incoming}", ancak "${existing}" sözlüğünü güncelliyorsunuz. Yine de değiştirilsin mi?';
       case 'dict_update_name_mismatch_title':
         return 'Adlar eşleşmiyor';
-      case 'dict_update_none':
-        return 'Tüm sözlükler güncel.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -383335,6 +383496,14 @@ extension on _StringsTr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -385428,8 +385597,6 @@ extension on _StringsVi {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return 'Kiểm tra cập nhật';
       case 'dict_update_checking':
         return 'Đang kiểm tra cập nhật…';
       case 'dict_update_done':
@@ -385449,8 +385616,6 @@ extension on _StringsVi {
             'Tệp đã chọn là "${incoming}", nhưng bạn đang cập nhật "${existing}". Vẫn thay thế?';
       case 'dict_update_name_mismatch_title':
         return 'Tên không khớp';
-      case 'dict_update_none':
-        return 'Tất cả từ điển đều là mới nhất.';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -394890,6 +395055,14 @@ extension on _StringsVi {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return 'Update all dictionaries';
+      case 'dict_update_all_no_source':
+        return 'None of your dictionaries declares an online update source. Dictionaries whose index.json has no update URL can only be updated from a local file.';
+      case 'dict_update_check_failed':
+        return 'Couldn\'t check for updates. Check your network or proxy settings.';
+      case 'dict_update_from_file_tooltip':
+        return 'Update from a local file (this dictionary has no online update source)';
       default:
         return null;
     }
@@ -396957,8 +397130,6 @@ extension on _StringsZhCn {
             '导入失败：${name}（${reason}）';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} 本词典处理失败';
-      case 'dict_update_check':
-        return '检查更新';
       case 'dict_update_checking':
         return '正在检查更新…';
       case 'dict_update_done':
@@ -396978,8 +397149,6 @@ extension on _StringsZhCn {
             '所选文件是「${incoming}」，但你正在更新「${existing}」。仍要替换吗？';
       case 'dict_update_name_mismatch_title':
         return '词典名称不一致';
-      case 'dict_update_none':
-        return '所有词典均为最新。';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -406334,6 +406503,14 @@ extension on _StringsZhCn {
         return ({required Object error}) => '在线打开失败：${error}';
       case 'novel_online_chapter_failed':
         return ({required Object error}) => '章节加载失败：${error}';
+      case 'dict_update_all':
+        return '更新全部词典';
+      case 'dict_update_all_no_source':
+        return '没有词典声明在线更新地址。index.json 里没有更新地址的词典只能从本地文件更新。';
+      case 'dict_update_check_failed':
+        return '检查更新失败，请检查网络或代理设置。';
+      case 'dict_update_from_file_tooltip':
+        return '从本地文件更新（此词典没有在线更新地址）';
       default:
         return null;
     }
@@ -408406,8 +408583,6 @@ extension on _StringsZhHk {
             'Import failed: ${name} (${reason})';
       case 'dict_task_failed_summary':
         return ({required Object n}) => '${n} dictionary(s) failed';
-      case 'dict_update_check':
-        return '檢查更新';
       case 'dict_update_checking':
         return '正在檢查更新…';
       case 'dict_update_done':
@@ -408427,8 +408602,6 @@ extension on _StringsZhHk {
             '所選檔案是「${incoming}」，但你正在更新「${existing}」。仍要替換嗎？';
       case 'dict_update_name_mismatch_title':
         return '詞典名稱不一致';
-      case 'dict_update_none':
-        return '所有詞典均為最新。';
       case 'dict_update_summary':
         return ({
           required Object updated,
@@ -417816,6 +417989,14 @@ extension on _StringsZhHk {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'dict_update_all':
+        return '更新全部詞典';
+      case 'dict_update_all_no_source':
+        return '沒有詞典聲明線上更新地址。index.json 裡沒有更新地址的詞典只能從本機檔案更新。';
+      case 'dict_update_check_failed':
+        return '檢查更新失敗，請檢查網路或代理設定。';
+      case 'dict_update_from_file_tooltip':
+        return '從本機檔案更新（此詞典沒有線上更新地址）';
       default:
         return null;
     }
