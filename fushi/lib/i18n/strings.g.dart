@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95183 (5599 per locale)
+/// Strings: 95166 (5598 per locale)
 ///
-/// Built on 2026-09-26 at 09:17 UTC
+/// Built on 2026-09-26 at 10:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7323,9 +7323,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_mode_hint => 'Show reading mode on entry';
   String get manga_reader_tap_hint => 'Show tap zones';
   String get manga_reader_skip_read => 'Skip read chapters';
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  String get manga_reader_transition => 'Always show chapter transition';
   String get manga_reader_fullscreen => 'Full screen';
   String get manga_reader_keep_screen => 'Keep screen on';
   String get manga_reader_invert_volume => 'Invert volume key direction';
@@ -7954,6 +7952,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_discovery_view_all => 'View all';
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   String get manga_discovery_empty_action => 'Manage sources';
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   String get video_dolby_vision_colors_enable_hdr_output =>
@@ -20288,11 +20288,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -21336,6 +21332,9 @@ class _StringsAr extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -33915,11 +33914,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -34967,6 +34962,9 @@ class _StringsDe extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -47596,11 +47594,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -48649,6 +48643,9 @@ class _StringsEs extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -61315,11 +61312,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -62370,6 +62363,9 @@ class _StringsFr extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -74832,11 +74828,7 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -75881,6 +75873,9 @@ class _StringsId extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -88440,11 +88435,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -89493,6 +89484,9 @@ class _StringsIt extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -101422,11 +101416,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -102463,6 +102453,9 @@ class _StringsJa extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -114402,11 +114395,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -115447,6 +115436,9 @@ class _StringsKo extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -127962,11 +127954,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -129013,6 +129001,9 @@ class _StringsNl extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -141581,11 +141572,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -142632,6 +142619,9 @@ class _StringsPtBr extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -155176,11 +155166,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -156226,6 +156212,9 @@ class _StringsRu extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -168569,11 +168558,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -169617,6 +169602,9 @@ class _StringsTh extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -182075,11 +182063,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -183122,6 +183106,9 @@ class _StringsTr extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -195551,11 +195538,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -196598,6 +196581,9 @@ class _StringsVi extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -207977,11 +207963,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_skip_read => '跳过已读章节';
   @override
-  String get manga_reader_skip_filtered => '跳过已过滤章节';
-  @override
   String get manga_reader_skip_duplicate => '跳过重复章节';
-  @override
-  String get manga_reader_transition => '始终显示章节过渡';
   @override
   String get manga_reader_fullscreen => '全屏';
   @override
@@ -208928,6 +208910,8 @@ class _StringsZhCn extends _StringsEn {
   String get manga_discovery_empty_title => '还没有可发现的漫画来源';
   @override
   String get manga_discovery_empty_action => '管理来源';
+  @override
+  String get manga_reader_download_ahead => '阅读时预下载下一章';
   @override
   String get video_dolby_vision_colors_unsupported =>
       '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
@@ -220537,11 +220521,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -221579,6 +221559,9 @@ class _StringsZhHk extends _StringsEn {
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   @override
   String get manga_discovery_empty_action => 'Manage sources';
+  @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
@@ -232270,12 +232253,8 @@ extension on _StringsEn {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -233133,6 +233112,8 @@ extension on _StringsEn {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -243814,12 +243795,8 @@ extension on _StringsAr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -244677,6 +244654,8 @@ extension on _StringsAr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -255407,12 +255386,8 @@ extension on _StringsDe {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -256270,6 +256245,8 @@ extension on _StringsDe {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -266990,12 +266967,8 @@ extension on _StringsEs {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -267853,6 +267826,8 @@ extension on _StringsEs {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -278581,12 +278556,8 @@ extension on _StringsFr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -279444,6 +279415,8 @@ extension on _StringsFr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -290142,12 +290115,8 @@ extension on _StringsId {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -291005,6 +290974,8 @@ extension on _StringsId {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -301726,12 +301697,8 @@ extension on _StringsIt {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -302589,6 +302556,8 @@ extension on _StringsIt {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -313234,12 +313203,8 @@ extension on _StringsJa {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -314096,6 +314061,8 @@ extension on _StringsJa {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -324745,12 +324712,8 @@ extension on _StringsKo {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -325608,6 +325571,8 @@ extension on _StringsKo {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -336324,12 +336289,8 @@ extension on _StringsNl {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -337187,6 +337148,8 @@ extension on _StringsNl {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -347898,12 +347861,8 @@ extension on _StringsPtBr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -348761,6 +348720,8 @@ extension on _StringsPtBr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -359478,12 +359439,8 @@ extension on _StringsRu {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -360341,6 +360298,8 @@ extension on _StringsRu {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -371027,12 +370986,8 @@ extension on _StringsTh {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -371890,6 +371845,8 @@ extension on _StringsTh {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -382592,12 +382549,8 @@ extension on _StringsTr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -383455,6 +383408,8 @@ extension on _StringsTr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -394151,12 +394106,8 @@ extension on _StringsVi {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -395014,6 +394965,8 @@ extension on _StringsVi {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -405612,12 +405565,8 @@ extension on _StringsZhCn {
         return '显示点击区提示';
       case 'manga_reader_skip_read':
         return '跳过已读章节';
-      case 'manga_reader_skip_filtered':
-        return '跳过已过滤章节';
       case 'manga_reader_skip_duplicate':
         return '跳过重复章节';
-      case 'manga_reader_transition':
-        return '始终显示章节过渡';
       case 'manga_reader_fullscreen':
         return '全屏';
       case 'manga_reader_keep_screen':
@@ -406463,6 +406412,8 @@ extension on _StringsZhCn {
         return '还没有可发现的漫画来源';
       case 'manga_discovery_empty_action':
         return '管理来源';
+      case 'manga_reader_download_ahead':
+        return '阅读时预下载下一章';
       case 'video_dolby_vision_colors_unsupported':
         return '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -417085,12 +417036,8 @@ extension on _StringsZhHk {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -417948,6 +417895,8 @@ extension on _StringsZhHk {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
