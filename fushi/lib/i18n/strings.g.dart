@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95013 (5589 per locale)
+/// Strings: 95132 (5596 per locale)
 ///
-/// Built on 2026-09-26 at 03:39 UTC
+/// Built on 2026-09-26 at 09:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7954,6 +7954,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_discovery_empty_action => 'Manage sources';
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  String get novel_detail_read_online => 'Read online';
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -21320,6 +21332,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -34926,6 +34957,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -48583,6 +48633,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -62279,6 +62348,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -75765,6 +75853,25 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -89352,6 +89459,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -102297,6 +102423,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'オンラインで読む';
+  @override
+  String get novel_detail_chapter_download => 'この章からダウンロード';
+  @override
+  String get novel_online_chapter_pending =>
+      'この章はまだ読み込まれていません。接続を確認してから章を開き直すと、配信元から読み込みます。';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'オンラインで開けませんでした：${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      '章を読み込めませんでした：${error}';
 }
 
 // Path: <root>
@@ -115256,6 +115401,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -128797,6 +128961,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -142391,6 +142574,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -155960,6 +156162,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -169326,6 +169547,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -182806,6 +183046,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -196257,6 +196516,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 // Path: <root>
@@ -208561,6 +208839,23 @@ class _StringsZhCn extends _StringsEn {
   String get manga_discovery_empty_action => '管理来源';
   @override
   String get manga_reader_download_ahead => '阅读时预下载下一章';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      '杜比视界 Profile 5 片源：HDR / 10-bit 输出关闭时颜色会偏紫或偏绿，改成「自动」即可正常显示。';
+  @override
+  String get novel_detail_read_online => '在线阅读';
+  @override
+  String get novel_detail_chapter_download => '从这一章开始下载';
+  @override
+  String get novel_online_chapter_pending => '本章尚未加载。请检查网络后重新打开本章，即可从源站读取。';
+  @override
+  String novel_online_open_failed({required Object error}) => '在线打开失败：${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      '章节加载失败：${error}';
 }
 
 // Path: <root>
@@ -221189,6 +221484,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_download_ahead =>
       'Download next chapter while reading';
+  @override
+  String get video_dolby_vision_colors_unsupported =>
+      'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+  @override
+  String get video_dolby_vision_colors_enable_hdr_output =>
+      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+  @override
+  String get novel_detail_read_online => 'Read online';
+  @override
+  String get novel_detail_chapter_download => 'Download from this chapter';
+  @override
+  String get novel_online_chapter_pending =>
+      'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+  @override
+  String novel_online_open_failed({required Object error}) =>
+      'Couldn\'t open online: ${error}';
+  @override
+  String novel_online_chapter_failed({required Object error}) =>
+      'Couldn\'t load the chapter: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -232717,6 +233031,21 @@ extension on _StringsEn {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -244240,6 +244569,21 @@ extension on _StringsAr {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -255812,6 +256156,21 @@ extension on _StringsDe {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -267374,6 +267733,21 @@ extension on _StringsEs {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -278944,6 +279318,21 @@ extension on _StringsFr {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -290484,6 +290873,21 @@ extension on _StringsId {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -302047,6 +302451,21 @@ extension on _StringsIt {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -313533,6 +313952,20 @@ extension on _StringsJa {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'オンラインで読む';
+      case 'novel_detail_chapter_download':
+        return 'この章からダウンロード';
+      case 'novel_online_chapter_pending':
+        return 'この章はまだ読み込まれていません。接続を確認してから章を開き直すと、配信元から読み込みます。';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'オンラインで開けませんでした：${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) => '章を読み込めませんでした：${error}';
       default:
         return null;
     }
@@ -325025,6 +325458,21 @@ extension on _StringsKo {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -336583,6 +337031,21 @@ extension on _StringsNl {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -348136,6 +348599,21 @@ extension on _StringsPtBr {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -359695,6 +360173,21 @@ extension on _StringsRu {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -371223,6 +371716,21 @@ extension on _StringsTh {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -382767,6 +383275,21 @@ extension on _StringsTr {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -394305,6 +394828,21 @@ extension on _StringsVi {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
@@ -405733,6 +406271,20 @@ extension on _StringsZhCn {
         return '管理来源';
       case 'manga_reader_download_ahead':
         return '阅读时预下载下一章';
+      case 'video_dolby_vision_colors_unsupported':
+        return '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return '杜比视界 Profile 5 片源：HDR / 10-bit 输出关闭时颜色会偏紫或偏绿，改成「自动」即可正常显示。';
+      case 'novel_detail_read_online':
+        return '在线阅读';
+      case 'novel_detail_chapter_download':
+        return '从这一章开始下载';
+      case 'novel_online_chapter_pending':
+        return '本章尚未加载。请检查网络后重新打开本章，即可从源站读取。';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => '在线打开失败：${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) => '章节加载失败：${error}';
       default:
         return null;
     }
@@ -417198,6 +417750,21 @@ extension on _StringsZhHk {
         return 'Manage sources';
       case 'manga_reader_download_ahead':
         return 'Download next chapter while reading';
+      case 'video_dolby_vision_colors_unsupported':
+        return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
+      case 'video_dolby_vision_colors_enable_hdr_output':
+        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
+      case 'novel_detail_read_online':
+        return 'Read online';
+      case 'novel_detail_chapter_download':
+        return 'Download from this chapter';
+      case 'novel_online_chapter_pending':
+        return 'This chapter hasn\'t been loaded yet. Check your connection, then reopen the chapter to load it from the source.';
+      case 'novel_online_open_failed':
+        return ({required Object error}) => 'Couldn\'t open online: ${error}';
+      case 'novel_online_chapter_failed':
+        return ({required Object error}) =>
+            'Couldn\'t load the chapter: ${error}';
       default:
         return null;
     }
