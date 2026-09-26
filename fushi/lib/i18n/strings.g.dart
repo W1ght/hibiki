@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95132 (5596 per locale)
+/// Strings: 95166 (5598 per locale)
 ///
-/// Built on 2026-09-26 at 09:35 UTC
+/// Built on 2026-09-26 at 10:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7966,6 +7966,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t open online: ${error}';
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -21351,6 +21354,11 @@ class _StringsAr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -34976,6 +34984,11 @@ class _StringsDe extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -48652,6 +48665,11 @@ class _StringsEs extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -62367,6 +62385,11 @@ class _StringsFr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -75872,6 +75895,11 @@ class _StringsId extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -89478,6 +89506,11 @@ class _StringsIt extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -102442,6 +102475,11 @@ class _StringsJa extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       '章を読み込めませんでした：${error}';
+  @override
+  String get anki_lapis_visual_text_indent => '字下げ';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} 字';
 }
 
 // Path: <root>
@@ -115420,6 +115458,11 @@ class _StringsKo extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -128980,6 +129023,11 @@ class _StringsNl extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -142593,6 +142641,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -156181,6 +156234,11 @@ class _StringsRu extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -169566,6 +169624,11 @@ class _StringsTh extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -183065,6 +183128,11 @@ class _StringsTr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -196535,6 +196603,11 @@ class _StringsVi extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
 }
 
 // Path: <root>
@@ -208856,6 +208929,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       '章节加载失败：${error}';
+  @override
+  String get anki_lapis_visual_text_indent => '首行缩进';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} 字';
 }
 
 // Path: <root>
@@ -221503,6 +221581,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => '首行縮排';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} 字';
 }
 
 /// Flat map(s) containing all translations.
@@ -233046,6 +233129,10 @@ extension on _StringsEn {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -244584,6 +244671,10 @@ extension on _StringsAr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -256171,6 +256262,10 @@ extension on _StringsDe {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -267748,6 +267843,10 @@ extension on _StringsEs {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -279333,6 +279432,10 @@ extension on _StringsFr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -290888,6 +290991,10 @@ extension on _StringsId {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -302466,6 +302573,10 @@ extension on _StringsIt {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -313966,6 +314077,10 @@ extension on _StringsJa {
         return ({required Object error}) => 'オンラインで開けませんでした：${error}';
       case 'novel_online_chapter_failed':
         return ({required Object error}) => '章を読み込めませんでした：${error}';
+      case 'anki_lapis_visual_text_indent':
+        return '字下げ';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} 字';
       default:
         return null;
     }
@@ -325473,6 +325588,10 @@ extension on _StringsKo {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -337046,6 +337165,10 @@ extension on _StringsNl {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -348614,6 +348737,10 @@ extension on _StringsPtBr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -360188,6 +360315,10 @@ extension on _StringsRu {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -371731,6 +371862,10 @@ extension on _StringsTh {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -383290,6 +383425,10 @@ extension on _StringsTr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -394843,6 +394982,10 @@ extension on _StringsVi {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       default:
         return null;
     }
@@ -406285,6 +406428,10 @@ extension on _StringsZhCn {
         return ({required Object error}) => '在线打开失败：${error}';
       case 'novel_online_chapter_failed':
         return ({required Object error}) => '章节加载失败：${error}';
+      case 'anki_lapis_visual_text_indent':
+        return '首行缩进';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} 字';
       default:
         return null;
     }
@@ -417765,6 +417912,10 @@ extension on _StringsZhHk {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return '首行縮排';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} 字';
       default:
         return null;
     }
