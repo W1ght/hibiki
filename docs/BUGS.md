@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2497 条。点号进各自文件。
+> 共 2498 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2718](bugs/BUG-2718-cmvs-runner-provider-allowlist.md) | ✅ | ✅ | CMVS 精确布局的查词命中被 runner 白名单丢弃 |
 | [BUG-2716](bugs/BUG-2716-kirikiri-sticky-tail-after-midloop-attach.md) | ✅ | ✅ | KiriKiri 循环音效中途附着时 P P T 粘尾不剥，整段游戏内查词被拒 |
 | [BUG-2712](bugs/BUG-2712-siglus-choice-lookup.md) | ✅ | ✅ | Siglus（CLANNAD）选项画面查词查到上一句、没有查词框、全屏看不到弹窗 |
 | [BUG-2711](bugs/BUG-2711-vn-split-screen-margin-asymmetry.md) | ✅ | ✅ | VN 模式拆屏后左右间距不一致 |
