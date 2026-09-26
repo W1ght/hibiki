@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95166 (5598 per locale)
+/// Strings: 95455 (5615 per locale)
 ///
-/// Built on 2026-09-26 at 10:11 UTC
+/// Built on 2026-09-26 at 10:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7969,6 +7969,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_visual_text_indent => 'First-line indent';
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  String get video_online_mining_mode => 'Online video mining';
+  String get video_online_mining_mode_background => 'In the background';
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  String get video_online_mining_mode_deferred => 'After watching';
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  String get video_mine_queue_title => 'Cards to add';
+  String get video_mine_queue_empty => 'No cards waiting.';
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -21359,6 +21388,52 @@ class _StringsAr extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -34989,6 +35064,52 @@ class _StringsDe extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -48670,6 +48791,52 @@ class _StringsEs extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -62390,6 +62557,52 @@ class _StringsFr extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -75900,6 +76113,52 @@ class _StringsId extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -89511,6 +89770,52 @@ class _StringsIt extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -102480,6 +102785,49 @@ class _StringsJa extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} 字';
+  @override
+  String get video_online_mining_mode => 'オンライン動画のカード作成';
+  @override
+  String get video_online_mining_mode_background => 'バックグラウンドで作成';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'ポップアップはすぐに追加済みになり、動画はそのまま再生されます。メディアはバックグラウンドで準備して Anki に追加します。';
+  @override
+  String get video_online_mining_mode_deferred => '見終わってから作成';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'メディアを準備してリストに保留し、プレーヤーを閉じたときか「すべて追加」を押したときにまとめて Anki に追加します。追加前に不要なものを削除できます。';
+  @override
+  String get video_online_mining_mode_wait => '完了まで待つ';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'カードが Anki に追加されるまでポップアップが待ちます（最新カードの編集が使えます）。';
+  @override
+  String video_mine_staged({required Object count}) => '保留に追加 · ${count} 件';
+  @override
+  String video_mine_in_progress({required Object count}) => 'カード作成中 ${count}';
+  @override
+  String video_mine_queue_badge({required Object count}) => '保留 ${count}';
+  @override
+  String get video_mine_queue_title => '保留中のカード';
+  @override
+  String get video_mine_queue_empty => '保留中のカードはありません。';
+  @override
+  String get video_mine_queue_commit_all => 'すべて Anki に追加';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => '追加中 ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} 件を追加、${failed} 件失敗';
+  @override
+  String video_mine_queue_failed({required Object reason}) => '追加失敗：${reason}';
+  @override
+  String get video_mine_queue_remove => '削除';
 }
 
 // Path: <root>
@@ -115463,6 +115811,52 @@ class _StringsKo extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -129028,6 +129422,52 @@ class _StringsNl extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -142646,6 +143086,52 @@ class _StringsPtBr extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -156239,6 +156725,52 @@ class _StringsRu extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -169629,6 +170161,52 @@ class _StringsTh extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -183133,6 +183711,52 @@ class _StringsTr extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -196608,6 +197232,52 @@ class _StringsVi extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} em';
+  @override
+  String get video_online_mining_mode => 'Online video mining';
+  @override
+  String get video_online_mining_mode_background => 'In the background';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+  @override
+  String get video_online_mining_mode_deferred => 'After watching';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+  @override
+  String get video_online_mining_mode_wait => 'Wait for the card';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      'The popup waits until the card is in Anki, so you can still edit the latest card.';
+  @override
+  String video_mine_staged({required Object count}) =>
+      'Saved for later · ${count} waiting';
+  @override
+  String video_mine_in_progress({required Object count}) =>
+      'Making ${count} card(s)…';
+  @override
+  String video_mine_queue_badge({required Object count}) => '${count} to add';
+  @override
+  String get video_mine_queue_title => 'Cards to add';
+  @override
+  String get video_mine_queue_empty => 'No cards waiting.';
+  @override
+  String get video_mine_queue_commit_all => 'Add all to Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => 'Adding ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => 'Added ${ok} cards, ${failed} failed';
+  @override
+  String video_mine_queue_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_mine_queue_remove => 'Remove';
 }
 
 // Path: <root>
@@ -208934,6 +209604,49 @@ class _StringsZhCn extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} 字';
+  @override
+  String get video_online_mining_mode => '在线视频制卡';
+  @override
+  String get video_online_mining_mode_background => '后台制卡';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      '弹窗立刻显示已加入、视频照常播放，媒体在后台准备并写入 Anki。';
+  @override
+  String get video_online_mining_mode_deferred => '看完再制卡';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      '后台准备好媒体后先放进待制卡列表，离开播放页或点「全部写入」时统一写入 Anki，写入前可删掉点错的。';
+  @override
+  String get video_online_mining_mode_wait => '等待完成';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      '弹窗等到卡片写入 Anki 才返回，保留「修改最新卡片」。';
+  @override
+  String video_mine_staged({required Object count}) => '已加入待制卡 · 共 ${count} 张';
+  @override
+  String video_mine_in_progress({required Object count}) => '正在制卡 ${count}';
+  @override
+  String video_mine_queue_badge({required Object count}) => '待制卡 ${count}';
+  @override
+  String get video_mine_queue_title => '待制卡';
+  @override
+  String get video_mine_queue_empty => '没有待写入的卡片。';
+  @override
+  String get video_mine_queue_commit_all => '全部写入 Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => '正在写入 ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => '已写入 ${ok} 张，失败 ${failed} 张';
+  @override
+  String video_mine_queue_failed({required Object reason}) => '写入失败：${reason}';
+  @override
+  String get video_mine_queue_remove => '移除';
 }
 
 // Path: <root>
@@ -221586,6 +222299,49 @@ class _StringsZhHk extends _StringsEn {
   @override
   String anki_lapis_visual_text_indent_chars({required Object count}) =>
       '${count} 字';
+  @override
+  String get video_online_mining_mode => '線上影片製卡';
+  @override
+  String get video_online_mining_mode_background => '背景製卡';
+  @override
+  String get video_online_mining_mode_background_hint =>
+      '彈窗立即顯示已加入、影片照常播放，媒體在背景準備並寫入 Anki。';
+  @override
+  String get video_online_mining_mode_deferred => '看完再製卡';
+  @override
+  String get video_online_mining_mode_deferred_hint =>
+      '背景準備好媒體後先放進待製卡清單，離開播放頁或按「全部寫入」時統一寫入 Anki，寫入前可刪掉點錯的。';
+  @override
+  String get video_online_mining_mode_wait => '等待完成';
+  @override
+  String get video_online_mining_mode_wait_hint =>
+      '彈窗等到卡片寫入 Anki 才返回，保留「修改最新卡片」。';
+  @override
+  String video_mine_staged({required Object count}) => '已加入待製卡 · 共 ${count} 張';
+  @override
+  String video_mine_in_progress({required Object count}) => '正在製卡 ${count}';
+  @override
+  String video_mine_queue_badge({required Object count}) => '待製卡 ${count}';
+  @override
+  String get video_mine_queue_title => '待製卡';
+  @override
+  String get video_mine_queue_empty => '沒有待寫入的卡片。';
+  @override
+  String get video_mine_queue_commit_all => '全部寫入 Anki';
+  @override
+  String video_mine_queue_committing({
+    required Object done,
+    required Object total,
+  }) => '正在寫入 ${done}/${total}…';
+  @override
+  String video_mine_queue_committed({
+    required Object ok,
+    required Object failed,
+  }) => '已寫入 ${ok} 張，失敗 ${failed} 張';
+  @override
+  String video_mine_queue_failed({required Object reason}) => '寫入失敗：${reason}';
+  @override
+  String get video_mine_queue_remove => '移除';
 }
 
 /// Flat map(s) containing all translations.
@@ -233133,6 +233889,43 @@ extension on _StringsEn {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -244675,6 +245468,43 @@ extension on _StringsAr {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -256266,6 +257096,43 @@ extension on _StringsDe {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -267847,6 +268714,43 @@ extension on _StringsEs {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -279436,6 +280340,43 @@ extension on _StringsFr {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -290995,6 +291936,43 @@ extension on _StringsId {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -302577,6 +303555,43 @@ extension on _StringsIt {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -314081,6 +315096,42 @@ extension on _StringsJa {
         return '字下げ';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} 字';
+      case 'video_online_mining_mode':
+        return 'オンライン動画のカード作成';
+      case 'video_online_mining_mode_background':
+        return 'バックグラウンドで作成';
+      case 'video_online_mining_mode_background_hint':
+        return 'ポップアップはすぐに追加済みになり、動画はそのまま再生されます。メディアはバックグラウンドで準備して Anki に追加します。';
+      case 'video_online_mining_mode_deferred':
+        return '見終わってから作成';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'メディアを準備してリストに保留し、プレーヤーを閉じたときか「すべて追加」を押したときにまとめて Anki に追加します。追加前に不要なものを削除できます。';
+      case 'video_online_mining_mode_wait':
+        return '完了まで待つ';
+      case 'video_online_mining_mode_wait_hint':
+        return 'カードが Anki に追加されるまでポップアップが待ちます（最新カードの編集が使えます）。';
+      case 'video_mine_staged':
+        return ({required Object count}) => '保留に追加 · ${count} 件';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'カード作成中 ${count}';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '保留 ${count}';
+      case 'video_mine_queue_title':
+        return '保留中のカード';
+      case 'video_mine_queue_empty':
+        return '保留中のカードはありません。';
+      case 'video_mine_queue_commit_all':
+        return 'すべて Anki に追加';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            '追加中 ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            '${ok} 件を追加、${failed} 件失敗';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => '追加失敗：${reason}';
+      case 'video_mine_queue_remove':
+        return '削除';
       default:
         return null;
     }
@@ -325592,6 +326643,43 @@ extension on _StringsKo {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -337169,6 +338257,43 @@ extension on _StringsNl {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -348741,6 +349866,43 @@ extension on _StringsPtBr {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -360319,6 +361481,43 @@ extension on _StringsRu {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -371866,6 +373065,43 @@ extension on _StringsTh {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -383429,6 +384665,43 @@ extension on _StringsTr {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -394986,6 +396259,43 @@ extension on _StringsVi {
         return 'First-line indent';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} em';
+      case 'video_online_mining_mode':
+        return 'Online video mining';
+      case 'video_online_mining_mode_background':
+        return 'In the background';
+      case 'video_online_mining_mode_background_hint':
+        return 'The popup marks the card as added right away and keeps the video going; the clip is prepared and sent to Anki in the background.';
+      case 'video_online_mining_mode_deferred':
+        return 'After watching';
+      case 'video_online_mining_mode_deferred_hint':
+        return 'Cards are prepared in the background and kept in a list; they go to Anki when you leave the player or tap Add all. Remove any you don\'t want first.';
+      case 'video_online_mining_mode_wait':
+        return 'Wait for the card';
+      case 'video_online_mining_mode_wait_hint':
+        return 'The popup waits until the card is in Anki, so you can still edit the latest card.';
+      case 'video_mine_staged':
+        return ({required Object count}) =>
+            'Saved for later · ${count} waiting';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '${count} to add';
+      case 'video_mine_queue_title':
+        return 'Cards to add';
+      case 'video_mine_queue_empty':
+        return 'No cards waiting.';
+      case 'video_mine_queue_commit_all':
+        return 'Add all to Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            'Adding ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            'Added ${ok} cards, ${failed} failed';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_mine_queue_remove':
+        return 'Remove';
       default:
         return null;
     }
@@ -406432,6 +407742,42 @@ extension on _StringsZhCn {
         return '首行缩进';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} 字';
+      case 'video_online_mining_mode':
+        return '在线视频制卡';
+      case 'video_online_mining_mode_background':
+        return '后台制卡';
+      case 'video_online_mining_mode_background_hint':
+        return '弹窗立刻显示已加入、视频照常播放，媒体在后台准备并写入 Anki。';
+      case 'video_online_mining_mode_deferred':
+        return '看完再制卡';
+      case 'video_online_mining_mode_deferred_hint':
+        return '后台准备好媒体后先放进待制卡列表，离开播放页或点「全部写入」时统一写入 Anki，写入前可删掉点错的。';
+      case 'video_online_mining_mode_wait':
+        return '等待完成';
+      case 'video_online_mining_mode_wait_hint':
+        return '弹窗等到卡片写入 Anki 才返回，保留「修改最新卡片」。';
+      case 'video_mine_staged':
+        return ({required Object count}) => '已加入待制卡 · 共 ${count} 张';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => '正在制卡 ${count}';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '待制卡 ${count}';
+      case 'video_mine_queue_title':
+        return '待制卡';
+      case 'video_mine_queue_empty':
+        return '没有待写入的卡片。';
+      case 'video_mine_queue_commit_all':
+        return '全部写入 Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            '正在写入 ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            '已写入 ${ok} 张，失败 ${failed} 张';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => '写入失败：${reason}';
+      case 'video_mine_queue_remove':
+        return '移除';
       default:
         return null;
     }
@@ -417916,6 +419262,42 @@ extension on _StringsZhHk {
         return '首行縮排';
       case 'anki_lapis_visual_text_indent_chars':
         return ({required Object count}) => '${count} 字';
+      case 'video_online_mining_mode':
+        return '線上影片製卡';
+      case 'video_online_mining_mode_background':
+        return '背景製卡';
+      case 'video_online_mining_mode_background_hint':
+        return '彈窗立即顯示已加入、影片照常播放，媒體在背景準備並寫入 Anki。';
+      case 'video_online_mining_mode_deferred':
+        return '看完再製卡';
+      case 'video_online_mining_mode_deferred_hint':
+        return '背景準備好媒體後先放進待製卡清單，離開播放頁或按「全部寫入」時統一寫入 Anki，寫入前可刪掉點錯的。';
+      case 'video_online_mining_mode_wait':
+        return '等待完成';
+      case 'video_online_mining_mode_wait_hint':
+        return '彈窗等到卡片寫入 Anki 才返回，保留「修改最新卡片」。';
+      case 'video_mine_staged':
+        return ({required Object count}) => '已加入待製卡 · 共 ${count} 張';
+      case 'video_mine_in_progress':
+        return ({required Object count}) => '正在製卡 ${count}';
+      case 'video_mine_queue_badge':
+        return ({required Object count}) => '待製卡 ${count}';
+      case 'video_mine_queue_title':
+        return '待製卡';
+      case 'video_mine_queue_empty':
+        return '沒有待寫入的卡片。';
+      case 'video_mine_queue_commit_all':
+        return '全部寫入 Anki';
+      case 'video_mine_queue_committing':
+        return ({required Object done, required Object total}) =>
+            '正在寫入 ${done}/${total}…';
+      case 'video_mine_queue_committed':
+        return ({required Object ok, required Object failed}) =>
+            '已寫入 ${ok} 張，失敗 ${failed} 張';
+      case 'video_mine_queue_failed':
+        return ({required Object reason}) => '寫入失敗：${reason}';
+      case 'video_mine_queue_remove':
+        return '移除';
       default:
         return null;
     }
