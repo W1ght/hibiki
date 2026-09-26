@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 95438 (5614 per locale)
+/// Strings: 95455 (5615 per locale)
 ///
-/// Built on 2026-09-26 at 07:08 UTC
+/// Built on 2026-09-26 at 10:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7323,9 +7323,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_mode_hint => 'Show reading mode on entry';
   String get manga_reader_tap_hint => 'Show tap zones';
   String get manga_reader_skip_read => 'Skip read chapters';
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  String get manga_reader_transition => 'Always show chapter transition';
   String get manga_reader_fullscreen => 'Full screen';
   String get manga_reader_keep_screen => 'Keep screen on';
   String get manga_reader_invert_volume => 'Invert volume key direction';
@@ -7954,6 +7952,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_discovery_view_all => 'View all';
   String get manga_discovery_empty_title => 'No manga sources to discover yet';
   String get manga_discovery_empty_action => 'Manage sources';
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   String get video_dolby_vision_colors_enable_hdr_output =>
@@ -7966,6 +7966,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t open online: ${error}';
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   String get video_online_mining_mode => 'Online video mining';
   String get video_online_mining_mode_background => 'In the background';
   String get video_online_mining_mode_background_hint =>
@@ -20314,11 +20317,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -21363,6 +21362,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -21381,6 +21383,11 @@ class _StringsAr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -33982,11 +33989,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -35035,6 +35038,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -35053,6 +35059,11 @@ class _StringsDe extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -47704,11 +47715,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -48758,6 +48765,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -48776,6 +48786,11 @@ class _StringsEs extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -61464,11 +61479,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -62520,6 +62531,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -62538,6 +62552,11 @@ class _StringsFr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -75022,11 +75041,7 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -76072,6 +76087,9 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -76090,6 +76108,11 @@ class _StringsId extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -88671,11 +88694,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -89725,6 +89744,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -89743,6 +89765,11 @@ class _StringsIt extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -101694,11 +101721,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -102736,6 +102759,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -102754,6 +102780,11 @@ class _StringsJa extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       '章を読み込めませんでした：${error}';
+  @override
+  String get anki_lapis_visual_text_indent => '字下げ';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} 字';
   @override
   String get video_online_mining_mode => 'オンライン動画のカード作成';
   @override
@@ -114712,11 +114743,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -115758,6 +115785,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -115776,6 +115806,11 @@ class _StringsKo extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -128313,11 +128348,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -129365,6 +129396,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -129383,6 +129417,11 @@ class _StringsNl extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -141973,11 +142012,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -143025,6 +143060,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -143043,6 +143081,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -155609,11 +155652,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -156660,6 +156699,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -156678,6 +156720,11 @@ class _StringsRu extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -169043,11 +169090,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -170092,6 +170135,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -170110,6 +170156,11 @@ class _StringsTh extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -182590,11 +182641,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -183638,6 +183685,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -183656,6 +183706,11 @@ class _StringsTr extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -196107,11 +196162,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -197155,6 +197206,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -197173,6 +197227,11 @@ class _StringsVi extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => 'First-line indent';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} em';
   @override
   String get video_online_mining_mode => 'Online video mining';
   @override
@@ -208574,11 +208633,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_skip_read => '跳过已读章节';
   @override
-  String get manga_reader_skip_filtered => '跳过已过滤章节';
-  @override
   String get manga_reader_skip_duplicate => '跳过重复章节';
-  @override
-  String get manga_reader_transition => '始终显示章节过渡';
   @override
   String get manga_reader_fullscreen => '全屏';
   @override
@@ -209526,6 +209581,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_discovery_empty_action => '管理来源';
   @override
+  String get manga_reader_download_ahead => '阅读时预下载下一章';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
   @override
@@ -209542,6 +209599,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       '章节加载失败：${error}';
+  @override
+  String get anki_lapis_visual_text_indent => '首行缩进';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} 字';
   @override
   String get video_online_mining_mode => '在线视频制卡';
   @override
@@ -221172,11 +221234,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_skip_read => 'Skip read chapters';
   @override
-  String get manga_reader_skip_filtered => 'Skip filtered chapters';
-  @override
   String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
-  @override
-  String get manga_reader_transition => 'Always show chapter transition';
   @override
   String get manga_reader_fullscreen => 'Full screen';
   @override
@@ -222215,6 +222273,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_discovery_empty_action => 'Manage sources';
   @override
+  String get manga_reader_download_ahead =>
+      'Download next chapter while reading';
+  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   @override
@@ -222233,6 +222294,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String novel_online_chapter_failed({required Object error}) =>
       'Couldn\'t load the chapter: ${error}';
+  @override
+  String get anki_lapis_visual_text_indent => '首行縮排';
+  @override
+  String anki_lapis_visual_text_indent_chars({required Object count}) =>
+      '${count} 字';
   @override
   String get video_online_mining_mode => '線上影片製卡';
   @override
@@ -232943,12 +233009,8 @@ extension on _StringsEn {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -233806,6 +233868,8 @@ extension on _StringsEn {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -233821,6 +233885,10 @@ extension on _StringsEn {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -244520,12 +244588,8 @@ extension on _StringsAr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -245383,6 +245447,8 @@ extension on _StringsAr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -245398,6 +245464,10 @@ extension on _StringsAr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -256146,12 +256216,8 @@ extension on _StringsDe {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -257009,6 +257075,8 @@ extension on _StringsDe {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -257024,6 +257092,10 @@ extension on _StringsDe {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -267762,12 +267834,8 @@ extension on _StringsEs {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -268625,6 +268693,8 @@ extension on _StringsEs {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -268640,6 +268710,10 @@ extension on _StringsEs {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -279386,12 +279460,8 @@ extension on _StringsFr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -280249,6 +280319,8 @@ extension on _StringsFr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -280264,6 +280336,10 @@ extension on _StringsFr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -290980,12 +291056,8 @@ extension on _StringsId {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -291843,6 +291915,8 @@ extension on _StringsId {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -291858,6 +291932,10 @@ extension on _StringsId {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -302597,12 +302675,8 @@ extension on _StringsIt {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -303460,6 +303534,8 @@ extension on _StringsIt {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -303475,6 +303551,10 @@ extension on _StringsIt {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -314138,12 +314218,8 @@ extension on _StringsJa {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -315000,6 +315076,8 @@ extension on _StringsJa {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -315014,6 +315092,10 @@ extension on _StringsJa {
         return ({required Object error}) => 'オンラインで開けませんでした：${error}';
       case 'novel_online_chapter_failed':
         return ({required Object error}) => '章を読み込めませんでした：${error}';
+      case 'anki_lapis_visual_text_indent':
+        return '字下げ';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} 字';
       case 'video_online_mining_mode':
         return 'オンライン動画のカード作成';
       case 'video_online_mining_mode_background':
@@ -325681,12 +325763,8 @@ extension on _StringsKo {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -326544,6 +326622,8 @@ extension on _StringsKo {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -326559,6 +326639,10 @@ extension on _StringsKo {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -337293,12 +337377,8 @@ extension on _StringsNl {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -338156,6 +338236,8 @@ extension on _StringsNl {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -338171,6 +338253,10 @@ extension on _StringsNl {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -348900,12 +348986,8 @@ extension on _StringsPtBr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -349763,6 +349845,8 @@ extension on _StringsPtBr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -349778,6 +349862,10 @@ extension on _StringsPtBr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -360513,12 +360601,8 @@ extension on _StringsRu {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -361376,6 +361460,8 @@ extension on _StringsRu {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -361391,6 +361477,10 @@ extension on _StringsRu {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -372095,12 +372185,8 @@ extension on _StringsTh {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -372958,6 +373044,8 @@ extension on _StringsTh {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -372973,6 +373061,10 @@ extension on _StringsTh {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -383693,12 +383785,8 @@ extension on _StringsTr {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -384556,6 +384644,8 @@ extension on _StringsTr {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -384571,6 +384661,10 @@ extension on _StringsTr {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -395285,12 +395379,8 @@ extension on _StringsVi {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -396148,6 +396238,8 @@ extension on _StringsVi {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -396163,6 +396255,10 @@ extension on _StringsVi {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return 'First-line indent';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} em';
       case 'video_online_mining_mode':
         return 'Online video mining';
       case 'video_online_mining_mode_background':
@@ -406779,12 +406875,8 @@ extension on _StringsZhCn {
         return '显示点击区提示';
       case 'manga_reader_skip_read':
         return '跳过已读章节';
-      case 'manga_reader_skip_filtered':
-        return '跳过已过滤章节';
       case 'manga_reader_skip_duplicate':
         return '跳过重复章节';
-      case 'manga_reader_transition':
-        return '始终显示章节过渡';
       case 'manga_reader_fullscreen':
         return '全屏';
       case 'manga_reader_keep_screen':
@@ -407630,6 +407722,8 @@ extension on _StringsZhCn {
         return '还没有可发现的漫画来源';
       case 'manga_discovery_empty_action':
         return '管理来源';
+      case 'manga_reader_download_ahead':
+        return '阅读时预下载下一章';
       case 'video_dolby_vision_colors_unsupported':
         return '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -407644,6 +407738,10 @@ extension on _StringsZhCn {
         return ({required Object error}) => '在线打开失败：${error}';
       case 'novel_online_chapter_failed':
         return ({required Object error}) => '章节加载失败：${error}';
+      case 'anki_lapis_visual_text_indent':
+        return '首行缩进';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} 字';
       case 'video_online_mining_mode':
         return '在线视频制卡';
       case 'video_online_mining_mode_background':
@@ -418284,12 +418382,8 @@ extension on _StringsZhHk {
         return 'Show tap zones';
       case 'manga_reader_skip_read':
         return 'Skip read chapters';
-      case 'manga_reader_skip_filtered':
-        return 'Skip filtered chapters';
       case 'manga_reader_skip_duplicate':
         return 'Skip duplicate chapters';
-      case 'manga_reader_transition':
-        return 'Always show chapter transition';
       case 'manga_reader_fullscreen':
         return 'Full screen';
       case 'manga_reader_keep_screen':
@@ -419147,6 +419241,8 @@ extension on _StringsZhHk {
         return 'No manga sources to discover yet';
       case 'manga_discovery_empty_action':
         return 'Manage sources';
+      case 'manga_reader_download_ahead':
+        return 'Download next chapter while reading';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_dolby_vision_colors_enable_hdr_output':
@@ -419162,6 +419258,10 @@ extension on _StringsZhHk {
       case 'novel_online_chapter_failed':
         return ({required Object error}) =>
             'Couldn\'t load the chapter: ${error}';
+      case 'anki_lapis_visual_text_indent':
+        return '首行縮排';
+      case 'anki_lapis_visual_text_indent_chars':
+        return ({required Object count}) => '${count} 字';
       case 'video_online_mining_mode':
         return '線上影片製卡';
       case 'video_online_mining_mode_background':
