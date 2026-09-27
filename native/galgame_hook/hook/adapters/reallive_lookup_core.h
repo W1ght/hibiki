@@ -746,6 +746,15 @@ inline size_t MapSelectedSuffix(LineGlyph* glyphs, size_t count,
     glyphs[index].source_index = kNoSource;
     glyphs[index].source_length = 0u;
   }
+  // Any failure leaves every glyph unmapped: a partial suffix match must not
+  // leave stale mappings behind for the hit test.
+  auto fail = [glyphs, count]() {
+    for (size_t index = 0u; index < count; ++index) {
+      glyphs[index].source_index = kNoSource;
+      glyphs[index].source_length = 0u;
+    }
+    return count;
+  };
   size_t source = selected_count;
   size_t glyph = count;
   bool any = false;
@@ -754,27 +763,22 @@ inline size_t MapSelectedSuffix(LineGlyph* glyphs, size_t count,
       --source;
     }
     if (source == 0u) break;
-    if (glyph == 0u) return count;
+    if (glyph == 0u) return fail();
     const uint32_t codepoint = glyphs[glyph - 1u].codepoint;
-    if (codepoint == 0u || codepoint > 0xffffu) return count;
+    if (codepoint == 0u || codepoint > 0xffffu) return fail();
     const wchar_t unit = static_cast<wchar_t>(codepoint);
     if (IsLookupLineWhitespace(unit)) {
       --glyph;
       continue;
     }
-    if (selected[source - 1u] != unit) return count;
+    if (selected[source - 1u] != unit) return fail();
     --source;
     glyphs[glyph - 1u].source_index = static_cast<uint16_t>(source);
     glyphs[glyph - 1u].source_length = 1u;
     any = true;
     --glyph;
   }
-  if (!any) {
-    for (size_t index = 0u; index < count; ++index) {
-      glyphs[index].source_index = kNoSource;
-    }
-    return count;
-  }
+  if (!any) return fail();
   return glyph;
 }
 
