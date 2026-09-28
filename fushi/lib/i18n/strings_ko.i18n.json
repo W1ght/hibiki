@@ -5465,5 +5465,7 @@
   "manga_ocr_cuda_desc": "Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.",
   "manga_ocr_runtime_installing": "Installing the local OCR engine…",
   "video_library_delete_rows_failed": "Could not delete $n video(s); they are still in the library.",
-  "video_library_delete_failed": "Delete failed: $reason"
+  "video_library_delete_failed": "Delete failed: $reason",
+  "media_source_remove_download_keep": "Don't move (pause those subscriptions)",
+  "media_source_remove_download_refs": "$subscriptions download subscriptions and $jobs unfinished downloads save into this source. Move them to:"
 }

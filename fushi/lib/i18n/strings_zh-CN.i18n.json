@@ -5465,5 +5465,7 @@
   "manga_ocr_cuda_desc": "原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。",
   "manga_ocr_runtime_installing": "正在安装本地 OCR 引擎…",
   "video_library_delete_rows_failed": "$n 个视频删除失败，仍保留在媒体库中。",
-  "video_library_delete_failed": "删除失败：$reason"
+  "video_library_delete_failed": "删除失败：$reason",
+  "media_source_remove_download_keep": "不迁移（暂停这些订阅）",
+  "media_source_remove_download_refs": "有 $subscriptions 个下载订阅和 $jobs 个未完成的下载保存到此来源。迁移到："
 }
