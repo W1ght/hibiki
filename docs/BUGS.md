@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2569 条。点号进各自文件。
+> 共 2570 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2792](bugs/BUG-2792-webkit-ruby-reserve-overridden.md) | ✅ | ✅ | Mac/iOS 分页段落之间列距/行距比段内窄（振假名页顶预留被书样式压掉一半） |
 | [BUG-2790](bugs/BUG-2790-popup-reattach-egl-bad-access.md) | 🚧 | 🚧 | 查过一次词后再开 app 外查词窗只剩旧 WebView 残影、卡片画不出 |
 | [BUG-2789](bugs/BUG-2789-screen-ocr-popup-anchor-crash.md) | ✅ | ✅ | 截屏识字点字后只有一层灰、查词卡画不出来 |
 | [BUG-2788](bugs/BUG-2788-gal-touch-card-steals-foreground.md) | ✅ | ✅ | Windows 触屏点过查词卡后点卡外会推进 galgame（卡片被触摸激活成前台） |
