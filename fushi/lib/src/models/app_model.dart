@@ -5357,9 +5357,7 @@ class AppModel with ChangeNotifier {
     final List<AnimeDownloadPlan> plans = await store.loadAll();
     final Set<String> ids = <String>{
       for (final AnimeDownloadPlan plan in plans) plan.id.toLowerCase(),
-      ...legacyEmbeddedTorrentResumeIds(
-        await database.getVideoDownloadJobs(),
-      ),
+      ...await loadEmbeddedTorrentResumeIds(database),
     };
     _animeDownloadPlanIds = ids;
     return ids;
@@ -5610,9 +5608,7 @@ class AppModel with ChangeNotifier {
     try {
       final AnimeDownloadPlanStore? store = _animeDownloadPlanStore;
       final Set<String> keepIds = store == null
-          ? legacyEmbeddedTorrentResumeIds(
-              await database.getVideoDownloadJobs(),
-            )
+          ? await loadEmbeddedTorrentResumeIds(database)
           : await _refreshAnimeDownloadPlanIds(store);
       host.saveResumeSnapshot(keepIds, force: true);
     } catch (e) {

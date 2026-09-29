@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2452 条。点号进各自文件。
+> 共 2453 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2776](bugs/BUG-2776-completed-seed-orphan-redownload.md) | ✅ | ✅ | 改来源后旧来源的已完成种子仍做种且文件删后重下 |
 | [BUG-2760](bugs/BUG-2760-ai-download-movie-pack-extras.md) | ✅ | ✅ | AI 下载多集合集包被判电影：整套进 Extras 只导入一集 |
 | [BUG-2755](bugs/BUG-2755-download-savepath-follow-source.md) | ✅ | ✅ | 删除/更换来源后视频下载仍落旧位置 |
 | [BUG-2754](bugs/BUG-2754-video-batch-delete-extras-fk.md) | ✅ | ✅ | 视频批量删除：本地花絮外键冲突删不掉且逐条回收慢 |
