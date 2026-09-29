@@ -208,45 +208,64 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
 
   Widget _buildContent() {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    return CustomScrollView(
-      slivers: <Widget>[
-        SliverToBoxAdapter(child: _buildSummaryCards()),
-        SliverToBoxAdapter(
-          child: buildStatDailyDurationChartSection(context, _aggregate.daily),
+    // 横屏时会话与按游戏列表拆到右栏（[buildStatAdaptiveScrollView]）。
+    return buildStatAdaptiveScrollView(
+      context,
+      sections: (double _) => <StatPaneSliver>[
+        StatPaneSliver(
+          StatPane.overview,
+          SliverToBoxAdapter(child: _buildSummaryCards()),
         ),
-        SliverToBoxAdapter(
-          child: buildStatSessionSection(
-            context,
-            sessions: _sessions,
-            titleOf: _sessionTitle,
-            collectionOf: _sessionCollectionName,
-            onDelete: _deleteSession,
-            onEdit: _editSession,
-            onClearAll: _clearSessions,
-          ),
-        ),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(
-              tokens.spacing.card,
-              tokens.spacing.card + tokens.spacing.gap,
-              tokens.spacing.card,
-              tokens.spacing.gap,
-            ),
-            child: Text(
-              t.game_stat_by_game,
-              style: Theme.of(context).textTheme.titleMedium,
+        StatPaneSliver(
+          StatPane.overview,
+          SliverToBoxAdapter(
+            child: buildStatDailyDurationChartSection(
+              context,
+              _aggregate.daily,
             ),
           ),
         ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (BuildContext context, int index) =>
-                _buildGameRow(_aggregate.byGame[index]),
-            childCount: _aggregate.byGame.length,
+        StatPaneSliver(
+          StatPane.detail,
+          SliverToBoxAdapter(
+            child: buildStatSessionSection(
+              context,
+              sessions: _sessions,
+              titleOf: _sessionTitle,
+              collectionOf: _sessionCollectionName,
+              onDelete: _deleteSession,
+              onEdit: _editSession,
+              onClearAll: _clearSessions,
+            ),
           ),
         ),
-        buildStatTailSliver(context),
+        StatPaneSliver(
+          StatPane.detail,
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(
+                tokens.spacing.card,
+                tokens.spacing.card + tokens.spacing.gap,
+                tokens.spacing.card,
+                tokens.spacing.gap,
+              ),
+              child: Text(
+                t.game_stat_by_game,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
+          ),
+        ),
+        StatPaneSliver(
+          StatPane.detail,
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) =>
+                  _buildGameRow(_aggregate.byGame[index]),
+              childCount: _aggregate.byGame.length,
+            ),
+          ),
+        ),
       ],
     );
   }

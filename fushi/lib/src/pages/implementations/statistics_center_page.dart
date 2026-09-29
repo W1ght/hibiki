@@ -227,25 +227,41 @@ class _StatsOverviewTabState extends ConsumerState<_StatsOverviewTab> {
       return Center(child: Text(_error!, style: tokens.type.metadata));
     }
     final StatWindow w = StatWindow(DateTime.now());
-    return ListView(
-      // BUG-2440：scaffold 底部安全区不再从 viewport 扣掉，tab 内容末尾自己让开
-      // home indicator / 手势条（三个域 tab 走 [buildStatTailSliver]）。
-      padding: withBottomSafeInset(
-        context,
-        EdgeInsets.only(bottom: tokens.spacing.card * 2),
-      ),
-      children: <Widget>[
-        _buildGoalCard(tokens, w),
-        _buildSummaryCards(w),
-        buildStatDailyDurationChartSection(context, _dailyChartData(w)),
-        buildStatSessionSection(
-          context,
-          sessions: _sessions,
-          titleOf: _sessionTitle,
-          collectionOf: _sessionCollectionName,
-          onDelete: _deleteSession,
-          onEdit: _editSession,
-          onClearAll: _clearSessions,
+    // 与三个域 tab 同一套自适应主体：竖屏自上而下，横屏左「目标 / 时段卡 / 图表」
+    // 右「跨域会话流」。BUG-2440 的底部安全区让开由 [buildStatTailSliver] 统一补。
+    return buildStatAdaptiveScrollView(
+      context,
+      sections: (double _) => <StatPaneSliver>[
+        StatPaneSliver(
+          StatPane.overview,
+          SliverToBoxAdapter(child: _buildGoalCard(tokens, w)),
+        ),
+        StatPaneSliver(
+          StatPane.overview,
+          SliverToBoxAdapter(child: _buildSummaryCards(w)),
+        ),
+        StatPaneSliver(
+          StatPane.overview,
+          SliverToBoxAdapter(
+            child: buildStatDailyDurationChartSection(
+              context,
+              _dailyChartData(w),
+            ),
+          ),
+        ),
+        StatPaneSliver(
+          StatPane.detail,
+          SliverToBoxAdapter(
+            child: buildStatSessionSection(
+              context,
+              sessions: _sessions,
+              titleOf: _sessionTitle,
+              collectionOf: _sessionCollectionName,
+              onDelete: _deleteSession,
+              onEdit: _editSession,
+              onClearAll: _clearSessions,
+            ),
+          ),
         ),
       ],
     );
