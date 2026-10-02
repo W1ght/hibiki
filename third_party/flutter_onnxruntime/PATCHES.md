@@ -163,8 +163,9 @@ and macOS 13.4–14.0 for free, with no change to the ORT binary or the Dart API
     completed on the main looper (`MainLooperResult`). Every other call keeps
     the upstream task queue + lock (they are cheap tensor/metadata calls).
     `onDetachedFromEngine` drains the executors before closing sessions.
-    The thread *counts* are chosen Dart-side from the CPU's big.LITTLE layout
-    (`fushi/lib/src/asr_host/asr_cpu_topology.dart`).
+    Measured on a Dimensity 900 (2×A78 + 6×A55), 10 min of Japanese audio,
+    int8 CPU: upstream dispatch 53–56 s; this delta with one greedy session
+    (`createAsrTranscriptionService`, Android) 41.5–42.2 s.
 
 **The Dart API under `lib/` carries two deltas (#8, the
 `freeDimensionOverrides` option, and #10, `getDeviceMemoryInfo`); everything

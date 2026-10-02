@@ -103,7 +103,7 @@ class OrtOnnxSessionFactory implements OnnxSessionFactory {
   final String logName;
 
   /// 调用方没给 `intraOpNumThreads` 时用的线程数；null = 交给 ORT（全部核心）。
-  /// ASR 在 Android 上按大小核拓扑填（`asr_cpu_topology.dart`），OCR 不设。
+  /// 生产恒 null；只有 ASR 真机测速扫描经 `ASR_ENCODER_THREADS` 填。
   final int? defaultIntraOpNumThreads;
 
   /// 探测本机 ORT 运行时**编译进来**的加速 EP 集合，喂给各子系统的 EP 选择

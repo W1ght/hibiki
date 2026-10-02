@@ -16,7 +16,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart'
     show BackgroundIsolateBinaryMessenger, RootIsolateToken;
 
-import 'package:fushi/src/asr_host/asr_cpu_topology.dart';
 import 'package:fushi/src/asr_host/asr_model_catalog.dart';
 import 'package:fushi/src/onnx/onnx_inference_ort.dart';
 import 'package:fushi/src/storage/app_paths.dart';
@@ -28,16 +27,14 @@ export 'package:fushi_engine/asr/fushi_asr_ffmpeg_backend.dart' show FushiAsrFfm
 ///
 /// **必须是顶层函数**：它要跨 isolate 边界发送，闭包过不去。
 ///
-/// Android 上未显式给线程数的会话（编码器等）按大小核拓扑取线程数
-/// （[androidAsrCpuThreadPlan]）。`ASR_ENCODER_THREADS` dart-define 只给真机测速
-/// 扫描用：> 0 = 指定线程数，< 0 = 交给 ORT 默认（全部核心），0（缺省）= 按拓扑。
+/// 编码器等未显式给线程数的会话交给 ORT 默认（全部核心）——2026-10-02 天玑 900
+/// （2×A78 + 6×A55）实测：只给 2 个大核 109 s / 10 分钟音频，全核 42 s；ORT 的
+/// 线程池动态分活，小核加起来的算力不能丢。`ASR_ENCODER_THREADS` dart-define
+/// （> 0）只给真机测速扫描用。
 asr.OnnxSessionFactory buildFushiOnnxFactory() => OrtOnnxSessionFactory(
       logName: asr.kAsrLogName,
-      defaultIntraOpNumThreads: switch (_kEncoderThreadsOverride) {
-        > 0 => _kEncoderThreadsOverride,
-        < 0 => null,
-        _ => androidAsrCpuThreadPlan?.encoderThreads,
-      },
+      defaultIntraOpNumThreads:
+          _kEncoderThreadsOverride > 0 ? _kEncoderThreadsOverride : null,
     );
 
 const int _kEncoderThreadsOverride =
@@ -167,10 +164,10 @@ Future<void> saveAsrModelCatalog(AsrModelCatalog catalog) async {
 
 /// 建一个装配好的转录服务。两个生产实例化点都调这里。
 ///
-/// Android 上贪心搜索的会话数 / 线程数同样按大小核拓扑给（见
-/// [androidAsrCpuThreadPlan]）；其余平台 null = 包里的默认。
+/// Android 上贪心搜索只开一个会话：编码器已经占满全部核心，第二个搜索会话只会
+/// 和它抢核（天玑 900 实测 10 分钟音频：2×4 线程 48~52 s，1×4 线程 42 s；
+/// 插件串行时的旧基线 53~56 s）。桌面编码器在 GPU 上，CPU 空着，保持包里的默认。
 asr.AsrTranscriptionService createAsrTranscriptionService() {
-  final AsrCpuThreadPlan? cpuPlan = androidAsrCpuThreadPlan;
   return asr.AsrTranscriptionService(
       // 有声书是干净朗读：语音与静默能量差 30 dB 以上、双模态可分，能量门限
       // 够用且免掉每 32 ms 一次 ONNX 前向。混音素材（动画/影视/带 BGM 的音源）
@@ -179,8 +176,7 @@ asr.AsrTranscriptionService createAsrTranscriptionService() {
       backend: fushiAsrBackend(),
       pcm: asr.FfmpegAsrPcmSource(backend: const FushiAsrFfmpegBackend()),
       openStore: openAsrModelStore,
-      greedySessions: cpuPlan?.greedySessions,
-      greedyIntraOpThreads: cpuPlan?.greedyThreads,
+      greedySessions: Platform.isAndroid ? 1 : null,
     );
 }
 

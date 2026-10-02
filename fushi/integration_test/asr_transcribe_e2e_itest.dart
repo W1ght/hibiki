@@ -22,8 +22,8 @@
 ///   两种传法都行）
 library;
 
-import 'package:fushi/src/asr_host/asr_cpu_topology.dart';
 import 'package:fushi/src/asr_host/asr_host.dart';
+import 'package:fushi/src/engine_bindings.dart';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -119,7 +119,10 @@ Future<
     // intra-op 线程数扫描；ASR_PCM_PARALLEL：同时在解的 ffmpeg 块数。
     greedySessions: int.tryParse(_param('ASR_GREEDY_SESSIONS')),
     greedyIntraOpThreads: int.tryParse(_param('ASR_GREEDY_THREADS')),
+    // 与生产同一个 ffmpeg 后端（安卓走 ffmpeg-kit）：包里默认的是命令行 ffmpeg，
+    // 安卓上根本没有这个可执行文件。
     pcm: FfmpegAsrPcmSource(
+      backend: const FushiAsrFfmpegBackend(),
       parallelism: int.tryParse(_param('ASR_PCM_PARALLEL')),
     ),
   );
@@ -139,8 +142,7 @@ Future<
     'resolution=${running.encoderResolution} '
     'fp16=${running.encoderFp16} '
     'greedyGraph=${running.greedyGraphAvailable}'
-    '${running.greedyUnavailableReason == null ? '' : ' (unavailable: ${running.greedyUnavailableReason})'} '
-    'cpuPlan=$androidAsrCpuThreadPlan',
+    '${running.greedyUnavailableReason == null ? '' : ' (unavailable: ${running.greedyUnavailableReason})'}',
   );
   final Stopwatch sw = Stopwatch()..start();
   try {
@@ -206,6 +208,10 @@ void main() {
   late String audio;
 
   setUpAll(() async {
+    // 与 main() 同一套装配：移动端的 ffmpeg 走 ffmpeg-kit 平台后端（不装的话
+    // 回落命令行 ffmpeg，安卓上没有这个可执行文件），ASR 数据根 / 出站也一并接上。
+    installEngineHostBindings();
+    installAsrHostBindings();
     expect(
       _kSeed,
       isNotEmpty,
@@ -348,7 +354,8 @@ Future<void> _phaseBenchmark({
     preference: preference,
   );
   try {
-    final FfmpegAsrPcmSource pcm = FfmpegAsrPcmSource();
+    final FfmpegAsrPcmSource pcm =
+        FfmpegAsrPcmSource(backend: const FushiAsrFfmpegBackend());
     final Stopwatch decodeClock = Stopwatch()..start();
     final List<AsrPcmChunk> chunks =
         await pcm.decode(audio, chunkSeconds: 600).toList();
