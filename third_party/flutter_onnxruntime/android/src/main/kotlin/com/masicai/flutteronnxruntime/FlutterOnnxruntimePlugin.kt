@@ -14,6 +14,8 @@ import ai.onnxruntime.OrtException
 import ai.onnxruntime.OrtLoggingLevel
 import ai.onnxruntime.OrtSession
 import ai.onnxruntime.providers.OrtTensorRTProviderOptions
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.annotation.NonNull
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -29,6 +31,9 @@ import java.nio.LongBuffer
 import java.nio.ShortBuffer
 import java.util.UUID
 import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 /**
  * Utility class for float16 conversions
@@ -200,11 +205,85 @@ class FlutterOnnxruntimePlugin : FlutterPlugin, MethodCallHandler {
         ortEnvironment = OrtEnvironment.getEnvironment()
     }
 
+    /**
+     * Hibiki delta #12: the three heavy calls leave the plugin's single serial
+     * task queue.
+     *
+     * Upstream runs every call on one background task queue *and* inside one
+     * global lock, so two sessions can never run at the same time: the ASR
+     * pipeline's encoder ‖ greedy-search overlap and its two greedy sessions
+     * all collapse into one FIFO. `createSession` gets its own worker (it takes
+     * seconds and would otherwise stall every tensor call queued behind it);
+     * `runInference` / `closeSession` go to a worker owned by that session, so
+     * independent sessions run concurrently while one session's own calls stay
+     * in order (a close always lands after the runs queued before it). Replies
+     * are delivered on the main looper. Everything else keeps the upstream
+     * queue + lock.
+     */
     override fun onMethodCall(
         @NonNull call: MethodCall,
         @NonNull result: Result,
-    ): Unit =
-        synchronized(lock) {
+    ) {
+        when (call.method) {
+            "createSession" -> {
+                createExecutor.execute { handleCall(call, MainLooperResult(result)) }
+            }
+            "runInference", "closeSession" -> {
+                val executor = call.argument<String>("sessionId")?.let { sessionExecutor(it) }
+                if (executor == null) {
+                    // Unknown session: the handler answers INVALID_SESSION inline.
+                    synchronized(lock) { handleCall(call, result) }
+                } else {
+                    val sessionId = call.argument<String>("sessionId")!!
+                    val closing = call.method == "closeSession"
+                    executor.execute {
+                        handleCall(call, MainLooperResult(result))
+                        if (closing && !sessions.containsKey(sessionId)) {
+                            sessionExecutors.remove(sessionId)?.shutdown()
+                        }
+                    }
+                }
+            }
+            else -> synchronized(lock) { handleCall(call, result) }
+        }
+    }
+
+    private val createExecutor: ExecutorService =
+        Executors.newSingleThreadExecutor { r -> Thread(r, "ort-create-session") }
+    private val sessionExecutors = ConcurrentHashMap<String, ExecutorService>()
+    private val mainHandler = Handler(Looper.getMainLooper())
+
+    private fun sessionExecutor(sessionId: String): ExecutorService? {
+        if (!sessions.containsKey(sessionId)) return null
+        return sessionExecutors.computeIfAbsent(sessionId) {
+            Executors.newSingleThreadExecutor { r -> Thread(r, "ort-session") }
+        }
+    }
+
+    /** Completes a channel reply on the main looper, whatever thread calls it. */
+    private inner class MainLooperResult(private val inner: Result) : Result {
+        override fun success(value: Any?) {
+            mainHandler.post { inner.success(value) }
+        }
+
+        override fun error(
+            errorCode: String,
+            errorMessage: String?,
+            errorDetails: Any?,
+        ) {
+            mainHandler.post { inner.error(errorCode, errorMessage, errorDetails) }
+        }
+
+        override fun notImplemented() {
+            mainHandler.post { inner.notImplemented() }
+        }
+    }
+
+    private fun handleCall(
+        call: MethodCall,
+        result: Result,
+    ) {
+        run {
             when (call.method) {
                 "getPlatformVersion" -> {
                     result.success("Android ${android.os.Build.VERSION.RELEASE}")
@@ -1178,12 +1257,26 @@ class FlutterOnnxruntimePlugin : FlutterPlugin, MethodCallHandler {
                 }
             }
         }
+    }
 
     override fun onDetachedFromEngine(
         @NonNull binding: FlutterPlugin.FlutterPluginBinding,
     ) {
         // Stop accepting new calls before acquiring the lock
         channel.setMethodCallHandler(null)
+
+        // Delta #12: let queued session work drain before sessions are closed.
+        val workers = ArrayList<ExecutorService>(sessionExecutors.values)
+        workers.add(createExecutor)
+        for (worker in workers) worker.shutdown()
+        for (worker in workers) {
+            try {
+                worker.awaitTermination(5, TimeUnit.SECONDS)
+            } catch (e: InterruptedException) {
+                Thread.currentThread().interrupt()
+            }
+        }
+        sessionExecutors.clear()
 
         // Wait for any in-flight handler call to finish, then clean up
         synchronized(lock) {

@@ -6214,5 +6214,8 @@
   "video_bluray_protection_unsupported": "This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.",
   "video_bluray_config_no_match": "No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.",
   "video_bluray_config_invalid": "The Blu-ray playback configuration is invalid. Replace KEYDB.cfg with a valid file and retry.",
-  "video_bluray_config_missing": "Blu-ray playback requires a matching KEYDB.cfg configuration."
+  "video_bluray_config_missing": "Blu-ray playback requires a matching KEYDB.cfg configuration.",
+  "audiobook_transcribe_live_segments": "Recognized $count segments",
+  "audiobook_transcribe_live_match": "Match rate $rate% · $matched / $total book characters matched ($percent%)",
+  "audiobook_transcribe_live_match_pending": "Matching against the book text…"
 }

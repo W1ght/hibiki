@@ -2818,11 +2818,15 @@ extension _ReaderChrome on _ReaderFushiPageState {
     final EpubBookRow? book =
         await appModel.database.getEpubBook(widget.bookKey);
     if (!mounted) return;
+    final String? extractDir = book?.extractDir;
     final String? srtPath = await _withStudyClockPaused(
       () => showAsrTranscribeSheet(
         context: context,
         audioPaths: List<String>.of(audio),
         languageHint: asrLanguageHintFromBookLanguage(book?.language),
+        liveMatchSections: extractDir == null || extractDir.isEmpty
+            ? null
+            : () => loadEpubSectionsInBackground(extractDir),
       ),
     );
     if (srtPath == null || !mounted) return;

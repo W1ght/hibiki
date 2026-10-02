@@ -19,6 +19,8 @@ import 'package:path/path.dart' as p;
 import 'package:share_plus/share_plus.dart';
 
 import 'package:fushi_asr_core/asr_core.dart';
+import 'package:fushi_audio/fushi_audio_core.dart' show EpubSection;
+import 'package:fushi_engine/media/audiobook/asr_live_match.dart';
 import 'package:fushi_engine/media/audiobook/audiobook_alignment_service.dart'
     show preferredTranscriptExportPath;
 import 'package:fushi/src/asr_host/asr_host.dart';
@@ -40,6 +42,11 @@ import 'package:fushi/utils.dart';
 /// [languageHint]：书本身的语言（EPUB `dc:language` 经 [asrLanguageHintFromBookLanguage]
 /// 换算）。有 hint 时语言初值用 hint、不写回偏好；用户手动切换时才写回。没 hint
 /// 沿用偏好。
+///
+/// [liveMatchSections]：这本书的正文章节（取法由调用方决定：已导入的书读解包
+/// 目录，导入前的 `.epub` 解进临时目录）。给了就在转录过程中定期把已转出的段落
+/// 与正文匹配，弹层上实时显示匹配率与已匹配的正文字数；null（视频字幕等没有
+/// 正文的场景）不显示。
 Future<String?> showAsrTranscribeSheet({
   required BuildContext context,
   required List<String> audioPaths,
@@ -55,6 +62,7 @@ Future<String?> showAsrTranscribeSheet({
   AsrModelCatalog Function()? catalogGetter,
   Future<void> Function(AsrModelCatalog catalog)? catalogSetter,
   Future<String?> Function()? directoryPicker,
+  Future<List<EpubSection>> Function()? liveMatchSections,
 }) {
   final AsrTranscriptionService effective =
       service ?? createAsrTranscriptionService();
@@ -92,6 +100,7 @@ Future<String?> showAsrTranscribeSheet({
         catalogGetter: catalogGetter,
         catalogSetter: catalogSetter,
         directoryPicker: directoryPicker,
+        liveMatchSections: liveMatchSections,
       );
   if (isDesktopPlatform) {
     return showAppDialog<String>(
@@ -281,6 +290,7 @@ class AsrTranscribeSheet extends StatefulWidget {
     Future<void> Function(AsrModelCatalog catalog)? catalogSetter,
     this.directoryPicker,
     this.systemSpeechService,
+    this.liveMatchSections,
     super.key,
   })  : catalogGetter = catalogGetter ?? _readAsrModelCatalog,
         catalogSetter = catalogSetter ?? saveAsrModelCatalog;
@@ -319,6 +329,9 @@ class AsrTranscribeSheet extends StatefulWidget {
   /// 选中「系统语音识别」时用哪个服务；null = 真的 [AppleSpeechTranscriptionService]。
   /// 测试注入 fake，免得 widget 测试去碰 method channel。
   final AsrTranscriptionService Function()? systemSpeechService;
+
+  /// 见 [showAsrTranscribeSheet] 的同名参数。
+  final Future<List<EpubSection>> Function()? liveMatchSections;
 
   @override
   State<AsrTranscribeSheet> createState() => _AsrTranscribeSheetState();
@@ -360,6 +373,13 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
   Stopwatch? _runClock;
   Duration? _elapsedTotal;
   OnnxProviderResolution? _resolution;
+
+  // 边转边匹配（见 [_maybeRunLiveMatch]）。
+  Future<List<EpubSection>>? _liveSections;
+  AsrLiveMatchStats? _liveStats;
+  bool _liveMatchInFlight = false;
+  DateTime? _liveMatchAt;
+  Duration _liveMatchCost = Duration.zero;
 
   /// 远程 host（能力位含 asr）；null = 只有本机。
   HostJobTarget? _remoteTarget;
@@ -544,6 +564,7 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
                 progress: final AsrTranscribeProgress p,
               ):
               setState(() => _progress = p);
+              _maybeRunLiveMatch(force: false);
             case AsrTranscribePausedEvent(
                 progress: final AsrTranscribeProgress p,
               ):
@@ -560,6 +581,7 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
                 _elapsedTotal = _runClock?.elapsed;
                 _phase = _Phase.finished;
               });
+              _maybeRunLiveMatch(force: true);
           }
         },
         onError: (Object e, StackTrace _) async {
@@ -575,6 +597,68 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
       if (!mounted) return;
       _failWith(e);
     }
+  }
+
+  /// 边转边匹配：把已落盘的段落对正文跑一遍匹配（后台 isolate），刷新匹配率与
+  /// 已匹配字数。
+  ///
+  /// 节流：第一次有段落就跑（尽早告诉用户「对得上」），之后间隔取 15 秒与上次
+  /// 耗时 4 倍中的大者——整本匹配随段落数增长，手机上不能让它和转录抢 CPU。
+  /// 同一时刻只跑一份；[force]（转录完成）无视间隔，但仍不并发。
+  Future<void> _maybeRunLiveMatch({required bool force}) async {
+    final Future<List<EpubSection>> Function()? load = widget.liveMatchSections;
+    if (load == null || _runRemote || _liveMatchInFlight) return;
+    if (!force) {
+      if ((_progress?.segmentsDone ?? 0) <= 0) return;
+      final DateTime? last = _liveMatchAt;
+      if (last != null) {
+        final Duration gap = _liveMatchCost * 4 > _kLiveMatchMinInterval
+            ? _liveMatchCost * 4
+            : _kLiveMatchMinInterval;
+        if (DateTime.now().difference(last) < gap) return;
+      }
+    }
+    _liveMatchInFlight = true;
+    final Stopwatch cost = Stopwatch()..start();
+    try {
+      final List<EpubSection> sections = await (_liveSections ??= load());
+      if (sections.isEmpty) return;
+      final Directory jobDir =
+          await _service.jobDirFor(widget.audioPaths, _language);
+      final AsrLiveMatchStats? stats = await computeAsrLiveMatch(
+        jobDirPath: jobDir.path,
+        sections: sections,
+      );
+      if (!mounted || stats == null) return;
+      setState(() => _liveStats = stats);
+    } catch (error, stack) {
+      // 预览失败不影响转录本身；原因留进日志，弹层继续只显示转录进度。
+      debugPrint('[asr-live-match] failed: $error\n$stack');
+    } finally {
+      cost.stop();
+      _liveMatchCost = cost.elapsed;
+      _liveMatchAt = DateTime.now();
+      _liveMatchInFlight = false;
+    }
+  }
+
+  static const Duration _kLiveMatchMinInterval = Duration(seconds: 15);
+
+  /// 边转边匹配那一行；没有正文 / 还没有段落时 null。
+  String? _liveMatchLine() {
+    if (widget.liveMatchSections == null || _runRemote) return null;
+    final AsrLiveMatchStats? s = _liveStats;
+    if (s == null) {
+      return (_progress?.segmentsDone ?? 0) > 0
+          ? t.audiobook_transcribe_live_match_pending
+          : null;
+    }
+    return t.audiobook_transcribe_live_match(
+      rate: (s.matchRate * 100).round(),
+      matched: s.matchedChars,
+      total: s.totalChars,
+      percent: (s.charFraction * 100).round(),
+    );
   }
 
   Future<void> _releaseRunning() async {
@@ -991,7 +1075,7 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
           );
           final double? rtf = p.rtf;
           final Duration? eta = p.eta;
-          sb.write(
+          sb.writeln(
             t.audiobook_transcribe_speed(
               elapsed: _fmtDuration(p.elapsed),
               eta: eta == null ? '—' : _fmtDuration(eta),
@@ -999,6 +1083,12 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
                   rtf == null || rtf <= 0 ? '—' : (1 / rtf).toStringAsFixed(1),
             ),
           );
+          // 段数按批递增（每批落盘都发进度）：「已处理时长」按整块推进、一块要
+          // 十几秒时，这一行是界面仍在动的证据。
+          sb.writeln(
+              t.audiobook_transcribe_live_segments(count: p.segmentsDone));
+          final String? live = _liveMatchLine();
+          if (live != null) sb.writeln(live);
         }
         if (_phase == _Phase.pausing) {
           sb
@@ -1025,6 +1115,12 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
                 elapsed: _fmtDuration(elapsed),
               ),
             );
+        }
+        final String? live = _liveStats == null ? null : _liveMatchLine();
+        if (live != null) {
+          sb
+            ..writeln()
+            ..write(live);
         }
         return sb.toString();
       case _Phase.error:

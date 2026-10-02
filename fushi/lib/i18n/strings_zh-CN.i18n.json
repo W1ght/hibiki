@@ -6214,5 +6214,8 @@
   "video_bluray_protection_unsupported": "这张盘使用的保护格式尚不支持。目前支持具有匹配播放配置的 AACS 1 蓝光盘。",
   "video_bluray_config_no_match": "未找到这张盘的匹配播放配置，请提供更新的 KEYDB.cfg 后重试。",
   "video_bluray_config_invalid": "蓝光播放配置无效，请更换有效的 KEYDB.cfg 后重试。",
-  "video_bluray_config_missing": "播放这张蓝光盘需要匹配的 KEYDB.cfg 配置。"
+  "video_bluray_config_missing": "播放这张蓝光盘需要匹配的 KEYDB.cfg 配置。",
+  "audiobook_transcribe_live_segments": "已识别 $count 段",
+  "audiobook_transcribe_live_match": "匹配率 $rate% · 已匹配正文 $matched / $total 字（$percent%）",
+  "audiobook_transcribe_live_match_pending": "正在与正文匹配…"
 }

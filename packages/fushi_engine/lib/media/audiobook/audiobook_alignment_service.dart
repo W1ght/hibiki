@@ -234,6 +234,23 @@ List<EpubSection> epubSectionsFromBook(EpubBook epubBook) {
 Future<List<EpubSection>> loadEpubSectionsInBackground(String extractDir) =>
     Isolate.run(() => epubSectionsFromExtractDir(extractDir));
 
+/// 还没导入（没有解包目录）的 `.epub` 文件取章节：在后台 isolate 里解进一个
+/// 临时目录、取完即删。给「导入前就转录」的转录弹层边转边匹配用。
+Future<List<EpubSection>> loadEpubSectionsFromFileInBackground(
+  String epubPath,
+) =>
+    Isolate.run(() {
+      final Directory tmp =
+          Directory.systemTemp.createTempSync('fushi_epub_sections_');
+      try {
+        return epubSectionsFromBook(
+          EpubParser.parseSyncFromPath(epubPath, tmp.path),
+        );
+      } finally {
+        tmp.deleteSync(recursive: true);
+      }
+    });
+
 /// 按字幕扩展名分派解析器（原两个导入对话框各持等价副本，已收敛到此单一真相源）。
 Future<List<AudioCue>> parseCuesForFormat(
   File file,

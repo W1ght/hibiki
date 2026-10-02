@@ -223,4 +223,43 @@ void main() {
     expect(md, contains('PlatformThreadDispatcher'));
     expect(md, contains('FLUTTER_ONNXRUNTIME_SYNC'));
   });
+
+  test('delta #12：Android 的建会话 / 推理 / 关会话离开串行任务队列与全局锁', () {
+    // 上游 Android 插件所有调用都在**一条**后台任务队列上、外面还套着全局锁：
+    // 编码器 ‖ 贪心搜索的流水线在安卓上被串成一条 FIFO，结果照旧正确、没有别的
+    // 测试会红——只是安卓转录白白慢一截。
+    final String src = maskComments(
+      File(
+        '$vendored/android/src/main/kotlin/com/masicai/flutteronnxruntime/'
+        'FlutterOnnxruntimePlugin.kt',
+      ).readAsStringSync(),
+    );
+    final int at = src.indexOf('override fun onMethodCall(');
+    expect(at, greaterThan(0), reason: 'onMethodCall 改名了，守卫需更新');
+    final int end = src.indexOf('private fun handleCall(', at);
+    expect(end, greaterThan(at), reason: '分发与处理体必须拆开（handleCall）');
+    final String dispatch = src.substring(at, end);
+    expect(
+      dispatch,
+      contains('createExecutor.execute'),
+      reason: 'createSession 要有自己的线程，否则建会话的几秒堵住所有张量调用',
+    );
+    expect(
+      dispatch,
+      contains('sessionExecutor('),
+      reason: 'runInference / closeSession 必须按会话取工作线程',
+    );
+    expect(
+      dispatch,
+      contains('MainLooperResult(result)'),
+      reason: '工作线程上的回复必须投回主线程完成',
+    );
+    expect(
+      src,
+      contains('sessionExecutors.remove(sessionId)?.shutdown()'),
+      reason: '关会话后要回收它的线程，否则每开关一个会话漏一条线程',
+    );
+    final String md = File('$vendored/PATCHES.md').readAsStringSync();
+    expect(md, contains('12. `android/'));
+  });
 }

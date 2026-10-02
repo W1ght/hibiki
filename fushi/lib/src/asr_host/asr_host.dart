@@ -16,6 +16,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart'
     show BackgroundIsolateBinaryMessenger, RootIsolateToken;
 
+import 'package:fushi/src/asr_host/asr_cpu_topology.dart';
 import 'package:fushi/src/asr_host/asr_model_catalog.dart';
 import 'package:fushi/src/onnx/onnx_inference_ort.dart';
 import 'package:fushi/src/storage/app_paths.dart';
@@ -26,8 +27,21 @@ export 'package:fushi_engine/asr/fushi_asr_ffmpeg_backend.dart' show FushiAsrFfm
 /// 在后台转录 isolate 里建 ONNX 会话工厂。
 ///
 /// **必须是顶层函数**：它要跨 isolate 边界发送，闭包过不去。
-asr.OnnxSessionFactory buildFushiOnnxFactory() =>
-    OrtOnnxSessionFactory(logName: asr.kAsrLogName);
+///
+/// Android 上未显式给线程数的会话（编码器等）按大小核拓扑取线程数
+/// （[androidAsrCpuThreadPlan]）。`ASR_ENCODER_THREADS` dart-define 只给真机测速
+/// 扫描用：> 0 = 指定线程数，< 0 = 交给 ORT 默认（全部核心），0（缺省）= 按拓扑。
+asr.OnnxSessionFactory buildFushiOnnxFactory() => OrtOnnxSessionFactory(
+      logName: asr.kAsrLogName,
+      defaultIntraOpNumThreads: switch (_kEncoderThreadsOverride) {
+        > 0 => _kEncoderThreadsOverride,
+        < 0 => null,
+        _ => androidAsrCpuThreadPlan?.encoderThreads,
+      },
+    );
+
+const int _kEncoderThreadsOverride =
+    int.fromEnvironment('ASR_ENCODER_THREADS');
 
 /// 后台转录 isolate 的宿主前置初始化。
 ///
@@ -152,8 +166,12 @@ Future<void> saveAsrModelCatalog(AsrModelCatalog catalog) async {
 }
 
 /// 建一个装配好的转录服务。两个生产实例化点都调这里。
-asr.AsrTranscriptionService createAsrTranscriptionService() =>
-    asr.AsrTranscriptionService(
+///
+/// Android 上贪心搜索的会话数 / 线程数同样按大小核拓扑给（见
+/// [androidAsrCpuThreadPlan]）；其余平台 null = 包里的默认。
+asr.AsrTranscriptionService createAsrTranscriptionService() {
+  final AsrCpuThreadPlan? cpuPlan = androidAsrCpuThreadPlan;
+  return asr.AsrTranscriptionService(
       // 有声书是干净朗读：语音与静默能量差 30 dB 以上、双模态可分，能量门限
       // 够用且免掉每 32 ms 一次 ONNX 前向。混音素材（动画/影视/带 BGM 的音源）
       // 必须换 mixedAudio，见 AsrAudioProfile。
@@ -161,7 +179,10 @@ asr.AsrTranscriptionService createAsrTranscriptionService() =>
       backend: fushiAsrBackend(),
       pcm: asr.FfmpegAsrPcmSource(backend: const FushiAsrFfmpegBackend()),
       openStore: openAsrModelStore,
+      greedySessions: cpuPlan?.greedySessions,
+      greedyIntraOpThreads: cpuPlan?.greedyThreads,
     );
+}
 
 /// 打开某语言当前模型包的磁盘目录。
 ///

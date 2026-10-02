@@ -22,6 +22,7 @@
 ///   两种传法都行）
 library;
 
+import 'package:fushi/src/asr_host/asr_cpu_topology.dart';
 import 'package:fushi/src/asr_host/asr_host.dart';
 import 'dart:io';
 
@@ -138,7 +139,8 @@ Future<
     'resolution=${running.encoderResolution} '
     'fp16=${running.encoderFp16} '
     'greedyGraph=${running.greedyGraphAvailable}'
-    '${running.greedyUnavailableReason == null ? '' : ' (unavailable: ${running.greedyUnavailableReason})'}',
+    '${running.greedyUnavailableReason == null ? '' : ' (unavailable: ${running.greedyUnavailableReason})'} '
+    'cpuPlan=$androidAsrCpuThreadPlan',
   );
   final Stopwatch sw = Stopwatch()..start();
   try {

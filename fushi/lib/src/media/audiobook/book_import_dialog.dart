@@ -510,10 +510,16 @@ class _BookImportDialogState extends State<BookImportDialog>
     // 语言初值跟随书本身的语言；此时书还没导入，只能从文件上读 OPF 元数据。
     final AsrLanguage? languageHint = await _asrLanguageHintFromPendingBook();
     if (!mounted) return;
+    // 书还没导入：边转边匹配的正文从待导入的 .epub 现解（临时目录，用完即删）。
+    final String? epubPath = _epubPath;
+    final bool hasEpub =
+        epubPath != null && _classifyCarrier(epubPath) == ImportCarrier.epub;
     final String? srtPath = await showAsrTranscribeSheet(
       context: context,
       audioPaths: List<String>.of(_audioPaths),
       languageHint: languageHint,
+      liveMatchSections:
+          hasEpub ? () => loadEpubSectionsFromFileInBackground(epubPath) : null,
     );
     if (srtPath == null || !mounted) return;
     setState(() {

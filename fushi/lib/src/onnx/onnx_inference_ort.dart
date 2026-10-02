@@ -90,6 +90,7 @@ class OrtOnnxSessionFactory implements OnnxSessionFactory {
     OnnxRuntime? runtime,
     OnnxSessionInputResolver? resolveInputs,
     this.logName = kOnnxLogName,
+    this.defaultIntraOpNumThreads,
   })  : _runtime = runtime ?? OnnxRuntime(),
         _resolveInputs = resolveInputs {
     _installFushiProviderFailureDescriber();
@@ -100,6 +101,10 @@ class OrtOnnxSessionFactory implements OnnxSessionFactory {
 
   /// 本工厂建会话 / 回退时写日志用的通道名。
   final String logName;
+
+  /// 调用方没给 `intraOpNumThreads` 时用的线程数；null = 交给 ORT（全部核心）。
+  /// ASR 在 Android 上按大小核拓扑填（`asr_cpu_topology.dart`），OCR 不设。
+  final int? defaultIntraOpNumThreads;
 
   /// 探测本机 ORT 运行时**编译进来**的加速 EP 集合，喂给各子系统的 EP 选择
   /// 纯函数（OCR `selectOcrExecutionProviders` / ASR `selectAsrEncoderProviders`）。
@@ -162,7 +167,7 @@ class OrtOnnxSessionFactory implements OnnxSessionFactory {
         modelPath,
         options: OrtSessionOptions(
           providers: effectiveProviders.map(_toOrtProvider).toList(),
-          intraOpNumThreads: intraOpNumThreads,
+          intraOpNumThreads: intraOpNumThreads ?? defaultIntraOpNumThreads,
           freeDimensionOverrides: freeDimensionOverrides,
         ),
       ),

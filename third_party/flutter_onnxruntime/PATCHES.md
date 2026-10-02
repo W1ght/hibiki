@@ -150,12 +150,29 @@ and macOS 13.4–14.0 for free, with no change to the ORT binary or the Dart API
     encoder GPU idle ~85% of the time for lack of queued work, which is what
     the Dart-side pipeline rewrite (`AsrBatchPipeline`) addresses.
 
+12. `android/src/main/kotlin/.../FlutterOnnxruntimePlugin.kt`: the Android
+    counterpart of deltas #9 and #11. Upstream runs every method call on one
+    background task queue **and** inside one global `synchronized(lock)`, so
+    on Android no two ORT calls ever overlap: the ASR pipeline's encoder ‖
+    greedy-search overlap collapsed into a single FIFO. `onMethodCall` now
+    only dispatches: `createSession` goes to a dedicated `createExecutor`
+    thread, `runInference` / `closeSession` to a single-thread executor owned
+    by that session (created on first use, shut down right after the session's
+    close) — sessions run concurrently, one session's calls stay FIFO, a close
+    lands after the runs queued before it. Replies from those threads are
+    completed on the main looper (`MainLooperResult`). Every other call keeps
+    the upstream task queue + lock (they are cheap tensor/metadata calls).
+    `onDetachedFromEngine` drains the executors before closing sessions.
+    The thread *counts* are chosen Dart-side from the CPU's big.LITTLE layout
+    (`fushi/lib/src/asr_host/asr_cpu_topology.dart`).
+
 **The Dart API under `lib/` carries two deltas (#8, the
 `freeDimensionOverrides` option, and #10, `getDeviceMemoryInfo`); everything
-else there is byte-for-byte upstream.** The Apple, Android and Linux native
+else there is byte-for-byte upstream.** The Apple and Linux native
 trees are untouched; the Windows tree carries deltas 6–11 above — provider
 wiring, error-string encoding, free-dimension overrides, worker-thread
-dispatch, the DXGI budget query and per-session CPU workers. No ORT wrapper
+dispatch, the DXGI budget query and per-session CPU workers; the Android tree
+carries delta 12 (per-session worker threads). No ORT wrapper
 or inference logic changed anywhere.
 
 Guards: `fushi/test/ocr/onnxruntime_windows_error_encoding_guard_test.dart`
@@ -185,7 +202,7 @@ path or drift the floors apart.
 
 ## Re-vendoring on upgrade
 
-Copy the new upstream version over this folder, then re-apply deltas #1–#11.
+Copy the new upstream version over this folder, then re-apply deltas #1–#12.
 Before bumping the `onnxruntime-objc` pin, check the new version's podspec
 platforms (`pod spec cat onnxruntime-objc --version=X.Y.Z`) — if the floor moved,
 the four project deployment targets and the guard test move with it.

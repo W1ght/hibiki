@@ -522,10 +522,14 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
     final EpubBookRow? book =
         await widget.repo.database.getEpubBook(widget.bookKey);
     if (!mounted) return;
+    final String? extractDir = widget.extractDir;
     final String? srtPath = await showAsrTranscribeSheet(
       context: context,
       audioPaths: List<String>.of(audio),
       languageHint: asrLanguageHintFromBookLanguage(book?.language),
+      liveMatchSections: extractDir == null || extractDir.isEmpty
+          ? null
+          : () => loadEpubSectionsInBackground(extractDir),
     );
     if (srtPath == null || !mounted) return;
     setState(() {
