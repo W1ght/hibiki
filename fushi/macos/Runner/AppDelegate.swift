@@ -305,6 +305,7 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         "firstResponder": AppDelegate.responderName(responder),
         "isKey": window.isKeyWindow,
         "isActive": NSApp.isActive,
+        "frSuper": ((responder as? NSView)?.superview).map { String(describing: type(of: $0)) } ?? "nil",
         "contextIsCurrent": ctx != nil && NSTextInputContext.current === ctx,
         "imeRect": (ctx?.client).map { c -> String in
           let r = c.firstRect(forCharacterRange: c.selectedRange(), actualRange: nil)

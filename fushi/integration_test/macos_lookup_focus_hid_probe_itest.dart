@@ -75,7 +75,7 @@ Future<void> _report(WidgetTester tester, String label) async {
   });
   debugPrint(
     '[hid-probe] $label text="${_fieldText(tester)}" '
-    'fr=${r['firstResponder']} key=${r['isKey']} active=${r['isActive']} '
+    'fr=${r['firstResponder']}<${r['frSuper']}> key=${r['isKey']} active=${r['isActive']} '
     'ctxCurrent=${r['contextIsCurrent']} curClient=${r['currentContextClient']} '
     'imeRect=${r['imeRect']} '
     'primaryFocus=${FocusManager.instance.primaryFocus?.debugLabel ?? FocusManager.instance.primaryFocus} '
