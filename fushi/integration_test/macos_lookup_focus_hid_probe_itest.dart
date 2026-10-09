@@ -186,6 +186,12 @@ void main() {
           ('del-2', <int>[del, del]),
           ('type-te-again', <int>[t, e]),
         ]) {
+          final Map<Object?, Object?> pre = await _call('responder');
+          if (pre['isActive'] != true || pre['isKey'] != true) {
+            debugPrint('[hid-probe] app not frontmost before $label; activate');
+            await _call('activate');
+            await tester.pump(const Duration(milliseconds: 500));
+          }
           await _hidKeys(tester, codes);
           await _settle(tester, 8);
           await _report(tester, label);
