@@ -152,8 +152,30 @@ void main() {
         await _report(tester, 'focused');
 
         // 用户录屏的序列：test → 出结果；ststst → 未找到；退格删光 → 空态。
-        const int t = 17, e = 14, s = 1, del = 51;
-        for (final (String label, List<int> codes) in <(String, List<int>)>[
+        const int t = 17, e = 14, s = 1, del = 51, ret = 36, shift = 56;
+        final List<(String, List<int>)> imeSteps = <(String, List<int>)>[
+          ('ime-test-commit', <int>[t, e, s, t, ret]),
+          ('ime-st-commit', <int>[s, t, ret]),
+          ('ime-s-commit', <int>[s, ret]),
+          ('del-7', <int>[del, del, del, del, del, del, del]),
+          ('ime-te-commit', <int>[t, e, ret]),
+          ('ime-s-only', <int>[s]),
+        ];
+        final List<(String, List<int>)> shiftSteps = <(String, List<int>)>[
+          ('shift-toggle', <int>[shift]),
+          ('type-test', <int>[t, e, s, t]),
+          ('type-st', <int>[s, t]),
+          ('type-s', <int>[s]),
+          ('del-7', <int>[del, del, del, del, del, del, del]),
+          ('type-te', <int>[t, e]),
+          ('shift-toggle-back', <int>[shift]),
+        ];
+        const String mode = String.fromEnvironment('STEPS');
+        for (final (String label, List<int> codes) in mode == 'ime'
+            ? imeSteps
+            : mode == 'shift'
+            ? shiftSteps
+            : <(String, List<int>)>[
           ('type-te', <int>[t, e]),
           ('type-st', <int>[s, t]),
           ('type-s', <int>[s]),
