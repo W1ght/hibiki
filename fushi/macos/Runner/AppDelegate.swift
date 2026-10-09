@@ -275,6 +275,18 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       }
       result(["ok": true, "firstResponder": AppDelegate.responderName(responder),
               "markedRange": NSStringFromRange(client.markedRange())])
+    case "focusWebView":
+      // 模拟「用户点过结果 WebView」：让窗口里第一个 WKWebView 成为 first responder。
+      var found: NSView?
+      func find(_ v: NSView) {
+        if found != nil { return }
+        if String(describing: type(of: v)).contains("WebView") { found = v; return }
+        for c in v.subviews { find(c) }
+      }
+      if let content = window.contentView { find(content) }
+      let ok = found.map { window.makeFirstResponder($0) } ?? false
+      result(["ok": ok, "view": found.map { String(describing: type(of: $0)) } ?? "nil",
+              "firstResponder": AppDelegate.responderName(window.firstResponder)])
     case "responder":
       // 只读：不激活窗口、不动 first responder（activate 本身会修复失焦，不能拿它取证）。
       let responder = window.firstResponder

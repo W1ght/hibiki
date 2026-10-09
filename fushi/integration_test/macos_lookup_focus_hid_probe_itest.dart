@@ -209,6 +209,8 @@ void main() {
           ('shift-to-ascii', <int>[shift]),
           ('te', <int>[t, e]),
           ('st', <int>[s, t]),
+          ('WEBVIEW-THEN-FIELD', <int>[]),
+          ('s-after-webview', <int>[s]),
           ('ststst', <int>[s, t, s, t, s, t]),
           ('s-after-notfound', <int>[s]),
           ('del-all', <int>[for (int i = 0; i < 12; i++) del]),
@@ -246,6 +248,15 @@ void main() {
             debugPrint('[hid-probe] app not frontmost before $label; activate');
             await _call('activate');
             await tester.pump(const Duration(milliseconds: 500));
+          }
+          if (label == 'WEBVIEW-THEN-FIELD') {
+            debugPrint('[hid-probe] focusWebView -> ${await _call('focusWebView')}');
+            await _settle(tester, 2);
+            await _report(tester, 'after-focusWebView');
+            editable.requestKeyboard();
+            await _settle(tester, 4);
+            await _report(tester, 'after-refocus-field');
+            continue;
           }
           await _hidKeys(tester, codes);
           await _settle(tester, 8);
