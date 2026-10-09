@@ -275,6 +275,14 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       }
       result(["ok": true, "firstResponder": AppDelegate.responderName(responder),
               "markedRange": NSStringFromRange(client.markedRange())])
+    case "enhancedUI":
+      // 与外部辅助功能客户端（VoiceOver / 窗口管理器等）给本 app 设
+      // AXEnhancedUserInterface 时系统发的同一条通知：Flutter 引擎据此打开语义树。
+      let on = (args["on"] as? Bool) ?? true
+      NotificationCenter.default.post(
+        name: NSNotification.Name("NSApplicationDidChangeAccessibilityEnhancedUserInterfaceNotification"),
+        object: NSApp, userInfo: ["AXEnhancedUserInterface": on])
+      result(["firstResponder": AppDelegate.responderName(window.firstResponder)])
     case "focusWebView":
       // 模拟「用户点过结果 WebView」：让窗口里第一个 WKWebView 成为 first responder。
       var found: NSView?

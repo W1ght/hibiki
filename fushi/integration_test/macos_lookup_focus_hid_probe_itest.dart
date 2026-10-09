@@ -159,6 +159,10 @@ void main() {
         );
         FocusManager.instance.addListener(onFocus);
         addTearDown(() => FocusManager.instance.removeListener(onFocus));
+        if (const bool.fromEnvironment('A11Y')) {
+          debugPrint('[hid-probe] enhancedUI -> ${await _call('enhancedUI')}');
+          await _settle(tester, 4);
+        }
         debugPrint('[hid-probe] select: ${await _helperRun(<String>['select', _kInputSource])}');
         await _call('activate');
         await tester.pump(const Duration(milliseconds: 800));
@@ -209,8 +213,7 @@ void main() {
           ('shift-to-ascii', <int>[shift]),
           ('te', <int>[t, e]),
           ('st', <int>[s, t]),
-          ('WEBVIEW-THEN-FIELD', <int>[]),
-          ('s-after-webview', <int>[s]),
+
           ('ststst', <int>[s, t, s, t, s, t]),
           ('s-after-notfound', <int>[s]),
           ('del-all', <int>[for (int i = 0; i < 12; i++) del]),
