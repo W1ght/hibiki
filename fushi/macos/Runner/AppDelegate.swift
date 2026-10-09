@@ -116,6 +116,18 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         testInputChannel.setMethodCallHandler { [weak self] call, result in
           self?.handleTestInput(call, result: result)
         }
+        // first responder 变化台账（BUG-3131）：谁、何时把键盘从文本插件手里拿走。
+        if let window = mainFlutterWindow {
+          firstResponderObservation = window.observe(\.firstResponder, options: [.new]) {
+            win, _ in
+            let stack = Thread.callStackSymbols.prefix(14).map {
+              $0.replacingOccurrences(of: "  ", with: " ")
+            }.joined(separator: " | ")
+            AppDelegate.responderLog.append(
+              "\(ProcessInfo.processInfo.systemUptime) -> "
+                + "\(AppDelegate.responderName(win.firstResponder)) :: \(stack)")
+          }
+        }
       }
       // App-external global lookup overlay (macOS counterpart of the Windows
       // GlobalLookupWindow + RegisterGlobalLookupChannel): same
@@ -247,6 +259,22 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       }
       result(["ok": true, "firstResponder": AppDelegate.responderName(responder),
               "markedRange": NSStringFromRange(client.markedRange())])
+    case "responder":
+      // 只读：不激活窗口、不动 first responder（activate 本身会修复失焦，不能拿它取证）。
+      let responder = window.firstResponder
+      let ctx = (responder as? NSView)?.inputContext
+      let log = AppDelegate.responderLog
+      if (args["clear"] as? Bool) ?? false { AppDelegate.responderLog.removeAll() }
+      result([
+        "firstResponder": AppDelegate.responderName(responder),
+        "isKey": window.isKeyWindow,
+        "isActive": NSApp.isActive,
+        "contextIsCurrent": ctx != nil && NSTextInputContext.current === ctx,
+        "currentContextClient": NSTextInputContext.current.map {
+          String(describing: type(of: $0.client))
+        } ?? "nil",
+        "log": log,
+      ])
     case "activate":
       NSApp.setActivationPolicy(.regular)
       NSApp.activate(ignoringOtherApps: true)
@@ -377,6 +405,9 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       result(FlutterMethodNotImplemented)
     }
   }
+
+  private static var responderLog: [String] = []
+  private var firstResponderObservation: NSKeyValueObservation?
 
   private static func responderName(_ r: NSResponder?) -> String {
     guard let r = r else { return "nil" }
