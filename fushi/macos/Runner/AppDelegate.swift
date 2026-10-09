@@ -300,8 +300,17 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         } else { children = nil }
         for c in children ?? [] { walk(c, depth + 1) }
       }
-      if let content = window.contentView { walk(content, 0) }
-      result(["nodes": count, "textFields": textFields,
+      walk(window, 0)
+      var flutterViewChildren = -1
+      var stack: [NSView] = window.contentView.map { [$0] } ?? []
+      while let v = stack.popLast() {
+        if String(describing: type(of: v)) == "FlutterView" {
+          flutterViewChildren = v.accessibilityChildren()?.count ?? -2
+          for c in v.accessibilityChildren() ?? [] { walk(c, 1) }
+        }
+        stack.append(contentsOf: v.subviews)
+      }
+      result(["nodes": count, "textFields": textFields, "fvChildren": flutterViewChildren,
               "firstResponder": AppDelegate.responderName(window.firstResponder)])
     case "focusWebView":
       // 模拟「用户点过结果 WebView」：让窗口里第一个 WKWebView 成为 first responder。
