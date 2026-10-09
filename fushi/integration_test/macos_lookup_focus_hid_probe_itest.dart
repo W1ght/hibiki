@@ -136,6 +136,19 @@ void main() {
         });
         await _settle(tester, 4);
         debugPrint('[hid-probe] click -> $click');
+        final EditableTextState editable = tester.state<EditableTextState>(
+          find
+              .descendant(
+                of: find.byKey(_kField),
+                matching: find.byType(EditableText),
+              )
+              .first,
+        );
+        if (!editable.widget.focusNode.hasFocus) {
+          debugPrint('[hid-probe] click missed the field; requestKeyboard()');
+          editable.requestKeyboard();
+          await _settle(tester, 4);
+        }
         await _report(tester, 'focused');
 
         // 用户录屏的序列：test → 出结果；ststst → 未找到；退格删光 → 空态。
