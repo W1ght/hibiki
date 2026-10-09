@@ -77,6 +77,7 @@ Future<void> _report(WidgetTester tester, String label) async {
     '[hid-probe] $label text="${_fieldText(tester)}" '
     'fr=${r['firstResponder']} key=${r['isKey']} active=${r['isActive']} '
     'ctxCurrent=${r['contextIsCurrent']} curClient=${r['currentContextClient']} '
+    'imeRect=${r['imeRect']} '
     'primaryFocus=${FocusManager.instance.primaryFocus?.debugLabel ?? FocusManager.instance.primaryFocus} '
     'results=${find.byKey(const ValueKey<String>('home_dictionary_result_evidence')).evaluate().length} '
     'empty=${find.byKey(const ValueKey<String>('home_dictionary_state_empty')).evaluate().length} '
@@ -216,7 +217,11 @@ void main() {
           ('sad', <int>[s, a, d]),
           ('shift-to-chinese', <int>[shift]),
           ('s-compose', <int>[s]),
-          ('ret', <int>[ret]),
+          ('del-compose', <int>[del]),
+          ('shift-to-ascii-2', <int>[shift]),
+          ('del-to-asd', <int>[del, del, del, del]),
+          ('shift-to-chinese-2', <int>[shift]),
+          ('s-compose-on-results', <int>[s]),
         ];
         const String mode = String.fromEnvironment('STEPS');
         for (final (String label, List<int> codes) in mode == 'user'

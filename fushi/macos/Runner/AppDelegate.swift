@@ -286,6 +286,11 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         "isKey": window.isKeyWindow,
         "isActive": NSApp.isActive,
         "contextIsCurrent": ctx != nil && NSTextInputContext.current === ctx,
+        "imeRect": (ctx?.client).map { c -> String in
+          let r = c.firstRect(forCharacterRange: c.selectedRange(), actualRange: nil)
+          return "\(NSStringFromRect(r)) screen=\(NSStringFromRect(window.screen?.frame ?? .zero)) "
+            + "win=\(NSStringFromRect(window.frame)) marked=\(NSStringFromRange(c.markedRange()))"
+        } ?? "nil",
         "currentContextClient": NSTextInputContext.current.map {
           String(describing: type(of: $0.client))
         } ?? "nil",
