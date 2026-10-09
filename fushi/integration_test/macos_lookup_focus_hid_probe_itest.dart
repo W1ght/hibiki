@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/services.dart';
+import 'package:flutter/semantics.dart';
 import 'package:fushi/models.dart' show AppModel;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/pages/implementations/home_page.dart'
@@ -70,6 +71,10 @@ Future<void> _settle(WidgetTester tester, [int quarters = 8]) async {
 }
 
 Future<void> _report(WidgetTester tester, String label) async {
+  if (const bool.fromEnvironment('A11Y')) {
+    debugPrint('[hid-probe] axWalk -> ${await _call('axWalk')} '
+        'semantics=${SemanticsBinding.instance.semanticsEnabled}');
+  }
   final Map<Object?, Object?> r = await _call('responder', <String, Object?>{
     'clear': true,
   });

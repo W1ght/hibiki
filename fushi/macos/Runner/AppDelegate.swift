@@ -283,6 +283,26 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         name: NSNotification.Name("NSApplicationDidChangeAccessibilityEnhancedUserInterfaceNotification"),
         object: NSApp, userInfo: ["AXEnhancedUserInterface": on])
       result(["firstResponder": AppDelegate.responderName(window.firstResponder)])
+    case "axWalk":
+      // 模拟辅助功能客户端遍历本窗口的无障碍树（窗口管理器 / 按键可视化等第三方工具
+      // 都会这么做）：引擎只在被问到时才把语义节点落成原生 NSView（FlutterTextField）。
+      var count = 0
+      var textFields = 0
+      func walk(_ e: Any, _ depth: Int) {
+        count += 1
+        if String(describing: type(of: e)).contains("FlutterTextField") { textFields += 1 }
+        guard depth < 40, count < 5000 else { return }
+        let children: [Any]?
+        if let v = e as? NSView { children = v.accessibilityChildren() }
+        else if let el = e as? NSAccessibilityElement { children = el.accessibilityChildren() }
+        else if let o = e as? NSObject, o.responds(to: #selector(NSAccessibilityElement.accessibilityChildren)) {
+          children = o.perform(#selector(NSAccessibilityElement.accessibilityChildren))?.takeUnretainedValue() as? [Any]
+        } else { children = nil }
+        for c in children ?? [] { walk(c, depth + 1) }
+      }
+      if let content = window.contentView { walk(content, 0) }
+      result(["nodes": count, "textFields": textFields,
+              "firstResponder": AppDelegate.responderName(window.firstResponder)])
     case "focusWebView":
       // 模拟「用户点过结果 WebView」：让窗口里第一个 WKWebView 成为 first responder。
       var found: NSView?
