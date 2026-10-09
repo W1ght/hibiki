@@ -25,6 +25,7 @@ const String _kInputSource = String.fromEnvironment(
 );
 
 final List<String> _textInputLog = <String>[];
+final List<String> _focusLog = <String>[];
 
 Future<Map<Object?, Object?>> _call(
   String method, [
@@ -75,8 +76,15 @@ Future<void> _report(WidgetTester tester, String label) async {
     '[hid-probe] $label text="${_fieldText(tester)}" '
     'fr=${r['firstResponder']} key=${r['isKey']} active=${r['isActive']} '
     'ctxCurrent=${r['contextIsCurrent']} curClient=${r['currentContextClient']} '
-    'primaryFocus=${FocusManager.instance.primaryFocus?.debugLabel ?? FocusManager.instance.primaryFocus}',
+    'primaryFocus=${FocusManager.instance.primaryFocus?.debugLabel ?? FocusManager.instance.primaryFocus} '
+    'results=${find.byKey(const ValueKey<String>('home_dictionary_result_evidence')).evaluate().length} '
+    'empty=${find.byKey(const ValueKey<String>('home_dictionary_state_empty')).evaluate().length} '
+    'idle=${find.byKey(const ValueKey<String>('home_dictionary_state_idle')).evaluate().length}',
   );
+  for (final String line in _focusLog) {
+    debugPrint('[hid-probe]   FOCUS $line');
+  }
+  _focusLog.clear();
   for (final Object? line in (r['log'] as List<Object?>? ?? <Object?>[])) {
     debugPrint('[hid-probe]   FR-CHANGE $line');
   }
@@ -126,6 +134,12 @@ void main() {
           () => binding.defaultBinaryMessenger.allMessagesHandler = null,
         );
 
+        void onFocus() => _focusLog.add(
+          '${DateTime.now().millisecondsSinceEpoch % 100000} '
+          '${FocusManager.instance.primaryFocus}',
+        );
+        FocusManager.instance.addListener(onFocus);
+        addTearDown(() => FocusManager.instance.removeListener(onFocus));
         debugPrint('[hid-probe] select: ${await _helperRun(<String>['select', _kInputSource])}');
         await _call('activate');
         await tester.pump(const Duration(milliseconds: 800));
@@ -153,11 +167,12 @@ void main() {
 
         // 用户录屏的序列：test → 出结果；ststst → 未找到；退格删光 → 空态。
         const int t = 17, e = 14, s = 1, del = 51, ret = 36, shift = 56;
+        const int w = 13, o = 31, r = 15, d = 2;
         final List<(String, List<int>)> imeSteps = <(String, List<int>)>[
-          ('ime-test-commit', <int>[t, e, s, t, ret]),
+          ('ime-testword-commit', <int>[t, e, s, t, w, o, r, d, ret]),
           ('ime-st-commit', <int>[s, t, ret]),
           ('ime-s-commit', <int>[s, ret]),
-          ('del-7', <int>[del, del, del, del, del, del, del]),
+          ('del-11', <int>[for (int i = 0; i < 11; i++) del]),
           ('ime-te-commit', <int>[t, e, ret]),
           ('ime-s-only', <int>[s]),
         ];
