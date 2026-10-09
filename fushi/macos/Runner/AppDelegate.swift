@@ -109,6 +109,9 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
       // WindowServer 产生的事件派 tracking area），故 hover 用 "flutter" 模式直接交
       // FlutterViewController——从那往下（修饰键同步、Flutter hover、MouseRegion、JS
       // selectText、真弹窗）全是真路径。点击与 flagsChanged 走 postEvent 即可到达。
+      if ProcessInfo.processInfo.environment["FUSHI_IMK_PROBE"] != nil {
+        MlifImkProbe.install()
+      }
       if ProcessInfo.processInfo.environment["FUSHI_TEST_INPUT"] != nil {
         let testInputChannel = FlutterMethodChannel(
           name: "app.fushi.test/input",
@@ -748,5 +751,97 @@ enum ForegroundSelectionCapture {
     if reSelLen < 0 { reSelLen = 0 }
 
     return Result(contextText: ctxText, selStart: reSelStart, selLen: reSelLen)
+  }
+}
+
+// ===== 探针（不入 PR）：IMK 按键路径打点，FUSHI_IMK_PROBE 门控 =====
+enum MlifImkProbe {
+  static var handle: FileHandle?
+  static let t0 = ProcessInfo.processInfo.systemUptime
+  static func log(_ s: String) {
+    let t = String(format: "%9.3f", (ProcessInfo.processInfo.systemUptime - t0) * 1000)
+    let cur = NSTextInputContext.current
+    let line = "\(t) ctx=\(cur.map { String(describing: Unmanaged.passUnretained($0).toOpaque()) } ?? "nil") \(s)\n"
+    handle?.write(line.data(using: .utf8)!)
+  }
+  static func swizzle(_ cls: AnyClass, _ sel: Selector, _ make: (IMP) -> AnyObject) {
+    guard let m = class_getInstanceMethod(cls, sel) else { log("no method \(sel)"); return }
+    let orig = method_getImplementation(m)
+    method_setImplementation(m, imp_implementationWithBlock(make(orig)))
+  }
+  static func install() {
+    let path = NSHomeDirectory() + "/dev/mlif-imk.log"
+    FileManager.default.createFile(atPath: path, contents: nil)
+    handle = FileHandle(forWritingAtPath: path)
+    guard let plugin = NSClassFromString("FlutterTextInputPlugin"),
+          let km = NSClassFromString("FlutterKeyboardManager") else { log("classes missing"); return }
+    typealias KeyF = @convention(c) (AnyObject, Selector, NSEvent) -> Bool
+    swizzle(plugin, NSSelectorFromString("handleKeyEvent:")) { imp in
+      let f = unsafeBitCast(imp, to: KeyF.self)
+      let b: @convention(block) (AnyObject, NSEvent) -> Bool = { me, ev in
+        let ownCtx = (me as? NSView)?.inputContext
+        let isCur = ownCtx != nil && ownCtx === NSTextInputContext.current
+        let fr = (me as? NSView)?.window?.firstResponder === me
+        log("plugin.handleKeyEvent >> type=\(ev.type.rawValue) kc=\(ev.keyCode) chars=\(ev.characters ?? "") evT=\(String(format: "%.3f", ev.timestamp * 1000)) ownCtxIsCurrent=\(isCur) pluginIsFR=\(fr) src=\(ev.cgEvent != nil)")
+        let r = f(me, NSSelectorFromString("handleKeyEvent:"), ev)
+        log("plugin.handleKeyEvent << kc=\(ev.keyCode) handled=\(r)")
+        return r
+      }
+      return b as AnyObject
+    }
+    typealias KMF = @convention(c) (AnyObject, Selector, NSEvent, AnyObject) -> Void
+    swizzle(km, NSSelectorFromString("handleEvent:withContext:")) { imp in
+      let f = unsafeBitCast(imp, to: KMF.self)
+      let b: @convention(block) (AnyObject, NSEvent, AnyObject) -> Void = { me, ev, ctx in
+        log("km.handleEvent type=\(ev.type.rawValue) kc=\(ev.keyCode) chars=\(ev.characters ?? "") evT=\(String(format: "%.3f", ev.timestamp * 1000))")
+        f(me, NSSelectorFromString("handleEvent:withContext:"), ev, ctx)
+      }
+      return b as AnyObject
+    }
+    typealias MarkF = @convention(c) (AnyObject, Selector, AnyObject, NSRange, NSRange) -> Void
+    swizzle(plugin, NSSelectorFromString("setMarkedText:selectedRange:replacementRange:")) { imp in
+      let f = unsafeBitCast(imp, to: MarkF.self)
+      let b: @convention(block) (AnyObject, AnyObject, NSRange, NSRange) -> Void = { me, s, sel, rep in
+        let str = (s as? NSAttributedString)?.string ?? (s as? String) ?? "?"
+        log("setMarkedText \"\(str)\" sel=\(NSStringFromRange(sel)) rep=\(NSStringFromRange(rep))")
+        f(me, NSSelectorFromString("setMarkedText:selectedRange:replacementRange:"), s, sel, rep)
+      }
+      return b as AnyObject
+    }
+    typealias InsF = @convention(c) (AnyObject, Selector, AnyObject, NSRange) -> Void
+    swizzle(plugin, NSSelectorFromString("insertText:replacementRange:")) { imp in
+      let f = unsafeBitCast(imp, to: InsF.self)
+      let b: @convention(block) (AnyObject, AnyObject, NSRange) -> Void = { me, s, rep in
+        let str = (s as? NSAttributedString)?.string ?? (s as? String) ?? "?"
+        log("insertText \"\(str)\" rep=\(NSStringFromRange(rep))")
+        f(me, NSSelectorFromString("insertText:replacementRange:"), s, rep)
+      }
+      return b as AnyObject
+    }
+    typealias VoidF = @convention(c) (AnyObject, Selector) -> Void
+    swizzle(plugin, NSSelectorFromString("unmarkText")) { imp in
+      let f = unsafeBitCast(imp, to: VoidF.self)
+      let b: @convention(block) (AnyObject) -> Void = { me in
+        log("unmarkText")
+        f(me, NSSelectorFromString("unmarkText"))
+      }
+      return b as AnyObject
+    }
+    typealias CallF = @convention(c) (AnyObject, Selector, FlutterMethodCall, @escaping FlutterResult) -> Void
+    swizzle(plugin, NSSelectorFromString("handleMethodCall:result:")) { imp in
+      let f = unsafeBitCast(imp, to: CallF.self)
+      let b: @convention(block) (AnyObject, FlutterMethodCall, @escaping FlutterResult) -> Void = { me, call, res in
+        var detail = ""
+        if call.method == "TextInput.setEditingState", let a = call.arguments as? [String: Any] {
+          detail = " text=\(a["text"] ?? "") sel=\(a["selectionBase"] ?? "")-\(a["selectionExtent"] ?? "") comp=\(a["composingBase"] ?? "")-\(a["composingExtent"] ?? "")"
+        }
+        if call.method != "TextInput.setEditableSizeAndTransform" && call.method != "TextInput.setCaretRect" && call.method != "TextInput.setMarkedTextRect" && call.method != "TextInput.setStyle" {
+          log("fw->engine \(call.method)\(detail)")
+        }
+        f(me, NSSelectorFromString("handleMethodCall:result:"), call, res)
+      }
+      return b as AnyObject
+    }
+    log("installed")
   }
 }
