@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/services.dart';
+import 'package:fushi/models.dart' show AppModel;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/pages/implementations/home_page.dart'
     show HomePage, HomeTab;
@@ -108,6 +109,23 @@ void main() {
         expect(await waitForHome(tester), isTrue);
         await readyAppModel(tester);
         expect(await seedDictionary(tester), isTrue);
+        const String realDicts = String.fromEnvironment('REAL_DICTS');
+        if (realDicts.isNotEmpty) {
+          final AppModel model = await readyAppModel(tester);
+          for (final FileSystemEntity f in Directory(realDicts).listSync()) {
+            if (!f.path.endsWith('.zip')) continue;
+            final String marker = '${f.path}.imported';
+            if (File(marker).existsSync()) continue;
+            final ValueNotifier<String> progress = ValueNotifier<String>('');
+            await model.importDictionary(
+              file: File(f.path),
+              progressNotifier: progress,
+              onImportSuccess: () => File(marker).writeAsStringSync('ok'),
+            );
+            progress.dispose();
+            debugPrint('[hid-probe] imported ${f.path}');
+          }
+        }
         HomePage.debugSelectTab!(HomeTab.dictionaries);
         await _settle(tester, 4);
 
@@ -185,8 +203,25 @@ void main() {
           ('type-te', <int>[t, e]),
           ('shift-toggle-back', <int>[shift]),
         ];
+        const int a = 0;
+        final List<(String, List<int>)> userSteps = <(String, List<int>)>[
+          ('shift-to-ascii', <int>[shift]),
+          ('te', <int>[t, e]),
+          ('st', <int>[s, t]),
+          ('ststst', <int>[s, t, s, t, s, t]),
+          ('s-after-notfound', <int>[s]),
+          ('del-all', <int>[for (int i = 0; i < 12; i++) del]),
+          ('asd', <int>[a, s, d]),
+          ('a', <int>[a]),
+          ('sad', <int>[s, a, d]),
+          ('shift-to-chinese', <int>[shift]),
+          ('s-compose', <int>[s]),
+          ('ret', <int>[ret]),
+        ];
         const String mode = String.fromEnvironment('STEPS');
-        for (final (String label, List<int> codes) in mode == 'ime'
+        for (final (String label, List<int> codes) in mode == 'user'
+            ? userSteps
+            : mode == 'ime'
             ? imeSteps
             : mode == 'shift'
             ? shiftSteps
