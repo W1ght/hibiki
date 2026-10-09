@@ -116,6 +116,22 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         testInputChannel.setMethodCallHandler { [weak self] call, result in
           self?.handleTestInput(call, result: result)
         }
+        // 失活 / 换 key 窗口台账：失活时谁成了前台 app。
+        NotificationCenter.default.addObserver(
+          forName: NSApplication.didResignActiveNotification, object: nil, queue: .main
+        ) { _ in
+          let front = NSWorkspace.shared.frontmostApplication
+          AppDelegate.responderLog.append(
+            "\(ProcessInfo.processInfo.systemUptime) APP-RESIGN front="
+              + "\(front?.bundleIdentifier ?? "?") pid=\(front?.processIdentifier ?? 0)")
+        }
+        NotificationCenter.default.addObserver(
+          forName: NSWindow.didBecomeKeyNotification, object: nil, queue: .main
+        ) { note in
+          AppDelegate.responderLog.append(
+            "\(ProcessInfo.processInfo.systemUptime) KEY-WINDOW "
+              + "\(note.object.map { String(describing: type(of: $0)) } ?? "nil")")
+        }
         // first responder 变化台账（BUG-3131）：谁、何时把键盘从文本插件手里拿走。
         if let window = mainFlutterWindow {
           firstResponderObservation = window.observe(\.firstResponder, options: [.new]) {
