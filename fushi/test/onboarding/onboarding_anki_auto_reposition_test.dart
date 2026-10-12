@@ -12,6 +12,8 @@ import '../helpers/source_guard.dart';
 /// 这项功能此前只藏在制卡设置里且默认关，手机端用户几乎不会发现；引导里把它
 /// 摆出来并默认开，同时讲清楚只有电脑版 Anki + AnkiConnect 能用。
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   test('引导里默认开，而设置本身仍默认关（不是升级送的）', () {
     expect(kOnboardingAnkiAutoRepositionDefault, isTrue);
     expect(const AnkiSettings().autoRepositionEnabled, isFalse);
