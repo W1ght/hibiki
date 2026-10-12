@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119765 (7045 per locale)
+/// Strings: 120088 (7064 per locale)
 ///
-/// Built on 2026-10-11 at 07:30 UTC
+/// Built on 2026-10-12 at 14:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10138,6 +10138,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get video_remote_title => 'Video remote';
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  String get video_remote_retry => 'Reconnect';
+  String get video_remote_favorites => 'Favorites';
+  String get video_remote_subtitles => 'Subtitles';
+  String get video_remote_all => 'All videos';
+  String get video_remote_remove => 'Remove selected favorites';
+  String get video_remote_current => 'Return to current subtitle';
+  String get video_remote_previous => 'Previous subtitle';
+  String get video_remote_next => 'Next subtitle';
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  String get video_remote_mine => 'Preview and create card';
+  String get video_remote_mined => 'Card created on computer';
+  String get video_remote_no_results => 'No dictionary entries found';
+  String get video_remote_expression => 'Expression';
+  String get video_remote_reading => 'Reading';
+  String get video_remote_meaning => 'Meaning';
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -27114,6 +27135,46 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -44480,6 +44541,46 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -61906,6 +62007,46 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -79411,6 +79552,46 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -96571,6 +96752,46 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -113896,6 +114117,46 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -130221,6 +130482,46 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -146582,6 +146883,46 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -163855,6 +164196,46 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -181197,6 +181578,46 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -198485,6 +198906,46 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -215451,6 +215912,46 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -232620,6 +233121,46 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -249716,6 +250257,46 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 // Path: <root>
@@ -265355,6 +265936,44 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get video_remote_title => '视频遥控器';
+  @override
+  String get video_remote_unsupported => '此设备不支持视频遥控';
+  @override
+  String get video_remote_waiting => '等待电脑打开视频';
+  @override
+  String get video_remote_retry => '重新连接';
+  @override
+  String get video_remote_favorites => '收藏';
+  @override
+  String get video_remote_subtitles => '字幕';
+  @override
+  String get video_remote_all => '全部视频';
+  @override
+  String get video_remote_remove => '取消选中收藏';
+  @override
+  String get video_remote_current => '回到当前字幕';
+  @override
+  String get video_remote_previous => '上一句';
+  @override
+  String get video_remote_next => '下一句';
+  @override
+  String get video_remote_open_favorite => '在电脑打开此收藏？';
+  @override
+  String get video_remote_mine => '预览并制卡';
+  @override
+  String get video_remote_mined => '已在电脑制卡';
+  @override
+  String get video_remote_no_results => '没有查到词条';
+  @override
+  String get video_remote_expression => '词语';
+  @override
+  String get video_remote_reading => '读音';
+  @override
+  String get video_remote_meaning => '释义';
+  @override
+  String get video_remote_sentence => '例句';
 }
 
 // Path: <root>
@@ -281130,6 +281749,46 @@ class _StringsZhHk extends _StringsEn {
       '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
 }
 
 /// Flat map(s) containing all translations.
@@ -295732,6 +296391,44 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -310329,6 +311026,44 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -325002,6 +325737,44 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -339657,6 +340430,44 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -354330,6 +355141,44 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -368947,6 +369796,44 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -383600,6 +384487,44 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -398127,6 +399052,44 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -412661,6 +413624,44 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -427309,6 +428310,44 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -441949,6 +442988,44 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -456594,6 +457671,44 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -471195,6 +472310,44 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -485827,6 +486980,44 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -500442,6 +501633,44 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }
@@ -514897,6 +516126,44 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'video_remote_title':
+        return '视频遥控器';
+      case 'video_remote_unsupported':
+        return '此设备不支持视频遥控';
+      case 'video_remote_waiting':
+        return '等待电脑打开视频';
+      case 'video_remote_retry':
+        return '重新连接';
+      case 'video_remote_favorites':
+        return '收藏';
+      case 'video_remote_subtitles':
+        return '字幕';
+      case 'video_remote_all':
+        return '全部视频';
+      case 'video_remote_remove':
+        return '取消选中收藏';
+      case 'video_remote_current':
+        return '回到当前字幕';
+      case 'video_remote_previous':
+        return '上一句';
+      case 'video_remote_next':
+        return '下一句';
+      case 'video_remote_open_favorite':
+        return '在电脑打开此收藏？';
+      case 'video_remote_mine':
+        return '预览并制卡';
+      case 'video_remote_mined':
+        return '已在电脑制卡';
+      case 'video_remote_no_results':
+        return '没有查到词条';
+      case 'video_remote_expression':
+        return '词语';
+      case 'video_remote_reading':
+        return '读音';
+      case 'video_remote_meaning':
+        return '释义';
+      case 'video_remote_sentence':
+        return '例句';
       default:
         return null;
     }
@@ -529369,6 +530636,44 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
       default:
         return null;
     }

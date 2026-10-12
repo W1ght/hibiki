@@ -352,9 +352,15 @@ extension _VideoLookupMining on _VideoFushiPageState {
     int? updateNoteId,
     VideoMiningHistorySnapshot? historySnapshot,
     void Function(MinePopupResult result)? onBackgroundLanded,
+    bool silent = false,
+    bool forceForeground = false,
+    bool forceSubtitleStart = false,
+    bool localOnly = false,
+    void Function(String code)? onFailure,
   }) async {
     final VideoPlayerController? controller = _controller;
     if (controller == null || !_discExtractionAllowed(controller)) {
+      onFailure?.call('video_extraction_unavailable');
       return const MinePopupResult();
     }
     // 在线视频：弹窗等不等这张卡（见 [VideoOnlineMiningMode]）。覆盖已有卡片 / 回看会话
@@ -362,14 +368,16 @@ extension _VideoLookupMining on _VideoFushiPageState {
     final VideoOnlineMiningMode onlineMode = resolveVideoOnlineMiningMode(
       preferred: appModel.videoOnlineMiningMode,
       mediaSource: controller.miningSource,
-      overwrite: updateNoteId != null,
+      overwrite: updateNoteId != null || forceForeground,
       sourceReview: _sourceReviewSession != null,
     );
 
     // 入队前立即冻结所有播放器/页面输入。换集会复用或 dispose controller，后续任务绝不能
     // 到真正出队时再读“当前集”。截图 Future 也在点击当下启动，current-frame 模式不会因
     // 本地 pushReplacement / 远端换流而截到下一集或访问已释放播放器。
-    final BaseAnkiRepository repo = ref.read(ankiRepositoryProvider);
+    final BaseAnkiRepository repo = localOnly
+        ? ref.read(platformServicesProvider).createAnkiRepository()
+        : ref.read(ankiRepositoryProvider);
     final MiningMediaCompression mediaCompression =
         MiningMediaCompression.resolve(
           imageTier: appModel.miningImageQuality,
@@ -431,7 +439,11 @@ extension _VideoLookupMining on _VideoFushiPageState {
     }
 
     final String? documentTitle = _videoMiningDocumentTitle();
-    final VideoMiningImageMode imageMode = appModel.videoMiningImageMode;
+    final VideoMiningImageMode imageMode =
+        forceSubtitleStart &&
+            appModel.videoMiningImageMode == VideoMiningImageMode.currentFrame
+        ? VideoMiningImageMode.subtitleStart
+        : appModel.videoMiningImageMode;
     final MiningAnimatedFormat animatedFormat =
         appModel.videoMiningAnimatedFormat;
     final MiningStillFormat stillFormat = appModel.videoMiningStillFormat;
@@ -442,20 +454,20 @@ extension _VideoLookupMining on _VideoFushiPageState {
     final String? collectionTag = appModel.autoAddBookNameToTags
         ? BaseAnkiRepository.sanitizeTitleTag(_playlistTitle)
         : null;
-    final Future<Uint8List?> currentFrameSnapshot = controller
-        .screenshot()
-        .catchError((Object error, StackTrace stack) {
-          // 截图在入队时就启动，必须立刻接住异常；否则任务排队期间 Future 已失败会成为
-          // unhandled async error。GIF/字幕起点帧路径仍可继续，截图只作为对应模式/兜底。
-          try {
-            ErrorLogService.instance.log(
-              'mineVideoCard.snapshotCurrentFrame',
-              error,
-              stack,
-            );
-          } catch (_) {}
-          return null;
-        });
+    final Future<Uint8List?> currentFrameSnapshot = forceSubtitleStart
+        ? Future<Uint8List?>.value(null)
+        : controller.screenshot().catchError((Object error, StackTrace stack) {
+            // 截图在入队时就启动，必须立刻接住异常；否则任务排队期间 Future 已失败会成为
+            // unhandled async error。GIF/字幕起点帧路径仍可继续，截图只作为对应模式/兜底。
+            try {
+              ErrorLogService.instance.log(
+                'mineVideoCard.snapshotCurrentFrame',
+                error,
+                stack,
+              );
+            } catch (_) {}
+            return null;
+          });
     // 不 await：先把本任务按点击顺序送进共享队列，轮到它时再解析临时目录。否则两个
     // 连续点击可能因 path_provider 返回先后不同而逆序入队。
     final Future<String> tempDir = getTemporaryDirectory().then(
@@ -678,6 +690,8 @@ extension _VideoLookupMining on _VideoFushiPageState {
       recordStats: reviewSession == null,
       mineDb: mineDb,
       statIdentity: statIdentity,
+      silent: silent,
+      onFailure: onFailure,
     );
     if (onlineMode == VideoOnlineMiningMode.wait) return land(await job);
     // 后台 / 看完再制卡：弹窗不陪着等。结局（成功 / 暂存 / 失败）在落地时由 OSD 报告。
@@ -704,10 +718,13 @@ extension _VideoLookupMining on _VideoFushiPageState {
     required bool recordStats,
     required FushiDatabase mineDb,
     required ({String bookKey, String title}) statIdentity,
+    bool silent = false,
+    void Function(String code)? onFailure,
   }) {
     // BUG-296 / TODO-390：应带句子音频却抽取失败 → 显式 OSD + 中止，不建无音频卡。
     if (res.aborted) {
-      if (mounted) {
+      onFailure?.call(res.abortReason ?? 'sentence_audio_export_failed');
+      if (mounted && !silent) {
         _showOsd(
           t.card_export_failed_detail(
             reason:
@@ -722,7 +739,7 @@ extension _VideoLookupMining on _VideoFushiPageState {
       return const MinePopupResult();
     }
     // W2a：动图降级为静态帧时可感知 OSD（原因取 GIF 失败摘要，最贴近根因）。
-    if (res.degradedToStill && mounted) {
+    if (res.degradedToStill && mounted && !silent) {
       _showOsd(
         t.card_cover_degraded_to_static(
           reason: coverFailure ?? 'animated clip unavailable',
@@ -731,6 +748,10 @@ extension _VideoLookupMining on _VideoFushiPageState {
       );
     }
     final MineOutcome outcome = res.outcome! as MineOutcome;
+    if (outcome.result != MineResult.success &&
+        outcome.result != MineResult.queued) {
+      onFailure?.call(outcome.errorCode ?? outcome.result.name);
+    }
     if (staged) {
       // 看完再制卡：只是进了待制卡列表。统计 / 历史等写入 Anki 时再记。
       if (outcome.result == MineResult.success) unawaited(_onVideoMineStaged());
@@ -755,7 +776,7 @@ extension _VideoLookupMining on _VideoFushiPageState {
     // State 的 `mounted`，不是 `context.mounted`：后台落地时页面可能早已 unmount，
     // 那时连取 `context` 都会抛（debug FlutterError / release 空检查），落地回调
     // （写制卡历史）就跟着没了，还会记一条假失败。
-    if (!mounted) return result;
+    if (!mounted || silent) return result;
     // TODO-971：制卡成功（card_exported / card_overwritten，含牌组名）走突出 OSD——
     // 居中、更大、停留更久，区别于音量/亮度小角标，避免用户「制卡了没反馈」。
     // describeMineOutcome 早就算出了 status，此前只被拿去选 prominent 布尔、颜色

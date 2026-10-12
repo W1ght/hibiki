@@ -50,6 +50,7 @@ import 'package:fushi_engine/sync/fushi_remote_lookup_service.dart';
 import 'package:fushi_engine/sync/game_stream/game_stream_protocol.dart';
 import 'package:fushi_engine/sync/game_stream/game_stream_service.dart';
 import 'package:fushi_engine/sync/remote_lookup_routes.dart';
+import 'package:fushi_engine/sync/video_remote_service.dart';
 import 'package:fushi_core/fushi_core.dart'
     show fushiDebugPrint, mimeTypeForFilePath;
 import 'package:meta/meta.dart';
@@ -257,6 +258,7 @@ class FushiSyncServer {
     Uint8List? Function(String dictionary, String path)?
         dictionaryMediaProvider,
     FushiRemoteGameStreamService? gameStreamService,
+    VideoRemoteService? videoRemoteService,
     @visibleForTesting BlurayClipRelayPool? blurayClipRelays,
   })  : syncDataDir = p.join(syncDataDir, 'sync-data'),
         _blurayClipRelays = blurayClipRelays ?? BlurayClipRelayPool(),
@@ -278,6 +280,7 @@ class FushiSyncServer {
         _subscriptions = subscriptions,
         _dictionaryMediaProvider = dictionaryMediaProvider,
         _gameStreamService = gameStreamService,
+        _videoRemoteService = videoRemoteService,
         _prefs = prefs,
         _now = now ?? DateTime.now;
 
@@ -327,6 +330,7 @@ class FushiSyncServer {
   final Uint8List? Function(String dictionary, String path)?
       _dictionaryMediaProvider;
   final FushiRemoteGameStreamService? _gameStreamService;
+  final VideoRemoteService? _videoRemoteService;
 
   /// 偏好读侧（互联 host 的实时转码开关）。null = 调用方没接线（老调用方、单测），
   /// 按默认值走，行为与从前一致。
@@ -747,6 +751,9 @@ class FushiSyncServer {
         reqPath == '/api/game-stream/launch/status') {
       return _handleGameStream(request, method, reqPath);
     }
+    if (reqPath.startsWith('/api/video-remote/')) {
+      return _handleVideoRemote(request, method, reqPath);
+    }
     if (reqPath.startsWith('/api/lookup/')) {
       return _handleLookupApi(request, method, reqPath);
     }
@@ -792,7 +799,12 @@ class FushiSyncServer {
     }
     if (reqPath == '/api/capabilities') {
       if (method != 'GET') return shelf.Response(405);
-      return _handleCapabilities();
+      final shelf.Response response = await _handleCapabilities();
+      if (_videoRemoteService == null) return response;
+      final Map<String, dynamic> capabilities =
+          jsonDecode(await response.readAsString()) as Map<String, dynamic>;
+      capabilities['videoRemoteControlV1'] = true;
+      return jsonResponse(capabilities);
     }
     if (reqPath == '/api/host/addresses') {
       if (method != 'GET') return shelf.Response(405);
@@ -928,6 +940,54 @@ class FushiSyncServer {
         );
       default:
         return shelf.Response(405);
+    }
+  }
+
+  Future<shelf.Response> _handleVideoRemote(
+    shelf.Request request,
+    String method,
+    String path,
+  ) async {
+    if (method != 'POST') return shelf.Response(405);
+    final VideoRemoteService? service = _videoRemoteService;
+    if (service == null) return shelf.Response.notFound('Video remote off');
+    final String operation = path.substring('/api/video-remote/'.length);
+    if (!videoRemoteOperations.contains(operation)) {
+      return shelf.Response.notFound('Unknown video remote operation');
+    }
+    // The middleware accepts legacy shared credentials for old library clients.
+    // Exclusive remote ownership must instead be tied to a paired credential;
+    // neither a body peerId nor the Basic username is an authenticated identity.
+    final String? authorization = request.headers['authorization'];
+    if (!await _validatePeerAuth(authorization)) {
+      return shelf.Response(403, body: '{"error":"paired_peer_required"}',
+          headers: <String, String>{'content-type': 'application/json'});
+    }
+    final String peerId = sha256.convert(
+      utf8.encode(_basicPassword(authorization!)!),
+    ).toString();
+    final BytesBuilder bytes = BytesBuilder(copy: false);
+    await for (final List<int> chunk in request.read()) {
+      bytes.add(chunk);
+      if (bytes.length > 2 * 1024 * 1024) {
+        return shelf.Response(413);
+      }
+    }
+    final Map<String, dynamic> body;
+    try {
+      final Object? decoded = jsonDecode(utf8.decode(bytes.takeBytes()));
+      if (decoded is! Map<String, dynamic>) throw const FormatException();
+      body = decoded;
+    } on FormatException {
+      return shelf.Response(400, body: '{"error":"invalid_json"}',
+          headers: <String, String>{'content-type': 'application/json'});
+    }
+    try {
+      return jsonResponse(await service.handle(operation, body, peerId));
+    } on VideoRemoteException catch (error) {
+      return shelf.Response(error.status,
+          body: jsonEncode(<String, String>{'error': error.code}),
+          headers: <String, String>{'content-type': 'application/json'});
     }
   }
 

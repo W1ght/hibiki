@@ -4052,17 +4052,25 @@ class VideoPlayerController extends ChangeNotifier
     await onPositionWrite?.call(bookUid, posMs);
   }
 
+  /// Explicit playback intent, including a repeated pause with no state change.
+  /// Remote lookup uses this to avoid resuming after a local user command.
+  int _remoteControlRevision = 0;
+  int get remoteControlRevision => _remoteControlRevision;
+
   /// 开始播放（未 load 时 no-op 安全）。
   Future<void> play() async {
+    _remoteControlRevision++;
     await _player?.play();
   }
 
   /// 暂停（未 load 时 no-op 安全）。
   Future<void> pause() async {
+    _remoteControlRevision++;
     await _player?.pause();
   }
 
   Future<void> playOrPause() async {
+    _remoteControlRevision++;
     await _player?.playOrPause();
   }
 
@@ -4685,6 +4693,7 @@ class VideoPlayerController extends ChangeNotifier
   /// 修「±秒跳转到 gap 后旧字幕不消失」（尤其暂停重听时）。[skipToCue] 自带 cue-snap，走
   /// [_rawSeekMs] 不吃本保护，避免权威同步先把目标清成 preRoll gap、下一拍才 snap 回而闪烁。
   Future<void> seekMs(int positionMs) async {
+    _remoteControlRevision++;
     final int clampedMs = positionMs.clamp(0, 1 << 30);
     _clearSeekTargetSnap();
     // 用户主动改变播放位置 = 放弃「只播这一句就停」的意图（[_oneShotHoldCueIndex]）。
@@ -4705,6 +4714,7 @@ class VideoPlayerController extends ChangeNotifier
   /// 在途保护的 [seekMs]，seek 前的权威同步会先把目标句清成 preRoll 落点的 gap、下一拍才随
   /// 快照 snap 回目标，凭空多一次闪烁。
   Future<void> _rawSeekMs(int positionMs) async {
+    _remoteControlRevision++;
     _clearSeekTargetSnap();
     // 同 [seekMs]：跳到别的句（[skipToCue]）即放弃上一次「只播这一句就停」。
     // [replayCue] 是唯一例外——它在本方法**之后**才置自己的一次性 hold，与
@@ -4749,6 +4759,7 @@ class VideoPlayerController extends ChangeNotifier
 
   /// 设置播放倍速（未 load 时也记下 [_lastSpeed]，下次 load 不丢）。
   Future<void> setSpeed(double rate) async {
+    _remoteControlRevision++;
     _lastSpeed = rate;
     await _syncAudioSpdif();
     await _player?.setRate(rate);

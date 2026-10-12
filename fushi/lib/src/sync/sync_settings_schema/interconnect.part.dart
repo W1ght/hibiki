@@ -769,6 +769,20 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
+                          if (u.enabled && u.hostId != null)
+                            FushiIconButton(
+                              icon: FushiIcons.subtitles,
+                              size: 18,
+                              tooltip: t.video_remote_title,
+                              enabled: !lockedByServer,
+                              onTap: () async {
+                                final String? token = u.token ?? await _repo.getFushiClientToken();
+                                if (!mounted) return;
+                                await pushSettingsPage(widget.settingsContext,
+                                  (BuildContext context) => VideoRemotePage(
+                                    repository: _repo, peer: u.copyWith(token: token)));
+                              },
+                            ),
                           // Gamepad/keyboard reorder equivalent for the drag handle.
                           FushiIconButton(
                             icon: FushiIcons.expandLess,

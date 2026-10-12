@@ -13,6 +13,7 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/module_registry.dart';
 import 'package:fushi/src/pages/implementations/migration_page.dart';
 import 'package:fushi/src/pages/implementations/game_stream_join_page.dart';
+import 'package:fushi/src/pages/implementations/video_remote_page.dart';
 import 'package:fushi/src/pages/implementations/migration_import_page.dart';
 import 'package:fushi/src/pages/implementations/external_reader_import_page.dart';
 import 'package:fushi/src/migration/migration_target_channel.dart';
