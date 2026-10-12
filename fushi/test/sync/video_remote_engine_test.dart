@@ -140,6 +140,40 @@ void main() {
     },
   );
 
+  test('internal failures are not replayed; protocol failures are', () async {
+    final VideoRemoteSessionCore core = VideoRemoteSessionCore();
+    addTearDown(core.dispose);
+    int runs = 0;
+    Future<Map<String, Object?>> broken() async {
+      runs++;
+      throw StateError('adapter bug');
+    }
+
+    await expectLater(
+      core.runIdempotent('one', 'broken', broken, fingerprint: 'a'),
+      throwsA(isA<StateError>()),
+    );
+    await expectLater(
+      core.runIdempotent('one', 'broken', broken, fingerprint: 'a'),
+      throwsA(isA<StateError>()),
+    );
+    expect(runs, 2, reason: 'an internal fault must not be cached');
+
+    int rejected = 0;
+    Future<Map<String, Object?>> stale() async {
+      rejected++;
+      throw const VideoRemoteException(409, 'session_changed');
+    }
+
+    for (int i = 0; i < 2; i++) {
+      await expectLater(
+        core.runIdempotent('one', 'stale', stale, fingerprint: 'b'),
+        throwsA(isA<VideoRemoteException>()),
+      );
+    }
+    expect(rejected, 1, reason: 'a protocol answer is replayed by id');
+  });
+
   test(
     'HTTP uses paired credential identity and rejects forged/legacy identities',
     () async {
@@ -218,6 +252,16 @@ void main() {
       );
       expect(failureStatus, 409);
       expect((jsonDecode(failureBody) as Map)['error'], 'stale_session');
+      service.failure = null;
+      service.crash = StateError('adapter bug');
+      final (int crashStatus, String crashBody) = await send(
+        '/api/video-remote/command',
+        token: 'paired',
+      );
+      expect(crashStatus, 500);
+      expect((jsonDecode(crashBody) as Map)['error'], videoRemoteInternalError);
+      expect(crashBody, isNot(contains('adapter bug')));
+      service.crash = null;
       server.pairedPeerTokensProvider = () async => <String>{};
       server.invalidatePeerTokenCache();
       expect(
@@ -231,6 +275,7 @@ void main() {
 final class _RecordingService implements VideoRemoteService {
   String? peer;
   VideoRemoteException? failure;
+  Error? crash;
   @override
   Future<Map<String, Object?>> handle(
     String operation,
@@ -239,6 +284,7 @@ final class _RecordingService implements VideoRemoteService {
   ) async {
     peer = peerId;
     if (failure != null) throw failure!;
+    if (crash != null) throw crash!;
     return <String, Object?>{'available': false};
   }
 }

@@ -6,7 +6,10 @@ import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/pages/implementations/video_remote_page.dart';
+import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
+import 'package:fushi/src/sync/video_remote_client.dart';
+import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 import 'package:fushi/src/utils/components/glass/fushi_glass_toggles.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -115,14 +118,28 @@ void main() {
       final int snapshots = host.operations
           .where((String op) => op == 'snapshot')
           .length;
-      await tester.binding.handleAppLifecycleStateChanged(
-        AppLifecycleState.paused,
-      );
-      await _wait(tester, () => host.operations.contains('disconnect'));
-      await tester.binding.handleAppLifecycleStateChanged(
-        AppLifecycleState.resumed,
-      );
+      int disconnects() =>
+          host.operations.where((String op) => op == 'disconnect').length;
+      // iOS control centre / banners only reach `inactive`: keep the lease.
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
       await _flush(tester);
+      expect(disconnects(), 0);
+      expect(find.text(t.video_remote_no_results), findsOneWidget);
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
+      await _wait(tester, () => disconnects() > 0);
+      await _flush(tester);
+      expect(disconnects(), 1);
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
+      await _flush(tester);
+      expect(
+        host.operations.where((String op) => op == 'snapshot').length,
+        snapshots,
+      );
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
+      await _flush(tester);
+      expect(disconnects(), 1);
       expect(find.text(t.video_remote_no_results), findsNothing);
       expect(
         host.operations.where((String op) => op == 'snapshot').length,
@@ -139,6 +156,99 @@ void main() {
       await close(tester);
     },
   );
+
+  testWidgets(
+    'closing the lookup sheet keeps its field alive while animating',
+    (WidgetTester tester) async {
+      await open(tester);
+      tester.widget<FushiListItem>(find.byType(FushiListItem).first).onTap!();
+      await _wait(
+        tester,
+        () => find.text(t.video_remote_no_results).evaluate().isNotEmpty,
+      );
+      tester
+          .widget<TextButton>(find.widgetWithText(TextButton, t.dialog_close))
+          .onPressed!();
+      // Pump through the exit animation frame by frame.
+      for (int i = 0; i < 10; i++) {
+        await tester.pump(const Duration(milliseconds: 50));
+      }
+      await _wait(tester, () => host.operations.contains('lookupEnd'));
+      expect(tester.takeException(), isNull);
+      expect(find.text(t.video_remote_no_results), findsNothing);
+      await close(tester);
+    },
+  );
+
+  testWidgets(
+    'dual subtitles highlight and skip along the primary track only',
+    (WidgetTester tester) async {
+      host.dualTrack = true;
+      await open(tester);
+      await _wait(
+        tester,
+        () => tester
+            .widgetList<FushiListItem>(find.byType(FushiListItem))
+            .any((FushiListItem item) => item.selected),
+      );
+      final List<FushiListItem> rows = tester
+          .widgetList<FushiListItem>(find.byType(FushiListItem))
+          .toList();
+      expect(rows.map((FushiListItem item) => item.selected), <bool>[
+        false,
+        true,
+        false,
+      ]);
+      FushiIconButtonControl button(String tooltip) =>
+          tester.widget<FushiIconButtonControl>(
+            find.byWidgetPredicate(
+              (Widget w) => w is FushiIconButtonControl && w.tooltip == tooltip,
+            ),
+          );
+      expect(button(t.video_remote_previous).onPressed, isNull);
+      button(t.video_remote_next).onPressed!();
+      await _wait(tester, () => host.commands.isNotEmpty);
+      expect(host.commands.single['cueId'], 'primary-2');
+      await close(tester);
+    },
+  );
+
+  test('remote errors are localized and never show raw exception text', () {
+    expect(
+      videoRemoteErrorText(const VideoRemoteError('controller_busy')),
+      t.video_remote_error_controller_busy,
+    );
+    expect(
+      videoRemoteErrorText(
+        const VideoRemoteError('favorite_source_unavailable', statusCode: 409),
+      ),
+      t.video_remote_error_favorite_source_unavailable,
+    );
+    expect(
+      videoRemoteErrorText(
+        const VideoRemoteError('paired_peer_required', statusCode: 403),
+      ),
+      t.video_remote_error_pairing_rejected,
+    );
+    expect(
+      videoRemoteErrorText(SyncAuthError('Video remote auth rejected')),
+      t.video_remote_error_pairing_rejected,
+    );
+    expect(
+      videoRemoteErrorText(
+        const VideoRemoteError('brand_new', statusCode: 409),
+      ),
+      t.video_remote_error_unknown(code: 'brand_new'),
+    );
+    expect(
+      videoRemoteErrorText(const VideoRemoteError('HTTP 404', statusCode: 404)),
+      t.video_remote_unsupported,
+    );
+    expect(
+      videoRemoteErrorText(const VideoRemoteError('lookup_cancelled')),
+      '',
+    );
+  });
 
   testWidgets(
     'episode change during subtitle paging recovers from stale session',
@@ -174,10 +284,11 @@ Future<void> _wait(WidgetTester tester, bool Function() ready) async {
 final class _PhoneHost {
   final List<String> operations = <String>[];
   final List<Map<String, dynamic>> lookups = <Map<String, dynamic>>[];
+  final List<Map<String, dynamic>> commands = <Map<String, dynamic>>[];
   final List<Completer<http.Response>> _events = <Completer<http.Response>>[];
   late final MockClient client = MockClient(_handle);
   Completer<void>? disconnectGate;
-  bool available = true, rejectFirstSubtitles = false;
+  bool available = true, rejectFirstSubtitles = false, dualTrack = false;
   int section = 0, revision = 1;
 
   Map<String, dynamic> get state => <String, dynamic>{
@@ -189,7 +300,7 @@ final class _PhoneHost {
     'identity': 'shared-book',
     'sectionIndex': section,
     'title': 'Episode $section',
-    'cueCount': available ? 1 : 0,
+    'cueCount': available ? cues.length : 0,
     'playing': false,
     'positionMs': 1500,
     'durationMs': 10000,
@@ -203,6 +314,30 @@ final class _PhoneHost {
     'delayMs': 0,
     'track': 'primary',
   };
+
+  /// Dual-track lists interleave both tracks by time; the secondary line at
+  /// the same instant sorts first here on purpose.
+  List<Map<String, dynamic>> get cues => dualTrack
+      ? <Map<String, dynamic>>[
+          <String, dynamic>{
+            'id': 'secondary-1',
+            'text': 'Translated sentence',
+            'startMs': 1000,
+            'endMs': 3000,
+            'delayMs': 0,
+            'track': 'secondary',
+          },
+          <String, dynamic>{...cue, 'id': 'primary-1'},
+          <String, dynamic>{
+            'id': 'primary-2',
+            'text': 'Next sentence',
+            'startMs': 4000,
+            'endMs': 6000,
+            'delayMs': 0,
+            'track': 'primary',
+          },
+        ]
+      : <Map<String, dynamic>>[cue];
   Map<String, dynamic> get favorite => <String, dynamic>{
     'id': 'episode-one-favorite',
     'text': 'Shared sentence',
@@ -233,10 +368,7 @@ final class _PhoneHost {
           revision++;
           return _response(<String, dynamic>{'error': 'session_changed'}, 409);
         }
-        return _response(<String, dynamic>{
-          'total': 1,
-          'cues': <Map<String, dynamic>>[cue],
-        });
+        return _response(<String, dynamic>{'total': cues.length, 'cues': cues});
       case 'favorites':
         final bool include = body['currentOnly'] != true || section == 1;
         return _response(<String, dynamic>{
@@ -261,6 +393,9 @@ final class _PhoneHost {
             'entries': <dynamic>[],
           },
         });
+      case 'command':
+        commands.add(body);
+        return _response(<String, dynamic>{'ok': true});
       case 'disconnect':
         await disconnectGate?.future;
         releaseEvents();

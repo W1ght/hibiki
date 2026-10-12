@@ -29,6 +29,18 @@ part of '../video_fushi_page.dart';
 /// ([_onMineEntryImpl], [_onUpdateEntryImpl]), the card landing path
 /// ([_mineVideoCard]) and the mined-sentence history row ([_recordMinedSentenceForVideo]).
 extension _VideoLookupMining on _VideoFushiPageState {
+  /// 本机 Anki 仓库 + 制卡后自动重排（与 `ankiRepositoryProvider` 的本地分支同构，
+  /// 只是不套待发队列、也不随「制卡到已配对设备」改道）。每次遥控制卡取一份新仓库，
+  /// 读的是当下的 Anki 设置；调度器防抖到期跑完一轮即空闲，不挂在页面上——遥控
+  /// 打开收藏会替换页面，挂在页面上会把未到期的重排一起丢掉。
+  BaseAnkiRepository _localAutoRepositionAnkiRepository() {
+    return withAnkiAutoReposition(
+      ref.read(platformServicesProvider).createAnkiRepository(),
+      showFailure: (String message) =>
+          _showOsd(message, severity: ToastSeverity.error),
+    ).repository;
+  }
+
   /// 把一条 cue 的画面/音频时间窗转成草稿可合并的区间。视频所有 cue 同属一个视频文件，
   /// [audioFileIndex] 统一用 0（合并恒成功，取 min start / max end）。null cue → null
   /// 区间（草稿据此退化为只合文本，不静默拼坏区间）。
@@ -375,8 +387,10 @@ extension _VideoLookupMining on _VideoFushiPageState {
     // 入队前立即冻结所有播放器/页面输入。换集会复用或 dispose controller，后续任务绝不能
     // 到真正出队时再读“当前集”。截图 Future 也在点击当下启动，current-frame 模式不会因
     // 本地 pushReplacement / 远端换流而截到下一集或访问已释放播放器。
+    // 遥控制卡（[localOnly]）强制本机 Anki：不经「制卡到已配对设备」转发、不进待发
+    // 队列（失败要当场报回手机），但自动重排与普通制卡同一套。
     final BaseAnkiRepository repo = localOnly
-        ? ref.read(platformServicesProvider).createAnkiRepository()
+        ? _localAutoRepositionAnkiRepository()
         : ref.read(ankiRepositoryProvider);
     final MiningMediaCompression mediaCompression =
         MiningMediaCompression.resolve(

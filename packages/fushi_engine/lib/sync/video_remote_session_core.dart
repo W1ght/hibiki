@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:collection';
 
-import 'video_remote_service.dart';
+import 'package:fushi_engine/sync/video_remote_service.dart';
 
 /// Bounded revision journal, exclusive controller lease and retry deduplication.
 final class VideoRemoteSessionCore {
@@ -202,9 +202,24 @@ final class VideoRemoteSessionCore {
     }
     final _RemoteRequest request = _RemoteRequest(fingerprint);
     _requests[key] = request;
-    request.result = Future<Map<String, Object?>>.sync(action).whenComplete(() {
-      request.completed = true;
-    });
+    request.result = Future<Map<String, Object?>>.sync(action)
+        .then(
+          (Map<String, Object?> value) => value,
+          onError: (Object error, StackTrace stack) {
+            // A [VideoRemoteException] is a deterministic protocol answer and is
+            // replayed for the same request ID. Anything else is an internal
+            // fault: drop the journal entry so the result is never replayed as
+            // if the operation had a settled outcome.
+            if (error is! VideoRemoteException &&
+                identical(_requests[key], request)) {
+              _requests.remove(key);
+            }
+            Error.throwWithStackTrace(error, stack);
+          },
+        )
+        .whenComplete(() {
+          request.completed = true;
+        });
     return request.result;
   }
 

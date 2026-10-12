@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:drift/native.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:fushi/src/media/video/video_player_controller.dart';
 import 'package:fushi/src/sync/video_remote_host.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -66,6 +67,108 @@ void main() {
     expect(player.playing, false);
     expect(player.commands, <String>['pause', 'play']);
   });
+
+  test(
+    'reported error clears after the next successful operation or session',
+    () async {
+      host.reportError('favorite_source_unavailable');
+      Map<String, Object?> state = await host.handle(
+        'snapshot',
+        <String, dynamic>{},
+        'phone',
+      );
+      expect(state['error'], 'favorite_source_unavailable');
+      // A rejected operation does not acknowledge the failure.
+      await expectLater(
+        call('command', <String, dynamic>{'action': 'bogus'}),
+        throwsA(isA<VideoRemoteException>()),
+      );
+      state = await host.handle('snapshot', <String, dynamic>{}, 'phone');
+      expect(state['error'], 'favorite_source_unavailable');
+      await call('command', <String, dynamic>{'action': 'pause'});
+      state = await host.handle('snapshot', <String, dynamic>{}, 'phone');
+      expect(state.containsKey('error'), isFalse);
+      final Map<String, Object?> events = await call(
+        'events',
+        <String, dynamic>{'afterRevision': 0, 'waitMs': 0},
+      );
+      final Map<String, Object?> last =
+          ((events['events']! as List).last as Map)['payload']!
+              as Map<String, Object?>;
+      expect(last.containsKey('error'), isFalse);
+
+      host.reportError('favorite_subtitle_ambiguous');
+      player.identity = 'episode-two';
+      player.notify();
+      state = await host.handle('snapshot', <String, dynamic>{}, 'phone');
+      expect(state.containsKey('error'), isFalse);
+    },
+  );
+
+  test('adapter failure codes reach the mining task', () async {
+    final Map<String, Object?> lookup = await call(
+      'lookupBegin',
+      <String, dynamic>{'cueId': 'primary'},
+    );
+    final Map<String, Object?> accepted = await call('mine', <String, dynamic>{
+      'contextId': lookup['contextId'],
+      'fields': <String, dynamic>{'term': '言葉'},
+    });
+    player.mining.completeError(
+      const VideoRemoteException(409, 'video_extraction_unavailable'),
+    );
+    await Future<void>.delayed(Duration.zero);
+    final Map<String, Object?> status = await call(
+      'mineStatus',
+      <String, dynamic>{'taskId': accepted['taskId']},
+    );
+    expect(status['status'], 'failed');
+    expect(status['error'], 'video_extraction_unavailable');
+  });
+
+  test(
+    'desktop toggle on the real player controller cancels lookup resume',
+    () async {
+      final VideoPlayerController controller = VideoPlayerController();
+      addTearDown(controller.dispose);
+      player.revisionSource = () => controller.remoteControlRevision;
+      player.onCommand = (String action) async {
+        if (action == 'pause') await controller.pause();
+        if (action == 'play') await controller.play();
+      };
+      final Map<String, Object?> lookup = await call(
+        'lookupBegin',
+        <String, dynamic>{'cueId': 'primary'},
+      );
+      expect(player.playing, false);
+      // The desktop shortcut / subtitle-list paths use togglePlayPause().
+      // Toggling twice returns to paused without any state the phone owns.
+      await controller.togglePlayPause();
+      player.playing = true;
+      await controller.togglePlayPause();
+      player.playing = false;
+      await call('lookupEnd', <String, dynamic>{
+        'contextId': lookup['contextId'],
+      });
+      expect(player.playing, false);
+      expect(player.commands, <String>['pause']);
+
+      // Every other public transport entry is an explicit intent as well.
+      for (final Future<void> Function() intent in <Future<void> Function()>[
+        controller.play,
+        controller.pause,
+        controller.playOrPause,
+        controller.togglePlayPause,
+        () => controller.seekMs(1000),
+        () => controller.seekRelative(1000),
+        () async => controller.notifyExternalSeek(500),
+      ]) {
+        final int before = controller.remoteControlRevision;
+        await intent();
+        expect(controller.remoteControlRevision, greaterThan(before));
+      }
+    },
+  );
 
   test('snapshot includes the selected episode identity', () {
     expect(snapshot['identity'], 'book-one');
@@ -322,6 +425,7 @@ void main() {
       expect(stored.single.bookKey, 'book-one');
       expect(stored.single.source, kFavoriteSentenceSourceVideo);
       expect(stored.single.normCharOffset, 1000);
+      expect(stored.single.dateKey, FushiDatabase.statDateKeyOf(now));
       final Map<String, Object?> list = await call(
         'favorites',
         <String, dynamic>{'query': '一番'},
@@ -397,6 +501,8 @@ final class _Player {
   int sectionIndex = 0;
   bool playing = true;
   int controlRevision = 0;
+  int Function()? revisionSource;
+  Future<void> Function(String action)? onCommand;
   int? seekMs;
   int mineCalls = 0;
   VideoRemoteCue? minedCue;
@@ -435,7 +541,7 @@ final class _Player {
       'playing': playing,
       'positionMs': seekMs ?? 0,
       'speed': 1.0,
-      'controlRevision': controlRevision,
+      'controlRevision': revisionSource?.call() ?? controlRevision,
     },
     command: command,
     mine: (VideoRemoteCue cue, Map<String, dynamic> fields) {
@@ -454,6 +560,7 @@ final class _Player {
   Future<void> command(String action, Map<String, dynamic> data) async {
     commands.add(action);
     controlRevision++;
+    await onCommand?.call(action);
     if (action == 'pause') {
       playing = false;
       if (pauseStarted != null && !pauseStarted!.isCompleted) {

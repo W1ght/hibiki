@@ -78,8 +78,16 @@ Future<void> _assertCardMedia(
     ...audioReference.allMatches(values).map((RegExpMatch m) => m.group(1)!),
     ...imageReference.allMatches(values).map((RegExpMatch m) => m.group(1)!),
   ];
-  expect(audioReference.hasMatch(values), true, reason: 'Extracted audio required');
-  expect(imageReference.hasMatch(values), true, reason: 'Extracted frame required');
+  expect(
+    audioReference.hasMatch(values),
+    true,
+    reason: 'Extracted audio required',
+  );
+  expect(
+    imageReference.hasMatch(values),
+    true,
+    reason: 'Extracted frame required',
+  );
   for (final String name in references) {
     expect(
       anki.mediaFileNames,
@@ -101,7 +109,9 @@ Future<String> _seedVideoWithSrt(
   final String path = '${dir.path}${Platform.pathSeparator}remote-control.mp4';
   final File video = await generateTestVideo(
     outPath: path,
-    duration: Duration(seconds: 30 + (_phoneHoldSeconds > 0 ? _phoneHoldSeconds : 0)),
+    duration: Duration(
+      seconds: 30 + (_phoneHoldSeconds > 0 ? _phoneHoldSeconds : 0),
+    ),
   );
   if (!await video.exists() || await video.length() == 0) {
     throw StateError('ffmpeg must generate a non-empty integration fixture');
@@ -179,8 +189,9 @@ void main() {
         for (int i = 0; i < 100; i++) {
           await tester.pump(const Duration(milliseconds: 250));
           if (find.byType(Video).evaluate().isNotEmpty &&
-              hooks().debugCueCount > 0)
+              hooks().debugCueCount > 0) {
             break;
+          }
         }
         expect(
           find.byType(Video),

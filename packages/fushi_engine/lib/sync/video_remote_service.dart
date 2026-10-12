@@ -17,6 +17,10 @@ final class VideoRemoteException implements Exception {
   String toString() => 'VideoRemoteException($status, $code)';
 }
 
+/// Error code returned (HTTP 500) when the adapter fails with an unexpected
+/// exception. Expected failures carry their own [VideoRemoteException.code].
+const String videoRemoteInternalError = 'internal_error';
+
 const Set<String> videoRemoteOperations = <String>{
   'snapshot',
   'events',

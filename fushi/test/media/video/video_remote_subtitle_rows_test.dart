@@ -85,6 +85,14 @@ void main() {
     // Preserve desktop row semantics: chain folding does not expand the cue.
     expect(rows.mergedByRep, isEmpty);
     expect(cues[rows.indexes.single].endMs, 63130);
+    // The folded row spans the whole chain, not only its head segment.
+    expect(rows.chainEndMsByRep, <int, int>{0: 68050});
+    final spans = subtitleTranscriptRowSpans(cues);
+    expect(spans, hasLength(1));
+    expect(spans.single.rawIndex, 0);
+    expect(spans.single.text, 'OP lyric');
+    expect(spans.single.startMs, 61670);
+    expect(spans.single.endMs, 68050);
     expect(
       subtitleTranscriptRows(List<AudioCue>.of(cues)).indexes,
       rows.indexes,
@@ -102,6 +110,11 @@ void main() {
       final rows = subtitleTranscriptRows(cues);
       expect(rows.indexes, <int>[0, 2]);
       expect(rows.representativeByRaw, <int, int>{0: 0, 1: 0, 2: 2});
+      expect(rows.chainEndMsByRep, <int, int>{0: 3000});
+      expect(subtitleTranscriptRowSpans(cues).map((row) => row.endMs), <int>[
+        3000,
+        4000,
+      ]);
     },
   );
 
@@ -140,5 +153,7 @@ void main() {
     expect(rows.indexes, isEmpty);
     expect(rows.representativeByRaw, isEmpty);
     expect(rows.mergedByRep, isEmpty);
+    expect(rows.chainEndMsByRep, isEmpty);
+    expect(subtitleTranscriptRowSpans(<AudioCue>[]), isEmpty);
   });
 }

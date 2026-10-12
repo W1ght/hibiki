@@ -249,6 +249,8 @@ import 'package:fushi/src/pages/implementations/stat_activity.dart';
 import 'package:fushi/src/sync/interconnect_adaptive_quality.dart';
 import 'package:fushi/src/sync/interconnect_sync_backend.dart';
 import 'package:fushi/src/sync/video_remote_host.dart';
+import 'package:fushi_engine/sync/video_remote_service.dart'
+    show VideoRemoteException;
 import 'package:fushi/src/sync/sync_backend.dart'
     show SyncAuthError, SyncPeerUnreachableError;
 import 'package:fushi/src/sync/sync_error_messages.dart'
@@ -5237,7 +5239,12 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
         try {
           await _openRemoteVideoFavorite(widget.initialRemoteFavorite!);
         } catch (error, stack) {
-          appModel.videoRemoteHost.reportError('favorite_source_unavailable');
+          // 可预期的失败（歧义 / 字幕缺失 / 来源不可用）带自己的稳定码报回手机。
+          appModel.videoRemoteHost.reportError(
+            error is VideoRemoteException
+                ? error.code
+                : 'favorite_source_unavailable',
+          );
           ErrorLogService.instance.log(
             'VideoFushi.remoteFavorite',
             error,

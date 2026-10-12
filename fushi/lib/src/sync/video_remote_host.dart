@@ -4,6 +4,7 @@ import 'package:crypto/crypto.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:fushi_audio/fushi_audio.dart';
+import 'package:fushi_core/fushi_core.dart' show FushiDatabase;
 import 'package:fushi_engine/sync/video_remote_service.dart';
 import 'package:fushi_engine/sync/video_remote_session_core.dart';
 
@@ -126,6 +127,12 @@ final class VideoRemoteHost implements VideoRemoteService {
     _publish();
   }
 
+  /// Reports an asynchronous failure the phone cannot get from a response,
+  /// e.g. the page opened by `openFavorite` failing to load its source.
+  ///
+  /// The code rides on the `state` snapshot until the controller's next
+  /// successful operation, a session (video identity) change or a new player
+  /// registration; it never outlives the attempt it describes.
   void reportError(String code) {
     _playbackError = code;
     _publish();
@@ -142,6 +149,8 @@ final class VideoRemoteHost implements VideoRemoteService {
       _identity = identity;
       _sessionId = '${_now().microsecondsSinceEpoch}_${++_serial}';
       _lookup = null;
+      // A reported failure belongs to the session it was raised in.
+      _playbackError = null;
       _subtitleVersion++;
       _cues = next;
       _cueMap = <String, VideoRemoteCue>{
@@ -321,7 +330,17 @@ final class VideoRemoteHost implements VideoRemoteService {
       () => _serialize(() async {
         // Queued commands revalidate their owner/session at execution time.
         await _core.assertOwner(peerId);
-        return _mutate(operation, body, peerId);
+        final Map<String, Object?> result = await _mutate(
+          operation,
+          body,
+          peerId,
+        );
+        // A successful controller operation supersedes an earlier failure.
+        if (_playbackError != null) {
+          _playbackError = null;
+          _publish();
+        }
+        return result;
       }),
       fingerprint: fingerprint,
     );
@@ -448,7 +467,9 @@ final class VideoRemoteHost implements VideoRemoteService {
           },
           onError: (Object error, StackTrace stack) {
             task.status = 'failed';
-            task.error = 'mining_failed';
+            task.error = error is VideoRemoteException
+                ? error.code
+                : 'mining_failed';
             debugPrint('Video remote mining failed: $error\n$stack');
             _core.publish('mine', task.toJson());
           },
@@ -554,7 +575,9 @@ final class VideoRemoteHost implements VideoRemoteService {
             normCharOffset: cue.startMs,
             normCharLength: cue.endMs - cue.startMs,
             source: kFavoriteSentenceSourceVideo,
-            dateKey: _now().toIso8601String().substring(0, 10),
+            // Same statistics-day key as every other favorite write
+            // (`statTodayKey()`), honouring the configurable day reset.
+            dateKey: FushiDatabase.statDateKeyOf(_now()),
           ),
         );
       } else if (body['favorited'] == false) {

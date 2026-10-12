@@ -52,14 +52,14 @@ class _VideoRemoteCueCache {
     String track,
     int delay,
   ) {
-    final rows = subtitleTranscriptRows(cues);
     return <VideoRemoteCue>[
-      for (final int rawIndex in rows.indexes)
+      for (final ({int rawIndex, String text, int startMs, int endMs}) row
+          in subtitleTranscriptRowSpans(cues))
         VideoRemoteCue(
-          id: '$track:$rawIndex',
-          text: (rows.mergedByRep[rawIndex] ?? cues[rawIndex]).text,
-          startMs: (rows.mergedByRep[rawIndex] ?? cues[rawIndex]).startMs,
-          endMs: (rows.mergedByRep[rawIndex] ?? cues[rawIndex]).endMs,
+          id: '$track:${row.rawIndex}',
+          text: row.text,
+          startMs: row.startMs,
+          endMs: row.endMs,
           delayMs: delay,
           track: track,
         ),
@@ -115,7 +115,7 @@ extension _VideoRemoteControl on _VideoFushiPageState {
             );
             if (action == 'seekCue') await controller.play();
           default:
-            throw ArgumentError.value(action, 'action');
+            throw const VideoRemoteException(400, 'invalid_action');
         }
       },
       mine: _mineRemoteVideoCue,
@@ -134,21 +134,26 @@ extension _VideoRemoteControl on _VideoFushiPageState {
   ) async {
     final VideoPlayerController? controller = _controller;
     if (controller == null || !mounted) {
-      throw StateError('Video session closed');
+      throw const VideoRemoteException(409, 'no_video');
     }
     if (controller.isBlurayNavigationSession &&
         (!controller.discMiningAvailable || _discLearningBlocked)) {
-      throw StateError(
-        controller.discMiningUnavailableReason ?? 'Disc extraction unavailable',
-      );
+      throw const VideoRemoteException(409, 'video_extraction_unavailable');
+    }
+    final Object? rawFields = request['rawFields'];
+    if (rawFields is! Map) {
+      throw const VideoRemoteException(400, 'invalid_fields');
     }
     final Map<String, String> fields = <String, String>{
-      for (final MapEntry<dynamic, dynamic> entry
-          in (request['rawFields'] as Map).entries)
+      for (final MapEntry<dynamic, dynamic> entry in rawFields.entries)
         entry.key.toString(): entry.value.toString(),
     };
     if ((fields['expression'] ?? '').trim().isEmpty) {
-      throw ArgumentError('A dictionary expression is required');
+      throw const VideoRemoteException(400, 'invalid_fields');
+    }
+    final Object? requestSentence = request['sentence'];
+    if (requestSentence != null && requestSentence is! String) {
+      throw const VideoRemoteException(400, 'invalid_fields');
     }
     final AudioPlaybackRange padded = padSentenceRange(
       AudioPlaybackRange(
@@ -162,7 +167,7 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       headPadMs: appModel.miningAudioHeadPadMs,
       tailPadMs: appModel.miningAudioTailPadMs,
     );
-    final String sentence = request['sentence'] as String? ?? cue.text;
+    final String sentence = requestSentence as String? ?? cue.text;
     final VideoMiningHistorySnapshot history =
         VideoMiningHistorySnapshot.capture(
           fields: fields,
@@ -202,24 +207,24 @@ extension _VideoRemoteControl on _VideoFushiPageState {
   Future<void> _openRemoteVideoFavorite(FavoriteSentence favorite) async {
     final String? uid = favorite.bookKey;
     if (uid == null || uid.isEmpty) {
-      throw StateError('Favorite has no video source');
+      throw const VideoRemoteException(404, 'favorite_source_unavailable');
     }
     if (uid == _activeBookUid &&
         _isRemote &&
         (favorite.sectionIndex ?? 0) != (_favoriteSectionIndex ?? 0)) {
       final int episode = favorite.sectionIndex ?? 0;
       if (episode < 0 || episode >= _episodes.length) {
-        throw StateError('Favorite episode is unavailable');
+        throw const VideoRemoteException(404, 'favorite_source_unavailable');
       }
       await _controller?.pause();
-      if (!mounted) throw StateError('Video session closed');
+      if (!mounted) throw const VideoRemoteException(409, 'no_video');
       await _loadRemoteEpisode(
         episode,
         startIntent: EpisodeStartIntent.explicitCue,
         initialPositionMsOverride: favorite.normCharOffset,
       );
       if (_controller == null || _failed) {
-        throw StateError('Favorite episode failed to load');
+        throw const VideoRemoteException(404, 'favorite_source_unavailable');
       }
       await _openRemoteVideoFavorite(favorite);
       return;
@@ -227,7 +232,9 @@ extension _VideoRemoteControl on _VideoFushiPageState {
     if (uid == _activeBookUid &&
         (favorite.sectionIndex ?? 0) == (_favoriteSectionIndex ?? 0)) {
       final VideoPlayerController? controller = _controller;
-      if (controller == null) throw StateError('Video session closed');
+      if (controller == null) {
+        throw const VideoRemoteException(409, 'no_video');
+      }
       final List<VideoRemoteCue> rows = _videoRemoteCueCache.read(
         controller,
         _currentSubtitleSource,
@@ -249,22 +256,26 @@ extension _VideoRemoteControl on _VideoFushiPageState {
         );
       }
       if (candidates.length > 1) {
-        throw StateError('Favorite subtitle track is ambiguous');
+        throw const VideoRemoteException(409, 'favorite_subtitle_ambiguous');
       }
       final VideoRemoteCue? cue = candidates.firstOrNull;
-      if (cue == null) throw StateError('Favorite subtitle is unavailable');
+      if (cue == null) {
+        throw const VideoRemoteException(404, 'favorite_subtitle_missing');
+      }
       await controller.seekMs(miningClipTimeMs(cue.startMs, cue.delayMs));
       await controller.play();
       return;
     }
     final VideoBookRow? row = await widget.repo.getByBookUid(uid);
-    if (row == null) throw StateError('Favorite video source is unavailable');
+    if (row == null) {
+      throw const VideoRemoteException(404, 'favorite_source_unavailable');
+    }
     if (await isLocalVideoResourceMissing(row.videoPath)) {
-      throw StateError('Favorite video file is unavailable');
+      throw const VideoRemoteException(404, 'favorite_source_unavailable');
     }
     final Map<String, int> collections = await appModel.database
         .getPrimaryCollectionIdByEntry();
-    if (!context.mounted) throw StateError('Video session closed');
+    if (!context.mounted) throw const VideoRemoteException(409, 'no_video');
     final PageRoute<void>? oldFullscreenRoute = _videoFullscreenRoute;
     final NavigatorState navigator = Navigator.of(context);
     final NavigatorState rootNavigator = Navigator.of(
@@ -278,7 +289,7 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       hasCurrentRoute: currentRoute != null,
     );
     await _controller?.pause();
-    if (!context.mounted) throw StateError('Video session closed');
+    if (!context.mounted) throw const VideoRemoteException(409, 'no_video');
     final Route<void> route = adaptivePageRoute<void>(
       context: context,
       builder: (_) => VideoFushiPage.neutralized(

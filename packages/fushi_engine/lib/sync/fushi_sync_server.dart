@@ -988,6 +988,13 @@ class FushiSyncServer {
       return shelf.Response(error.status,
           body: jsonEncode(<String, String>{'error': error.code}),
           headers: <String, String>{'content-type': 'application/json'});
+    } catch (error, stack) {
+      // 适配层把可预期失败都翻成 [VideoRemoteException]；走到这里的是真缺陷。
+      // 记日志并回稳定机器码，手机按码本地化，不把内部异常文本发给对端。
+      engineLog.log('FushiSyncServer.videoRemote.$operation', error, stack);
+      return shelf.Response(500,
+          body: jsonEncode(<String, String>{'error': videoRemoteInternalError}),
+          headers: <String, String>{'content-type': 'application/json'});
     }
   }
 

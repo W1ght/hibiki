@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120088 (7064 per locale)
+/// Strings: 120445 (7085 per locale)
 ///
-/// Built on 2026-10-12 at 14:12 UTC
+/// Built on 2026-10-12 at 16:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10159,6 +10159,46 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_reading => 'Reading';
   String get video_remote_meaning => 'Meaning';
   String get video_remote_sentence => 'Sentence';
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -27175,6 +27215,67 @@ class _StringsAr extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -44581,6 +44682,67 @@ class _StringsDe extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -62047,6 +62209,67 @@ class _StringsEs extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -79592,6 +79815,67 @@ class _StringsFr extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -96792,6 +97076,67 @@ class _StringsId extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -114157,6 +114502,67 @@ class _StringsIt extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -130522,6 +130928,67 @@ class _StringsJa extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -146923,6 +147390,67 @@ class _StringsKo extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -164236,6 +164764,67 @@ class _StringsNl extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -181618,6 +182207,67 @@ class _StringsPtBr extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -198946,6 +199596,67 @@ class _StringsRu extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -215952,6 +216663,67 @@ class _StringsTh extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -233161,6 +233933,67 @@ class _StringsTr extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -250297,6 +251130,67 @@ class _StringsVi extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 // Path: <root>
@@ -265974,6 +266868,50 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_meaning => '释义';
   @override
   String get video_remote_sentence => '例句';
+  @override
+  String get video_remote_error_controller_busy => '另一台设备正在遥控这个视频';
+  @override
+  String get video_remote_error_controller_lease_lost => '遥控已超时或被接管，正在重新连接';
+  @override
+  String get video_remote_error_subtitles_changed => '电脑上的字幕已变化，正在刷新';
+  @override
+  String get video_remote_error_favorite_missing => '这条收藏已不存在';
+  @override
+  String get video_remote_error_favorite_ambiguous => '有多条字幕与这条收藏匹配，无法确定';
+  @override
+  String get video_remote_error_favorite_source_unavailable => '这条收藏对应的视频已不可用';
+  @override
+  String get video_remote_error_lookup_expired => '查词已过期，请重新点选句子';
+  @override
+  String get video_remote_error_mining_busy => '电脑仍在制作上一张卡片';
+  @override
+  String get video_remote_error_mining_failed => '电脑制卡失败';
+  @override
+  String get video_remote_error_requests_busy => '电脑忙，请稍后再试';
+  @override
+  String get video_remote_error_no_video => '电脑上没有打开视频';
+  @override
+  String get video_remote_error_remote_closed => '电脑已关闭遥控';
+  @override
+  String get video_remote_error_task_missing => '电脑上找不到这次制卡任务';
+  @override
+  String get video_remote_error_internal_error => '电脑端出错';
+  @override
+  String get video_remote_error_pairing_rejected => '电脑拒绝了本设备的配对凭据，请重新配对';
+  @override
+  String get video_remote_error_unreachable => '连接不到电脑';
+  @override
+  String get video_remote_error_certificate_mismatch => '电脑证书与配对时不一致，请重新配对';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      '电脑拒绝了请求（${code}），请把两台设备的 Fushi 都更新到最新版';
+  @override
+  String video_remote_error_unknown({required Object code}) => '遥控失败（${code}）';
+  @override
+  String get video_remote_error_favorite_subtitle_missing => '视频里找不到这条收藏对应的字幕';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      '电脑无法为卡片提取音频或画面';
 }
 
 // Path: <root>
@@ -281789,6 +282727,67 @@ class _StringsZhHk extends _StringsEn {
   String get video_remote_meaning => 'Meaning';
   @override
   String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
 }
 
 /// Flat map(s) containing all translations.
@@ -296429,6 +297428,49 @@ extension on _StringsEn {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -311064,6 +312106,49 @@ extension on _StringsAr {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -325775,6 +326860,49 @@ extension on _StringsDe {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -340468,6 +341596,49 @@ extension on _StringsEs {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -355179,6 +356350,49 @@ extension on _StringsFr {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -369834,6 +371048,49 @@ extension on _StringsId {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -384525,6 +385782,49 @@ extension on _StringsIt {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -399090,6 +400390,49 @@ extension on _StringsJa {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -413662,6 +415005,49 @@ extension on _StringsKo {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -428348,6 +429734,49 @@ extension on _StringsNl {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -443026,6 +444455,49 @@ extension on _StringsPtBr {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -457709,6 +459181,49 @@ extension on _StringsRu {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -472348,6 +473863,49 @@ extension on _StringsTh {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -487018,6 +488576,49 @@ extension on _StringsTr {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -501671,6 +503272,49 @@ extension on _StringsVi {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
@@ -516164,6 +517808,49 @@ extension on _StringsZhCn {
         return '释义';
       case 'video_remote_sentence':
         return '例句';
+      case 'video_remote_error_controller_busy':
+        return '另一台设备正在遥控这个视频';
+      case 'video_remote_error_controller_lease_lost':
+        return '遥控已超时或被接管，正在重新连接';
+      case 'video_remote_error_subtitles_changed':
+        return '电脑上的字幕已变化，正在刷新';
+      case 'video_remote_error_favorite_missing':
+        return '这条收藏已不存在';
+      case 'video_remote_error_favorite_ambiguous':
+        return '有多条字幕与这条收藏匹配，无法确定';
+      case 'video_remote_error_favorite_source_unavailable':
+        return '这条收藏对应的视频已不可用';
+      case 'video_remote_error_lookup_expired':
+        return '查词已过期，请重新点选句子';
+      case 'video_remote_error_mining_busy':
+        return '电脑仍在制作上一张卡片';
+      case 'video_remote_error_mining_failed':
+        return '电脑制卡失败';
+      case 'video_remote_error_requests_busy':
+        return '电脑忙，请稍后再试';
+      case 'video_remote_error_no_video':
+        return '电脑上没有打开视频';
+      case 'video_remote_error_remote_closed':
+        return '电脑已关闭遥控';
+      case 'video_remote_error_task_missing':
+        return '电脑上找不到这次制卡任务';
+      case 'video_remote_error_internal_error':
+        return '电脑端出错';
+      case 'video_remote_error_pairing_rejected':
+        return '电脑拒绝了本设备的配对凭据，请重新配对';
+      case 'video_remote_error_unreachable':
+        return '连接不到电脑';
+      case 'video_remote_error_certificate_mismatch':
+        return '电脑证书与配对时不一致，请重新配对';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            '电脑拒绝了请求（${code}），请把两台设备的 Fushi 都更新到最新版';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => '遥控失败（${code}）';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return '视频里找不到这条收藏对应的字幕';
+      case 'video_remote_error_video_extraction_unavailable':
+        return '电脑无法为卡片提取音频或画面';
       default:
         return null;
     }
@@ -530674,6 +532361,49 @@ extension on _StringsZhHk {
         return 'Meaning';
       case 'video_remote_sentence':
         return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
       default:
         return null;
     }
