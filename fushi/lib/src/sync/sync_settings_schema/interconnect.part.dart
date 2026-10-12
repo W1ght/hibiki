@@ -182,11 +182,6 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
   List<FushiClientUrl> _urls = <FushiClientUrl>[];
   // url -> last test-connection result (null = not tested this session).
   final Map<String, bool> _reachable = <String, bool>{};
-  // hostId -> host declared `videoRemoteControlV1` on /api/capabilities. The
-  // remote button only appears on a confirmed host: a headless server or an
-  // older app has no player wiring and would just answer 404.
-  final Map<String, bool> _videoRemoteHosts = <String, bool>{};
-  final Set<String> _videoRemoteProbing = <String>{};
   bool _isTesting = false;
   bool _loaded = false;
   // BUG-1562：「已连接 ✓」那一行的判据是 token 非空，而 token 活在
@@ -259,7 +254,6 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       _tokenPresent = _tokenController.text.trim().isNotEmpty;
       _loaded = true;
     });
-    unawaited(_probeVideoRemote());
     _syncSettings(widget.settingsContext)
         .setHasClientConnection(urls.isNotEmpty);
   }
@@ -282,7 +276,6 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       }
       _tokenPresent = _tokenController.text.trim().isNotEmpty;
     });
-    unawaited(_probeVideoRemote());
     _syncSettings(widget.settingsContext)
       // 按 host 计数：同一台机器的多条地址（LAN / IPv6 / 组网）只算一台。
       ..peerCount = interconnectPeerRepresentatives(urls).length
@@ -695,49 +688,6 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       setState(() => _reachable[u.url] = ok);
     }
     if (mounted) setState(() => _isTesting = false);
-    // 「测试连接」也重探遥控能力：对端可能刚升级或刚打开视频页装配。
-    unawaited(_probeVideoRemote(force: true));
-  }
-
-  /// 遥控固定的对端：凭据按 BUG-1550 规则取；本行没有指纹（P2P 明文转发口等）
-  /// 时沿用同一台 host 的配对指纹，遥控客户端据此拒绝任何不符的证书。
-  FushiClientUrl _videoRemotePeer(FushiClientUrl u, String? fallbackToken) {
-    String? pin = u.fingerprintSha256;
-    if ((pin == null || pin.isEmpty) && u.hostId != null) {
-      for (final FushiClientUrl other in _urls) {
-        final String? fp = other.fingerprintSha256;
-        if (other.hostId == u.hostId && fp != null && fp.isNotEmpty) {
-          pin = fp;
-          break;
-        }
-      }
-    }
-    return u.copyWith(
-      token: interconnectTokenFor(u, fallbackToken),
-      fingerprintSha256: pin,
-    );
-  }
-
-  /// 按 host 探 `/api/capabilities` 的 `videoRemoteControlV1`；没有应答的保持
-  /// 未知（不显示按钮），下次重载或测试连接再探。
-  Future<void> _probeVideoRemote({bool force = false}) async {
-    final String? fallbackToken = await _repo.getFushiClientToken();
-    if (!mounted) return;
-    for (final FushiClientUrl u in interconnectPeerRepresentatives(_urls)) {
-      final String? hostId = u.hostId;
-      if (hostId == null || !u.enabled) continue;
-      if (!force && _videoRemoteHosts.containsKey(hostId)) continue;
-      if (!_videoRemoteProbing.add(hostId)) continue;
-      final VideoRemoteClient client = VideoRemoteClient(
-        repository: _repo,
-        peer: _videoRemotePeer(u, fallbackToken),
-      );
-      unawaited(client.supportsVideoRemote().then((bool? supported) {
-        _videoRemoteProbing.remove(hostId);
-        if (!mounted || supported == null) return;
-        setState(() => _videoRemoteHosts[hostId] = supported);
-      }));
-    }
   }
 
   @override
@@ -819,27 +769,6 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          if (u.enabled &&
-                              u.hostId != null &&
-                              _videoRemoteHosts[u.hostId] == true)
-                            FushiIconButton(
-                              icon: FushiIcons.subtitles,
-                              size: 18,
-                              tooltip: t.video_remote_title,
-                              enabled: !lockedByServer,
-                              onTap: () async {
-                                final String? fallbackToken =
-                                    await _repo.getFushiClientToken();
-                                if (!mounted) return;
-                                await pushSettingsPage(
-                                  widget.settingsContext,
-                                  (BuildContext context) => VideoRemotePage(
-                                    repository: _repo,
-                                    peer: _videoRemotePeer(u, fallbackToken),
-                                  ),
-                                );
-                              },
-                            ),
                           // Gamepad/keyboard reorder equivalent for the drag handle.
                           FushiIconButton(
                             icon: FushiIcons.expandLess,

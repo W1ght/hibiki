@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120445 (7085 per locale)
+/// Strings: 120836 (7108 per locale)
 ///
-/// Built on 2026-10-12 at 16:22 UTC
+/// Built on 2026-10-12 at 17:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10199,6 +10199,36 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This favorite\'s subtitle line was not found in the video';
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  String get video_remote_control_replay => 'Replay this line';
+  String get video_remote_control_favorite => 'Favorite this line';
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  String get video_remote_control_mine => 'Create card';
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  String get video_remote_control_customize => 'Customize buttons';
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  String get video_remote_control_slot_primary => 'Main controls';
+  String get video_remote_control_slot_secondary => 'More buttons';
+  String get video_remote_control_slot_hidden => 'Removed';
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  String get video_remote_favorites_scope_current => 'This video';
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  String get video_remote_favorites_empty => 'No favorites yet';
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  String get video_remote_favorites_select => 'Select';
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -27276,6 +27306,59 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -44743,6 +44826,59 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -62270,6 +62406,59 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -79876,6 +80065,59 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -97137,6 +97379,59 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -114563,6 +114858,59 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -130989,6 +131337,59 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -147451,6 +147852,59 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -164825,6 +165279,59 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -182268,6 +182775,59 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -199657,6 +200217,59 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -216724,6 +217337,59 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -233994,6 +234660,59 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -251191,6 +251910,59 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 // Path: <root>
@@ -266912,6 +267684,53 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       '电脑无法为卡片提取音频或画面';
+  @override
+  String get video_remote_control_replay => '重播本句';
+  @override
+  String get video_remote_control_favorite => '收藏本句';
+  @override
+  String get video_remote_control_unfavorite => '取消收藏';
+  @override
+  String get video_remote_control_mine => '制卡';
+  @override
+  String get video_remote_control_subtitle_visibility => '显示或隐藏字幕';
+  @override
+  String get video_remote_control_seek_back => '后退 10 秒';
+  @override
+  String get video_remote_control_seek_forward => '前进 10 秒';
+  @override
+  String get video_remote_control_customize => '自定义按钮';
+  @override
+  String get video_remote_control_editor_hint =>
+      '在主控制组与更多按钮之间拖动按钮。播放 / 暂停始终保留。';
+  @override
+  String get video_remote_control_slot_primary => '主控制组';
+  @override
+  String get video_remote_control_slot_secondary => '更多按钮';
+  @override
+  String get video_remote_control_slot_hidden => '已移出';
+  @override
+  String get video_remote_control_reject_pinned => '播放 / 暂停不能移出';
+  @override
+  String get video_remote_favorites_scope_current => '当前视频';
+  @override
+  String get video_remote_favorites_search_hint => '搜索收藏';
+  @override
+  String get video_remote_favorites_empty => '还没有收藏';
+  @override
+  String get video_remote_favorites_empty_hint => '长按字幕行即可收藏到这里。';
+  @override
+  String get video_remote_favorites_search_empty => '没有匹配的收藏';
+  @override
+  String video_remote_favorites_selected({required Object n}) => '已选 ${n} 条';
+  @override
+  String get video_remote_favorites_select => '多选';
+  @override
+  String get video_remote_transcript_empty => '暂无字幕';
+  @override
+  String video_remote_host_connected({required Object name}) => '已连接 ${name}';
+  @override
+  String get video_remote_line_actions => '句子操作';
 }
 
 // Path: <root>
@@ -282788,6 +283607,59 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
 }
 
 /// Flat map(s) containing all translations.
@@ -297471,6 +298343,52 @@ extension on _StringsEn {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -312149,6 +313067,52 @@ extension on _StringsAr {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -326903,6 +327867,52 @@ extension on _StringsDe {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -341639,6 +342649,52 @@ extension on _StringsEs {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -356393,6 +357449,52 @@ extension on _StringsFr {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -371091,6 +372193,52 @@ extension on _StringsId {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -385825,6 +386973,52 @@ extension on _StringsIt {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -400433,6 +401627,52 @@ extension on _StringsJa {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -415048,6 +416288,52 @@ extension on _StringsKo {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -429777,6 +431063,52 @@ extension on _StringsNl {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -444498,6 +445830,52 @@ extension on _StringsPtBr {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -459224,6 +460602,52 @@ extension on _StringsRu {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -473906,6 +475330,52 @@ extension on _StringsTh {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -488619,6 +490089,52 @@ extension on _StringsTr {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -503315,6 +504831,52 @@ extension on _StringsVi {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }
@@ -517851,6 +519413,52 @@ extension on _StringsZhCn {
         return '视频里找不到这条收藏对应的字幕';
       case 'video_remote_error_video_extraction_unavailable':
         return '电脑无法为卡片提取音频或画面';
+      case 'video_remote_control_replay':
+        return '重播本句';
+      case 'video_remote_control_favorite':
+        return '收藏本句';
+      case 'video_remote_control_unfavorite':
+        return '取消收藏';
+      case 'video_remote_control_mine':
+        return '制卡';
+      case 'video_remote_control_subtitle_visibility':
+        return '显示或隐藏字幕';
+      case 'video_remote_control_seek_back':
+        return '后退 10 秒';
+      case 'video_remote_control_seek_forward':
+        return '前进 10 秒';
+      case 'video_remote_control_customize':
+        return '自定义按钮';
+      case 'video_remote_control_editor_hint':
+        return '在主控制组与更多按钮之间拖动按钮。播放 / 暂停始终保留。';
+      case 'video_remote_control_slot_primary':
+        return '主控制组';
+      case 'video_remote_control_slot_secondary':
+        return '更多按钮';
+      case 'video_remote_control_slot_hidden':
+        return '已移出';
+      case 'video_remote_control_reject_pinned':
+        return '播放 / 暂停不能移出';
+      case 'video_remote_favorites_scope_current':
+        return '当前视频';
+      case 'video_remote_favorites_search_hint':
+        return '搜索收藏';
+      case 'video_remote_favorites_empty':
+        return '还没有收藏';
+      case 'video_remote_favorites_empty_hint':
+        return '长按字幕行即可收藏到这里。';
+      case 'video_remote_favorites_search_empty':
+        return '没有匹配的收藏';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '已选 ${n} 条';
+      case 'video_remote_favorites_select':
+        return '多选';
+      case 'video_remote_transcript_empty':
+        return '暂无字幕';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => '已连接 ${name}';
+      case 'video_remote_line_actions':
+        return '句子操作';
       default:
         return null;
     }
@@ -532404,6 +534012,52 @@ extension on _StringsZhHk {
         return 'This favorite\'s subtitle line was not found in the video';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       default:
         return null;
     }

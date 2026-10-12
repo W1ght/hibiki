@@ -1,18 +1,20 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:drift/native.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi/models.dart' show appProvider;
+import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
+    show MinePopupResult;
 import 'package:integration_test/integration_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/media/video/subtitle_transcript_text.dart';
 import 'package:fushi/src/pages/implementations/video_remote_page.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi/src/sync/video_remote_host.dart';
-import 'package:fushi/src/utils/components/fushi_material_components.dart';
-import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart';
-import 'package:fushi/src/utils/components/glass/fushi_glass_toggles.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart';
@@ -21,6 +23,7 @@ import 'package:fushi_engine/sync/fushi_sync_server.dart';
 import 'package:fushi_engine/sync/video_remote_service.dart';
 
 import 'helpers/focus_driver.dart';
+import 'helpers/video_remote_phone_app_model.dart';
 import 'helpers/observe_capture.dart';
 
 /// Actual phone widgets and authenticated HTTP routes against an isolated host.
@@ -77,11 +80,17 @@ void main() {
       await database.close();
       await temp.delete(recursive: true);
     });
+    final VideoRemotePhoneAppModel appModel = VideoRemotePhoneAppModel();
+    VideoRemotePageState page() =>
+        tester.state<VideoRemotePageState>(find.byType(VideoRemotePage));
     await tester.pumpWidget(
-      TranslationProvider(
-        child: MaterialApp(
-          theme: ThemeData.light(useMaterial3: true),
-          home: VideoRemotePage(repository: repository, peer: peer),
+      ProviderScope(
+        overrides: [appProvider.overrideWith((Ref ref) => appModel)],
+        child: TranslationProvider(
+          child: MaterialApp(
+            theme: ThemeData.light(useMaterial3: true),
+            home: VideoRemotePage(repository: repository, peer: peer),
+          ),
         ),
       ),
     );
@@ -91,11 +100,9 @@ void main() {
     );
     final FocusDriver driver = FocusDriver(tester);
 
-    expect(
-      await driver.focusWidget(find.byTooltip(t.video_remote_favorites).first),
-      isTrue,
-    );
-    await driver.activate();
+    // Line actions live in the shared scaffold; drive the page's favorite
+    // command for the first subtitle line.
+    unawaited(page().toggleRowFavorite(page().rows.first));
     await _wait(tester, () => recording.operations.contains('favoriteSet'));
     await _wait(tester, () => player.favoriteWritesVisible);
     final List<FavoriteSentence> saved = (await tester.runAsync(
@@ -117,28 +124,22 @@ void main() {
     );
     await driver.activate();
     await _wait(tester, () => dictionary.terms.isNotEmpty);
-    await _wait(tester, () => find.text('猫 ねこ').evaluate().isNotEmpty);
+    await _wait(tester, () => page().lookupOpen);
     expect(dictionary.terms.single, startsWith('猫'));
+    expect(appModel.localSearches, 0);
     expect(player.playing, isFalse);
-    expect(
-      await driver.focusWidget(find.widgetWithText(FushiListItem, '猫 ねこ')),
-      isTrue,
-    );
-    await driver.activate();
-    await _wait(tester, () => find.byType(AlertDialog).evaluate().isNotEmpty);
-    expect(find.widgetWithText(FushiTextField, 'Meaning'), findsOneWidget);
-    expect(
-      await driver.focusWidget(
-        find.widgetWithText(FushiTextButton, t.video_remote_mine),
-      ),
-      isTrue,
-    );
-    await driver.activate();
-    await _wait(tester, () => player.mines.length == 1);
-    await _wait(
-      tester,
-      () => find.text(t.video_remote_mined).evaluate().isNotEmpty,
-    );
+    // The popup is the shared WebView dictionary popup; its ＋ button reaches
+    // the page through onMineEntry. Drive that boundary directly.
+    late MinePopupResult mined;
+    await tester.runAsync(() async {
+      mined = await page().onMineEntry(<String, String>{
+        'expression': '猫',
+        'reading': 'ねこ',
+        'glossary': 'A small domestic feline.',
+      });
+    });
+    expect(mined.queued, isTrue);
+    expect(player.mines, hasLength(1));
     expect(player.mines.single['rawFields'], containsPair('expression', '猫'));
     expect(
       player.mines.single['rawFields'],
@@ -154,37 +155,18 @@ void main() {
     );
     expect(card.saved, isTrue);
     debugPrint('[video-remote-phone] screenshot=${card.path} fixtureAnki=true');
-    expect(
-      await driver.focusWidget(
-        find.widgetWithText(FushiTextButton, t.dialog_close),
-      ),
-      isTrue,
-    );
-    await driver.activate();
+    page().closeLookup();
     await _wait(tester, () => recording.operations.contains('lookupEnd'));
     await _wait(tester, () => player.playing);
 
-    expect(
-      await driver.focusWidget(find.text(t.video_remote_favorites)),
-      isTrue,
+    unawaited(page().setFavoritesAllVideos(false));
+    await _wait(tester, () => page().favorites.isNotEmpty);
+    unawaited(
+      page().removeFavorites(<String>{
+        for (final Map<String, dynamic> f in page().favorites)
+          f['id'].toString(),
+      }),
     );
-    await driver.activate();
-    await _wait(
-      tester,
-      () => find.byType(FushiCheckboxListTile).evaluate().isNotEmpty,
-    );
-    expect(
-      await driver.focusWidget(find.byType(FushiCheckboxListTile)),
-      isTrue,
-    );
-    await driver.activate();
-    expect(
-      await driver.focusWidget(
-        find.widgetWithText(FushiTextButton, t.video_remote_remove),
-      ),
-      isTrue,
-    );
-    await driver.activate();
     await _wait(tester, () => recording.operations.contains('favoritesRemove'));
     await tester.runAsync(() async {
       for (int i = 0; i < 20 && (await favorites.getAll()).isNotEmpty; i++) {

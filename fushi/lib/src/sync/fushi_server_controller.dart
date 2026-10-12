@@ -684,6 +684,10 @@ class FushiSyncServerController extends ChangeNotifier {
           FushiDicts.isInitialized
               ? FushiDicts.instance.getMediaFile(dict, mediaPath)
               : null,
+      // 对端弹窗渲染本机查词结果时用本机的词典样式（`/api/lookup/dictionary/styles`）。
+      dictionaryStylesProvider: () => FushiDicts.isInitialized
+          ? FushiDicts.dictionaryStyles
+          : const <String, String>{},
     )
       ..onPairRequest = _promptPairApproval
       // TODO-961 M1: host 生成并暂存本会话 PIN，供 confirm 阶段审批弹窗显示。

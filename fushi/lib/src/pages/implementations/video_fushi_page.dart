@@ -11,7 +11,7 @@ import 'package:fushi/src/media/video/bluray_disc_track_selection.dart';
 import 'package:fushi/src/media/video/video_disc_menu.dart';
 import 'package:fushi/src/media/video/bluray_java_runtime.dart';
 import 'package:fushi_engine/media/video/bluray/bluray_menu_info.dart';
-import 'dart:convert' show utf8;
+import 'dart:convert' show jsonDecode, jsonEncode, utf8;
 import 'dart:io';
 import 'dart:math' as math;
 
@@ -243,6 +243,10 @@ import 'package:fushi/src/pages/implementations/dictionary_popup_controller.dart
 import 'package:fushi/src/pages/implementations/dictionary_popup_input_bridge.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_layer.dart';
 import 'package:fushi/src/pages/implementations/dictionary_page_mixin.dart';
+import 'package:fushi/src/pages/implementations/dictionary_webview_media.dart'
+    show writeDictionaryMediaCache;
+import 'package:fushi_engine/dictionary/dictionary_media_types.dart'
+    show safeDictionaryMediaPath;
 import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
     show MinePopupResult, DictionaryPopupWebViewState;
 import 'package:fushi/src/pages/implementations/stat_activity.dart';

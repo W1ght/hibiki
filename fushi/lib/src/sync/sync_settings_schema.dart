@@ -13,7 +13,6 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/module_registry.dart';
 import 'package:fushi/src/pages/implementations/migration_page.dart';
 import 'package:fushi/src/pages/implementations/game_stream_join_page.dart';
-import 'package:fushi/src/pages/implementations/video_remote_page.dart';
 import 'package:fushi/src/pages/implementations/migration_import_page.dart';
 import 'package:fushi/src/pages/implementations/external_reader_import_page.dart';
 import 'package:fushi/src/migration/migration_target_channel.dart';
@@ -41,7 +40,6 @@ import 'package:fushi/src/sync/desktop_oauth_wait_dialog.dart';
 import 'package:fushi/src/sync/dropbox_sync_backend.dart';
 import 'package:fushi/src/sync/ftp_sync_backend.dart';
 import 'package:fushi/src/sync/interconnect_sync_backend.dart';
-import 'package:fushi/src/sync/video_remote_client.dart';
 import 'package:fushi/src/sync/remote_book_client.dart' show RemoteBookClient;
 import 'package:fushi/src/sync/hidden_remote_books.dart'
     show remoteBookSourceHost, resolveShelfRemoteBookClient;

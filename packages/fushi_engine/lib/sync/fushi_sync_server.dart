@@ -257,6 +257,7 @@ class FushiSyncServer {
     PrefStore? prefs,
     Uint8List? Function(String dictionary, String path)?
         dictionaryMediaProvider,
+    Map<String, String> Function()? dictionaryStylesProvider,
     FushiRemoteGameStreamService? gameStreamService,
     VideoRemoteService? videoRemoteService,
     @visibleForTesting BlurayClipRelayPool? blurayClipRelays,
@@ -279,6 +280,7 @@ class FushiSyncServer {
             assistant == null ? null : HostAssistantSessions(assistant),
         _subscriptions = subscriptions,
         _dictionaryMediaProvider = dictionaryMediaProvider,
+        _dictionaryStylesProvider = dictionaryStylesProvider,
         _gameStreamService = gameStreamService,
         _videoRemoteService = videoRemoteService,
         _prefs = prefs,
@@ -329,6 +331,11 @@ class FushiSyncServer {
   /// stays unit-testable. Returns null -> the media endpoint answers 404.
   final Uint8List? Function(String dictionary, String path)?
       _dictionaryMediaProvider;
+
+  /// 词典名 → 该词典自带的 CSS（与 app 内弹窗 `window.dictionaryStyles` 同源）。查词
+  /// 结果来自本机时，对端弹窗也必须用本机的词典样式渲染——对端未必装了同名词典，
+  /// 装了也可能是另一个版本。null = 端点 404（老调用方 / 单测不接线）。
+  final Map<String, String> Function()? _dictionaryStylesProvider;
   final FushiRemoteGameStreamService? _gameStreamService;
   final VideoRemoteService? _videoRemoteService;
 

@@ -180,6 +180,11 @@ extension _VideoRemoteControl on _VideoFushiPageState {
           dateKey: statTodayKey(),
         );
     final FushiDatabase historyDb = appModel.database;
+    // 手机弹框里的词典是本机这几部（手机端查的就是本机词典）：外字等词典媒体在这里
+    // 落进本机 Anki 媒体缓存，与本机弹框制卡同一步骤（手机那边没有这些字节）。
+    await writeDictionaryMediaCache(
+      _remoteDictionaryMediaJson(fields['dictionaryMedia'] ?? ''),
+    );
     String? error;
     final MinePopupResult result = await _mineVideoCard(
       fields: fields,
@@ -202,6 +207,30 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       'success': result.ankiConnect,
       if (error != null) 'error': error,
     };
+  }
+
+  /// 手机送来的词典媒体清单（`[{dictionary, path}]`）只留路径落在词典资源根内的
+  /// 条目：缓存文件名取自路径扩展名，越级路径不许进写盘那一步。
+  static String _remoteDictionaryMediaJson(String raw) {
+    if (raw.isEmpty || raw == '[]') return raw;
+    final Object? decoded;
+    try {
+      decoded = jsonDecode(raw);
+    } on FormatException {
+      return '[]';
+    }
+    if (decoded is! List) return '[]';
+    return jsonEncode(<Map<String, String>>[
+      for (final Object? item in decoded)
+        if (item is Map &&
+            item['dictionary'] is String &&
+            item['path'] is String &&
+            safeDictionaryMediaPath(item['path'] as String) != null)
+          <String, String>{
+            'dictionary': item['dictionary'] as String,
+            'path': safeDictionaryMediaPath(item['path'] as String)!,
+          },
+    ]);
   }
 
   Future<void> _openRemoteVideoFavorite(FavoriteSentence favorite) async {

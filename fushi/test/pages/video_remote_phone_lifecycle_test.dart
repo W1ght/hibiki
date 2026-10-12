@@ -3,20 +3,68 @@ import 'dart:convert';
 
 import 'package:drift/native.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
+import 'package:fushi/models.dart';
+import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
+    show MinePopupResult;
 import 'package:fushi/src/pages/implementations/video_remote_page.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi/src/sync/video_remote_client.dart';
-import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart';
-import 'package:fushi/src/utils/components/fushi_material_components.dart';
-import 'package:fushi/src/utils/components/glass/fushi_glass_toggles.dart';
 import 'package:fushi_core/fushi_core.dart';
+import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
+import '../helpers/fake_inappwebview_platform.dart';
+import '../helpers/test_platform_services.dart';
+
+/// 弹框布局读到的那几项偏好；本机词典查询在遥控页里必须一次都不发生。
+class _RemotePageAppModel extends AppModel {
+  _RemotePageAppModel() : super(testPlatformServices());
+
+  int localSearches = 0;
+
+  @override
+  int get maximumTerms => 10;
+  @override
+  double get popupMaxWidth => 360;
+  @override
+  double get popupMaxHeight => 360;
+  @override
+  double get dictionaryFontSize => 16;
+  @override
+  bool get popupBottomDocked => false;
+  @override
+  double get appUiScale => 1.0;
+  @override
+  bool get lowMemoryMode => false;
+  @override
+  List<String> get enabledAudioSources => const <String>[];
+  @override
+  void addToDictionaryHistory({required DictionarySearchResult result}) {}
+  @override
+  void addToSearchHistory({
+    required String historyKey,
+    required String searchTerm,
+  }) {}
+  @override
+  Future<DictionarySearchResult> searchDictionary({
+    required String searchTerm,
+    required bool searchWithWildcards,
+    int? overrideMaximumTerms,
+    bool useCache = true,
+    bool allowRemoteLookup = true,
+  }) async {
+    localSearches++;
+    return DictionarySearchResult(searchTerm: searchTerm);
+  }
+}
+
 void main() {
+  setUpAll(installFakeInAppWebViewPlatform);
   const FushiClientUrl peer = FushiClientUrl(
     url: 'http://phone-test:8765',
     hostId: 'phone-test',
@@ -25,6 +73,7 @@ void main() {
   late FushiDatabase database;
   late SyncRepository repository;
   late _PhoneHost host;
+  late _RemotePageAppModel appModel;
 
   setUp(() async {
     LocaleSettings.setLocale(AppLocale.en);
@@ -32,22 +81,32 @@ void main() {
     repository = SyncRepository(database);
     await repository.setFushiClientUrls(<FushiClientUrl>[peer]);
     host = _PhoneHost();
+    appModel = _RemotePageAppModel();
   });
   tearDown(() async => database.close());
 
+  VideoRemotePageState page(WidgetTester tester) =>
+      tester.state<VideoRemotePageState>(find.byType(VideoRemotePage));
+
+  int count(String operation) =>
+      host.operations.where((String op) => op == operation).length;
+
   Future<void> open(WidgetTester tester) async {
     await tester.pumpWidget(
-      TranslationProvider(
-        child: MaterialApp(
-          home: VideoRemotePage(
-            repository: repository,
-            peer: peer,
-            httpClient: host.client,
+      ProviderScope(
+        overrides: [appProvider.overrideWith((Ref ref) => appModel)],
+        child: TranslationProvider(
+          child: MaterialApp(
+            home: VideoRemotePage(
+              repository: repository,
+              peer: peer,
+              httpClient: host.client,
+            ),
           ),
         ),
       ),
     );
-    await _wait(tester, () => find.byType(FushiListItem).evaluate().isNotEmpty);
+    await _wait(tester, () => page(tester).rows.isNotEmpty);
   }
 
   Future<void> close(WidgetTester tester) async {
@@ -61,14 +120,11 @@ void main() {
     'history lookup confirms a different episode despite identical text and time',
     (WidgetTester tester) async {
       await open(tester);
-      await tester.tap(find.text(t.video_remote_favorites).last);
-      await _wait(tester, () => find.byType(FushiSwitch).evaluate().isNotEmpty);
-      tester.widget<FushiSwitch>(find.byType(FushiSwitch)).onChanged!(true);
-      await _wait(
-        tester,
-        () => find.byType(FushiCheckboxListTile).evaluate().isNotEmpty,
+      unawaited(page(tester).setFavoritesAllVideos(true));
+      await _wait(tester, () => page(tester).favorites.isNotEmpty);
+      unawaited(
+        page(tester).openFavorite(page(tester).favorites.single, lookup: true),
       );
-      await tester.tap(find.text('Shared sentence'));
       await tester.pumpAndSettle();
       expect(find.byType(AlertDialog), findsOneWidget);
       expect(host.lookups, isEmpty);
@@ -83,14 +139,11 @@ void main() {
     'history lookup waits for the target player event after route replacement',
     (WidgetTester tester) async {
       await open(tester);
-      await tester.tap(find.text(t.video_remote_favorites).last);
-      await _wait(tester, () => find.byType(FushiSwitch).evaluate().isNotEmpty);
-      tester.widget<FushiSwitch>(find.byType(FushiSwitch)).onChanged!(true);
-      await _wait(
-        tester,
-        () => find.byType(FushiCheckboxListTile).evaluate().isNotEmpty,
+      unawaited(page(tester).setFavoritesAllVideos(true));
+      await _wait(tester, () => page(tester).favorites.isNotEmpty);
+      unawaited(
+        page(tester).openFavorite(page(tester).favorites.single, lookup: true),
       );
-      await tester.tap(find.text('Shared sentence'));
       await tester.pumpAndSettle();
       await tester.tap(find.widgetWithText(TextButton, t.play).last);
       await _wait(tester, () => host.operations.contains('openFavorite'));
@@ -106,107 +159,130 @@ void main() {
   );
 
   testWidgets(
-    'background dismisses the draft and resume waits for disconnect before snapshot',
+    'background closes the lookup popup, ends the lookup and resume waits for disconnect',
     (WidgetTester tester) async {
       await open(tester);
-      tester.widget<FushiListItem>(find.byType(FushiListItem).first).onTap!();
-      await _wait(
-        tester,
-        () => find.text(t.video_remote_no_results).evaluate().isNotEmpty,
-      );
+      unawaited(page(tester).openLookup(page(tester).rows.first, 0));
+      await _wait(tester, () => page(tester).lookupOpen);
+      expect(host.lookups, hasLength(1));
+      expect(host.operations, contains('dictionary'));
+      expect(appModel.localSearches, 0);
       host.disconnectGate = Completer<void>();
-      final int snapshots = host.operations
-          .where((String op) => op == 'snapshot')
-          .length;
-      int disconnects() =>
-          host.operations.where((String op) => op == 'disconnect').length;
+      final int snapshots = count('snapshot');
       // iOS control centre / banners only reach `inactive`: keep the lease.
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
       await _flush(tester);
-      expect(disconnects(), 0);
-      expect(find.text(t.video_remote_no_results), findsOneWidget);
+      expect(count('disconnect'), 0);
+      expect(page(tester).lookupOpen, isTrue);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
-      await _wait(tester, () => disconnects() > 0);
+      await _wait(tester, () => count('disconnect') > 0);
       await _flush(tester);
-      expect(disconnects(), 1);
+      expect(page(tester).lookupOpen, isFalse);
+      // The lookup context ends (the computer resumes only its own pause)
+      // before the lease is released.
+      expect(host.ended, <String>['lookup-1']);
+      expect(
+        host.operations.lastIndexOf('lookupEnd'),
+        lessThan(host.operations.lastIndexOf('disconnect')),
+      );
+      expect(count('disconnect'), 1);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
       await _flush(tester);
-      expect(
-        host.operations.where((String op) => op == 'snapshot').length,
-        snapshots,
-      );
+      expect(count('snapshot'), snapshots);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
       await _flush(tester);
-      expect(disconnects(), 1);
-      expect(find.text(t.video_remote_no_results), findsNothing);
-      expect(
-        host.operations.where((String op) => op == 'snapshot').length,
-        snapshots,
-      );
+      expect(count('disconnect'), 1);
+      expect(count('snapshot'), snapshots);
       host.disconnectGate!.complete();
-      await _wait(
-        tester,
-        () =>
-            host.operations.where((String op) => op == 'snapshot').length >
-            snapshots,
-      );
+      await _wait(tester, () => count('snapshot') > snapshots);
       expect(host.operations, isNot(contains('mine')));
       await close(tester);
     },
   );
 
   testWidgets(
-    'closing the lookup sheet keeps its field alive while animating',
+    'the lookup context lives as long as the popup stack and follows the tapped line',
     (WidgetTester tester) async {
+      host.dualTrack = true;
       await open(tester);
-      tester.widget<FushiListItem>(find.byType(FushiListItem).first).onTap!();
-      await _wait(
-        tester,
-        () => find.text(t.video_remote_no_results).evaluate().isNotEmpty,
+      final VideoRemotePageState state = page(tester);
+      unawaited(state.openLookup(state.rows[1], 0));
+      await _wait(tester, () => state.lookupOpen);
+      expect(host.lookups.single['cueId'], 'primary-1');
+      // Same line again: the context is reused, the computer is not re-paused.
+      unawaited(state.openLookup(state.rows[1], 2));
+      await _wait(tester, () => count('dictionary') >= 2);
+      await _flush(tester);
+      expect(count('lookupBegin'), 1);
+      // Another line while open: end the old context, then begin the new one.
+      unawaited(state.openLookup(state.rows[2], 0));
+      await _wait(tester, () => count('lookupBegin') == 2);
+      expect(host.ended, <String>['lookup-1']);
+      expect(
+        host.operations.lastIndexOf('lookupEnd'),
+        lessThan(host.operations.lastIndexOf('lookupBegin')),
       );
-      tester
-          .widget<TextButton>(find.widgetWithText(TextButton, t.dialog_close))
-          .onPressed!();
-      // Pump through the exit animation frame by frame.
-      for (int i = 0; i < 10; i++) {
-        await tester.pump(const Duration(milliseconds: 50));
-      }
-      await _wait(tester, () => host.operations.contains('lookupEnd'));
+      expect(host.lookups.last['cueId'], 'primary-2');
+      await _wait(tester, () => state.lookupOpen);
+      state.closeLookup();
+      await _wait(tester, () => host.ended.length == 2);
+      expect(host.ended.last, 'lookup-2');
+      expect(state.lookupOpen, isFalse);
+      expect(appModel.localSearches, 0);
       expect(tester.takeException(), isNull);
-      expect(find.text(t.video_remote_no_results), findsNothing);
       await close(tester);
     },
   );
+
+  testWidgets('mining goes to the computer bound to the lookup context', (
+    WidgetTester tester,
+  ) async {
+    await open(tester);
+    final VideoRemotePageState state = page(tester);
+    unawaited(state.openLookup(state.rows.first, 0));
+    await _wait(tester, () => state.lookupOpen);
+    late MinePopupResult result;
+    await tester.runAsync(() async {
+      result = await state.onMineEntry(<String, String>{
+        'expression': '猫',
+        'reading': 'ねこ',
+        'glossary': 'cat',
+        'sentence': 'Shared sentence',
+      });
+    });
+    expect(result.queued, isTrue);
+    expect(host.mines.single['contextId'], 'lookup-1');
+    final Map<String, dynamic> fields =
+        host.mines.single['fields'] as Map<String, dynamic>;
+    expect(fields['rawFields'], containsPair('expression', '猫'));
+    expect(fields['sentence'], 'Shared sentence');
+    expect(host.operations, contains('mineStatus'));
+    // Local Anki / favorites entry points stay disabled on the phone.
+    expect(await state.checkDuplicate('猫', 'ねこ'), isFalse);
+    expect(
+      await state.onFavoriteEntry(<String, String>{'expression': '猫'}),
+      isFalse,
+    );
+    state.closeLookup();
+    await _wait(tester, () => host.ended.isNotEmpty);
+    await close(tester);
+  });
 
   testWidgets(
     'dual subtitles highlight and skip along the primary track only',
     (WidgetTester tester) async {
       host.dualTrack = true;
       await open(tester);
-      await _wait(
-        tester,
-        () => tester
-            .widgetList<FushiListItem>(find.byType(FushiListItem))
-            .any((FushiListItem item) => item.selected),
-      );
-      final List<FushiListItem> rows = tester
-          .widgetList<FushiListItem>(find.byType(FushiListItem))
-          .toList();
-      expect(rows.map((FushiListItem item) => item.selected), <bool>[
-        false,
-        true,
-        false,
-      ]);
-      FushiIconButtonControl button(String tooltip) =>
-          tester.widget<FushiIconButtonControl>(
-            find.byWidgetPredicate(
-              (Widget w) => w is FushiIconButtonControl && w.tooltip == tooltip,
-            ),
-          );
-      expect(button(t.video_remote_previous).onPressed, isNull);
-      button(t.video_remote_next).onPressed!();
+      await _wait(tester, () => page(tester).currentRowIndex >= 0);
+      final VideoRemotePageState state = page(tester);
+      // Rows interleave both tracks; the current line is the primary one.
+      expect(state.currentRowIndex, 1);
+      expect(state.isPrimaryRow(state.rows[0]), isFalse);
+      expect(state.previousRowIndex, -1);
+      expect(state.nextRowIndex, 2);
+      unawaited(state.nextRow());
       await _wait(tester, () => host.commands.isNotEmpty);
       expect(host.commands.single['cueId'], 'primary-2');
       await close(tester);
@@ -259,7 +335,7 @@ void main() {
         host.operations.where((String op) => op == 'snapshot').length,
         greaterThanOrEqualTo(2),
       );
-      tester.widget<FushiListItem>(find.byType(FushiListItem).first).onTap!();
+      unawaited(page(tester).openLookup(page(tester).rows.first, 0));
       await _wait(tester, () => host.lookups.isNotEmpty);
       expect(host.lookups.single['sessionId'], 'episode-1');
       await close(tester);
@@ -285,6 +361,8 @@ final class _PhoneHost {
   final List<String> operations = <String>[];
   final List<Map<String, dynamic>> lookups = <Map<String, dynamic>>[];
   final List<Map<String, dynamic>> commands = <Map<String, dynamic>>[];
+  final List<Map<String, dynamic>> mines = <Map<String, dynamic>>[];
+  final List<String> ended = <String>[];
   final List<Completer<http.Response>> _events = <Completer<http.Response>>[];
   late final MockClient client = MockClient(_handle);
   Completer<void>? disconnectGate;
@@ -392,6 +470,21 @@ final class _PhoneHost {
             'searchTerm': 'Shared sentence',
             'entries': <dynamic>[],
           },
+        });
+      case 'lookupEnd':
+        ended.add(body['contextId'].toString());
+        return _response(<String, dynamic>{'ok': true});
+      case 'mine':
+        mines.add(body);
+        return _response(<String, dynamic>{
+          'taskId': 'mine_1',
+          'status': 'running',
+        });
+      case 'mineStatus':
+        return _response(<String, dynamic>{
+          'taskId': 'mine_1',
+          'status': 'succeeded',
+          'result': <String, dynamic>{'ankiConnect': true, 'success': true},
         });
       case 'command':
         commands.add(body);
