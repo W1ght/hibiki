@@ -10,7 +10,6 @@ import 'package:fushi/src/utils/components/fushi_loading_view.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 import 'package:fushi/src/utils/components/fushi_placeholder_message.dart';
 import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
-import 'package:fushi/src/utils/components/glass/fushi_expressive.dart';
 import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart';
 import 'package:fushi/src/utils/components/glass/fushi_glass_toggles.dart'
     show FushiCheckbox;
@@ -34,7 +33,6 @@ class VideoRemoteFavoritesView extends StatefulWidget {
     super.key,
     required this.entries,
     required this.scope,
-    required this.onScopeChanged,
     required this.onOpen,
     required this.onRemove,
     this.onLookup,
@@ -44,8 +42,9 @@ class VideoRemoteFavoritesView extends StatefulWidget {
   });
 
   final List<VideoRemoteFavoriteEntry> entries;
+
+  /// 这一页的范围（范围选择器由外层脚手架固定在翻页之上，不随页滑动）。
   final VideoRemoteFavoritesScope scope;
-  final ValueChanged<VideoRemoteFavoritesScope> onScopeChanged;
 
   /// 点卡片：回放这句（跨视频由页面先确认）。
   final ValueChanged<VideoRemoteFavoriteEntry> onOpen;
@@ -139,30 +138,7 @@ class _VideoRemoteFavoritesViewState extends State<VideoRemoteFavoritesView> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-            child: FushiConnectedButtonGroup<VideoRemoteFavoritesScope>(
-              key: const ValueKey<String>('video-remote-favorites-scope'),
-              expandedInsets: EdgeInsets.zero,
-              selected: <VideoRemoteFavoritesScope>{widget.scope},
-              onSelectionChanged: (Set<VideoRemoteFavoritesScope> next) {
-                if (next.isEmpty) return;
-                _clearSelection();
-                widget.onScopeChanged(next.first);
-              },
-              segments: <ButtonSegment<VideoRemoteFavoritesScope>>[
-                ButtonSegment<VideoRemoteFavoritesScope>(
-                  value: VideoRemoteFavoritesScope.currentVideo,
-                  label: Text(t.video_remote_favorites_scope_current),
-                ),
-                ButtonSegment<VideoRemoteFavoritesScope>(
-                  value: VideoRemoteFavoritesScope.allVideos,
-                  label: Text(t.video_remote_all),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
             child: FushiSearchField(
               fieldKey: const ValueKey<String>('video-remote-favorites-search'),
               controller: _query,

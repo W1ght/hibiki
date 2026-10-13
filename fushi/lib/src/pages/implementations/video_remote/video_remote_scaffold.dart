@@ -439,7 +439,6 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
           : _favoritesCurrentKey,
       entries: active ? widget.favorites : const <VideoRemoteFavoriteEntry>[],
       scope: scope,
-      onScopeChanged: widget.callbacks.onFavoritesScopeChanged,
       onOpen: widget.callbacks.onOpenFavorite,
       onRemove: widget.callbacks.onRemoveFavorites,
       onLookup: widget.callbacks.onLookupFavorite,
@@ -448,9 +447,82 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
     );
   }
 
+  /// 翻页的实时位置（0 = 字幕，1 = 收藏·当前视频，2 = 收藏·全部视频）；还没
+  /// 挂上时按当前页签与范围推算。
+  double get _pagePosition {
+    if (_pages.hasClients && _pages.positions.length == 1) {
+      final double? page = _pages.page;
+      if (page != null) return page;
+    }
+    return videoRemotePageIndex(_tab, widget.favoritesScope).toDouble();
+  }
+
+  /// 收藏范围选择器：固定在翻页之上，不随页滑动（用户 2026-10-13：滑的是
+  /// 选择器下面的内容，不是选择器本身）。从字幕页滑向收藏时跟着手指展开、
+  /// 淡入；两个收藏页之间滑动时只有选中段跟着手指切换。
+  Widget _scopeSelector() {
+    return ListenableBuilder(
+      listenable: _pages,
+      builder: (BuildContext context, Widget? _) {
+        final double page = _pagePosition;
+        final double reveal = page.clamp(0.0, 1.0);
+        final VideoRemoteFavoritesScope shown = page >= 1.5
+            ? VideoRemoteFavoritesScope.allVideos
+            : VideoRemoteFavoritesScope.currentVideo;
+        return ClipRect(
+          child: Align(
+            alignment: Alignment.topCenter,
+            heightFactor: reveal,
+            child: Opacity(
+              opacity: reveal,
+              child: IgnorePointer(
+                ignoring: reveal < 1,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                  child: FushiConnectedButtonGroup<VideoRemoteFavoritesScope>(
+                    key: const ValueKey<String>('video-remote-favorites-scope'),
+                    expandedInsets: EdgeInsets.zero,
+                    selected: <VideoRemoteFavoritesScope>{shown},
+                    onSelectionChanged: (Set<VideoRemoteFavoritesScope> next) {
+                      if (next.isEmpty || next.first == widget.favoritesScope) {
+                        return;
+                      }
+                      widget.callbacks.onFavoritesScopeChanged(next.first);
+                    },
+                    segments: <ButtonSegment<VideoRemoteFavoritesScope>>[
+                      ButtonSegment<VideoRemoteFavoritesScope>(
+                        value: VideoRemoteFavoritesScope.currentVideo,
+                        label: Text(t.video_remote_favorites_scope_current),
+                      ),
+                      ButtonSegment<VideoRemoteFavoritesScope>(
+                        value: VideoRemoteFavoritesScope.allVideos,
+                        label: Text(t.video_remote_all),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   /// 三页横排（字幕 / 收藏·当前视频 / 收藏·全部视频），都保活：离屏页不画、
-  /// 不吃指针，但滚动位置与搜索词都在。
+  /// 不吃指针，但滚动位置与搜索词都在。收藏范围选择器固定在翻页之上
+  /// （[_scopeSelector]），只有它下面的内容随页滑动。
   Widget _tabBody() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        _scopeSelector(),
+        Expanded(child: _pagesView()),
+      ],
+    );
+  }
+
+  Widget _pagesView() {
     return NotificationListener<ScrollNotification>(
       onNotification: _onPagesScroll,
       child: PageView(

@@ -673,6 +673,67 @@ void main() {
       });
     }
 
+    testWidgets('收藏两页之间滑动：范围选择器固定不动，只有下面的内容跟着滑', (WidgetTester tester) async {
+      final _Recorder recorder = _Recorder();
+      final ValueNotifier<VideoRemoteFavoritesScope> scope =
+          ValueNotifier<VideoRemoteFavoritesScope>(
+            VideoRemoteFavoritesScope.currentVideo,
+          );
+      addTearDown(scope.dispose);
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(recorder: recorder, favorites: _favoriteEntries, scope: scope),
+      );
+      await _swipe(tester, -0.8);
+      expect(_pageOf(tester), 1);
+
+      final Finder selector = find.byKey(
+        const ValueKey<String>('video-remote-favorites-scope'),
+      );
+      final Finder card = find.byKey(
+        const ValueKey<String>('video-remote-favorite-fav-1'),
+      );
+      // 只有一个选择器（不再每页一份）。
+      expect(selector, findsOneWidget);
+      final Rect selectorBefore = tester.getRect(selector);
+      final Rect cardBefore = tester.getRect(card);
+
+      final TestGesture drag = await tester.startGesture(
+        tester.getCenter(find.byType(PageView)),
+      );
+      await drag.moveBy(const Offset(-40, 0));
+      // 拖过半屏（390 宽）：松手后落到第三页。
+      await drag.moveBy(const Offset(-200, 0));
+      await tester.pump();
+      expect(tester.getRect(selector), selectorBefore);
+      expect(tester.getRect(card).left, lessThan(cardBefore.left - 100));
+      await drag.up();
+      await tester.pumpAndSettle();
+      expect(_pageOf(tester), 2);
+      expect(tester.getRect(selector), selectorBefore);
+      expect(tester.takeException(), isNull);
+    });
+
+    testWidgets('字幕页上看不到范围选择器', (WidgetTester tester) async {
+      final _Recorder recorder = _Recorder();
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(recorder: recorder, favorites: _favoriteEntries),
+      );
+      expect(_pageOf(tester), 0);
+      final Finder selector = find.byKey(
+        const ValueKey<String>('video-remote-favorites-scope'),
+      );
+      // 收起时高度为 0、不可点。
+      expect(tester.getSize(selector).height, greaterThan(0));
+      final RenderBox clip = tester.renderObject<RenderBox>(
+        find.ancestor(of: selector, matching: find.byType(ClipRect)).first,
+      );
+      expect(clip.size.height, 0);
+    });
+
     testWidgets('按钮切页签 / 范围，页面滑到对应页', (WidgetTester tester) async {
       final _Recorder recorder = _Recorder();
       final ValueNotifier<VideoRemoteFavoritesScope> scope =
