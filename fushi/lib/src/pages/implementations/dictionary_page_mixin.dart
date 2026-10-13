@@ -201,6 +201,16 @@ mixin DictionaryPageMixin {
   Future<void> Function(SentenceContextSlot slot, int index, bool removed)?
       get onRemoveSentenceContext => null;
 
+  /// 「制卡前调整·选择句子上下文」里的「试听」（视频/首页查词车道）：放这张卡会写进
+  /// 去的那段句子音频（草稿上下文 + 当前句合并后的区间），返回 false = 没有可试听
+  /// 的音频。默认 null = 不支持，对话框不渲染试听按钮。视频页放本机播放器；手机遥控
+  /// 页经遥控协议让电脑端播放器放（手机上没有视频音频）。与 reader 车道
+  /// （[BaseSourcePageState.onPreviewSentenceAudio]）对称。
+  Future<bool> Function()? get onPreviewSentenceAudioToDraft => null;
+
+  /// 停止 [onPreviewSentenceAudioToDraft] 起的试听。与之同时为 null 或同时非 null。
+  Future<void> Function()? get onStopSentenceAudioPreviewToDraft => null;
+
   /// BUG-797 / BUG-1040：有多少个「必须盖住查词弹窗」的 Flutter 对话框正开着。
   ///
   /// 查词弹窗是**原生平台视图**（桌面 WebView2 / Android platform view），靠 airspace 永远
@@ -262,6 +272,13 @@ mixin DictionaryPageMixin {
           editSentence: onEditSentenceContextText,
           // 移除 / 恢复某一句前文/后文（剔掉夹在中间的旁白）。宿主没接传 null。
           removeSentence: onRemoveSentenceContext,
+          // 试听：宿主没接（或只接了一半）就传 null，对话框不渲染试听按钮。
+          previewAudio: onStopSentenceAudioPreviewToDraft == null
+              ? null
+              : onPreviewSentenceAudioToDraft,
+          stopAudioPreview: onPreviewSentenceAudioToDraft == null
+              ? null
+              : onStopSentenceAudioPreviewToDraft,
           // BUG-2627：回传「有没有真的点到制卡按钮」。弹窗层在这次往返途中被关栈
           // （或 State 已卸载）时为 false，对话框据此提示，不再静默关窗。
           onConfirm: () async =>

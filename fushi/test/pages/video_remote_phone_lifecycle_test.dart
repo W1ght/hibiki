@@ -7,8 +7,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/models.dart';
+import 'package:fushi/src/media/audiobook/mining_sentence_draft.dart'
+    show SentenceContextSlot;
 import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
     show MinePopupResult;
+import 'package:fushi/src/pages/implementations/video_remote/video_remote_models.dart';
+import 'package:fushi/src/pages/implementations/video_remote/video_remote_scaffold.dart';
 import 'package:fushi/src/pages/implementations/video_remote_page.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
@@ -236,6 +240,79 @@ void main() {
     },
   );
 
+  testWidgets(
+    'the looked-up word is highlighted in its line until the popup stack closes',
+    (WidgetTester tester) async {
+      host.dictionaryMatch = 6; // 'Shared'
+      await open(tester);
+      final VideoRemotePageState state = page(tester);
+      expect(state.lookupHighlight, isNull);
+      unawaited(
+        state.openLookup(
+          state.rows.first,
+          0,
+          anchor: const Rect.fromLTWH(20, 300, 120, 30),
+        ),
+      );
+      await _wait(tester, () => state.lookupHighlight != null);
+      final VideoRemoteLookupHighlight highlight = state.lookupHighlight!;
+      expect(highlight.surface, VideoRemoteLookupSurface.transcript);
+      expect(highlight.id, 'cue-0');
+      expect(highlight.graphemeStart, 0);
+      expect(highlight.graphemeCount, 6);
+      // The transcript row draws it; the page stops swiping while it is open.
+      expect(
+        find.byKey(
+          const ValueKey<String>('subtitle-transcript-lookup-highlight'),
+        ),
+        findsOneWidget,
+      );
+      expect(
+        tester
+            .widget<VideoRemoteScaffold>(find.byType(VideoRemoteScaffold))
+            .pageSwipeEnabled,
+        isFalse,
+      );
+      state.closeLookup();
+      await _flush(tester);
+      expect(state.lookupOpen, isFalse);
+      expect(state.lookupHighlight, isNull);
+      expect(
+        find.byKey(
+          const ValueKey<String>('subtitle-transcript-lookup-highlight'),
+        ),
+        findsNothing,
+      );
+      expect(
+        tester
+            .widget<VideoRemoteScaffold>(find.byType(VideoRemoteScaffold))
+            .pageSwipeEnabled,
+        isTrue,
+      );
+
+      // A miss (no entries) does not highlight anything.
+      host.dictionaryMatch = 0;
+      unawaited(state.openLookup(state.rows.first, 7));
+      await _wait(tester, () => count('dictionary') >= 2);
+      await _flush(tester);
+      expect(state.lookupHighlight, isNull);
+      state.closeLookup();
+      await _flush(tester);
+
+      // Backgrounding closes the stack and the highlight with it.
+      host.dictionaryMatch = 6;
+      unawaited(state.openLookup(state.rows.first, 0));
+      await _wait(tester, () => state.lookupHighlight != null);
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
+      await _wait(tester, () => count('disconnect') > 0);
+      await _flush(tester);
+      expect(state.lookupHighlight, isNull);
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
+      await _flush(tester);
+      await close(tester);
+    },
+  );
+
   testWidgets('mining goes to the computer bound to the lookup context', (
     WidgetTester tester,
   ) async {
@@ -269,6 +346,78 @@ void main() {
     await _wait(tester, () => host.ended.isNotEmpty);
     await close(tester);
   });
+
+  testWidgets(
+    'adjust-context dialog hooks drive the computer draft of the lookup',
+    (WidgetTester tester) async {
+      await open(tester);
+      final VideoRemotePageState state = page(tester);
+      // Before any lookup there is no context to adjust: answer locally.
+      late int total;
+      await tester.runAsync(() async {
+        total = await state.onSetSentenceContextToDraft!(1, 1);
+      });
+      expect(total, 0);
+      expect(host.contexts, isEmpty);
+
+      unawaited(state.openLookup(state.rows.first, 0));
+      await _wait(tester, () => state.lookupOpen);
+      late Map<String, Object?> preview;
+      late bool played;
+      await tester.runAsync(() async {
+        preview = await state.onSentenceContextPreviewToDraft!();
+        total = await state.onSetSentenceContextToDraft!(2, 1);
+        await state.onEditSentenceContextText!(
+          SentenceContextSlot.prev,
+          0,
+          'Edited',
+        );
+        await state.onRemoveSentenceContext!(SentenceContextSlot.next, 0, true);
+        played = await state.onPreviewSentenceAudioToDraft!();
+        await state.onStopSentenceAudioPreviewToDraft!();
+      });
+      expect(preview['current'], 'Shared sentence');
+      expect(total, 3);
+      expect(played, isTrue);
+      expect(
+        host.contexts.map((Map<String, dynamic> body) => body['action']),
+        <String>[
+          'preview',
+          'set',
+          'edit',
+          'remove',
+          'previewAudio',
+          'stopAudio',
+        ],
+      );
+      expect(
+        host.contexts.every(
+          (Map<String, dynamic> body) =>
+              body['contextId'] == 'lookup-1' && body['requestId'] is String,
+        ),
+        isTrue,
+      );
+      expect(host.contexts[1], containsPair('prev', 2));
+      expect(host.contexts[1], containsPair('next', 1));
+      expect(host.contexts[2], containsPair('slot', 'prev'));
+      expect(host.contexts[2], containsPair('text', 'Edited'));
+      expect(host.contexts[3], containsPair('removed', true));
+
+      // The computer dropped the lookup: the dialog keeps its last preview
+      // instead of hanging or throwing.
+      host.contextError = 'lookup_expired';
+      await tester.runAsync(() async {
+        total = await state.onSetSentenceContextToDraft!(3, 3);
+        played = await state.onPreviewSentenceAudioToDraft!();
+      });
+      expect(total, 3);
+      expect(played, isFalse);
+      expect(tester.takeException(), isNull);
+      state.closeLookup();
+      await _wait(tester, () => host.ended.isNotEmpty);
+      await close(tester);
+    },
+  );
 
   testWidgets(
     'dual subtitles highlight and skip along the primary track only',
@@ -363,10 +512,16 @@ final class _PhoneHost {
   final List<Map<String, dynamic>> commands = <Map<String, dynamic>>[];
   final List<Map<String, dynamic>> mines = <Map<String, dynamic>>[];
   final List<String> ended = <String>[];
+  final List<Map<String, dynamic>> contexts = <Map<String, dynamic>>[];
+  String? contextError;
   final List<Completer<http.Response>> _events = <Completer<http.Response>>[];
   late final MockClient client = MockClient(_handle);
   Completer<void>? disconnectGate;
   bool available = true, rejectFirstSubtitles = false, dualTrack = false;
+
+  /// The computer's dictionary matches the first [dictionaryMatch] characters
+  /// of the query (0 = no entries).
+  int dictionaryMatch = 0;
   int section = 0, revision = 1;
 
   Map<String, dynamic> get state => <String, dynamic>{
@@ -468,12 +623,34 @@ final class _PhoneHost {
           'type': 'dictionaryResult',
           'result': <String, dynamic>{
             'searchTerm': 'Shared sentence',
-            'entries': <dynamic>[],
+            'bestLength': dictionaryMatch,
+            'entries': <dynamic>[
+              if (dictionaryMatch > 0)
+                <String, dynamic>{
+                  'dictionaryName': 'Remote',
+                  'word': 'Shared sentence'.substring(0, dictionaryMatch),
+                  'meaning': 'gloss',
+                },
+            ],
           },
         });
       case 'lookupEnd':
         ended.add(body['contextId'].toString());
         return _response(<String, dynamic>{'ok': true});
+      case 'lookupContext':
+        if (contextError != null) {
+          return _response(<String, dynamic>{'error': contextError}, 409);
+        }
+        contexts.add(body);
+        return _response(<String, dynamic>{
+          'prev': <String>['Earlier', 'Before'],
+          'current': 'Shared sentence',
+          'next': <String>['After'],
+          'prevRemoved': <bool>[false, false],
+          'nextRemoved': <bool>[body['action'] == 'remove'],
+          'total': 3,
+          if (body['action'] == 'previewAudio') 'played': true,
+        });
       case 'mine':
         mines.add(body);
         return _response(<String, dynamic>{

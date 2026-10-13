@@ -299,11 +299,16 @@ final class _PhonePlayer {
       if (action == 'play' || action == 'seekCue') playing = true;
       notify();
     },
-    mine: (VideoRemoteCue cue, Map<String, dynamic> fields) async {
-      mines.add(fields);
-      await Future<void>.delayed(const Duration(milliseconds: 700));
-      return <String, Object?>{'success': true, 'fixtureAnki': true};
-    },
+    mine:
+        (
+          VideoRemoteCue cue,
+          Map<String, dynamic> fields,
+          VideoRemoteMineSelection selection,
+        ) async {
+          mines.add(fields);
+          await Future<void>.delayed(const Duration(milliseconds: 700));
+          return <String, Object?>{'success': true, 'fixtureAnki': true};
+        },
     openFavorite: (FavoriteSentence favorite) async {
       positionMs = favorite.normCharOffset ?? 0;
       notify();

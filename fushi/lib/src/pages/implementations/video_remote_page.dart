@@ -7,6 +7,8 @@ import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/lookup/lookup_overlay_navigator.dart';
+import 'package:fushi/src/media/audiobook/mining_sentence_draft.dart'
+    show SentenceContextSlot;
 import 'package:fushi/src/media/sources/reader_fushi_source.dart';
 import 'package:fushi/src/media/video/video_remote_control_layout.dart';
 import 'package:fushi/src/models/preferences_repository.dart'
@@ -43,6 +45,8 @@ import 'package:fushi_core/fushi_core.dart'
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart';
 import 'package:fushi/src/media/video/subtitle_transcript_text.dart';
+import 'package:fushi/src/pages/implementations/video_fushi_page.dart'
+    show lookupHighlightGraphemeCount;
 import 'package:http/http.dart' as http;
 
 /// 手机字幕遥控器：字幕列表 + 收藏 + 在手机上查电脑的词典 / 制卡。
@@ -102,8 +106,9 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
   /// 脚手架行号 → [_cues] 里的主轨行（每次 build 由 [_projectTranscript] 重算）。
   List<Map<String, dynamic>> _lineRows = <Map<String, dynamic>>[];
 
-  /// 最近一次按下的全局位置：查词弹框贴着它落下。
-  Offset? _lastPointer;
+  /// 当前弹框栈顶层查词（[openLookup]）查的那个词在行内的位置；对外只经
+  /// [lookupHighlight] 派生读（栈全关即 null），嵌套查词不改它。
+  VideoRemoteLookupHighlight? _lookupHighlight;
 
   /// 控制卡进度条的读口（本地按速度推算播放头，见 [_position]）。
   late final _RemoteClock _playbackClock = _RemoteClock(this);
@@ -745,8 +750,17 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
   /// 弹框栈里是否有东西在显示（含搜索期占位）。
   bool get lookupOpen => _popup.hasVisiblePopup || _popup.isSearchingUi;
 
+  /// 正在查的词在行内的高亮（画在字幕行 / 收藏卡上）。从存值按「弹框栈还有可见
+  /// 层」派生：逐层关到空、返回键、切后台收栈……任何关闭路径都自然清空，不另存
+  /// 布尔镜像（与视频页 `_activeSubtitleLookupHighlight` 同口径）。
+  VideoRemoteLookupHighlight? get lookupHighlight =>
+      _popup.hasVisiblePopup ? _lookupHighlight : null;
+
   /// 查词入口：在 [row] 的第 [charOffset] 个 grapheme 处查词（行点击传 0 = 从句首
-  /// 最长匹配）。[anchor] 是被点文字的全局矩形，弹框贴着它；缺省贴整行。
+  /// 最长匹配）。[anchor] 是被点词的全局锚点矩形（字幕组件回传的「被点字位→句末」
+  /// 字形盒并集，与视频页字幕侧栏同口径），弹框贴着它的上方 / 下方、不盖住词；
+  /// 缺省（键盘查词 / 控制卡「制卡」）贴字幕列表当前句高度。[favoriteId] 非空 =
+  /// 从收藏卡发起，高亮画在那张卡上，否则画在字幕行上。
   ///
   /// 会话规则：弹框栈与电脑端的一次查词上下文一一对应。第一次点字 `lookupBegin`
   /// （电脑暂停）；弹框开着时再点同一行沿用上下文；点了别的行先 `lookupEnd` 旧的再
@@ -755,12 +769,19 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
     Map<String, dynamic> row,
     int charOffset, {
     Rect? anchor,
+    String? favoriteId,
   }) => _guard(() async {
     if (!_foreground || !mounted) return;
     final String text = row['text'].toString();
-    final String span = subtitleTranscriptLookupSpan(text, charOffset).term;
+    final ({int start, String term}) lookupSpan = subtitleTranscriptLookupSpan(
+      text,
+      charOffset,
+    );
+    final String span = lookupSpan.term;
     final String term = span.isNotEmpty ? span : text.trim();
     if (term.isEmpty) return;
+    // 换词：旧词的高亮先撤掉，新词查完再按匹配长度画。
+    if (_lookupHighlight != null) setState(() => _lookupHighlight = null);
     final int serial = ++_lookupSerial;
     final int generation = _generation;
     final String cueId = row['id'].toString();
@@ -797,7 +818,7 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
       _lookupSubtitleVersion = (_state['subtitleVersion'] as num?)?.toInt();
     }
     _ensureWarmPopup();
-    await pushNestedPopup(
+    final int matchedRunes = await pushNestedPopup(
       query: term,
       selectionRect: selection,
       controller: _popup,
@@ -806,6 +827,25 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
       reuseWarmSlot: true,
       autoRead: true,
     );
+    // BUG-2091 同语义：按引擎回报的匹配长度在行内高亮被查词；查无词条（0）不高亮。
+    // 查词期间又点了别的词 / 栈已关（serial 变了 / 栈空）就不再画这次的。有词条
+    // 的结果要等 WebView 渲染才翻可见：这里先存，[lookupHighlight] 翻可见后才露出。
+    if (mounted && serial == _lookupSerial && _popup.entries.isNotEmpty) {
+      final int count = lookupHighlightGraphemeCount(term, matchedRunes);
+      final VideoRemoteLookupHighlight? next =
+          count > 0 && lookupSpan.start >= 0 && span.isNotEmpty
+          ? VideoRemoteLookupHighlight(
+              surface: favoriteId == null
+                  ? VideoRemoteLookupSurface.transcript
+                  : VideoRemoteLookupSurface.favorite,
+              id: favoriteId ?? row['id'].toString(),
+              text: text,
+              graphemeStart: lookupSpan.start,
+              graphemeCount: count,
+            )
+          : null;
+      if (next != _lookupHighlight) setState(() => _lookupHighlight = next);
+    }
     // 搜索期间用户可能已把栈关掉（那时上下文已结束）；这里只补「查完发现栈已空」。
     _endLookupIfClosed();
   });
@@ -841,6 +881,12 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
   /// 都走这里。关的只是嵌套的一层（栈里还有可见层）或还在搜索时不结束上下文。
   void _popAt(int index) {
     if (index >= 0) popNestedPopupAt(index, _popup);
+    if (mounted &&
+        _lookupHighlight != null &&
+        !_popup.hasVisiblePopup &&
+        !_popup.isSearchingUi) {
+      setState(() => _lookupHighlight = null);
+    }
     _endLookupIfClosed();
   }
 
@@ -859,8 +905,11 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
     final String? contextId = _lookupContextId;
     _lookupSerial++;
     _clearLookupContext();
-    if (mounted && _popup.entries.isNotEmpty) {
-      setState(() => _popup.dismissAt(0));
+    if (mounted && (_popup.entries.isNotEmpty || _lookupHighlight != null)) {
+      setState(() {
+        if (_popup.entries.isNotEmpty) _popup.dismissAt(0);
+        _lookupHighlight = null;
+      });
     }
     return contextId;
   }
@@ -939,6 +988,127 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
       playInWebView: popupState?.playWordAudioUrl,
     );
   }
+
+  // ── 「调整上下文」：草稿只在电脑端（本次查词上下文里），手机只发命令 ──────────
+  //
+  // 与视频页同一个 [SentenceContextDialog]（mixin 的 `_openSentenceContextDialogForVideo`）：
+  // 草稿模型、上下 N 句的取法、预览 map、合成文本 / 区间全在电脑端，手机经
+  // `lookupContext` 驱动它；制卡时电脑按这份草稿出卡（见 [onMineEntry]）。试听也在
+  // 电脑的播放器上放——手机没有视频音频。
+
+  /// 电脑最近一次回的上下文预览：命令失败时给对话框兜底，不让它卡在加载态。
+  Map<String, Object?>? _contextPreview;
+
+  /// 发一条 `lookupContext` 命令，回电脑的最新预览；失败（查词已结束 / 字幕变了 /
+  /// 电脑不可达）回 null，并按 [report] 用 toast 报原因（弹框此时停靠屏外，横幅
+  /// 被对话框盖住）。
+  Future<Map<String, Object?>?> _lookupContext(
+    String action, {
+    Map<String, dynamic> args = const <String, dynamic>{},
+    bool report = true,
+  }) async {
+    final String? contextId = _lookupContextId;
+    try {
+      if (contextId == null) throw const VideoRemoteError('lookup_expired');
+      final Map<String, dynamic> result = await _client.call(
+        'lookupContext',
+        <String, dynamic>{
+          ...args,
+          'contextId': contextId,
+          'requestId': _client.requestId(),
+          'action': action,
+        },
+      );
+      return _contextPreview = Map<String, Object?>.of(result);
+    } catch (e) {
+      final String text = report ? videoRemoteErrorText(e) : '';
+      if (text.isNotEmpty) {
+        FushiToast.show(msg: text, severity: ToastSeverity.warning);
+      }
+      return null;
+    }
+  }
+
+  /// 电脑答不上来时的预览：上一份电脑预览，或只有被查那一行。
+  Map<String, Object?> _contextFallback() {
+    final Map<String, Object?>? last = _contextPreview;
+    if (last != null) return last;
+    String current = '';
+    for (final Map<String, dynamic> row in _cues) {
+      if (row['id']?.toString() == _lookupCueId) {
+        current = row['text']?.toString() ?? '';
+        break;
+      }
+    }
+    return <String, Object?>{
+      'prev': const <String>[],
+      'current': current,
+      'next': const <String>[],
+      'total': 0,
+    };
+  }
+
+  @override
+  Future<Map<String, Object?>> Function()?
+  get onSentenceContextPreviewToDraft => () async {
+    _contextPreview = null;
+    return await _lookupContext('preview') ?? _contextFallback();
+  };
+
+  @override
+  Future<int> Function(int prevCount, int nextCount)?
+  get onSetSentenceContextToDraft => (int prevCount, int nextCount) async {
+    final Map<String, Object?> preview =
+        await _lookupContext(
+          'set',
+          args: <String, dynamic>{'prev': prevCount, 'next': nextCount},
+        ) ??
+        _contextFallback();
+    return (preview['total'] as num?)?.toInt() ?? 0;
+  };
+
+  @override
+  Future<int> Function()? get onClearSentenceDraftToDraft => () async {
+    await _lookupContext('clear');
+    return 0;
+  };
+
+  @override
+  Future<void> Function(SentenceContextSlot slot, int index, String text)?
+  get onEditSentenceContextText =>
+      (SentenceContextSlot slot, int index, String text) async {
+        await _lookupContext(
+          'edit',
+          args: <String, dynamic>{
+            'slot': slot.name,
+            'index': index,
+            'text': text,
+          },
+        );
+      };
+
+  @override
+  Future<void> Function(SentenceContextSlot slot, int index, bool removed)?
+  get onRemoveSentenceContext =>
+      (SentenceContextSlot slot, int index, bool removed) async {
+        await _lookupContext(
+          'remove',
+          args: <String, dynamic>{
+            'slot': slot.name,
+            'index': index,
+            'removed': removed,
+          },
+        );
+      };
+
+  @override
+  Future<bool> Function()? get onPreviewSentenceAudioToDraft =>
+      () async => (await _lookupContext('previewAudio'))?['played'] == true;
+
+  @override
+  Future<void> Function()? get onStopSentenceAudioPreviewToDraft => () async {
+    await _lookupContext('stopAudio', report: false);
+  };
 
   /// 制卡交给电脑：用电脑本地的 Anki 配置，素材从电脑正在播的视频按本次查词绑定的
   /// 字幕句抽取。网络失败（没拿到任何响应）时才按 requestId 回查任务——电脑明确
@@ -1252,17 +1422,27 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
     }
   }
 
+  /// [anchor] 是收藏卡上被点词的全局锚点矩形：收藏就在电脑当前视频里、能直接
+  /// 查时贴着它弹；要先确认并切视频、等那句 cue 到位的路径上，收藏列表会随新
+  /// 视频重排 / 重取，那个矩形已不可信，退回 [_fallbackAnchor]。
   Future<void> _openFavorite(
     Map<String, dynamic> favorite, {
     bool lookup = false,
     int charOffset = 0,
+    Rect? anchor,
   }) => _guard(() async {
     final int generation = _generation;
     if (_favoriteCueWaiter != null) return;
+    final String favoriteId = favorite['id'].toString();
     if (lookup) {
       final Map<String, dynamic>? cue = _favoriteCue(favorite);
       if (cue != null) {
-        await openLookup(cue, charOffset);
+        await openLookup(
+          cue,
+          charOffset,
+          anchor: anchor,
+          favoriteId: favoriteId,
+        );
         return;
       }
     }
@@ -1301,7 +1481,7 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
       if (!mounted || !_foreground || generation != _generation) return;
       final Map<String, dynamic> cue = await _waitForFavoriteCue(favorite);
       if (mounted && _foreground && generation == _generation) {
-        await openLookup(cue, charOffset);
+        await openLookup(cue, charOffset, favoriteId: favoriteId);
       }
     }
   });
@@ -1319,89 +1499,90 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
         final int top = _popup.lastVisibleIndex;
         _popAt(top >= 0 ? top : 0);
       },
-      // 记下按下点：字幕组件只回「第几行第几个字」，弹框贴着手指落下的位置。
-      child: Listener(
-        behavior: HitTestBehavior.translucent,
-        onPointerDown: (PointerDownEvent event) =>
-            _lastPointer = event.position,
-        child: Scaffold(
-          body: VideoRemoteScaffold(
-            nowPlaying: _nowPlaying(),
-            lines: projection.lines,
-            activeIndex: projection.activeLine,
-            favorites: _favoriteEntries(),
-            favoritesScope: _all
-                ? VideoRemoteFavoritesScope.allVideos
-                : VideoRemoteFavoritesScope.currentVideo,
-            favoritesLoading: _favoritesLoading,
-            controlLayout: _controlLayout(),
-            clock: _playbackClock,
-            notice: _notice(),
-            initialTab: _tab,
-            onTabChanged: (VideoRemoteTab tab) {
-              _tab = tab;
-              if (tab == VideoRemoteTab.favorites) {
-                unawaited(_guard(_loadFavorites));
-              }
+      child: Scaffold(
+        body: VideoRemoteScaffold(
+          nowPlaying: _nowPlaying(),
+          lines: projection.lines,
+          activeIndex: projection.activeLine,
+          favorites: _favoriteEntries(),
+          favoritesScope: _all
+              ? VideoRemoteFavoritesScope.allVideos
+              : VideoRemoteFavoritesScope.currentVideo,
+          favoritesLoading: _favoritesLoading,
+          controlLayout: _controlLayout(),
+          clock: _playbackClock,
+          notice: _notice(),
+          initialTab: _tab,
+          onTabChanged: (VideoRemoteTab tab) {
+            _tab = tab;
+            if (tab == VideoRemoteTab.favorites) {
+              unawaited(_guard(_loadFavorites));
+            }
+          },
+          isControlEnabled: _controlEnabled,
+          transcriptReplayKey:
+              '${_state['sessionId']}|${_state['subtitleVersion']}',
+          lookupHighlight: lookupHighlight,
+          // 弹框开着时列表区不响应横滑切页（不和弹框的横滑关闭 / 逐字点击抢手势）。
+          pageSwipeEnabled: !lookupOpen,
+          callbacks: VideoRemoteCallbacks(
+            onBack: () => unawaited(Navigator.of(context).maybePop()),
+            onControl: (VideoRemoteControlItem item) =>
+                unawaited(_onControl(item)),
+            // 锚点是字幕组件回传的被点词矩形（与视频页字幕侧栏同口径）：弹框
+            // 贴着词的正上方 / 正下方，不盖住它。
+            onLookup: (int line, int charOffset, Rect anchor) {
+              if (line < 0 || line >= _lineRows.length) return;
+              unawaited(
+                openLookup(_lineRows[line], charOffset, anchor: anchor),
+              );
             },
-            isControlEnabled: _controlEnabled,
-            transcriptReplayKey:
-                '${_state['sessionId']}|${_state['subtitleVersion']}',
-            callbacks: VideoRemoteCallbacks(
-              onBack: () => unawaited(Navigator.of(context).maybePop()),
-              onControl: (VideoRemoteControlItem item) =>
-                  unawaited(_onControl(item)),
-              onLookup: (int line, int charOffset) {
-                if (line < 0 || line >= _lineRows.length) return;
-                unawaited(
-                  openLookup(
-                    _lineRows[line],
-                    charOffset,
-                    anchor: _pointerAnchor(),
-                  ),
-                );
-              },
-              onLineTap: (int line) => _withLine(line, seekToRow),
-              onReplayLine: (int line) => _withLine(line, seekToRow),
-              onToggleFavoriteLine: (int line) =>
-                  _withLine(line, toggleRowFavorite),
-              // 制卡要先选词：打开这一句的查词弹框，在弹框里点 ＋。
-              onMineLine: (int line) => _withLine(
-                line,
-                (Map<String, dynamic> row) => openLookup(row, 0),
-              ),
-              onFavoritesScopeChanged: (VideoRemoteFavoritesScope scope) =>
-                  unawaited(
-                    setFavoritesAllVideos(
-                      scope == VideoRemoteFavoritesScope.allVideos,
-                    ),
-                  ),
-              onOpenFavorite: (VideoRemoteFavoriteEntry entry) {
-                final Map<String, dynamic>? favorite = _favoriteById(entry.id);
-                if (favorite != null) unawaited(openFavorite(favorite));
-              },
-              onLookupFavorite: (VideoRemoteFavoriteEntry entry, int offset) {
-                final Map<String, dynamic>? favorite = _favoriteById(entry.id);
-                if (favorite == null) return;
-                unawaited(
-                  _openFavorite(favorite, lookup: true, charOffset: offset),
-                );
-              },
-              onRemoveFavorites: (Set<String> ids) =>
-                  unawaited(removeFavorites(ids)),
-              onRefresh: () => unawaited(reconnect()),
-              onSeek: available ? (Duration to) => unawaited(seekTo(to)) : null,
-              onCustomizeControls: _prefs == null
-                  ? null
-                  : () => unawaited(
-                      runWithLookupPopupHidden<void>(
-                        () => showVideoRemoteControlEditor(
-                          context,
-                          prefs: _prefs,
-                        ),
-                      ),
-                    ),
+            onLineTap: (int line) => _withLine(line, seekToRow),
+            onReplayLine: (int line) => _withLine(line, seekToRow),
+            onToggleFavoriteLine: (int line) =>
+                _withLine(line, toggleRowFavorite),
+            // 制卡要先选词：打开这一句的查词弹框，在弹框里点 ＋。
+            onMineLine: (int line) => _withLine(
+              line,
+              (Map<String, dynamic> row) => openLookup(row, 0),
             ),
+            onFavoritesScopeChanged: (VideoRemoteFavoritesScope scope) =>
+                unawaited(
+                  setFavoritesAllVideos(
+                    scope == VideoRemoteFavoritesScope.allVideos,
+                  ),
+                ),
+            onOpenFavorite: (VideoRemoteFavoriteEntry entry) {
+              final Map<String, dynamic>? favorite = _favoriteById(entry.id);
+              if (favorite != null) unawaited(openFavorite(favorite));
+            },
+            onLookupFavorite:
+                (VideoRemoteFavoriteEntry entry, int offset, Rect anchor) {
+                  final Map<String, dynamic>? favorite = _favoriteById(
+                    entry.id,
+                  );
+                  if (favorite == null) return;
+                  unawaited(
+                    _openFavorite(
+                      favorite,
+                      lookup: true,
+                      charOffset: offset,
+                      anchor: anchor,
+                    ),
+                  );
+                },
+            onRemoveFavorites: (Set<String> ids) =>
+                unawaited(removeFavorites(ids)),
+            onRefresh: () => unawaited(reconnect()),
+            onSeek: available ? (Duration to) => unawaited(seekTo(to)) : null,
+            onCustomizeControls: _prefs == null
+                ? null
+                : () => unawaited(
+                    runWithLookupPopupHidden<void>(
+                      () =>
+                          showVideoRemoteControlEditor(context, prefs: _prefs),
+                    ),
+                  ),
           ),
         ),
       ),
@@ -1557,16 +1738,6 @@ class VideoRemotePageState extends ConsumerState<VideoRemotePage>
         // followCurrent 由脚手架自己处理；另两个没有协议命令（已置灰）。
         break;
     }
-  }
-
-  /// 查词弹框的锚点：手指刚按下的位置（字幕组件只回行号与字号）；键盘查词
-  /// 没有按下点时贴字幕列表的当前句高度。
-  Rect _pointerAnchor() {
-    final Offset? pointer = _lastPointer;
-    if (pointer != null) {
-      return Rect.fromCenter(center: pointer, width: 24, height: 24);
-    }
-    return _fallbackAnchor();
   }
 }
 

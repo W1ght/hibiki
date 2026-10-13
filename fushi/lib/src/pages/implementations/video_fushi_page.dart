@@ -2389,6 +2389,16 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
   Future<void> Function(SentenceContextSlot slot, int index, bool removed)?
   get onRemoveSentenceContext => _removeSentenceContext;
 
+  /// 「选择句子上下文」对话框的试听（视频车道）：本机播放器从合并区间首句播到末句
+  /// 句尾自动停（[_previewSentenceContextAudio]）。
+  @override
+  Future<bool> Function()? get onPreviewSentenceAudioToDraft =>
+      _previewSentenceContextAudio;
+
+  @override
+  Future<void> Function()? get onStopSentenceAudioPreviewToDraft =>
+      () async => _controller?.pause();
+
   /// TODO-382「+句」可撤销（视频车道）：弹窗点「清空已加句子」清掉本会话累积的全部草稿
   /// 句，回传清空后的句数（恒 0）。不动字幕列表「选入词卡」的 cue 选择集（两套独立机制）。
   @override

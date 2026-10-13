@@ -18,9 +18,10 @@ import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:material_ui/material_ui.dart';
 
-/// 收藏查词回调：第 [charOffset] 个字（grapheme 下标）。
+/// 收藏查词回调：第 [charOffset] 个字（grapheme 下标）+ 查词弹框的全局锚点矩形
+/// [anchor]（同 [VideoRemoteLookupCallback]；键盘查词为 [Rect.zero]）。
 typedef VideoRemoteFavoriteLookupCallback =
-    void Function(VideoRemoteFavoriteEntry entry, int charOffset);
+    void Function(VideoRemoteFavoriteEntry entry, int charOffset, Rect anchor);
 
 /// 收藏列表（纯展示）：顶部「当前视频 / 全部视频」连接式按钮组 + 搜索，下面
 /// 卡片列表错峰进场。长按卡片进入多选，选中后批量取消收藏。
@@ -39,6 +40,7 @@ class VideoRemoteFavoritesView extends StatefulWidget {
     this.onLookup,
     this.padding = EdgeInsets.zero,
     this.loading = false,
+    this.lookupHighlight,
   });
 
   final List<VideoRemoteFavoriteEntry> entries;
@@ -59,6 +61,9 @@ class VideoRemoteFavoritesView extends StatefulWidget {
 
   /// 正在取这一批（空列表时显示加载中而不是空态）。
   final bool loading;
+
+  /// 正在查的词（只画在它所属的那张卡上）；null = 不高亮。
+  final VideoRemoteLookupHighlight? lookupHighlight;
 
   @override
   State<VideoRemoteFavoritesView> createState() =>
@@ -235,9 +240,11 @@ class _VideoRemoteFavoritesViewState extends State<VideoRemoteFavoritesView> {
                   ? () => _toggle(entry)
                   : () => widget.onOpen(entry),
               onLongPress: () => _toggle(entry),
+              lookupHighlight: widget.lookupHighlight?.rangeForFavorite(entry),
               onLookup: _selecting || lookup == null
                   ? null
-                  : (int charOffset) => lookup(entry, charOffset),
+                  : (int charOffset, Rect anchor) =>
+                        lookup(entry, charOffset, anchor),
             ),
           );
         }),
@@ -316,6 +323,7 @@ class _FavoriteCard extends StatelessWidget {
     required this.onTap,
     required this.onLongPress,
     required this.onLookup,
+    this.lookupHighlight,
   });
 
   final VideoRemoteFavoriteEntry entry;
@@ -324,7 +332,8 @@ class _FavoriteCard extends StatelessWidget {
   final bool selected;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
-  final ValueChanged<int>? onLookup;
+  final void Function(int charOffset, Rect anchor)? onLookup;
+  final SubtitleTranscriptHighlightRange? lookupHighlight;
 
   @override
   Widget build(BuildContext context) {
@@ -342,7 +351,7 @@ class _FavoriteCard extends StatelessWidget {
       if (showVideo && episode.isNotEmpty) episode,
       formatFushiPlaybackTime(entry.start),
     ];
-    final ValueChanged<int>? lookup = onLookup;
+    final void Function(int charOffset, Rect anchor)? lookup = onLookup;
     return FushiCard(
       selected: selected,
       onTap: onTap,
@@ -361,8 +370,8 @@ class _FavoriteCard extends StatelessWidget {
                   SubtitleTranscriptText(
                     text: entry.text,
                     style: sentenceStyle,
-                    onLookup: (int graphemeIndex, Rect _) =>
-                        lookup(graphemeIndex),
+                    lookupHighlight: lookupHighlight,
+                    onLookup: lookup,
                     onBackgroundTap: onTap,
                   ),
                 if ((entry.secondaryText ?? '').trim().isNotEmpty)

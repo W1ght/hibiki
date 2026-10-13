@@ -4894,11 +4894,14 @@ class VideoPlayerController extends ChangeNotifier
   /// 一次性 hold 的作废由 [seekMs] / [_rawSeekMs] / [setCues] 负责：用户中途拖进度、
   /// 跳去别的句或换片，都立刻放弃「停在本句尾」的意图。全局偏好
   /// `字幕结束暂停`（[setPauseAtSubtitleEnd]）与本方法正交，互不改写。
-  Future<void> replayCue(AudioCue cue) async {
+  ///
+  /// [until] 非空时从 [cue] 句首一直播到 [until] 句尾才停（制卡「调整上下文」试听
+  /// 多句合并区间用）：一次性 hold 挂在 [until] 上，中间各句照常走过。
+  Future<void> replayCue(AudioCue cue, {AudioCue? until}) async {
     // 先 seek（内部 [_rawSeekMs] 会清掉上一次的一次性 hold），再置本次目标——顺序与
     // [skipToCue] 置 [_seekTargetCueIndex] 同构，故绝不会被自清。
     await skipToCue(cue);
-    final int? targetIndex = _resolveCueIndex(cue);
+    final int? targetIndex = _resolveCueIndex(until ?? cue);
     if (targetIndex != null) {
       _oneShotHoldCueIndex = targetIndex;
       // 这一句可能刚被句尾暂停过（全局开关开着时）。不清防重复记号的话，重播到句尾会

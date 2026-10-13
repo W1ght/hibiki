@@ -105,6 +105,247 @@ void main() {
     },
   );
 
+  group('lookupContext (adjust sentence context)', () {
+    // Four primary rows around one secondary row: the context must stay on
+    // the anchor's own track, in time order.
+    Future<String> begin(String cueId) async {
+      player.cues = const <VideoRemoteCue>[
+        VideoRemoteCue(
+          id: 'p0',
+          text: '零',
+          startMs: 0,
+          endMs: 900,
+          delayMs: 0,
+          track: 'primary',
+        ),
+        VideoRemoteCue(
+          id: 'p1',
+          text: '一',
+          startMs: 1000,
+          endMs: 1900,
+          delayMs: 0,
+          track: 'primary',
+        ),
+        VideoRemoteCue(
+          id: 's1',
+          text: 'one',
+          startMs: 1000,
+          endMs: 1900,
+          delayMs: 0,
+          track: 'secondary',
+        ),
+        VideoRemoteCue(
+          id: 'p2',
+          text: '二',
+          startMs: 2000,
+          endMs: 2900,
+          delayMs: 0,
+          track: 'primary',
+        ),
+        VideoRemoteCue(
+          id: 'p3',
+          text: '三',
+          startMs: 3000,
+          endMs: 3900,
+          delayMs: 0,
+          track: 'primary',
+        ),
+      ];
+      player.notify();
+      snapshot = await host.handle('snapshot', <String, dynamic>{}, 'phone');
+      final Map<String, Object?> lookup = await call(
+        'lookupBegin',
+        <String, dynamic>{'cueId': cueId},
+      );
+      return lookup['contextId']! as String;
+    }
+
+    Future<Map<String, Object?>> context(
+      String contextId,
+      String action, [
+      Map<String, dynamic> args = const <String, dynamic>{},
+    ]) => call('lookupContext', <String, dynamic>{
+      'contextId': contextId,
+      'action': action,
+      ...args,
+    });
+
+    test(
+      'set / edit / remove drive the draft and the card follows it',
+      () async {
+        final String id = await begin('p1');
+        Map<String, Object?> preview = await context(id, 'preview');
+        expect(preview['current'], '一');
+        expect(preview['prev'], isEmpty);
+        expect(preview['total'], 0);
+
+        preview = await context(id, 'set', <String, dynamic>{
+          'prev': 5,
+          'next': 2,
+        });
+        // Clamped at the track edges; the secondary row never joins.
+        expect(preview['prev'], <String>['零']);
+        expect(preview['next'], <String>['二', '三']);
+        expect(preview['total'], 3);
+
+        preview = await context(id, 'edit', <String, dynamic>{
+          'slot': 'next',
+          'index': 0,
+          'text': '二（改）',
+        });
+        expect(preview['next'], <String>['二（改）', '三']);
+        preview = await context(id, 'remove', <String, dynamic>{
+          'slot': 'next',
+          'index': 1,
+          'removed': true,
+        });
+        expect(preview['nextRemoved'], <bool>[false, true]);
+        expect(preview['total'], 2);
+
+        await call('mine', <String, dynamic>{
+          'contextId': id,
+          'fields': <String, dynamic>{
+            'rawFields': <String, dynamic>{'expression': '一'},
+          },
+        });
+        final VideoRemoteMineSelection selection = player.minedSelection!;
+        expect(player.minedCue!.id, 'p1');
+        expect(selection.adjusted, isTrue);
+        expect(selection.sentence, '零\n一\n二（改）');
+        expect(selection.cueSentence, selection.sentence);
+        // First kept row start -> last kept row end; the removed row is out.
+        expect(selection.startMs, 0);
+        expect(selection.endMs, 2900);
+
+        // Later edits do not reach an accepted card; success consumes the draft.
+        await context(id, 'set', <String, dynamic>{'prev': 0, 'next': 0});
+        expect(player.minedSelection!.sentence, '零\n一\n二（改）');
+        await context(id, 'set', <String, dynamic>{'prev': 1, 'next': 0});
+        player.mining.complete(<String, Object?>{'success': true});
+        await Future<void>.delayed(Duration.zero);
+        preview = await context(id, 'preview');
+        expect(preview['total'], 0);
+        expect(preview['prev'], isEmpty);
+      },
+    );
+
+    test('without context the card is the looked-up row', () async {
+      final String id = await begin('p2');
+      await call('mine', <String, dynamic>{
+        'contextId': id,
+        'fields': <String, dynamic>{
+          'rawFields': <String, dynamic>{'expression': '二'},
+        },
+      });
+      final VideoRemoteMineSelection selection = player.minedSelection!;
+      expect(selection.adjusted, isFalse);
+      expect(selection.sentence, '二');
+      expect(selection.startMs, 2000);
+      expect(selection.endMs, 2900);
+    });
+
+    test('audio preview plays the composed span on the desktop', () async {
+      final String id = await begin('p1');
+      await context(id, 'set', <String, dynamic>{'prev': 0, 'next': 1});
+      final Map<String, Object?> played = await context(id, 'previewAudio');
+      expect(played['played'], isTrue);
+      final Map<String, Object?> stopped = await context(id, 'stopAudio');
+      expect(stopped['played'], isFalse);
+      expect(player.previews, <String>['p1:1000-2900', 'stop']);
+      // Previewing is not an explicit playback command: the lookup survives.
+      expect((await context(id, 'preview'))['total'], 1);
+    });
+
+    test(
+      'closing after an audition restores the paused playhead and resumes',
+      () async {
+        player.seekMs = 1500;
+        final String id = await begin('p1');
+        expect(player.playing, isFalse);
+        await context(id, 'set', <String, dynamic>{'prev': 1, 'next': 0});
+        await context(id, 'previewAudio');
+        // The real audition seeks, plays and pauses at the span end: all of
+        // those bump the revision without being a local playback intent.
+        player.controlRevision += 3;
+        player.seekMs = 1900;
+        player.commands.clear();
+        await call('lookupEnd', <String, dynamic>{'contextId': id});
+        expect(player.commands, <String>['seek', 'play']);
+        expect(player.seekMs, 1500);
+        expect(player.playing, isTrue);
+      },
+    );
+
+    test(
+      'closing mid-audition stops it and keeps a paused video paused',
+      () async {
+        player.playing = false;
+        player.seekMs = 1200;
+        final String id = await begin('p1');
+        await context(id, 'previewAudio');
+        player.playing = true; // audition still running
+        player.commands.clear();
+        await call('lookupEnd', <String, dynamic>{'contextId': id});
+        expect(player.previews.last, 'stop');
+        expect(player.commands, <String>['seek']);
+        expect(player.seekMs, 1200);
+      },
+    );
+
+    test('stale or malformed requests are refused, never crash', () async {
+      final String id = await begin('p1');
+      Future<void> refused(Future<Map<String, Object?>> request, String code) =>
+          expectLater(
+            request,
+            throwsA(
+              isA<VideoRemoteException>().having(
+                (VideoRemoteException e) => e.code,
+                'code',
+                code,
+              ),
+            ),
+          );
+      await refused(context('lookup_bogus', 'preview'), 'lookup_expired');
+      await refused(context(id, 'bogus'), 'invalid_action');
+      await refused(
+        context(id, 'edit', <String, dynamic>{
+          'slot': 'nowhere',
+          'index': 0,
+          'text': 'x',
+        }),
+        'invalid_argument',
+      );
+      await refused(
+        context(id, 'remove', <String, dynamic>{
+          'slot': 'current',
+          'index': 0,
+          'removed': true,
+        }),
+        'invalid_argument',
+      );
+      await refused(
+        context(id, 'remove', <String, dynamic>{
+          'slot': 'prev',
+          'index': 3,
+          'removed': true,
+        }),
+        'invalid_argument',
+      );
+      await refused(
+        context(id, 'set', <String, dynamic>{'prev': '1'}),
+        'invalid_number',
+      );
+      // Subtitles changed under the lookup: the draft is gone with it.
+      player.cues = <VideoRemoteCue>[...player.cues.take(2)];
+      player.notify();
+      await refused(context(id, 'preview'), 'lookup_expired');
+      // An ended lookup is expired as well.
+      final String next = await begin('p2');
+      await call('lookupEnd', <String, dynamic>{'contextId': next});
+      await refused(context(next, 'set'), 'lookup_expired');
+    });
+  });
+
   test('adapter failure codes reach the mining task', () async {
     final Map<String, Object?> lookup = await call(
       'lookupBegin',
@@ -506,6 +747,8 @@ final class _Player {
   int? seekMs;
   int mineCalls = 0;
   VideoRemoteCue? minedCue;
+  VideoRemoteMineSelection? minedSelection;
+  final List<String> previews = <String>[];
   final List<String> commands = <String>[];
   final List<VoidCallback> listeners = <VoidCallback>[];
   final Completer<Map<String, Object?>> mining =
@@ -544,11 +787,22 @@ final class _Player {
       'controlRevision': revisionSource?.call() ?? controlRevision,
     },
     command: command,
-    mine: (VideoRemoteCue cue, Map<String, dynamic> fields) {
-      mineCalls++;
-      minedCue = cue;
-      return mining.future;
+    mine:
+        (
+          VideoRemoteCue cue,
+          Map<String, dynamic> fields,
+          VideoRemoteMineSelection selection,
+        ) {
+          mineCalls++;
+          minedCue = cue;
+          minedSelection = selection;
+          return mining.future;
+        },
+    previewAudio: (VideoRemoteCue anchor, int startMs, int endMs) async {
+      previews.add('${anchor.id}:$startMs-$endMs');
+      return true;
     },
+    stopAudio: () async => previews.add('stop'),
     openFavorite: (FavoriteSentence favorite) async {
       seekMs = favorite.normCharOffset;
       notify();

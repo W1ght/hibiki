@@ -119,6 +119,15 @@ extension _VideoRemoteControl on _VideoFushiPageState {
         }
       },
       mine: _mineRemoteVideoCue,
+      previewAudio: (VideoRemoteCue anchor, int startMs, int endMs) =>
+          _replaySubtitleSpan(
+            anchor.track == 'secondary'
+                ? controller.secondaryCues
+                : controller.cues,
+            startMs,
+            endMs,
+          ),
+      stopAudio: controller.pause,
       openFavorite: _openRemoteVideoFavorite,
       addListener: controller.addListener,
       removeListener: controller.removeListener,
@@ -128,9 +137,13 @@ extension _VideoRemoteControl on _VideoFushiPageState {
     appModel.videoRemoteHost.register(binding);
   }
 
+  /// 遥控制卡：手机经 `lookupContext` 调好的上下文由宿主冻结成 [selection]
+  /// （与本页 [_resolveVideoMiningRange] 同一套草稿合成），这里只按本页规则加
+  /// 首尾留白、换到播放器轴再出卡。
   Future<Map<String, Object?>> _mineRemoteVideoCue(
     VideoRemoteCue cue,
     Map<String, dynamic> request,
+    VideoRemoteMineSelection selection,
   ) async {
     final VideoPlayerController? controller = _controller;
     if (controller == null || !mounted) {
@@ -158,8 +171,8 @@ extension _VideoRemoteControl on _VideoFushiPageState {
     final AudioPlaybackRange padded = padSentenceRange(
       AudioPlaybackRange(
         audioFileIndex: 0,
-        startMs: cue.startMs,
-        endMs: cue.endMs,
+        startMs: selection.startMs,
+        endMs: selection.endMs,
       ),
       cues: cue.track == 'secondary'
           ? controller.secondaryCues
@@ -167,7 +180,10 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       headPadMs: appModel.miningAudioHeadPadMs,
       tailPadMs: appModel.miningAudioTailPadMs,
     );
-    final String sentence = requestSentence as String? ?? cue.text;
+    // 手机调过上下文（加句 / 改字）时以合成文本为准；否则沿用手机带来的句子。
+    final String sentence = selection.adjusted
+        ? selection.sentence
+        : requestSentence as String? ?? selection.sentence;
     final VideoMiningHistorySnapshot history =
         VideoMiningHistorySnapshot.capture(
           fields: fields,
@@ -190,9 +206,10 @@ extension _VideoRemoteControl on _VideoFushiPageState {
       fields: fields,
       clipStartMs: miningClipTimeMs(padded.startMs, cue.delayMs),
       clipEndMs: miningClipTimeMs(padded.endMs, cue.delayMs),
-      stillFrameAtMs: miningClipTimeMs(cue.startMs, cue.delayMs),
+      // 与本页制卡同：封面锚在合并区间**未 pad** 的起点。
+      stillFrameAtMs: miningClipTimeMs(selection.startMs, cue.delayMs),
       sentence: sentence,
-      cueSentence: cue.text,
+      cueSentence: selection.cueSentence,
       silent: true,
       forceForeground: true,
       forceSubtitleStart: true,

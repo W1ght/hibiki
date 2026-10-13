@@ -119,6 +119,50 @@ extension _VideoLookupMining on _VideoFushiPageState {
     return _miningDraft.length;
   }
 
+  /// 「选择句子上下文」对话框的试听（[DictionaryPageMixin.onPreviewSentenceAudioToDraft]
+  /// 的私有目标）：放**这张卡会合并进去的那段**——草稿全部句 + 当前查词句的首句起
+  /// →末句止，而不只是当前句（BUG-2196 ② 同一口径）。
+  Future<bool> _previewSentenceContextAudio() async {
+    final VideoPlayerController? controller = _controller;
+    final AudioCue? anchor = _lastLookupCue;
+    if (controller == null || anchor == null) return false;
+    final AudioPlaybackRange? span = _miningDraft.composeAudioRange(
+      _cueRange(anchor),
+    );
+    if (span == null) return false;
+    return _replaySubtitleSpan(
+      controller.cueStreamOwning(anchor),
+      span.startMs,
+      span.endMs,
+    );
+  }
+
+  /// 在 [stream]（一条按 startMs 升序的字幕流）上把字幕时基区间 `[startMs, endMs]`
+  /// 落到首尾两句，经 [VideoPlayerController.replayCue] 从首句句首播到末句句尾自动停
+  /// ——与查词顶栏「重播本句」同一套句尾判定（倍速 / 延迟 / seek 吸附都已处理）。
+  /// 本机试听与手机遥控试听（声音都在电脑上放）共用。区间里没有任何一句时返回 false。
+  Future<bool> _replaySubtitleSpan(
+    List<AudioCue> stream,
+    int startMs,
+    int endMs,
+  ) async {
+    final VideoPlayerController? controller = _controller;
+    if (controller == null || endMs <= startMs) return false;
+    AudioCue? first;
+    AudioCue? last;
+    for (final AudioCue cue in stream) {
+      if (cue.endMs <= startMs || cue.startMs >= endMs) continue;
+      first ??= cue;
+      last = cue;
+    }
+    if (first == null) return false;
+    await controller.replayCue(
+      first,
+      until: identical(first, last) ? null : last,
+    );
+    return true;
+  }
+
   /// 制卡（覆写 [DictionaryPageMixin.onMineEntry]）：在词典 [fields]（已含单词
   /// 发音 `{audio}`、例句字段等）基础上，注入视频专属上下文——当前帧截图
   /// coverPath（→`{book-cover}`）+ 当前字幕 cue 的音频片段（裁**当前选中音轨**）

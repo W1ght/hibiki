@@ -11,7 +11,8 @@ import 'package:fushi/src/utils/components/fushi_m3e_player.dart';
 import 'package:material_ui/material_ui.dart';
 
 /// 手机字幕遥控器展示组件：竖 / 横屏布局、当前句强调、手动滚动后「回到当前
-/// 句」、自定义按钮布局、逐字查词回调、大字号长句不溢出、旋转保状态。
+/// 句」、自定义按钮布局、逐字查词回调（带被点词锚点）、大字号长句不溢出、旋转保
+/// 状态、三页左右滑动与按钮双向同步、查词高亮只画在所属行 / 卡上。
 class _Clock implements FushiPlaybackClock {
   @override
   Duration get position => const Duration(minutes: 3, seconds: 12);
@@ -51,8 +52,30 @@ List<VideoRemoteTranscriptLine> _lines({int count = 40, String? longLine}) =>
 class _Recorder {
   final List<VideoRemoteControlItem> controls = <VideoRemoteControlItem>[];
   final List<(int, int)> lookups = <(int, int)>[];
+  final List<Rect> anchors = <Rect>[];
   final List<int> lineTaps = <int>[];
+  final List<VideoRemoteTab> tabs = <VideoRemoteTab>[];
+  final List<VideoRemoteFavoritesScope> scopes = <VideoRemoteFavoritesScope>[];
+  final List<(String, int, Rect)> favoriteLookups = <(String, int, Rect)>[];
 }
+
+const List<VideoRemoteFavoriteEntry> _favoriteEntries =
+    <VideoRemoteFavoriteEntry>[
+      VideoRemoteFavoriteEntry(
+        id: 'fav-1',
+        text: '今日はいい天気ですね。',
+        videoTitle: '葬送のフリーレン',
+        start: Duration(seconds: 4),
+        isCurrentVideo: true,
+      ),
+      VideoRemoteFavoriteEntry(
+        id: 'fav-2',
+        text: 'じゃあ、また明日。',
+        videoTitle: '葬送のフリーレン',
+        start: Duration(seconds: 36),
+        isCurrentVideo: true,
+      ),
+    ];
 
 Widget _app({
   required _Recorder recorder,
@@ -63,7 +86,17 @@ Widget _app({
   bool apple = false,
   VideoRemoteTranscriptController? controller,
   VideoRemoteNotice? notice,
+  List<VideoRemoteFavoriteEntry> favorites = const <VideoRemoteFavoriteEntry>[],
+  ValueNotifier<VideoRemoteFavoritesScope>? scope,
+  VideoRemoteLookupHighlight? lookupHighlight,
+  bool pageSwipeEnabled = true,
 }) {
+  // 收藏范围由「调用方」持有：范围回调里改它，脚手架据此滑到对应页。
+  final ValueNotifier<VideoRemoteFavoritesScope> scopeState =
+      scope ??
+      ValueNotifier<VideoRemoteFavoritesScope>(
+        VideoRemoteFavoritesScope.currentVideo,
+      );
   final ThemeData base = apple
       ? buildFushiThemeData(
           scheme: ColorScheme.fromSeed(seedColor: kFushiDefaultSeed),
@@ -81,41 +114,74 @@ Widget _app({
       child: child!,
     ),
     home: Scaffold(
-      body: VideoRemoteScaffold(
-        nowPlaying: const VideoRemoteNowPlaying(
-          title: '葬送のフリーレン',
-          episodeLabel: '第 7 話',
-          hostName: 'DESKTOP-STUDY',
-          isPlaying: true,
-          speed: 1.25,
-        ),
-        clock: _Clock(),
-        lines: lines ?? _lines(),
-        activeIndex: activeIndex,
-        favorites: const <VideoRemoteFavoriteEntry>[],
-        favoritesScope: VideoRemoteFavoritesScope.currentVideo,
-        controlLayout: layout ?? VideoRemoteControlLayout.defaults,
-        transcriptController: controller,
-        notice: notice,
-        callbacks: VideoRemoteCallbacks(
-          onBack: () {},
-          onControl: recorder.controls.add,
-          onLookup: (int line, int charOffset) =>
-              recorder.lookups.add((line, charOffset)),
-          onLineTap: recorder.lineTaps.add,
-          onFavoritesScopeChanged: (_) {},
-          onOpenFavorite: (_) {},
-          onRemoveFavorites: (_) {},
-          onRefresh: () {},
-          onSeek: (_) {},
-          onReplayLine: (_) {},
-          onToggleFavoriteLine: (_) {},
-          onMineLine: (_) {},
-          onCustomizeControls: () {},
-        ),
+      body: ValueListenableBuilder<VideoRemoteFavoritesScope>(
+        valueListenable: scopeState,
+        builder: (BuildContext context, VideoRemoteFavoritesScope scope, _) =>
+            VideoRemoteScaffold(
+              nowPlaying: const VideoRemoteNowPlaying(
+                title: '葬送のフリーレン',
+                episodeLabel: '第 7 話',
+                hostName: 'DESKTOP-STUDY',
+                isPlaying: true,
+                speed: 1.25,
+              ),
+              clock: _Clock(),
+              lines: lines ?? _lines(),
+              activeIndex: activeIndex,
+              favorites: favorites,
+              favoritesScope: scope,
+              controlLayout: layout ?? VideoRemoteControlLayout.defaults,
+              transcriptController: controller,
+              notice: notice,
+              lookupHighlight: lookupHighlight,
+              pageSwipeEnabled: pageSwipeEnabled,
+              onTabChanged: recorder.tabs.add,
+              callbacks: VideoRemoteCallbacks(
+                onBack: () {},
+                onControl: recorder.controls.add,
+                onLookup: (int line, int charOffset, Rect anchor) {
+                  recorder.lookups.add((line, charOffset));
+                  recorder.anchors.add(anchor);
+                },
+                onLineTap: recorder.lineTaps.add,
+                onLookupFavorite:
+                    (
+                      VideoRemoteFavoriteEntry entry,
+                      int charOffset,
+                      Rect anchor,
+                    ) => recorder.favoriteLookups.add((
+                      entry.id,
+                      charOffset,
+                      anchor,
+                    )),
+                onFavoritesScopeChanged: (VideoRemoteFavoritesScope next) {
+                  recorder.scopes.add(next);
+                  scopeState.value = next;
+                },
+                onOpenFavorite: (_) {},
+                onRemoveFavorites: (_) {},
+                onRefresh: () {},
+                onSeek: (_) {},
+                onReplayLine: (_) {},
+                onToggleFavoriteLine: (_) {},
+                onMineLine: (_) {},
+                onCustomizeControls: () {},
+              ),
+            ),
       ),
     ),
   );
+}
+
+/// 列表区 PageView 当前停在第几页（四舍五入）。
+int _pageOf(WidgetTester tester) =>
+    tester.widget<PageView>(find.byType(PageView)).controller!.page!.round();
+
+/// 在列表区中部横滑一屏宽的 [fraction]（负 = 向左滑，去下一页）。
+Future<void> _swipe(WidgetTester tester, double fraction) async {
+  final Rect area = tester.getRect(find.byType(PageView));
+  await tester.dragFrom(area.center, Offset(area.width * fraction, 0));
+  await tester.pumpAndSettle();
 }
 
 Future<void> _pumpAt(WidgetTester tester, Size size, Widget app) async {
@@ -393,6 +459,20 @@ void main() {
       final Offset local = boxes.first.toRect().center;
       await tester.tapAt(paragraph.localToGlobal(local));
       await tester.pump(const Duration(milliseconds: 50));
+      // 锚点是被点词的真实全局矩形（被点字位→句末并集），不是手指按下点：
+      // 必须盖住被点的那个字，弹框才会贴在词的正上方 / 正下方。
+      final Rect anchor = recorder.anchors.last;
+      expect(anchor, isNot(Rect.zero));
+      expect(
+        anchor.contains(paragraph.localToGlobal(local)),
+        isTrue,
+        reason: 'anchor $anchor must cover tapped glyph $charIndex',
+      );
+      final Rect glyph = boxes.first.toRect().shift(
+        paragraph.localToGlobal(Offset.zero),
+      );
+      expect(anchor.top, lessThanOrEqualTo(glyph.top + 0.5));
+      expect(anchor.bottom, greaterThanOrEqualTo(glyph.bottom - 0.5));
     }
     expect(recorder.lookups, <(int, int)>[(line, 0), (line, 3), (line, 7)]);
     expect(recorder.lineTaps, isEmpty);
@@ -460,15 +540,11 @@ void main() {
       find.byKey(const ValueKey<String>('video-remote-wide')),
       findsOneWidget,
     );
+    // 横屏右栏仍停在「收藏·当前视频」那一页。
+    expect(_pageOf(tester), 1);
     expect(
-      _revealOf(
-        tester,
-        find.byKey(
-          const ValueKey<String>('video-remote-favorites-scope'),
-          skipOffstage: false,
-        ),
-      ).visible,
-      isTrue,
+      find.byKey(const ValueKey<String>('video-remote-favorites-scope')),
+      findsOneWidget,
     );
     await tester.tap(
       find.byKey(const ValueKey<String>('video-remote-tab-transcript')),
@@ -539,5 +615,277 @@ void main() {
       videoRemoteLineOpacity(index: 9, activeIndex: -1, following: true),
       0.62,
     );
+  });
+
+  group('左右滑动切页', () {
+    for (final Size size in const <Size>[Size(390, 844), Size(844, 390)]) {
+      final String label = size.width > size.height ? '横屏' : '竖屏';
+      testWidgets('$label：滑动在字幕 / 收藏·当前 / 收藏·全部之间切，按钮跟着变', (
+        WidgetTester tester,
+      ) async {
+        final _Recorder recorder = _Recorder();
+        final ValueNotifier<VideoRemoteFavoritesScope> scope =
+            ValueNotifier<VideoRemoteFavoritesScope>(
+              VideoRemoteFavoritesScope.currentVideo,
+            );
+        addTearDown(scope.dispose);
+        await _pumpAt(
+          tester,
+          size,
+          _app(recorder: recorder, favorites: _favoriteEntries, scope: scope),
+        );
+        expect(_pageOf(tester), 0);
+
+        await _swipe(tester, -0.8);
+        expect(_pageOf(tester), 1);
+        expect(recorder.tabs, <VideoRemoteTab>[VideoRemoteTab.favorites]);
+        expect(recorder.scopes, isEmpty);
+        expect(
+          find.byKey(const ValueKey<String>('video-remote-favorite-fav-1')),
+          findsOneWidget,
+        );
+
+        await _swipe(tester, -0.8);
+        expect(_pageOf(tester), 2);
+        // 切范围仍走范围回调（页面据此重取「全部视频」）。
+        expect(recorder.scopes, <VideoRemoteFavoritesScope>[
+          VideoRemoteFavoritesScope.allVideos,
+        ]);
+        expect(scope.value, VideoRemoteFavoritesScope.allVideos);
+        expect(recorder.tabs, <VideoRemoteTab>[VideoRemoteTab.favorites]);
+
+        // 最后一页再往左滑：停在原地。
+        await _swipe(tester, -0.8);
+        expect(_pageOf(tester), 2);
+
+        await _swipe(tester, 0.8);
+        await _swipe(tester, 0.8);
+        expect(_pageOf(tester), 0);
+        expect(recorder.tabs, <VideoRemoteTab>[
+          VideoRemoteTab.favorites,
+          VideoRemoteTab.transcript,
+        ]);
+        expect(recorder.scopes, <VideoRemoteFavoritesScope>[
+          VideoRemoteFavoritesScope.allVideos,
+          VideoRemoteFavoritesScope.currentVideo,
+        ]);
+        expect(tester.takeException(), isNull);
+      });
+    }
+
+    testWidgets('按钮切页签 / 范围，页面滑到对应页', (WidgetTester tester) async {
+      final _Recorder recorder = _Recorder();
+      final ValueNotifier<VideoRemoteFavoritesScope> scope =
+          ValueNotifier<VideoRemoteFavoritesScope>(
+            VideoRemoteFavoritesScope.currentVideo,
+          );
+      addTearDown(scope.dispose);
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(recorder: recorder, favorites: _favoriteEntries, scope: scope),
+      );
+      await tester.tap(
+        find.descendant(
+          of: find.byKey(const ValueKey<String>('video-remote-tab-switch')),
+          matching: find.text('Favorites'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(_pageOf(tester), 1);
+      expect(recorder.tabs, <VideoRemoteTab>[VideoRemoteTab.favorites]);
+
+      // 收藏页里的范围按钮切到「全部」：页面滑到第三页。
+      await tester.tap(
+        find.descendant(
+          of: find.byKey(
+            const ValueKey<String>('video-remote-favorites-scope'),
+          ),
+          matching: find.text('All videos'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(recorder.scopes, <VideoRemoteFavoritesScope>[
+        VideoRemoteFavoritesScope.allVideos,
+      ]);
+      expect(_pageOf(tester), 2);
+
+      // 回到字幕：从第三页直接回第一页，范围不变。
+      await tester.tap(
+        find.descendant(
+          of: find.byKey(const ValueKey<String>('video-remote-tab-switch')),
+          matching: find.text('Subtitles'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(_pageOf(tester), 0);
+      expect(recorder.scopes, hasLength(1));
+
+      // 范围是「全部」时点收藏页签：直接到第三页。
+      await tester.tap(
+        find.descendant(
+          of: find.byKey(const ValueKey<String>('video-remote-tab-switch')),
+          matching: find.text('Favorites'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(_pageOf(tester), 2);
+      expect(tester.takeException(), isNull);
+    });
+
+    testWidgets('查词弹框开着（pageSwipeEnabled=false）时横滑不切页', (
+      WidgetTester tester,
+    ) async {
+      final _Recorder recorder = _Recorder();
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(recorder: recorder, pageSwipeEnabled: false),
+      );
+      await _swipe(tester, -0.8);
+      expect(_pageOf(tester), 0);
+      expect(recorder.tabs, isEmpty);
+    });
+
+    testWidgets('竖向滚动字幕不会误切页', (WidgetTester tester) async {
+      final _Recorder recorder = _Recorder();
+      await _pumpAt(tester, const Size(390, 844), _app(recorder: recorder));
+      await tester.drag(
+        find.byKey(const ValueKey<String>('video-remote-transcript-list')),
+        const Offset(12, -300),
+      );
+      await tester.pumpAndSettle();
+      expect(_pageOf(tester), 0);
+      expect(recorder.tabs, isEmpty);
+    });
+
+    test('页码纯函数', () {
+      expect(
+        videoRemotePageIndex(
+          VideoRemoteTab.transcript,
+          VideoRemoteFavoritesScope.allVideos,
+        ),
+        0,
+      );
+      expect(
+        videoRemotePageIndex(
+          VideoRemoteTab.favorites,
+          VideoRemoteFavoritesScope.currentVideo,
+        ),
+        1,
+      );
+      expect(
+        videoRemotePageIndex(
+          VideoRemoteTab.favorites,
+          VideoRemoteFavoritesScope.allVideos,
+        ),
+        2,
+      );
+    });
+  });
+
+  group('查词高亮', () {
+    const ValueKey<String> highlightKey = ValueKey<String>(
+      'subtitle-transcript-lookup-highlight',
+    );
+    Finder highlightIn(Finder scope) =>
+        find.descendant(of: scope, matching: find.byKey(highlightKey));
+
+    testWidgets('只画在所属字幕行上，null 时一处都没有', (WidgetTester tester) async {
+      final _Recorder recorder = _Recorder();
+      await _pumpAt(tester, const Size(390, 844), _app(recorder: recorder));
+      expect(find.byKey(highlightKey), findsNothing);
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(
+          recorder: recorder,
+          lookupHighlight: const VideoRemoteLookupHighlight(
+            surface: VideoRemoteLookupSurface.transcript,
+            id: 'cue-5',
+            text: 'この町に来てから、もう三年が経った。',
+            graphemeStart: 2,
+            graphemeCount: 1,
+          ),
+        ),
+      );
+      expect(
+        highlightIn(find.byKey(const ValueKey<String>('video-remote-line-5'))),
+        findsOneWidget,
+      );
+      expect(find.byKey(highlightKey), findsOneWidget);
+      // 文本对不上（换了字幕版本）就不画。
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(
+          recorder: recorder,
+          lookupHighlight: const VideoRemoteLookupHighlight(
+            surface: VideoRemoteLookupSurface.transcript,
+            id: 'cue-5',
+            text: '別の文',
+            graphemeStart: 0,
+            graphemeCount: 1,
+          ),
+        ),
+      );
+      expect(find.byKey(highlightKey), findsNothing);
+    });
+
+    testWidgets('收藏卡：高亮画在那张卡上，点字回调带锚点', (WidgetTester tester) async {
+      final _Recorder recorder = _Recorder();
+      final ValueNotifier<VideoRemoteFavoritesScope> scope =
+          ValueNotifier<VideoRemoteFavoritesScope>(
+            VideoRemoteFavoritesScope.currentVideo,
+          );
+      addTearDown(scope.dispose);
+      await _pumpAt(
+        tester,
+        const Size(390, 844),
+        _app(
+          recorder: recorder,
+          favorites: _favoriteEntries,
+          scope: scope,
+          lookupHighlight: const VideoRemoteLookupHighlight(
+            surface: VideoRemoteLookupSurface.favorite,
+            id: 'fav-2',
+            text: 'じゃあ、また明日。',
+            graphemeStart: 6,
+            graphemeCount: 2,
+          ),
+        ),
+      );
+      await _swipe(tester, -0.8);
+      expect(_pageOf(tester), 1);
+      final Finder card1 = find.byKey(
+        const ValueKey<String>('video-remote-favorite-fav-1'),
+      );
+      final Finder card2 = find.byKey(
+        const ValueKey<String>('video-remote-favorite-fav-2'),
+      );
+      expect(highlightIn(card2), findsOneWidget);
+      expect(highlightIn(card1), findsNothing);
+      // 收藏的高亮不会画到字幕行上（字幕页离屏，连同离屏一起数）。
+      expect(find.byKey(highlightKey, skipOffstage: false), findsOneWidget);
+
+      final RenderParagraph paragraph = tester.renderObject<RenderParagraph>(
+        find.descendant(of: card1, matching: find.byType(RichText)).first,
+      );
+      final Offset local = paragraph
+          .getBoxesForSelection(
+            const TextSelection(baseOffset: 2, extentOffset: 3),
+          )
+          .first
+          .toRect()
+          .center;
+      await tester.tapAt(paragraph.localToGlobal(local));
+      await tester.pump(const Duration(milliseconds: 50));
+      expect(recorder.favoriteLookups, hasLength(1));
+      final (String id, int offset, Rect anchor) =
+          recorder.favoriteLookups.single;
+      expect(id, 'fav-1');
+      expect(offset, 2);
+      expect(anchor.contains(paragraph.localToGlobal(local)), isTrue);
+    });
   });
 }

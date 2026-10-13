@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:fushi/i18n/strings.g.dart';
@@ -15,6 +16,7 @@ import 'package:fushi/src/utils/adaptive/adaptive_platform.dart'
 import 'package:fushi/src/utils/components/fushi_floating_toolbar.dart';
 import 'package:fushi/src/utils/components/fushi_inline_notice.dart';
 import 'package:fushi/src/utils/components/fushi_m3e_player.dart';
+import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
 import 'package:fushi/src/utils/components/glass/fushi_expressive.dart'
     show FushiConnectedButtonGroup;
@@ -49,7 +51,7 @@ class VideoRemoteCallbacks {
   /// 控制按钮。`followCurrent` 由脚手架自己处理（回到当前句），不会转发。
   final ValueChanged<VideoRemoteControlItem> onControl;
 
-  /// 字幕里点字查词：行下标 + 字下标（grapheme）。
+  /// 字幕里点字查词：行下标 + 字下标（grapheme）+ 被点词的全局锚点矩形。
   final VideoRemoteLookupCallback onLookup;
 
   final ValueChanged<VideoRemoteFavoritesScope> onFavoritesScopeChanged;
@@ -70,7 +72,7 @@ class VideoRemoteCallbacks {
   final ValueChanged<int>? onToggleFavoriteLine;
   final ValueChanged<int>? onMineLine;
 
-  /// 收藏卡里点字查词；null = 收藏句子不逐字可点。
+  /// 收藏卡里点字查词（带被点词的全局锚点矩形）；null = 收藏句子不逐字可点。
   final VideoRemoteFavoriteLookupCallback? onLookupFavorite;
 
   /// ⋯ 菜单里的「自定义按钮」（通常 `showVideoRemoteControlEditor`）；null =
@@ -85,6 +87,12 @@ class VideoRemoteCallbacks {
 ///    `adaptiveOverflow` 宽度不够才收进 ⋯）+ 中间列表 + 底部浮动控制卡；
 ///  * 横屏 / 平板：左栏信息 + 控制卡，右栏顶栏 + [字幕|收藏] 列表。
 /// 背景是封面取色的 mesh（Apple 设计系统用平底）。
+///
+/// 列表区是三页横排的 [PageView]：「字幕」「收藏·当前视频」「收藏·全部视频」，
+/// 左右滑动切换（竖横屏都有）。滑动与按钮双向同步：页签按钮 / 收藏范围按钮切了，
+/// 页面跟着滑过去（M3E spatial 弹簧，动效关闭时瞬切）；滑停在某页，页签与范围
+/// 跟着变（范围变化走 [VideoRemoteCallbacks.onFavoritesScopeChanged]，页签变化走
+/// [onTabChanged]）。[pageSwipeEnabled] 为 false（查词弹框开着）时不响应横滑。
 ///
 /// 状态归属：
 ///  * 当前页签由本组件持有（初值 [initialTab]，变化回调 [onTabChanged]）；
@@ -112,6 +120,8 @@ class VideoRemoteScaffold extends StatefulWidget {
     this.transcriptReplayKey,
     this.lineTextStyle,
     this.animateBackdrop = false,
+    this.lookupHighlight,
+    this.pageSwipeEnabled = true,
   });
 
   final VideoRemoteNowPlaying nowPlaying;
@@ -144,6 +154,13 @@ class VideoRemoteScaffold extends StatefulWidget {
   /// 白白耗电发热（spec「没有动态背景」）。
   final bool animateBackdrop;
 
+  /// 当前查词弹框正在查的词：画在它所属的字幕行 / 收藏卡上；null = 不高亮。
+  final VideoRemoteLookupHighlight? lookupHighlight;
+
+  /// 列表区能否左右滑动切页。查词弹框开着时调用方传 false，避免和弹框的横滑
+  /// 关闭、逐字点击抢手势。
+  final bool pageSwipeEnabled;
+
   @override
   State<VideoRemoteScaffold> createState() => _VideoRemoteScaffoldState();
 }
@@ -152,10 +169,20 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
   final GlobalKey _transcriptKey = GlobalKey(
     debugLabel: 'video-remote-transcript',
   );
-  final GlobalKey _favoritesKey = GlobalKey(
-    debugLabel: 'video-remote-favorites',
+  final GlobalKey _favoritesCurrentKey = GlobalKey(
+    debugLabel: 'video-remote-favorites-current',
   );
+  final GlobalKey _favoritesAllKey = GlobalKey(
+    debugLabel: 'video-remote-favorites-all',
+  );
+
+  /// 三页横排的 PageView 整体挂这个 key：竖横屏切换时整棵（含保活的离屏页）
+  /// 搬家，各页滚动位置 / 搜索词不丢。
+  final GlobalKey _pagesKey = GlobalKey(debugLabel: 'video-remote-pages');
   late VideoRemoteTab _tab = widget.initialTab;
+  late final PageController _pages = PageController(
+    initialPage: videoRemotePageIndex(_tab, widget.favoritesScope),
+  );
   VideoRemoteTranscriptController? _ownController;
   VideoRemoteNotice? _lastNotice;
 
@@ -183,10 +210,16 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
     if (oldWidget.nowPlaying.cover != widget.nowPlaying.cover) {
       _resolveCoverScheme();
     }
+    // 收藏范围按钮（或调用方）换了范围：停在收藏页时滑到对应那一页。
+    if (oldWidget.favoritesScope != widget.favoritesScope &&
+        _tab == VideoRemoteTab.favorites) {
+      _goToPage(videoRemotePageIndex(_tab, widget.favoritesScope));
+    }
   }
 
   @override
   void dispose() {
+    _pages.dispose();
     _ownController?.dispose();
     super.dispose();
   }
@@ -232,6 +265,55 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
     if (tab == _tab) return;
     setState(() => _tab = tab);
     widget.onTabChanged?.call(tab);
+    _goToPage(videoRemotePageIndex(tab, widget.favoritesScope));
+  }
+
+  /// 按钮侧切页：滑到第 [page] 页（M3E spatial 弹簧；动效关闭时瞬切）。
+  void _goToPage(int page) {
+    if (!_pages.hasClients || _pages.positions.length != 1) return;
+    final double? current = _pages.page;
+    if (current != null && (current - page).abs() < 0.001) return;
+    final FushiSpringSpec spring = context.fushiMotion.spatialDefault;
+    if (!spring.enabled || spring.duration == Duration.zero) {
+      _pages.jumpToPage(page);
+      return;
+    }
+    unawaited(
+      _pages.animateToPage(
+        page,
+        duration: spring.duration,
+        curve: spring.curve,
+      ),
+    );
+  }
+
+  /// 滑动侧切页：滑停后把页签与收藏范围同步成这一页（按钮驱动的动画停下时
+  /// 两者本就一致，这里是 no-op）。
+  bool _onPagesScroll(ScrollNotification notification) {
+    if (notification.depth != 0 ||
+        notification is! ScrollEndNotification ||
+        notification.metrics is! PageMetrics) {
+      return false;
+    }
+    final double? page = (notification.metrics as PageMetrics).page;
+    if (page == null) return false;
+    final int index = page.round().clamp(0, 2);
+    final VideoRemoteTab tab = index == 0
+        ? VideoRemoteTab.transcript
+        : VideoRemoteTab.favorites;
+    if (tab == VideoRemoteTab.favorites) {
+      final VideoRemoteFavoritesScope scope = index == 2
+          ? VideoRemoteFavoritesScope.allVideos
+          : VideoRemoteFavoritesScope.currentVideo;
+      if (scope != widget.favoritesScope) {
+        widget.callbacks.onFavoritesScopeChanged(scope);
+      }
+    }
+    if (tab != _tab) {
+      setState(() => _tab = tab);
+      widget.onTabChanged?.call(tab);
+    }
+    return false;
   }
 
   void _onControl(VideoRemoteControlItem item) {
@@ -344,38 +426,54 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
     onMineLine: widget.callbacks.onMineLine,
     textStyle: widget.lineTextStyle,
     entranceReplayKey: widget.transcriptReplayKey,
+    lookupHighlight: widget.lookupHighlight,
   );
 
-  Widget _favorites() => VideoRemoteFavoritesView(
-    key: _favoritesKey,
-    entries: widget.favorites,
-    scope: widget.favoritesScope,
-    onScopeChanged: widget.callbacks.onFavoritesScopeChanged,
-    onOpen: widget.callbacks.onOpenFavorite,
-    onRemove: widget.callbacks.onRemoveFavorites,
-    onLookup: widget.callbacks.onLookupFavorite,
-    loading: widget.favoritesLoading,
-  );
+  /// 收藏的一页（当前视频 / 全部视频各一页）。调用方一次只取当前范围那一批：
+  /// 另一页在滑过去、范围回调取回新一批之前显示加载中，不拿别的范围的条目冒充。
+  Widget _favorites(VideoRemoteFavoritesScope scope) {
+    final bool active = scope == widget.favoritesScope;
+    return VideoRemoteFavoritesView(
+      key: scope == VideoRemoteFavoritesScope.allVideos
+          ? _favoritesAllKey
+          : _favoritesCurrentKey,
+      entries: active ? widget.favorites : const <VideoRemoteFavoriteEntry>[],
+      scope: scope,
+      onScopeChanged: widget.callbacks.onFavoritesScopeChanged,
+      onOpen: widget.callbacks.onOpenFavorite,
+      onRemove: widget.callbacks.onRemoveFavorites,
+      onLookup: widget.callbacks.onLookupFavorite,
+      loading: !active || widget.favoritesLoading,
+      lookupHighlight: widget.lookupHighlight,
+    );
+  }
 
-  /// 两个页签叠放、都保活：切换走水平共享轴（淡入 + 从所在一侧滑入），隐藏的
-  /// 那页不画、不吃指针、不进语义树，但滚动位置与搜索词都在。
+  /// 三页横排（字幕 / 收藏·当前视频 / 收藏·全部视频），都保活：离屏页不画、
+  /// 不吃指针，但滚动位置与搜索词都在。
   Widget _tabBody() {
-    return Stack(
-      fit: StackFit.expand,
-      children: <Widget>[
-        FushiChromeReveal(
-          visible: _tab == VideoRemoteTab.transcript,
-          from: AxisDirection.left,
-          distance: 32,
-          child: _transcript(),
-        ),
-        FushiChromeReveal(
-          visible: _tab == VideoRemoteTab.favorites,
-          from: AxisDirection.right,
-          distance: 32,
-          child: _favorites(),
-        ),
-      ],
+    return NotificationListener<ScrollNotification>(
+      onNotification: _onPagesScroll,
+      child: PageView(
+        key: _pagesKey,
+        controller: _pages,
+        physics: widget.pageSwipeEnabled
+            ? const PageScrollPhysics()
+            : const NeverScrollableScrollPhysics(),
+        children: <Widget>[
+          _VideoRemoteKeepAlive(
+            key: const ValueKey<String>('video-remote-page-transcript'),
+            child: _transcript(),
+          ),
+          _VideoRemoteKeepAlive(
+            key: const ValueKey<String>('video-remote-page-favorites-current'),
+            child: _favorites(VideoRemoteFavoritesScope.currentVideo),
+          ),
+          _VideoRemoteKeepAlive(
+            key: const ValueKey<String>('video-remote-page-favorites-all'),
+            child: _favorites(VideoRemoteFavoritesScope.allVideos),
+          ),
+        ],
+      ),
     );
   }
 
@@ -551,5 +649,35 @@ class _VideoRemoteScaffoldState extends State<VideoRemoteScaffold> {
         },
       ),
     );
+  }
+}
+
+/// 列表区第几页：0 = 字幕，1 = 收藏·当前视频，2 = 收藏·全部视频（纯函数，测试用）。
+int videoRemotePageIndex(VideoRemoteTab tab, VideoRemoteFavoritesScope scope) =>
+    switch (tab) {
+      VideoRemoteTab.transcript => 0,
+      VideoRemoteTab.favorites =>
+        scope == VideoRemoteFavoritesScope.allVideos ? 2 : 1,
+    };
+
+/// PageView 的一页保活（离屏也不销毁，滚动位置 / 搜索词 / 多选都在）。
+class _VideoRemoteKeepAlive extends StatefulWidget {
+  const _VideoRemoteKeepAlive({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  State<_VideoRemoteKeepAlive> createState() => _VideoRemoteKeepAliveState();
+}
+
+class _VideoRemoteKeepAliveState extends State<_VideoRemoteKeepAlive>
+    with AutomaticKeepAliveClientMixin<_VideoRemoteKeepAlive> {
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
+  Widget build(BuildContext context) {
+    super.build(context);
+    return widget.child;
   }
 }

@@ -144,6 +144,58 @@ class VideoRemoteNotice {
   final VoidCallback? onAction;
 }
 
+/// 查词高亮画在哪一处：字幕列表的行，还是收藏卡。
+enum VideoRemoteLookupSurface { transcript, favorite }
+
+/// 当前查词弹框正在查的词在行内的高亮：哪一处（[surface] + [id]：字幕行
+/// [VideoRemoteTranscriptLine.id] / 收藏 [VideoRemoteFavoriteEntry.id]）的哪一段
+/// grapheme 区间。[text] 一并核对，行文本变了（换字幕版本）就不再高亮。
+@immutable
+class VideoRemoteLookupHighlight {
+  const VideoRemoteLookupHighlight({
+    required this.surface,
+    required this.id,
+    required this.text,
+    required this.graphemeStart,
+    required this.graphemeCount,
+  });
+
+  final VideoRemoteLookupSurface surface;
+  final String id;
+  final String text;
+  final int graphemeStart;
+  final int graphemeCount;
+
+  ({int start, int count})? _rangeFor(
+    VideoRemoteLookupSurface surface,
+    String id,
+    String text,
+  ) => surface == this.surface && id == this.id && text == this.text
+      ? (start: graphemeStart, count: graphemeCount)
+      : null;
+
+  /// 字幕行 [line] 上要画的区间；不是这一行为 null。
+  ({int start, int count})? rangeForLine(VideoRemoteTranscriptLine line) =>
+      _rangeFor(VideoRemoteLookupSurface.transcript, line.id, line.text);
+
+  /// 收藏卡 [entry] 上要画的区间；不是这一条为 null。
+  ({int start, int count})? rangeForFavorite(VideoRemoteFavoriteEntry entry) =>
+      _rangeFor(VideoRemoteLookupSurface.favorite, entry.id, entry.text);
+
+  @override
+  bool operator ==(Object other) =>
+      other is VideoRemoteLookupHighlight &&
+      other.surface == surface &&
+      other.id == id &&
+      other.text == text &&
+      other.graphemeStart == graphemeStart &&
+      other.graphemeCount == graphemeCount;
+
+  @override
+  int get hashCode =>
+      Object.hash(surface, id, text, graphemeStart, graphemeCount);
+}
+
 /// 页签。
 enum VideoRemoteTab { transcript, favorites }
 

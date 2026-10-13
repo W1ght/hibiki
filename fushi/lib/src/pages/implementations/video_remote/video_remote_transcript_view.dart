@@ -26,9 +26,11 @@ import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:material_ui/material_ui.dart';
 
 /// 查词回调：第 [lineIndex] 行、第 [charOffset] 个字（grapheme 下标，与
-/// `subtitleTranscriptLookupSpan(text, charOffset)` 同口径）。
+/// `subtitleTranscriptLookupSpan(text, charOffset)` 同口径）+ 查词弹框的全局锚点
+/// 矩形 [anchor]（被点字位→句末的字形盒并集，见 `subtitleListLookupAnchorRect`；
+/// 键盘查词没有几何时为 [Rect.zero]）。
 typedef VideoRemoteLookupCallback =
-    void Function(int lineIndex, int charOffset);
+    void Function(int lineIndex, int charOffset, Rect anchor);
 
 /// 当前句停在可视带的这个高度比例（与歌词模式 anchorY 同口径）。
 const double kVideoRemoteTranscriptAnchor = 0.42;
@@ -97,6 +99,7 @@ class VideoRemoteTranscriptView extends StatefulWidget {
     this.padding = EdgeInsets.zero,
     this.entranceReplayKey,
     this.keyboardLookup = false,
+    this.lookupHighlight,
   });
 
   /// 主轨字幕行（副轨挂在各行的 secondaryText 上）。
@@ -133,6 +136,9 @@ class VideoRemoteTranscriptView extends StatefulWidget {
 
   /// 键盘逐字查词（外接键盘 / 桌面）。
   final bool keyboardLookup;
+
+  /// 正在查的词（只画在它所属的那一行）；null = 不高亮。
+  final VideoRemoteLookupHighlight? lookupHighlight;
 
   @override
   State<VideoRemoteTranscriptView> createState() =>
@@ -358,8 +364,11 @@ class _VideoRemoteTranscriptViewState extends State<VideoRemoteTranscriptView> {
                       ),
                       baseStyle: base,
                       keyboardLookup: widget.keyboardLookup,
-                      onLookup: (int charOffset) =>
-                          widget.onLookup(index, charOffset),
+                      lookupHighlight: widget.lookupHighlight?.rangeForLine(
+                        widget.lines[index],
+                      ),
+                      onLookup: (int charOffset, Rect anchor) =>
+                          widget.onLookup(index, charOffset, anchor),
                       onTap: widget.onLineTap == null
                           ? null
                           : () => widget.onLineTap!(index),
@@ -434,6 +443,7 @@ class _TranscriptRow extends StatelessWidget {
     required this.opacity,
     required this.baseStyle,
     required this.keyboardLookup,
+    required this.lookupHighlight,
     required this.onLookup,
     required this.onTap,
     required this.onLongPress,
@@ -445,7 +455,8 @@ class _TranscriptRow extends StatelessWidget {
   final double opacity;
   final TextStyle baseStyle;
   final bool keyboardLookup;
-  final ValueChanged<int> onLookup;
+  final SubtitleTranscriptHighlightRange? lookupHighlight;
+  final void Function(int charOffset, Rect anchor) onLookup;
   final VoidCallback? onTap;
   final VoidCallback onLongPress;
 
@@ -498,8 +509,8 @@ class _TranscriptRow extends StatelessWidget {
                               'video-remote-line-text-$index',
                             ),
                             keyboardLookup: keyboardLookup,
-                            onLookup: (int graphemeIndex, Rect _) =>
-                                onLookup(graphemeIndex),
+                            lookupHighlight: lookupHighlight,
+                            onLookup: onLookup,
                             onBackgroundTap: onTap,
                           ),
                           if (secondary != null) ...<Widget>[
