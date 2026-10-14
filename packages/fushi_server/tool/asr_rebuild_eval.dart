@@ -27,7 +27,10 @@ Future<void> main(List<String> args) async {
           (jsonDecode(line) as Map<Object?, Object?>).cast<String, Object?>(),
         ),
   ];
-  final List<AsrCue> asrCues = const AsrCueBuilder().build(segments);
+  // -DTAIL_PAD=-1 复现旧段尾（外扩边界），用于基线对照。
+  const int tailPad = int.fromEnvironment('TAIL_PAD', defaultValue: 80);
+  final List<AsrCue> asrCues =
+      const AsrCueBuilder(tailPadMs: tailPad).build(segments);
   final String srt = p.join(jobDir, AsrJobFiles.srt);
   File(srt).writeAsStringSync(serializeAsrCuesToSrt(asrCues));
   File(p.join(jobDir, AsrJobFiles.cueTokens))
@@ -53,6 +56,13 @@ Future<void> main(List<String> args) async {
     result: result,
     subtitlePath: srt,
     hasTokenTiming: timing,
+  );
+  // 只含命中书文的 cue（Hoshi 等按文本游标匹配的外部播放器用）。
+  File(p.join(jobDir, 'transcript.matched.srt')).writeAsStringSync(
+    serializeAudioCuesToSrt(<AudioCue>[
+      for (int i = 0; i < done.cues.length; i++)
+        if (done.result.matches[i].matched) done.cues[i],
+    ]),
   );
   stdout.writeln(
     'segments=${segments.length} asrCues=${asrCues.length} '
