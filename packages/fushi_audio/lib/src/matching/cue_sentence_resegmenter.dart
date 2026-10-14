@@ -46,6 +46,7 @@ class CueSentenceResegmenter {
     this.maxDensityRatio = 2.0,
     this.densitySlackMs = 250,
     this.forwardPauseMs = 700,
+    this.unheardLeadMs = 1000,
   }) : assert(frameMs > 0, 'frameMs 是时长下限：合缝按时长分权重，0 会让全零时长的中间 cue 除零');
 
   /// 新边界起点在该句首 token 之前预留的毫秒数（补偿 RNN-T 发射延迟）。
@@ -73,6 +74,9 @@ class CueSentenceResegmenter {
   /// 无 token 的正文片前后两片之间的停顿（前片末 token → 后片首 token）达到此
   /// 值时，该片并入后一片而不是前一片。
   final int forwardPauseMs;
+
+  /// 片首 token 离所属原 cue 起点超过此值，视为那条原 cue 开头有被漏听的语音。
+  final int unheardLeadMs;
 
   /// 正文里的句末标点（与 `AsrCueBuilder.sentenceTerminators` 同源同义）。
   static const String sentenceTerminators = '。！？!?…‥．.';
@@ -471,8 +475,13 @@ class CueSentenceResegmenter {
         final _Boundary? kept = boundaries[pieces[k + 1].start];
         ends[k] = kept?.endMs ?? (pieces[k + 1].firstTokenMs - leadInMs);
         // 新边界落在两条原 cue 之间（中间隔着 VAD 静音）：终点不越过本片末
-        // token 所属原 cue 的收声终点，否则字幕跨着整段停顿挂到下一句。
-        if (kept == null && p.lastCueEndMs < pieces[k + 1].firstTokenMs) {
+        // token 所属原 cue 的收声终点，否则字幕跨着整段停顿挂到下一句。但后一片
+        // 的首 token 离它那条原 cue 的起点很远时，那段开头的语音被 ASR 整段漏听了
+        // （「まったく、｜人を貶める…のかしら。」只听出「まったく」），合缝已把
+        // 那段正文归给本片，终点就该延到那段语音之后，不能卡回前一个 VAD 段。
+        if (kept == null &&
+            p.lastCueEndMs < pieces[k + 1].firstTokenMs &&
+            pieces[k + 1].leadingSilenceMs < unheardLeadMs) {
           ends[k] = math.min(ends[k], p.lastCueEndMs);
         }
       }
@@ -573,6 +582,7 @@ class CueSentenceResegmenter {
           text: timing.tokens[k],
           timeMs: timeMs,
           bookPos: bookPos,
+          cueStartMs: cue.startMs,
           cueEndMs: cue.endMs,
         ),
       );
@@ -770,6 +780,7 @@ class _Token {
     required this.text,
     required this.timeMs,
     required this.bookPos,
+    required this.cueStartMs,
     required this.cueEndMs,
   });
 
@@ -778,6 +789,8 @@ class _Token {
   final int bookPos;
 
   /// 该 token 所属原 cue 的终点（转录时按 VAD 收声点定的）。
+  /// 该 token 所属原 cue 的起点。
+  final int cueStartMs;
   final int cueEndMs;
 }
 
@@ -805,6 +818,10 @@ class _Piece {
 
   /// 片内最后一个 token 所属原 cue 的终点。
   int get lastCueEndMs => tokens.last.cueEndMs;
+
+  /// 片首 token 离它所属原 cue 起点多远：远了说明那条原 cue 开头有一段语音没被
+  /// 听写出来（RNN-T 整段漏字）。
+  int get leadingSilenceMs => tokens.first.timeMs - tokens.first.cueStartMs;
 }
 
 class _RunOutput {
