@@ -35,7 +35,21 @@ Future<void> main(List<String> args) async {
   File(srt).writeAsStringSync(serializeAsrCuesToSrt(asrCues));
   File(p.join(jobDir, AsrJobFiles.cueTokens))
       .writeAsStringSync(serializeAsrCueTokens(asrCues));
-  File(p.join(jobDir, AsrJobFiles.state)).writeAsStringSync('{}');
+  // 检查点旁的 state.json（各文件时长）与能量包络一起带过来，对齐收尾里的
+  // 句界吸附才能跑；没有就写空状态（只当作「是转录产物」的标记）。
+  final String srcDir = p.dirname(segmentsPath);
+  final File srcState = File(p.join(srcDir, AsrJobFiles.state));
+  if (srcState.existsSync()) {
+    srcState.copySync(p.join(jobDir, AsrJobFiles.state));
+  } else {
+    File(p.join(jobDir, AsrJobFiles.state)).writeAsStringSync('{}');
+  }
+  for (final FileSystemEntity e in Directory(srcDir).listSync()) {
+    final String name = p.basename(e.path);
+    if (e is File && name.startsWith('transcript.energy.') && srcDir != jobDir) {
+      e.copySync(p.join(jobDir, name));
+    }
+  }
 
   final Stopwatch sw = Stopwatch()..start();
   final List<EpubSection> sections = epubSectionsFromBook(

@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:isolate';
+import 'dart:typed_data';
 import 'package:fushi_audio/fushi_audio_core.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:path/path.dart' as p;
@@ -164,6 +165,14 @@ Future<({List<AudioCue> cues, MatchResult result})> finalizeAlignedCues({
       cues: cues,
       result: result,
     );
+    // 句界吸到真实停顿上：转录时顺手写下的能量包络（旧任务没有就跳过）。
+    final Int8List? energy = readAsrEnergyTimeline(
+      Directory(p.dirname(subtitlePath)),
+    );
+    if (energy != null) {
+      final int moved = const CueEnergySnapper().snap(cues, energy);
+      fushiDebugPrint('[fushi-import] energy snap: $moved boundaries');
+    }
   }
   SubtitleRematchCodec.applyToCues(cues: cues, result: result);
   if (asrGenerated) {
