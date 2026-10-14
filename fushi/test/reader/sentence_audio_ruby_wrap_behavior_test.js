@@ -315,7 +315,7 @@ function makeReader(cueRoots) {
     'fillSentenceAudioRubyGaps', 'watchSentenceAudioRubyGapLayout', 'paintSentenceAudioRubyGaps',
     'eraseSentenceAudioRubyGaps', 'clearSentenceAudioRubyGaps', '_setReanchorPending',
     'sentenceAudioLineRects', 'sentenceAudioSameLine', 'sentenceAudioJoinGap', 'splitSentenceAudioJoinLines',
-    'splitSentenceAudioWrapper', 'wrapSentenceAudioGroup']
+    'splitSentenceAudioWrapper', 'wrapSentenceAudioGroup', 'withLiveRangeBatch']
     .map(extractMethod).join(',\n');
   vm.runInContext('var R = {\n' + methods + '\n};', sandbox);
   installSelectionSide(sandbox);
@@ -544,13 +544,13 @@ function makeVnReader() {
     console: { log() {} },
   };
   vm.createContext(sandbox);
-  const methods = ['wrapSentenceAudioCueRanges', 'clearInlineSentenceAudioCue', 'applyInlineSentenceAudioCue',
-    'clearCurrentSentenceAudioScreenTargets']
+  const methods = ['wrapSentenceAudioCueRanges', 'wrapSentenceAudioCueRangesInBatch', 'clearInlineSentenceAudioCue',
+    'applyInlineSentenceAudioCue', 'clearCurrentSentenceAudioScreenTargets']
     .map((n) => extractMethod(n, vnSource))
     .concat(['sentenceAudioWrapItems', 'sentenceAudioInlineGap', 'rubyForNode', 'fillSentenceAudioRubyGaps',
       'watchSentenceAudioRubyGapLayout', 'paintSentenceAudioRubyGaps', 'eraseSentenceAudioRubyGaps',
       'clearSentenceAudioRubyGaps', 'sentenceAudioLineRects', 'sentenceAudioSameLine', 'sentenceAudioJoinGap',
-      'splitSentenceAudioJoinLines', 'splitSentenceAudioWrapper', 'wrapSentenceAudioGroup']
+      'splitSentenceAudioJoinLines', 'splitSentenceAudioWrapper', 'wrapSentenceAudioGroup', 'withLiveRangeBatch']
       .map((n) => extractMethod(n, gapSource)))
     .join(',\n');
   vm.runInContext('var R = {\n' + methods + '\n};', sandbox);
@@ -824,6 +824,38 @@ const rangeText = (r) => (r.startContainer === r.endContainer
   assert.strictEqual(favorite.startOffset, 2);
   assert.strictEqual(favorite.endContainer, ws[0].childNodes[0]);
   assert.strictEqual(rangeText(favorite), '文。学校', 'the favourite across the cut still covers the same text');
+  liveRanges.length = 0;
+}
+
+// 18. BUG-3369：开章逐句包裹整批只读一次原生选区。DOM 刚改过时读 getSelection().rangeCount 会让
+// Blink 对整章同步排版一次；moveNodes 每次都读时，一章 2700 句的有声书开书卡几十秒、超时白屏。
+{
+  const N = 40;
+  const p = el('p', []);
+  const nodes = [];
+  for (let i = 0; i < N; i++) { const t = new Text('文' + i + '。'); nodes.push(t); p.appendChild(t); }
+  const R = makeReader({});
+  R.collectSentenceAudioCueRanges = () =>
+    nodes.map((t, i) => ({ id: 'c' + i, ranges: [{ node: t, start: 0, end: 2 }] }));
+  let reads = 0;
+  R.testWindow.getSelection = () => { reads++; return { rangeCount: 0 }; };
+  R.applySentenceAudioCues(nodes.map((t, i) => ({ id: 'c' + i })));
+  assert.strictEqual(R.cueWrappers.size, N, 'every cue still gets its wrapper');
+  assert.strictEqual(reads, 1, 'the native selection is read once per batch, not once per moved group');
+  assert.strictEqual(R.testWindow.__fushiLiveRanges.noNativeSelection, false, 'the batch flag is reset afterwards');
+
+  // 有原生选区时照旧逐次钉住、写回（批只在确认没有选区时跳过读取）。
+  const t2 = new Text('前の文。学校で会話だ');
+  el('p', [t2]);
+  const R2 = makeReader({});
+  R2.collectSentenceAudioCueRanges = () => [{ id: 'd0', ranges: [{ node: t2, start: 4, end: 9 }] }];
+  let reads2 = 0;
+  R2.testWindow.getSelection = () => {
+    reads2++;
+    return { rangeCount: 1, anchorNode: t2, anchorOffset: 0, focusNode: t2, focusOffset: 1, setBaseAndExtent() {} };
+  };
+  R2.applySentenceAudioCues([{ id: 'd0' }]);
+  assert.ok(reads2 >= 2, 'with a live native selection every move still reads and restores it');
   liveRanges.length = 0;
 }
 

@@ -2849,9 +2849,12 @@ $sharedInitViewport
       wrapperGroups.push(wrappers);
     });
     highlights.wrappers.clear();
-    for (var i = 0; i < wrapperGroups.length; i++) {
-      this.unwrap(wrapperGroups[i]);
-    }
+    var self = this;
+    this.withLiveRangeBatch(function() {
+      for (var i = 0; i < wrapperGroups.length; i++) {
+        self.unwrap(wrapperGroups[i]);
+      }
+    });
   },
   applyCurrentScreenHighlights: function() {
     var highlights = Array.isArray(this.initialHighlights) ? this.initialHighlights : [];
@@ -3010,6 +3013,12 @@ $sharedInitViewport
     return this.cueWrappers.get(cueId) || [];
   },
   wrapSentenceAudioCueRanges: function(cueRanges) {
+    var self = this;
+    return this.withLiveRangeBatch(function() {
+      return self.wrapSentenceAudioCueRangesInBatch(cueRanges);
+    });
+  },
+  wrapSentenceAudioCueRangesInBatch: function(cueRanges) {
     var wrapped = new Map();
     for (var i = cueRanges.length - 1; i >= 0; i--) {
       var id = cueRanges[i].id;
@@ -3078,8 +3087,10 @@ $sharedInitViewport
   clearSentenceAudioTargets: function() {
     this.clearSentenceAudioCuePresentation();
     var self = this;
-    this.cueWrappers.forEach(function(wrappers) {
-      self.unwrap(wrappers);
+    this.withLiveRangeBatch(function() {
+      self.cueWrappers.forEach(function(wrappers) {
+        self.unwrap(wrappers);
+      });
     });
     this.cueWrappers.clear();
     this.cueSourceRanges.clear();
