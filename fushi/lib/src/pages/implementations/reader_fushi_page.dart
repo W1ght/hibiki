@@ -1275,6 +1275,18 @@ EpubBook parseBookOnly(String extractDir) {
   return EpubParser.parseFromExtracted(extractDir);
 }
 
+/// isolate 入口：在书的副本上建插图表。[EpubBook.images] 逐章同步读文件 +
+/// html_parser 整章解析，放在 UI isolate 上长篇会卡上百毫秒到秒级。
+List<EpubImageRef> _epubBookImagesOf(EpubBook book) => book.images;
+
+/// 取 [book] 的插图表：已建好直接返回，否则在后台 isolate 建好再回填到 [book]，
+/// 之后同一本书的读取（插图册 / 歌词模式插图）都不再重扫。
+Future<List<EpubImageRef>> _loadBookImagesOffUiIsolate(EpubBook book) async {
+  if (book.hasImages) return book.images;
+  book.adoptImages(await compute(_epubBookImagesOf, book));
+  return book.images;
+}
+
 /// TODO-131: 从 [EpubBooks.chaptersJson]（导入时由 EpubImporter 写入的
 /// `characters` 字段，值即 `chapterPlainText().length`）复用每章字符数，避免开书时
 /// 对整本 EPUB 重跑 html_parser。

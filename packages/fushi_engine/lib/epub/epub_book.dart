@@ -409,6 +409,16 @@ class EpubBook {
     return result;
   }
 
+  /// Whether [images] has already been built (reading it is then free).
+  bool get hasImages => _images != null;
+
+  /// Adopts an [images] list built off the UI isolate on a copy of this same
+  /// book, so later [images] reads on this instance do not rescan every
+  /// chapter. No-op once [images] is built.
+  void adoptImages(List<EpubImageRef> images) {
+    _images ??= List<EpubImageRef>.unmodifiable(images);
+  }
+
   /// Walks one chapter body in document order, counting study characters as it
   /// goes, and records how many preceded each image reference. Ruby readings
   /// (`<rt>/<rp>/<rtc>`) are skipped so a heavily annotated chapter does not
