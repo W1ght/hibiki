@@ -96,13 +96,13 @@ SettingsSection _mangaPagingSection() {
         },
         onChanged: (SettingsContext c, String value) =>
             c.appModel.setMangaReaderPreferences(
-          c.appModel.mangaReaderPreferences.copyWithJson(<String, Object?>{
-            'autoMode': value == 'auto',
-            'mode': value == 'auto'
-                ? c.appModel.mangaReaderPreferences.mode.storageKey
-                : value,
-          }),
-        ),
+              c.appModel.mangaReaderPreferences.copyWithJson(<String, Object?>{
+                'autoMode': value == 'auto',
+                'mode': value == 'auto'
+                    ? c.appModel.mangaReaderPreferences.mode.storageKey
+                    : value,
+              }),
+            ),
         defaultValue: 'auto',
       ),
       // 阅读方向：偏好是新书的默认值，已打开的书仍按自身状态走。
@@ -127,25 +127,24 @@ SettingsSection _mangaPagingSection() {
       ),
       SettingsSegmentedItem<String>(
         id: 'manga.page_animation',
-        title: t.manga_page_animation,
+        title: t.page_turn_animation,
         icon: Icons.animation_outlined,
         options: <SettingsSegmentOption<String>>[
           SettingsSegmentOption<String>(
             value: MangaPageAnimation.none.key,
-            label: t.manga_page_animation_none,
+            label: t.page_turn_animation_none,
           ),
           SettingsSegmentOption<String>(
             value: MangaPageAnimation.slide.key,
-            label: t.manga_page_animation_slide,
+            label: t.page_turn_animation_slide,
           ),
           SettingsSegmentOption<String>(
             value: MangaPageAnimation.fade.key,
-            label: t.manga_page_animation_fade,
+            label: t.page_turn_animation_fade,
           ),
         ],
-        selected: (SettingsContext c) => MangaPageAnimationKey.fromKey(
-          c.appModel.mangaPageAnimation,
-        ).key,
+        selected: (SettingsContext c) =>
+            MangaPageAnimationKey.fromKey(c.appModel.mangaPageAnimation).key,
         onChanged: (SettingsContext c, String value) =>
             c.appModel.setMangaPageAnimation(value),
         defaultValue: MangaPageAnimation.slide.key,
@@ -186,9 +185,8 @@ SettingsSection _mangaPagingSection() {
             label: t.manga_tap_zone_layout_top_bottom,
           ),
         ],
-        selected: (SettingsContext c) => MangaTapZoneLayoutKey.fromKey(
-          c.appModel.mangaTapZoneLayout,
-        ).key,
+        selected: (SettingsContext c) =>
+            MangaTapZoneLayoutKey.fromKey(c.appModel.mangaTapZoneLayout).key,
         onChanged: (SettingsContext c, String value) =>
             c.appModel.setMangaTapZoneLayout(value),
         defaultValue: kMangaTapZoneLayoutDefault,
@@ -263,10 +261,10 @@ SettingsSection _mangaDisplaySection() {
             c.appModel.mangaReaderPreferences.scaleType.key,
         onChanged: (SettingsContext c, String value) =>
             c.appModel.setMangaReaderPreferences(
-          c.appModel.mangaReaderPreferences.copyWithJson(
-            <String, Object?>{'scaleType': value},
-          ),
-        ),
+              c.appModel.mangaReaderPreferences.copyWithJson(<String, Object?>{
+                'scaleType': value,
+              }),
+            ),
         defaultValue: MangaScaleType.fitScreen.key,
       ),
       SettingsSliderItem(
