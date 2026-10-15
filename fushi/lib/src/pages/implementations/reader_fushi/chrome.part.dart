@@ -3898,7 +3898,8 @@ extension _ReaderChrome on _ReaderFushiPageState {
 
   // ── Popup Audio Controls ───────────────────────────────────────────
 
-  Future<void> _refreshSectionHighlights(int section) async {
+  /// [freshId]：刚收藏的那条，笔触样式下给它放一次落笔动画（只有收藏动作传）。
+  Future<void> _refreshSectionHighlights(int section, {String? freshId}) async {
     if (_controller == null) return;
     if (_lyricsMode) await _applyLyricsFavorites();
     final List<FavoriteSentence> chapterFavs =
@@ -3910,6 +3911,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
       _controller!,
       chapterFavs,
       backgroundHex: _readerBackgroundHex,
+      freshIds: freshId == null ? const <String>[] : <String>[freshId],
     );
     await _controller!.evaluateJavascript(
       source:
@@ -4002,7 +4004,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
     _invalidateFavoriteSentenceCache();
     _rebuild(() => _currentSentenceIsFavorited = true);
     if (mounted) {
-      await _refreshSectionHighlights(section);
+      await _refreshSectionHighlights(section, freshId: fav.id);
     }
     FushiToast.show(msg: t.favorite_added, severity: ToastSeverity.success);
   }

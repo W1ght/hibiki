@@ -768,7 +768,310 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       });
       return out;
     };
-    var paintGroup = function(group, reg, origin) {
+    // ── 高亮条的笔触样式（用户 2026-10-15「高亮条自定义做成配置，用户自己可自选样式」「全部高亮都要
+    // 能选可以自定义高亮」）──
+    // 四类高亮（收藏 / 查词 / 有声书当前句 / 搜索）各有一套配置。经典样式照旧画 1em 窄条；选了笔触样式
+    // （马克笔 / 荧光笔 / 手绘 / 半截 / 彩铅 / 胶带）时，这一组改画一张 SVG：同样的行片段、同样的坐标系
+    // （host 局部坐标，随正文滚动 / 翻页），只是形状换成斜切、毛边、双笔这些。配置全走正文 CSS 的 :root
+    // 变量（--fushi-mark-<种类>-*，ReaderContentStyles 按设置写），改设置 = 换正文样式表 = head 的
+    // MutationObserver 触发重画，不需要额外的桥调用。颜色仍是各组原来的颜色：用一个探针 lane 读这一组
+    // 的 CSS 底色（与经典窄条同一条规则），只取 RGB，浓度听配置；底色是透明的（如关掉了有声书底色）就
+    // 不画。
+    // 形状在「沿行 u / 跨行 v」局部坐标里算：横排 u=x、v=y；竖排 u=y、v=-x。v 的负方向是振假名所在
+    // 的 over 侧（横排上方、竖排右侧），「盖住振假名」就是往 over 侧加厚。笔划画在正文之下，振假名字
+    // 本身仍压在笔划上面。随机抖动的种子取组名 + 行的局部坐标 + 样式：翻页、重画不变形，重排才换一笔。
+    // Dart 侧设置页预览（favorite_highlight_preview.dart）按同一套参数画示意，两边改形状要一起改。
+    var MARK_KINDS = ['favorite', 'lookup', 'audio', 'search'];
+    var KIND_OF = { 'fushi-sentence-audio': 'audio', 'fushi-selection': 'lookup', 'fushi-search': 'search' };
+    var kindOf = function(name) {
+      return KIND_OF[name] || (/^fushi-hl-[a-z]+$/.test(name) ? 'favorite' : null);
+    };
+    var MARK_STYLES = ['marker', 'fluo', 'rough', 'under', 'crayon', 'tape'];
+    var clampNum = function(v, lo, hi) { return v < lo ? lo : (v > hi ? hi : v); };
+    var cssNum = function(cs, name, fallback) {
+      var v = parseFloat(cs.getPropertyValue(name));
+      return isFinite(v) ? v : fallback;
+    };
+    // 每类高亮的笔触配置；经典（或没写变量）的种类不在结果里。
+    var markConfigs = function() {
+      var out = {};
+      if (typeof getComputedStyle !== 'function' || !document.documentElement) return out;
+      var cs = getComputedStyle(document.documentElement);
+      var dark = cssNum(cs, '--fushi-mark-dark', 0) > 0;
+      var paper = (cs.getPropertyValue('--fushi-mark-paper') || '').trim() || (dark ? '#000' : '#fff');
+      MARK_KINDS.forEach(function(kind) {
+        var p = '--fushi-mark-' + kind + '-';
+        var style = (cs.getPropertyValue(p + 'style') || '').trim();
+        if (MARK_STYLES.indexOf(style) < 0) return;
+        out[kind] = {
+          kind: kind,
+          style: style,
+          thickness: clampNum(cssNum(cs, p + 'thickness', 1), 0.4, 2),
+          opacity: clampNum(cssNum(cs, p + 'opacity', 0.35), 0.05, 1),
+          cover: cssNum(cs, p + 'cover-ruby', 0) > 0,
+          rough: clampNum(cssNum(cs, p + 'roughness', 0.5), 0, 1),
+          animate: cssNum(cs, p + 'animate', 0) > 0,
+          paper: paper
+        };
+      });
+      return out;
+    };
+    // 这一组的颜色：探针 lane 的计算底色（与经典窄条同一条 CSS 规则，收藏五色、有声书自定义色、
+    // 查词色都在那里）。返回 'rgb(r,g,b)'；底色完全透明返回 null（这一组不画）。
+    var groupColor = function(name) {
+      var probe = document.createElement(LANE);
+      probe.setAttribute('data-hl', name);
+      host.appendChild(probe);
+      var raw = getComputedStyle(probe).backgroundColor || '';
+      probe.remove();
+      var m = /rgba?\(([^)]*)\)/.exec(raw);
+      if (!m) return null;
+      var parts = m[1].split(/[\s,/]+/).filter(function(s) { return s !== ''; }).map(parseFloat);
+      if (parts.length < 3) return null;
+      if (parts.length > 3 && !(parts[3] > 0)) return null;
+      return 'rgb(' + Math.round(parts[0]) + ',' + Math.round(parts[1]) + ',' + Math.round(parts[2]) + ')';
+    };
+    var markRng = function(seed) {
+      var a = seed >>> 0;
+      return function() {
+        a = (a + 0x6D2B79F5) >>> 0;
+        var t = a;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    };
+    var markHash = function(s) {
+      var h = 2166136261;
+      for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+      return h >>> 0;
+    };
+    var fx = function(n) { return (Math.round(n * 100) / 100).toString(); };
+    var markPoint = function(vertical) {
+      return vertical
+        ? function(u, v) { return fx(-v) + ',' + fx(u); }
+        : function(u, v) { return fx(u) + ',' + fx(v); };
+    };
+    var polyD = function(P, pts) {
+      var d = '';
+      for (var i = 0; i < pts.length; i++) d += (i ? 'L' : 'M') + P(pts[i][0], pts[i][1]);
+      return d + 'Z';
+    };
+    var wobble = function(from, to, v, amp, step, rnd) {
+      var out = [];
+      var n = Math.max(1, Math.round(Math.abs(to - from) / step));
+      for (var i = 1; i < n; i++) out.push([from + (to - from) * i / n, v + (rnd() - 0.5) * 2 * amp]);
+      return out;
+    };
+    // 笔划的跨行上下沿：thickness 以 1em（「一个字高」，与经典窄条同宽）为基准缩放，居中于墨迹中线；
+    // 盖住振假名时 over 侧多加一个注音高（约 0.6em）。
+    var markBand = function(line, k, cfg, rnd) {
+      var half = line.em * k * cfg.thickness / 2;
+      var j = (rnd() - 0.5) * line.em * 0.05 * cfg.rough;
+      return { top: line.vc - half - (cfg.cover ? line.em * 0.6 : 0) + j, bot: line.vc + half + j };
+    };
+    var pathTag = function(d, attrs) { return '<path d="' + d + '" ' + attrs + '/>'; };
+    var MARKERS = {
+      // 斜切马克笔：逐行一条，两端平行斜切，收笔端微毛并略积墨。
+      marker: function(l, c) {
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1, cfg, r), h = b.bot - b.top;
+        var s = h * (0.18 + 0.22 * cfg.rough);
+        var a = l.u0 - em * (0.06 + r() * 0.1 * cfg.rough), z = l.u1 + em * (0.04 + r() * 0.16 * cfg.rough);
+        var amp = h * 0.025 * cfg.rough;
+        var pts = [[a + s / 2, b.top]].concat(wobble(a + s / 2, z + s / 2, b.top, amp, em * 1.6, r),
+          [[z + s / 2, b.top], [z + s * 0.1 + (r() - 0.5) * em * 0.12 * cfg.rough, b.top + h * 0.45], [z - s / 2, b.bot]],
+          wobble(z - s / 2, a - s / 2, b.bot, amp, em * 1.6, r), [[a - s / 2, b.bot]]);
+        var p0 = Math.max(a, z - em * 0.7);
+        return pathTag(polyD(c.P, pts), 'fill="' + c.fill + '" fill-opacity="' + fx(cfg.opacity) + '"') +
+          pathTag(polyD(c.P, [[p0 + s / 2, b.top], [z + s / 2, b.top], [z - s / 2, b.bot], [p0 - s / 2, b.bot]]),
+            'fill="' + c.fill + '" fill-opacity="' + fx(cfg.opacity * 0.28) + '"');
+      },
+      // 水性荧光笔：边缘被纸纤维晕开（位移滤镜），起笔收笔更深（渐变），中段几道浅色拖痕。
+      fluo: function(l, c) {
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1, cfg, r), h = b.bot - b.top, s = h * 0.18;
+        var a = l.u0 - em * 0.1, z = l.u1 + em * (0.04 + r() * 0.14 * cfg.rough);
+        var gid = c.uid + 'g';
+        c.defs.push('<linearGradient id="' + gid + '" x1="0" y1="0" x2="' + (l.v ? 0 : 1) + '" y2="' + (l.v ? 1 : 0) + '">' +
+          [[0, 1.55], [0.06, 1], [0.5, 0.82], [0.94, 1], [1, 1.7]].map(function(st) {
+            return '<stop offset="' + st[0] + '" stop-color="' + c.fill + '" stop-opacity="' + fx(Math.min(1, cfg.opacity * st[1])) + '"/>';
+          }).join('') + '</linearGradient>');
+        var amp = h * (0.02 + 0.05 * cfg.rough);
+        var pts = [[a + s, b.top]].concat(wobble(a + s, z, b.top, amp, em * 0.7, r),
+          [[z, b.top], [z - s, b.bot]], wobble(z - s, a, b.bot, amp, em * 0.7, r), [[a, b.bot]]);
+        var out = pathTag(polyD(c.P, pts), 'fill="url(#' + gid + ')" filter="url(#' + c.base + 'fray)"');
+        for (var k = 0; k < 2; k++) {
+          var v = b.top + h * (0.3 + r() * 0.45);
+          var u0 = a + (z - a) * r() * 0.3, u1 = Math.min(u0 + (z - a) * (0.35 + r() * 0.4), z - s);
+          out += pathTag('M' + c.P(u0, v) + 'L' + c.P(u1, v + (r() - 0.5) * 1.5),
+            'fill="none" stroke="' + c.paper + '" stroke-opacity="0.22" stroke-width="1.1" stroke-linecap="round"');
+        }
+        return out;
+      },
+      // 手绘双笔：两道略带弧度的粗笔叠画，重叠处更深（rough-notation 的 highlight 画法）。
+      rough: function(l, c) {
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1, cfg, r), w = b.bot - b.top, vc = (b.top + b.bot) / 2;
+        var out = '';
+        for (var k = 0; k < 2; k++) {
+          var a = l.u0 - em * (0.04 + r() * 0.14 * cfg.rough), z = l.u1 + em * r() * 0.18 * cfg.rough;
+          var j = w * (0.08 + 0.2 * cfg.rough);
+          var v0 = vc + (r() - 0.5) * j, v1 = vc + (r() - 0.5) * j, bow = (r() - 0.5) * j * 1.3;
+          out += pathTag('M' + c.P(a, v0) + 'Q' + c.P((a + z) / 2, (v0 + v1) / 2 + bow) + ' ' + c.P(z, v1),
+            'fill="none" stroke="' + c.fill + '" stroke-opacity="' + fx(cfg.opacity * 0.72) + '" stroke-width="' +
+            fx(w * (0.84 + r() * 0.1)) + '"');
+        }
+        return out;
+      },
+      // 半截荧光：只涂墨迹中线到字下沿（竖排是左侧），振假名永远露在外面，「盖住振假名」对它无效。
+      under: function(l, c) {
+        var r = c.rnd, cfg = c.cfg, em = l.em;
+        var top = l.vc + em * 0.02, bot = l.vc + em * 0.5 * cfg.thickness, s = (bot - top) * 0.4;
+        var a = l.u0 - em * 0.05, z = l.u1 + em * (0.03 + r() * 0.1 * cfg.rough);
+        var amp = 0.3 + 0.6 * cfg.rough;
+        var pts = [[a + s / 2, top]].concat(wobble(a, z, top, amp, em, r), [[z + s / 2, top], [z - s / 2, bot]],
+          wobble(z, a, bot, amp, em, r), [[a - s / 2, bot]]);
+        return pathTag(polyD(c.P, pts), 'fill="' + c.fill + '" fill-opacity="' + fx(Math.min(0.9, cfg.opacity * 1.35)) + '"');
+      },
+      // 彩铅涂抹：纸面颗粒把颜色打散（颗粒滤镜），边缘不规则。
+      crayon: function(l, c) {
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1.04, cfg, r), h = b.bot - b.top;
+        var a = l.u0 - em * 0.1, z = l.u1 + em * (0.05 + r() * 0.12 * cfg.rough);
+        var amp = h * (0.02 + 0.06 * cfg.rough);
+        var pts = [[a, b.top + h * 0.08]].concat(wobble(a, z, b.top, amp, em * 0.5, r),
+          [[z, b.top + h * 0.1], [z + em * 0.05, b.bot - h * 0.2], [z - em * 0.1, b.bot]],
+          wobble(z, a, b.bot, amp, em * 0.5, r), [[a - em * 0.04, b.bot - h * 0.1]]);
+        return pathTag(polyD(c.P, pts), 'fill="' + c.fill + '" fill-opacity="' + fx(Math.min(1, cfg.opacity * 2)) +
+          '" filter="url(#' + c.base + 'grain)"');
+      },
+      // 和纸胶带：半透明胶带，两端锯齿撕口、略微歪斜，叠一层细斜纹。
+      tape: function(l, c) {
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1.08, cfg, r), h = b.bot - b.top;
+        var a = l.u0 - em * 0.16, z = l.u1 + em * 0.16, tilt = (r() - 0.5) * h * 0.2 * cfg.rough;
+        var torn = function(u, top, bot, dir) {
+          var out = [];
+          for (var i = 0; i <= 5; i++) {
+            out.push([u + dir * (i % 2 ? em * 0.08 : 0) + (r() - 0.5) * 1.2 * cfg.rough, top + (bot - top) * i / 5]);
+          }
+          return out;
+        };
+        var pts = torn(z, b.top + tilt, b.bot + tilt, 1).concat(torn(a, b.bot - tilt, b.top - tilt, -1));
+        var d = polyD(c.P, pts);
+        return pathTag(d, 'fill="' + c.fill + '" fill-opacity="' + fx(Math.min(0.85, cfg.opacity * 1.05)) + '"') +
+          pathTag(d, 'fill="url(#' + c.base + 'stripe)"');
+      }
+    };
+    var markDefs = function(base, cfg) {
+      return '<filter id="' + base + 'fray" x="-4%" y="-40%" width="108%" height="180%">' +
+          '<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>' +
+          '<feDisplacementMap in="SourceGraphic" in2="n" scale="' + fx(1.6 + 2.4 * cfg.rough) +
+          '" xChannelSelector="R" yChannelSelector="G"/></filter>' +
+        '<filter id="' + base + 'grain" x="-4%" y="-30%" width="108%" height="160%">' +
+          '<feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="1" seed="7" result="n"/>' +
+          '<feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 1.75" result="m"/>' +
+          '<feComposite in="SourceGraphic" in2="m" operator="in" result="c"/>' +
+          '<feDisplacementMap in="c" in2="n" scale="' + fx(1 + 2 * cfg.rough) + '" xChannelSelector="R" yChannelSelector="G"/></filter>' +
+        '<pattern id="' + base + 'stripe" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">' +
+          '<rect width="2" height="6" fill="' + cfg.paper + '" fill-opacity="0.25"/></pattern>';
+    };
+    // 落笔动画（SMIL，声明式、不需要帧循环），只有两类高亮有：
+    // - 收藏：刚收藏的句子由 HighlightBridge 在写入 CSS.highlights 之前把行片段登记进来（markFresh），
+    //   下一次画收藏层时这几行沿书写方向展开。只用一次、2 秒过期；章节打开 / 重排后的重新应用不登记，
+    //   所以翻页、重排永远不会重放。
+    // - 有声书当前句：读到新的一句（这一组出现了上次没有的行）时画出新行。这一组第一次画（开章、刚切到
+    //   笔触样式）不算新，避免一打开就扫一遍。
+    // 查词（拖选每帧都在重画）与搜索没有动画。
+    var fresh = [];
+    var markFresh = function(ranges, elements) {
+      if (!hostEl()) return;
+      var origin = host.getBoundingClientRect();
+      var pieces = [];
+      (ranges || []).forEach(function(range) { rangeRects(range, pieces); });
+      var seen = [];
+      (elements || []).forEach(function(el) { elementRects(el, seen, pieces); });
+      var until = Date.now() + 2000;
+      pieces.forEach(function(p) {
+        fresh.push({ x0: p.r.left - origin.left, y0: p.r.top - origin.top,
+          x1: p.r.right - origin.left, y1: p.r.bottom - origin.top, until: until });
+      });
+    };
+    var isFresh = function(line) {
+      var now = Date.now();
+      for (var i = 0; i < fresh.length; i++) {
+        var f = fresh[i];
+        if (f.until < now) continue;
+        var midHit = line.v ? (line.x >= f.x0 - 1 && line.x <= f.x1 + 1) : (line.y >= f.y0 - 1 && line.y <= f.y1 + 1);
+        var spanHit = line.v ? (line.b0 < f.y1 && line.b1 > f.y0) : (line.b0 < f.x1 && line.b1 > f.x0);
+        if (midHit && spanHit) return true;
+      }
+      return false;
+    };
+    // 有声书：上一次画过的行（组名 → { 行键: true }）。
+    var paintedLines = {};
+    var reducedMotion = function() {
+      try { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; }
+    };
+    // 返回 { ink, still }：ink 是要写进 DOM 的串（新行带落笔动画），still 是同一张图去掉动画的串。
+    // paintGroup 只按 still 判断「形状变没变」：落笔动画播放中阅读器常会再重画一次（切句后滚到该句、
+    // 重锚落定），那次的 ink 不带动画，若按 ink 比较就会替换 DOM、把正在播的动画截断。
+    var markSvg = function(name, list, origin, cfg) {
+      var prevLines = paintedLines[name];
+      var nowLines = {};
+      paintedLines[name] = nowLines;
+      var empty = { ink: '', still: '' };
+      if (!list.length) return empty;
+      var fill = groupColor(name);
+      if (!fill) return empty;
+      var base = 'fushi-mark-' + name.replace(/^fushi-/, '') + '-';
+      var defs = markDefs(base, cfg);
+      var clips = '';
+      var still = '';
+      var animate = cfg.animate && !reducedMotion() &&
+        (cfg.kind === 'favorite' ? fresh.length > 0 : cfg.kind === 'audio' && !!prevLines);
+      var delay = 0;
+      var out = '';
+      list.forEach(function(l, i) {
+        var line = l.v
+          ? { v: true, u0: l.a - origin.top, u1: l.b - origin.top, vc: -(l.mid - origin.left), em: l.em }
+          : { v: false, u0: l.a - origin.left, u1: l.b - origin.left, vc: l.mid - origin.top, em: l.em };
+        var key = Math.round(line.u0) + ':' + Math.round(line.u1) + ':' + Math.round(line.vc);
+        nowLines[key] = true;
+        var c = {
+          cfg: cfg, P: markPoint(line.v), fill: fill, paper: cfg.paper, base: base, uid: base + i, defs: [],
+          rnd: markRng(markHash(name + ':' + cfg.style + ':' + Math.round(line.u0) + ':' + Math.round(line.vc)))
+        };
+        var shape = MARKERS[cfg.style](line, c);
+        defs += c.defs.join('');
+        still += shape;
+        var isNew = false;
+        if (animate && cfg.kind === 'favorite') {
+          isNew = isFresh(l.v
+            ? { v: true, x: l.mid - origin.left, b0: line.u0, b1: line.u1 }
+            : { v: false, y: l.mid - origin.top, b0: line.u0, b1: line.u1 });
+        } else if (animate) {
+          isNew = !prevLines[key];
+        }
+        if (!isNew) { out += shape; return; }
+        var em = line.em, len = line.u1 - line.u0 + em * 2, dur = 0.14 + (len / em) * 0.026;
+        var cid = base + i + 'c';
+        var rect = line.v
+          ? '<rect x="' + fx(-line.vc - em * 3) + '" y="' + fx(line.u0 - em) + '" width="' + fx(em * 6) + '" height="0">' +
+            '<animate attributeName="height" from="0" to="' + fx(len) + '"'
+          : '<rect x="' + fx(line.u0 - em) + '" y="' + fx(line.vc - em * 3) + '" width="0" height="' + fx(em * 6) + '">' +
+            '<animate attributeName="width" from="0" to="' + fx(len) + '"';
+        clips += '<clipPath id="' + cid + '" clipPathUnits="userSpaceOnUse">' + rect + ' begin="' + fx(delay) + 's" dur="' +
+          fx(dur) + 's" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.6 0.4 1"/></rect></clipPath>';
+        out += '<g clip-path="url(#' + cid + ')">' + shape + '</g>';
+        delay += dur + 0.06;
+      });
+      // 1×1 的 svg 靠 overflow:visible 把笔划画出来（UA 默认给非根 svg overflow:hidden，会整张裁掉）；
+      // 定位在 host 原点，路径坐标就是 host 局部坐标。
+      var open = '<svg xmlns="http://www.w3.org/2000/svg" class="fushi-mark-ink" width="1" height="1" aria-hidden="true"' +
+        ' style="position:absolute;left:0;top:0;overflow:visible;pointer-events:none">';
+      return {
+        ink: open + '<defs>' + defs + clips + '</defs>' + out + '</svg>',
+        still: open + '<defs>' + defs + '</defs>' + still + '</svg>'
+      };
+    };
+    var paintGroup = function(group, reg, origin, mark) {
       var el = host.querySelector(':scope > [data-hl-group="' + group.name + '"]');
       var pieces = [];
       var highlight = reg ? reg.get(group.name) : null;
@@ -778,6 +1081,18 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
         var els = document.body.querySelectorAll(group.selector);
         for (var i = 0; i < els.length; i++) elementRects(els[i], seen, pieces);
       }
+      if (mark) {
+        // 比上次写入的静态串，不比 innerHTML：SVG 回读的序列化与写入串不逐字相同，比 innerHTML 会每次
+        // 都判成「变了」、重建 DOM 并重放落笔动画；比 ink 则会截断正在播的动画（见 markSvg）。
+        var res = markSvg(group.name, lanes(pieces, group.join), origin, mark);
+        if (el.__fushiInk !== res.still) {
+          el.innerHTML = res.ink;
+          el.__fushiInk = res.still;
+        }
+        return;
+      }
+      el.__fushiInk = null;
+      delete paintedLines[group.name];
       var html = '';
       lanes(pieces, group.join).forEach(function(l) {
         var x = l.v ? l.mid - l.lane / 2 : l.a;
@@ -797,9 +1112,15 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       if (!hostEl()) return;
       var reg = registry();
       var origin = host.getBoundingClientRect();
+      var marks = markConfigs();
+      var favPainted = false;
       GROUPS.forEach(function(g) {
-        if (names[g.name]) paintGroup(g, reg, origin);
+        if (!names[g.name]) return;
+        var kind = kindOf(g.name);
+        paintGroup(g, reg, origin, kind ? marks[kind] || null : null);
+        if (kind === 'favorite') favPainted = true;
       });
+      if (favPainted) fresh = [];
     };
     var schedule = function(name) {
       if (name === undefined) {
@@ -865,7 +1186,14 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       if (document.body) observe();
       else if (typeof document.addEventListener === 'function') document.addEventListener('DOMContentLoaded', observe);
     }
-    return { repaint: function(name) { schedule(name); }, flush: flush, laneEm: LANE_EM };
+    return {
+      repaint: function(name) { schedule(name); },
+      flush: flush,
+      laneEm: LANE_EM,
+      markFresh: markFresh,
+      markStyles: MARK_STYLES,
+      markKinds: MARK_KINDS
+    };
   })();
 }
 window.fushiSelection = {

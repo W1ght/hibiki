@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132158 (7774 per locale)
+/// Strings: 132770 (7810 per locale)
 ///
-/// Built on 2026-10-15 at 03:29 UTC
+/// Built on 2026-10-15 at 05:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11232,6 +11232,54 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  String get reader_highlight_style_classic => 'Classic';
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  String get reader_highlight_style_marker => 'Chisel marker';
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  String get reader_highlight_style_fluo => 'Highlighter';
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  String get reader_highlight_style_under => 'Lower half';
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  String get reader_highlight_style_tape => 'Washi tape';
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  String get reader_highlight_thickness => 'Thickness';
+  String get reader_highlight_opacity => 'Color strength';
+  String get reader_highlight_roughness => 'Stroke jitter';
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  String get reader_highlight_animate => 'Stroke animation';
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  String get reader_highlight_replay => 'Replay';
+  String get reader_highlight_horizontal => 'Horizontal';
+  String get reader_highlight_vertical => 'Vertical';
+  String get reader_highlight_reset => 'Reset to defaults';
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  String get reader_highlight_preview_color => 'Preview color';
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  String get reader_highlight_title => 'Highlight style';
+  String get reader_highlight_all_classic => 'All classic';
+  String get reader_highlight_kind_label => 'Applies to';
+  String get reader_highlight_kind_favorite => 'Favorites';
+  String get reader_highlight_kind_lookup => 'Lookup';
+  String get reader_highlight_kind_audio => 'Audiobook';
+  String get reader_highlight_kind_search => 'Search';
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -30030,6 +30078,90 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -49218,6 +49350,90 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -68465,6 +68681,90 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -87793,6 +88093,90 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -106774,6 +107158,90 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -125921,6 +126389,90 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -144068,6 +144620,90 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -162251,6 +162887,90 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -181346,6 +182066,90 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -200510,6 +201314,90 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -219619,6 +220507,90 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -238406,6 +239378,90 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -257397,6 +258453,90 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -276315,6 +277455,90 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 // Path: <root>
@@ -293582,6 +294806,78 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+  @override
+  String get reader_highlight_style_classic => '经典';
+  @override
+  String get reader_highlight_style_classic_hint => '一个字高的色条加下划线';
+  @override
+  String get reader_highlight_style_marker => '斜切马克笔';
+  @override
+  String get reader_highlight_style_marker_hint => '两端斜切，收笔处微微积墨';
+  @override
+  String get reader_highlight_style_fluo => '水性荧光笔';
+  @override
+  String get reader_highlight_style_fluo_hint => '边缘晕开，起笔和收笔颜色更深';
+  @override
+  String get reader_highlight_style_rough => '手绘双笔';
+  @override
+  String get reader_highlight_style_rough_hint => '两道粗笔叠画，像随手划了两遍';
+  @override
+  String get reader_highlight_style_under => '半截荧光';
+  @override
+  String get reader_highlight_style_under_hint => '只涂字的下半截，永远不挡振假名';
+  @override
+  String get reader_highlight_style_crayon => '彩铅涂抹';
+  @override
+  String get reader_highlight_style_crayon_hint => '纸面颗粒感，边缘不规则';
+  @override
+  String get reader_highlight_style_tape => '和纸胶带';
+  @override
+  String get reader_highlight_style_tape_hint => '两端撕口，带一层细斜纹';
+  @override
+  String get reader_highlight_thickness => '粗细';
+  @override
+  String get reader_highlight_opacity => '浓度';
+  @override
+  String get reader_highlight_roughness => '笔触抖动';
+  @override
+  String get reader_highlight_cover_ruby => '笔划盖住振假名';
+  @override
+  String get reader_highlight_cover_ruby_hint => '往振假名一侧加厚，振假名仍显示在笔划上面';
+  @override
+  String get reader_highlight_animate => '落笔动画';
+  @override
+  String get reader_highlight_animate_hint => '新收藏时沿书写方向画出来';
+  @override
+  String get reader_highlight_replay => '重播';
+  @override
+  String get reader_highlight_horizontal => '横排';
+  @override
+  String get reader_highlight_vertical => '竖排';
+  @override
+  String get reader_highlight_reset => '恢复默认';
+  @override
+  String get reader_highlight_eink_notice => '墨水屏模式下固定使用经典样式。';
+  @override
+  String get reader_highlight_preview_color => '预览颜色';
+  @override
+  String get reader_highlight_preview_color_hint => '只影响预览，每条收藏保留自己的颜色';
+  @override
+  String get reader_highlight_title => '高亮样式';
+  @override
+  String get reader_highlight_all_classic => '全部经典';
+  @override
+  String get reader_highlight_kind_label => '应用于';
+  @override
+  String get reader_highlight_kind_favorite => '收藏';
+  @override
+  String get reader_highlight_kind_lookup => '查词';
+  @override
+  String get reader_highlight_kind_audio => '有声书';
+  @override
+  String get reader_highlight_kind_search => '搜索';
+  @override
+  String get reader_highlight_animate_audio_hint => '朗读到哪一句，就沿书写方向画出哪一句';
 }
 
 // Path: <root>
@@ -311170,6 +312466,90 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get reader_highlight_style_classic => 'Classic';
+  @override
+  String get reader_highlight_style_classic_hint =>
+      'A one-character-high bar with an underline';
+  @override
+  String get reader_highlight_style_marker => 'Chisel marker';
+  @override
+  String get reader_highlight_style_marker_hint =>
+      'Slanted ends, with a little ink pooling where the pen lifts';
+  @override
+  String get reader_highlight_style_fluo => 'Highlighter';
+  @override
+  String get reader_highlight_style_fluo_hint =>
+      'Feathered edges, darker at both ends';
+  @override
+  String get reader_highlight_style_rough => 'Hand-drawn';
+  @override
+  String get reader_highlight_style_rough_hint =>
+      'Two overlapping strokes, as if marked twice';
+  @override
+  String get reader_highlight_style_under => 'Lower half';
+  @override
+  String get reader_highlight_style_under_hint =>
+      'Covers only the lower half of the text, never the furigana';
+  @override
+  String get reader_highlight_style_crayon => 'Colored pencil';
+  @override
+  String get reader_highlight_style_crayon_hint =>
+      'Grainy color with uneven edges';
+  @override
+  String get reader_highlight_style_tape => 'Washi tape';
+  @override
+  String get reader_highlight_style_tape_hint =>
+      'Torn ends and a fine diagonal pattern';
+  @override
+  String get reader_highlight_thickness => 'Thickness';
+  @override
+  String get reader_highlight_opacity => 'Color strength';
+  @override
+  String get reader_highlight_roughness => 'Stroke jitter';
+  @override
+  String get reader_highlight_cover_ruby => 'Cover furigana';
+  @override
+  String get reader_highlight_cover_ruby_hint =>
+      'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+  @override
+  String get reader_highlight_animate => 'Stroke animation';
+  @override
+  String get reader_highlight_animate_hint =>
+      'Draws the stroke along the text when you add a favorite';
+  @override
+  String get reader_highlight_replay => 'Replay';
+  @override
+  String get reader_highlight_horizontal => 'Horizontal';
+  @override
+  String get reader_highlight_vertical => 'Vertical';
+  @override
+  String get reader_highlight_reset => 'Reset to defaults';
+  @override
+  String get reader_highlight_eink_notice =>
+      'E-ink mode always uses the classic style.';
+  @override
+  String get reader_highlight_preview_color => 'Preview color';
+  @override
+  String get reader_highlight_preview_color_hint =>
+      'Only changes the preview. Each favorite keeps its own color.';
+  @override
+  String get reader_highlight_title => 'Highlight style';
+  @override
+  String get reader_highlight_all_classic => 'All classic';
+  @override
+  String get reader_highlight_kind_label => 'Applies to';
+  @override
+  String get reader_highlight_kind_favorite => 'Favorites';
+  @override
+  String get reader_highlight_kind_lookup => 'Lookup';
+  @override
+  String get reader_highlight_kind_audio => 'Audiobook';
+  @override
+  String get reader_highlight_kind_search => 'Search';
+  @override
+  String get reader_highlight_animate_audio_hint =>
+      'Draws each sentence along the text as the audio reaches it';
 }
 
 /// Flat map(s) containing all translations.
@@ -327298,6 +328678,78 @@ extension on _StringsEn {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -343421,6 +344873,78 @@ extension on _StringsAr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -359620,6 +361144,78 @@ extension on _StringsDe {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -375801,6 +377397,78 @@ extension on _StringsEs {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -392000,6 +393668,78 @@ extension on _StringsFr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -408143,6 +409883,78 @@ extension on _StringsId {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -424322,6 +426134,78 @@ extension on _StringsIt {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -440374,6 +442258,78 @@ extension on _StringsJa {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -456434,6 +458390,78 @@ extension on _StringsKo {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -472608,6 +474636,78 @@ extension on _StringsNl {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -488774,6 +490874,78 @@ extension on _StringsPtBr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -504945,6 +507117,78 @@ extension on _StringsRu {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -521072,6 +523316,78 @@ extension on _StringsTh {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -537230,6 +539546,78 @@ extension on _StringsTr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -553371,6 +555759,78 @@ extension on _StringsVi {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
@@ -569328,6 +571788,78 @@ extension on _StringsZhCn {
         return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+      case 'reader_highlight_style_classic':
+        return '经典';
+      case 'reader_highlight_style_classic_hint':
+        return '一个字高的色条加下划线';
+      case 'reader_highlight_style_marker':
+        return '斜切马克笔';
+      case 'reader_highlight_style_marker_hint':
+        return '两端斜切，收笔处微微积墨';
+      case 'reader_highlight_style_fluo':
+        return '水性荧光笔';
+      case 'reader_highlight_style_fluo_hint':
+        return '边缘晕开，起笔和收笔颜色更深';
+      case 'reader_highlight_style_rough':
+        return '手绘双笔';
+      case 'reader_highlight_style_rough_hint':
+        return '两道粗笔叠画，像随手划了两遍';
+      case 'reader_highlight_style_under':
+        return '半截荧光';
+      case 'reader_highlight_style_under_hint':
+        return '只涂字的下半截，永远不挡振假名';
+      case 'reader_highlight_style_crayon':
+        return '彩铅涂抹';
+      case 'reader_highlight_style_crayon_hint':
+        return '纸面颗粒感，边缘不规则';
+      case 'reader_highlight_style_tape':
+        return '和纸胶带';
+      case 'reader_highlight_style_tape_hint':
+        return '两端撕口，带一层细斜纹';
+      case 'reader_highlight_thickness':
+        return '粗细';
+      case 'reader_highlight_opacity':
+        return '浓度';
+      case 'reader_highlight_roughness':
+        return '笔触抖动';
+      case 'reader_highlight_cover_ruby':
+        return '笔划盖住振假名';
+      case 'reader_highlight_cover_ruby_hint':
+        return '往振假名一侧加厚，振假名仍显示在笔划上面';
+      case 'reader_highlight_animate':
+        return '落笔动画';
+      case 'reader_highlight_animate_hint':
+        return '新收藏时沿书写方向画出来';
+      case 'reader_highlight_replay':
+        return '重播';
+      case 'reader_highlight_horizontal':
+        return '横排';
+      case 'reader_highlight_vertical':
+        return '竖排';
+      case 'reader_highlight_reset':
+        return '恢复默认';
+      case 'reader_highlight_eink_notice':
+        return '墨水屏模式下固定使用经典样式。';
+      case 'reader_highlight_preview_color':
+        return '预览颜色';
+      case 'reader_highlight_preview_color_hint':
+        return '只影响预览，每条收藏保留自己的颜色';
+      case 'reader_highlight_title':
+        return '高亮样式';
+      case 'reader_highlight_all_classic':
+        return '全部经典';
+      case 'reader_highlight_kind_label':
+        return '应用于';
+      case 'reader_highlight_kind_favorite':
+        return '收藏';
+      case 'reader_highlight_kind_lookup':
+        return '查词';
+      case 'reader_highlight_kind_audio':
+        return '有声书';
+      case 'reader_highlight_kind_search':
+        return '搜索';
+      case 'reader_highlight_animate_audio_hint':
+        return '朗读到哪一句，就沿书写方向画出哪一句';
       default:
         return null;
     }
@@ -585325,6 +587857,78 @@ extension on _StringsZhHk {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'reader_highlight_style_classic':
+        return 'Classic';
+      case 'reader_highlight_style_classic_hint':
+        return 'A one-character-high bar with an underline';
+      case 'reader_highlight_style_marker':
+        return 'Chisel marker';
+      case 'reader_highlight_style_marker_hint':
+        return 'Slanted ends, with a little ink pooling where the pen lifts';
+      case 'reader_highlight_style_fluo':
+        return 'Highlighter';
+      case 'reader_highlight_style_fluo_hint':
+        return 'Feathered edges, darker at both ends';
+      case 'reader_highlight_style_rough':
+        return 'Hand-drawn';
+      case 'reader_highlight_style_rough_hint':
+        return 'Two overlapping strokes, as if marked twice';
+      case 'reader_highlight_style_under':
+        return 'Lower half';
+      case 'reader_highlight_style_under_hint':
+        return 'Covers only the lower half of the text, never the furigana';
+      case 'reader_highlight_style_crayon':
+        return 'Colored pencil';
+      case 'reader_highlight_style_crayon_hint':
+        return 'Grainy color with uneven edges';
+      case 'reader_highlight_style_tape':
+        return 'Washi tape';
+      case 'reader_highlight_style_tape_hint':
+        return 'Torn ends and a fine diagonal pattern';
+      case 'reader_highlight_thickness':
+        return 'Thickness';
+      case 'reader_highlight_opacity':
+        return 'Color strength';
+      case 'reader_highlight_roughness':
+        return 'Stroke jitter';
+      case 'reader_highlight_cover_ruby':
+        return 'Cover furigana';
+      case 'reader_highlight_cover_ruby_hint':
+        return 'Thickens the stroke toward the furigana side. The furigana stays readable on top.';
+      case 'reader_highlight_animate':
+        return 'Stroke animation';
+      case 'reader_highlight_animate_hint':
+        return 'Draws the stroke along the text when you add a favorite';
+      case 'reader_highlight_replay':
+        return 'Replay';
+      case 'reader_highlight_horizontal':
+        return 'Horizontal';
+      case 'reader_highlight_vertical':
+        return 'Vertical';
+      case 'reader_highlight_reset':
+        return 'Reset to defaults';
+      case 'reader_highlight_eink_notice':
+        return 'E-ink mode always uses the classic style.';
+      case 'reader_highlight_preview_color':
+        return 'Preview color';
+      case 'reader_highlight_preview_color_hint':
+        return 'Only changes the preview. Each favorite keeps its own color.';
+      case 'reader_highlight_title':
+        return 'Highlight style';
+      case 'reader_highlight_all_classic':
+        return 'All classic';
+      case 'reader_highlight_kind_label':
+        return 'Applies to';
+      case 'reader_highlight_kind_favorite':
+        return 'Favorites';
+      case 'reader_highlight_kind_lookup':
+        return 'Lookup';
+      case 'reader_highlight_kind_audio':
+        return 'Audiobook';
+      case 'reader_highlight_kind_search':
+        return 'Search';
+      case 'reader_highlight_animate_audio_hint':
+        return 'Draws each sentence along the text as the audio reaches it';
       default:
         return null;
     }
