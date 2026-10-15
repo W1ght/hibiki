@@ -73,4 +73,66 @@ void main() {
     final List<AudioCue> cues = <AudioCue>[_cue(0, 2000), _cue(2000, 5000)];
     expect(snapper.snap(cues, Int8List(300)), 0);
   });
+
+  group('refineEdges', () {
+    test('起点落在静音里：挪到开口 − 150 ms', () {
+      final List<AudioCue> cues = <AudioCue>[_cue(1000, 4000)];
+      expect(
+        snapper.refineEdges(cues, _energy(6000, <(int, int)>[(0, 1500)])),
+        1,
+      );
+      expect(cues.single.startMs, 1350);
+      expect(cues.single.endMs, 4000);
+    });
+
+    test('终点落在静音里：收到收声 + 80 ms', () {
+      final List<AudioCue> cues = <AudioCue>[_cue(1000, 4000)];
+      expect(
+        snapper.refineEdges(cues, _energy(6000, <(int, int)>[(3500, 6000)])),
+        1,
+      );
+      expect(cues.single.endMs, 3580);
+    });
+
+    test('开口在 600 ms 之外：不动', () {
+      final List<AudioCue> cues = <AudioCue>[_cue(1000, 4000)];
+      expect(
+        snapper.refineEdges(cues, _energy(6000, <(int, int)>[(0, 2000)])),
+        0,
+      );
+      expect(cues.single.startMs, 1000);
+    });
+
+    test('静音里 40 ms 的噪声尖峰不算开口', () {
+      final Int8List e = _energy(6000, <(int, int)>[(0, 1500)])
+        ..fillRange(1100 ~/ 20, 1140 ~/ 20, -20);
+      final List<AudioCue> cues = <AudioCue>[_cue(1000, 4000)];
+      snapper.refineEdges(cues, e);
+      expect(cues.single.startMs, 1350);
+    });
+
+    test('收终点会早于末 token − 200 ms：不动', () {
+      final List<AudioCue> cues = <AudioCue>[
+        _cue(1000, 4000)
+          ..tokenTiming = CueTokenTiming(
+            tokens: <String>['a', 'b'],
+            offsetsMs: <int>[0, 2900],
+          ),
+      ];
+      // 收声 3500 → 本该收到 3580，但末 token 在 3900（守卫线 3700）。
+      expect(
+        snapper.refineEdges(cues, _energy(6000, <(int, int)>[(3500, 6000)])),
+        0,
+      );
+      expect(cues.single.endMs, 4000);
+    });
+
+    test('收完短于 500 ms：不动', () {
+      final List<AudioCue> cues = <AudioCue>[_cue(1000, 1800)];
+      expect(
+        snapper.refineEdges(cues, _energy(3000, <(int, int)>[(0, 1500)])),
+        0,
+      );
+    });
+  });
 }

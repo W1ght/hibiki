@@ -29,7 +29,26 @@ class CueEnergySnapper {
     this.minThresholdDb = -50,
     this.maxThresholdDb = -30,
     this.tokenGuardMs = 200,
+    this.edgeMaxShiftMs = 600,
+    this.edgeMinVoiceMs = 60,
+    this.edgeLeadMs = 150,
+    this.edgeTailMs = 80,
   });
+
+  /// [refineEdges]：终点留到收声后多少。春物卷 2 扫过 80 / 150：150 起点延迟
+  /// p90 从 88 涨回 110~124 ms、尾挂变多，只换来提前截断少 3~9 条。
+  final int edgeTailMs;
+
+  /// [refineEdges]：起点挪到开口前多少。比 [leadMs] 宽——轻声开口（气声、清辅音）
+  /// 常在门限下，40 ms 时字头被切（晚起 > 150 ms）11~16 条，150 ms 降到 7~8 条，
+  /// 提前开始几乎不变（春物卷 2 扫 40 / 100 / 150）。
+  final int edgeLeadMs;
+
+  /// [refineEdges]：起止点最多往 cue 内收多远。
+  final int edgeMaxShiftMs;
+
+  /// [refineEdges]：多长的连续有声才算真开口 / 真收声（滤掉单帧噪声）。
+  final int edgeMinVoiceMs;
 
   /// 包络帧长（与转录时写入的一致）。
   final int frameMs;
@@ -138,6 +157,103 @@ class CueEnergySnapper {
       moved++;
     }
     return moved;
+  }
+
+  /// 起止点落在静音里时收回到真实有声处（[snap] 之后跑）。
+  ///
+  /// [snap] 只管紧挨着的两条 cue；前面是长停顿的起点、后面是长停顿的终点它不碰，
+  /// 而那里恰是 token 时刻粗的模型（Kitsune CTC 80 ms 一帧、多字 token 线性摊开，
+  /// 同一字相对 RNN-T ±200 ms 散布）最常把字幕挂进静音的地方：
+  /// - 起点所在帧是静音 → 往后 [edgeMaxShiftMs] 内找第一段 ≥ [edgeMinVoiceMs] 的
+  ///   有声，起点挪到它 − [leadMs]；
+  /// - 终点前一帧是静音 → 往前同样找最后一段有声，终点收到它 + [tailMs]，但不早于
+  ///   末 token 发射时刻 − [tokenGuardMs]。
+  ///
+  /// 只往 cue 内部收，不越界、不动文本；挪完短于 [minDurationMs] 的不动。返回
+  /// 挪动的边数。
+  int refineEdges(List<AudioCue> cues, Int8List energyDb) {
+    final int n = energyDb.length;
+    if (n == 0 || cues.isEmpty) return 0;
+    final Float64List threshold = _thresholds(energyDb);
+    bool quiet(int f) {
+      final int v = energyDb[f];
+      return v != 0 && v < threshold[f];
+    }
+
+    final int maxShift = edgeMaxShiftMs ~/ frameMs;
+    final int minVoice = (edgeMinVoiceMs / frameMs).ceil();
+    int moved = 0;
+    for (final AudioCue cue in cues) {
+      final int fs = cue.startMs ~/ frameMs;
+      if (fs >= 0 && fs < n && quiet(fs)) {
+        int f = fs;
+        final int limit = math.min(n, fs + maxShift);
+        int onset = -1;
+        while (f < limit) {
+          if (quiet(f)) {
+            f++;
+            continue;
+          }
+          int g = f;
+          while (g < n && !quiet(g) && g - f < minVoice) {
+            g++;
+          }
+          if (g - f >= minVoice) {
+            onset = f;
+            break;
+          }
+          f = g;
+        }
+        if (onset >= 0) {
+          final int start = math.max(cue.startMs, onset * frameMs - edgeLeadMs);
+          if (start > cue.startMs && cue.endMs - start >= minDurationMs) {
+            _shiftStart(cue, start);
+            moved++;
+          }
+        }
+      }
+      final int fe = (cue.endMs - 1) ~/ frameMs;
+      if (fe >= 0 && fe < n && quiet(fe)) {
+        int f = fe;
+        final int limit = math.max(-1, fe - maxShift);
+        int offset = -1;
+        while (f > limit) {
+          if (quiet(f)) {
+            f--;
+            continue;
+          }
+          int g = f;
+          while (g >= 0 && !quiet(g) && f - g < minVoice) {
+            g--;
+          }
+          if (f - g >= minVoice) {
+            offset = f;
+            break;
+          }
+          f = g;
+        }
+        if (offset >= 0) {
+          final int end = math.min(
+            cue.endMs,
+            (offset + 1) * frameMs + edgeTailMs,
+          );
+          final int? lastToken = _lastTokenMs(cue);
+          if (end < cue.endMs &&
+              end - cue.startMs >= minDurationMs &&
+              (lastToken == null || end >= lastToken - tokenGuardMs)) {
+            cue.endMs = end;
+            moved++;
+          }
+        }
+      }
+    }
+    return moved;
+  }
+
+  static int? _lastTokenMs(AudioCue cue) {
+    final CueTokenTiming? t = cue.tokenTiming;
+    if (t == null || t.isEmpty) return null;
+    return cue.startMs + t.offsetsMs.last;
   }
 
   /// 每帧的门限（按 [_floorBlockFrames] 一块算一次局部底噪）。未知帧不参与。

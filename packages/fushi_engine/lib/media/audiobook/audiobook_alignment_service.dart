@@ -170,8 +170,12 @@ Future<({List<AudioCue> cues, MatchResult result})> finalizeAlignedCues({
       Directory(p.dirname(subtitlePath)),
     );
     if (energy != null) {
-      final int moved = const CueEnergySnapper().snap(cues, energy);
-      fushiDebugPrint('[fushi-import] energy snap: $moved boundaries');
+      const CueEnergySnapper snapper = CueEnergySnapper();
+      final int moved = snapper.snap(cues, energy);
+      final int edges = snapper.refineEdges(cues, energy);
+      fushiDebugPrint(
+        '[fushi-import] energy snap: $moved boundaries, $edges edges',
+      );
     }
   }
   SubtitleRematchCodec.applyToCues(cues: cues, result: result);
