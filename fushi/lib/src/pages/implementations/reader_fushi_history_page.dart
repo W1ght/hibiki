@@ -449,7 +449,7 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
   final Set<String> _downloadingAudiobookKeys = <String>{};
 
   /// 已在本机落地、但远端清单还没按新本地状态重新去重的对端书（键 =
-  /// [RemoteBookInfo.downloadId]，BUG-3450）。渲染时跳过它们的占位卡；由
+  /// [RemoteBookInfo.downloadId]，BUG-3451）。渲染时跳过它们的占位卡；由
   /// [_onRemoteBookLanded] 写入，那一轮远端清单回来后摘除。
   final Set<String> _landedRemoteDownloadIds = <String>{};
 

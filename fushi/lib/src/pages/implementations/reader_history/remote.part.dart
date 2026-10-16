@@ -895,7 +895,7 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
               : resolveExtractedEpubRoot(existingBook.extractDir) != null);
       final String? localBookKey = (hasExistingContent ? existingBook.bookKey : null) ??
           await _importRemoteBookFile(dest, mangaTitleHint: book.title);
-      // BUG-3450：刚从对端落地的书沿用它在对端的入库时刻。书架「最近阅读」对没有
+      // BUG-3451：刚从对端落地的书沿用它在对端的入库时刻。书架「最近阅读」对没有
       // 阅读记录的书回落到入库时刻、「导入时间」直接按它排；不改的话入库时刻 = 下载
       // 那一刻，对端没读过的书一下完就顶到最前，和下载前占位卡的位置（同样按 host
       // 的入库时刻排）对不上。只动这次新导入的行：已在本机的书（有声书补拉重试）
@@ -994,7 +994,7 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
       // 远端书时不再丢「阅读记录」（放在有声书下载之前、独立吞错，保证进度回填不被
       // 有声书失败连带跳过）。
       await _downloadRemoteBookProgress(book, client, localBookKey);
-      // BUG-3450：刚写进的对端阅读时刻要进「最近阅读」排序。最后阅读时间 provider
+      // BUG-3451：刚写进的对端阅读时刻要进「最近阅读」排序。最后阅读时间 provider
       // 平时只在关书时失效，不失效的话这本书查不到阅读记录、回落到入库时刻。
       if (mounted) ref.invalidate(bookLastReadAtProvider);
       // BUG-990：EPUB 已落库、有声书未落库的空窗起点——标记本地 bookKey「有声书下载中」，
@@ -1020,7 +1020,7 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
     }
   }
 
-  /// 对端书在本机落地（入库 + 别名 / 合集归属已写完）后的书架收尾（BUG-3450）。
+  /// 对端书在本机落地（入库 + 别名 / 合集归属已写完）后的书架收尾（BUG-3451）。
   ///
   /// 占位卡的去重与合集折叠此前只在整个下载任务结束后才重算（[_downloadRemoteBook]
   /// 尾部的刷新），而本地卡在入库那一刻就经书集合流冒出来：中间这段（拉进度、下

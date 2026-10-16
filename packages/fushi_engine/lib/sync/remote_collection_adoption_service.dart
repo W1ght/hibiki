@@ -79,7 +79,7 @@ class RemoteCollectionAdoptionService {
     final String? uid = identities.uidByKey[remoteKey];
     if (uid != null) return database.getEpubBookByUid(uid);
     if (preloaded == null) return null;
-    // BUG-3450：[preloaded] 是整份清单收养开始时的快照，逐本收养之间别的事务照常
+    // BUG-3451：[preloaded] 是整份清单收养开始时的快照，逐本收养之间别的事务照常
     // 落库——这一轮循环期间正好下载落地、已把占位成员提升成本地 uid 的书，在快照里
     // 查不到，按「本机没有」处理就会把对端键的占位成员行重新插回合集：合集里同一本
     // 书两行（本地卡 + 未下载占位卡，册数翻倍），直到下一轮目录刷新才被收掉。快照
