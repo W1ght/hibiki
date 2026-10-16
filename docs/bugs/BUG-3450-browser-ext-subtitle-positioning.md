@@ -15,7 +15,7 @@
   | 重算时机 | 字幕 200ms tick；按钮 scroll/resize/悬停 + 1s 轮询 | 1s `setInterval` + fullscreenchange + 一次 rAF | 共享 rAF 帧观察：每帧只读一次正片矩形，变了才回调；原有 tick / 轮询保留作兜底 |
   | 站点样式隔离 | 选择器只写了部分几何属性 | `!important` + 内联 style，不用 shadow DOM | 定位三项（position/left/top）写内联 `!important`；JS 不写的几何属性（height/max-height/min-width/right/bottom/margin/aspect-ratio/float/transform）在 ID 规则里 `!important`。不用 shadow DOM：覆盖层文字要走 content.js 的 caret 取词 |
   | 位置存储 | 视频盒分数坐标（x 中心、y 底边），全站一份 | 像素偏移（距视频底 / 顶 75px），按 profile 一份，不分站 | 保留分数坐标（全屏 ↔ 非全屏按比例不变，存档格式不变、无需迁移）；摆放时按实测高夹回视频内（坏存档只夹显示、不改写），缩放按实测高落底边 |
-- **[x] ① 已修复** — （提交见下）
+- **[x] ① 已修复** — `442e03bd97`
   - `tools/browser-extension/video-target.js`：新增视频锚定 `window.fushiVideoAnchor`——`overlayHost()` / `anchorMode()`（带 1 秒缓存）/ `placeAt()`（内联 `!important`）/ `watch()`（共享 rAF 帧观察）；`probeOrigin(parent, mode)` 泛化原 fixed 探针，探针几何也写 `!important`。
   - `tools/browser-extension/subtitle-panel.js`：`parentForOverlay` / `placeOverlay` 走视频锚定（`setOverlayPoint`）；`placeOverlay` 摆放后按实测高把底边夹到「视频顶缘 + 盒高」以下（`renderedOverlayHeight`）；缩放把手按实测高重落底边；覆盖层显示期间订阅帧观察（`watchOverlay` / `replaceOverlay`）。
   - `tools/browser-extension/player-controls.js`：悬浮按钮挂载点（`floatingHost`）、摆放（`placeFloatingButton`）走视频锚定并订阅帧观察（`watchFloating`）；从悬浮态切到站点控制栏时清掉内联定位。
