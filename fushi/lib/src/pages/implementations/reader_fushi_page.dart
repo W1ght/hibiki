@@ -1530,6 +1530,14 @@ class ReaderFushiPage extends BaseSourcePage {
   @visibleForTesting
   static Future<Uint8List?> Function()? debugCaptureWebView;
 
+  /// 测试钩子：对阅读器 WebView 直接发 Chrome DevTools Protocol 命令（WebView2 /
+  /// Android 有效）。集成测试用它经 `Input.dispatchTouchEvent` 投真实触摸序列，
+  /// 走页面自己的 touchstart / touchmove / touchend 监听（拖动跟手等）。
+  /// 仅 debug/profile build 在 onWebViewCreated 注册；release / 未在阅读器页时为 null。
+  @visibleForTesting
+  static Future<dynamic> Function(String method, Map<String, dynamic> params)?
+  debugCallDevToolsProtocol;
+
   /// Test hook: reports which surface the char cursor lives on
   /// (`none`/`reader`/`popup`). Set in build, cleared on dispose, asserted out of
   /// release builds. Lets integration tests observe the cursor↔popup transfer.
@@ -3361,6 +3369,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       ReaderFushiPage.debugHookOwner = null;
       ReaderFushiPage.debugEvaluateJavascript = null;
       ReaderFushiPage.debugCaptureWebView = null;
+      ReaderFushiPage.debugCallDevToolsProtocol = null;
       ReaderFushiPage.debugCaretSurface = null;
       ReaderFushiPage.debugEvaluateTopPopup = null;
       ReaderFushiPage.debugInjectAudiobookBridge = null;

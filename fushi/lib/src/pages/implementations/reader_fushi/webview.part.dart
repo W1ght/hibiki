@@ -2118,6 +2118,12 @@ updateLive: function(patch) {
               controller.evaluateJavascript(source: source);
           ReaderFushiPage.debugCaptureWebView = () =>
               controller.takeScreenshot();
+          ReaderFushiPage.debugCallDevToolsProtocol =
+              (String method, Map<String, dynamic> params) =>
+                  controller.callDevToolsProtocolMethod(
+                    methodName: method,
+                    parameters: params,
+                  );
           ReaderFushiPage.debugCaretSurface = () => _caretSurface.name;
           ReaderFushiPage.debugEvaluateTopPopup = (String source) async =>
               _webviewTopPopupState?.debugEval(source);
