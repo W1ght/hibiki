@@ -50,7 +50,7 @@ async function run(vertical, effect) {
     const result = await pg.evaluate(() => window.fushiReader.paginate('forward'));
     const mid = [];
     for (const pct of [25, 50]) {
-      await new Promise(r => setTimeout(r, DURATION * (pct === 25 ? 0.25 : 0.25)));
+      await new Promise(r => setTimeout(r, DURATION * 0.25));
       mid.push(await pg.evaluate(() => ({
         animations: document.getAnimations().length,
         marker: document.documentElement.getAttribute('data-fushi-pt'),
