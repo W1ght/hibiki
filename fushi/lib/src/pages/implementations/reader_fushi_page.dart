@@ -4066,7 +4066,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         key: const ValueKey<String>('fushi_chapter_fade_in'),
         opacity: _readerContentReady ? 0 : 1,
         duration: kReaderChapterFadeInDuration,
-        curve: Curves.easeOut,
+        curve: FushiMotion.exit,
         onEnd: () {
           if (!_readerContentReady || !_chapterFadeInPending) return;
           _rebuild(() => _chapterFadeInPending = false);

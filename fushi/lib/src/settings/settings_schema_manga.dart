@@ -157,7 +157,7 @@ SettingsSection _mangaPagingSection() {
       SettingsSegmentedItem<String>(
         id: 'manga.page_animation_speed',
         title: t.page_turn_animation_speed,
-        icon: Icons.speed_outlined,
+        icon: FushiIcons.speed,
         visible: (SettingsContext c) =>
             mangaPageAnimationFromKey(c.appModel.mangaPageAnimation) !=
             PageTurnAnimation.none,
@@ -184,7 +184,7 @@ SettingsSection _mangaPagingSection() {
         id: 'manga.page_turn_follow_drag',
         title: t.page_turn_follow_drag,
         subtitle: t.page_turn_follow_drag_description,
-        icon: Icons.swipe_outlined,
+        icon: FushiIcons.swipe,
         visible: (SettingsContext c) => mangaPageAnimationFromKey(
           c.appModel.mangaPageAnimation,
         ).isDirectional,

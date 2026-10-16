@@ -4,12 +4,13 @@
 //
 // 先生成真 shell：
 //   flutter test test/reader/reader_headless_shell_dump_test.dart   # 写 shell 到 systemTemp
-//   node tool/reader_pitch_headless/page_turn_animation_probe.mjs [输出目录]
+//   node tool/reader_pitch_headless/page_turn_animation_probe.mjs   # 截图写到 <systemTemp>/fushi_page_turn_probe
 // CHROME_PATH 指向 Chromium（Playwright headless shell 亦可）。退出码 0 = 每组都在
 // 动画中途观察到 View Transition 且落页正确。
 import fs from 'node:fs'; import path from 'node:path'; import os from 'node:os'; import puppeteer from 'puppeteer-core';
 const CHROME = process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
-const OUT = process.argv[2] || path.join(os.tmpdir(), 'fushi_page_turn_probe');
+// 输出目录固定在系统临时目录下，不接受命令行路径（避免把任意路径当写入目标）。
+const OUT = path.join(os.tmpdir(), 'fushi_page_turn_probe');
 fs.mkdirSync(OUT, { recursive: true });
 const W = 600, H = 800, DURATION = 2000;
 const css = (vertical) => vertical
