@@ -136,6 +136,30 @@ const CHECK = String.raw`(async () => {
   await frames();
   ok(ink('fushi-hl-yellow') === sweeping, 're-applying the same favourites never replays the sweep');
 
+  // Lines sweep in reading order (user 2026-10-16): vertical-rl right to left, horizontal top to bottom.
+  const longRange = (() => {
+    for (const n of textNodes(root())) {
+      if (n.data.indexOf('窓の外') >= 0) { const r = document.createRange(); r.selectNodeContents(n); return r; }
+    }
+    return null;
+  })();
+  CSS.highlights.delete('fushi-hl-blue');
+  await frames();
+  window.__fushiLanes.markFresh([longRange], []);
+  CSS.highlights.set('fushi-hl-blue', new Highlight(longRange));
+  await frames();
+  const order = Array.from(group('fushi-hl-blue').querySelectorAll('clipPath rect'))
+    .map((r) => ({ begin: parseFloat(r.querySelector('animate').getAttribute('begin')),
+      pos: vertical ? parseFloat(r.getAttribute('x')) : parseFloat(r.getAttribute('y')) }))
+    .sort((a, b) => a.begin - b.begin);
+  ok(order.length > 0, 'the long favourite sweeps in');
+  for (let i = 1; i < order.length; i++) {
+    ok(vertical ? order[i].pos < order[i - 1].pos : order[i].pos > order[i - 1].pos,
+      'line ' + i + ' sweeps after the one before it in reading order');
+  }
+  CSS.highlights.delete('fushi-hl-blue');
+  await frames();
+
   // ── lookup (text range + ruby class), search ──
   const look = rangeOf('がましい');
   CSS.highlights.set('fushi-selection', new Highlight(look));

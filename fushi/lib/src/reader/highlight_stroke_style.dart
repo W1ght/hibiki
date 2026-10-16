@@ -57,14 +57,17 @@ enum HighlightStrokeStyle {
 
 /// 阅读器里的四类高亮。每类一套独立的 [HighlightStrokeConfig]。
 enum HighlightKind {
-  /// 收藏句（五色）：新收藏时放一次落笔动画。
-  favorite('favorite', 'favorite_highlight'),
+  // 顺序即设置页「应用于」的分段顺序（用户 2026-10-16：有声书第一、查词第二、收藏第三）。
+  // 偏好键按名字存，改顺序不影响已有设置。
+
+  /// 有声书当前句：读到哪句就画出哪句。
+  audio('audio', 'audio_highlight'),
 
   /// 查词选中（含拖选）：选中一处新的词时画出来；拖选扩大选区不重播。
   lookup('lookup', 'lookup_highlight'),
 
-  /// 有声书当前句：读到哪句就画出哪句。
-  audio('audio', 'audio_highlight'),
+  /// 收藏句（五色）：新收藏时放一次落笔动画。
+  favorite('favorite', 'favorite_highlight'),
 
   /// 搜索命中：跳到一处新的命中时画出来。
   search('search', 'search_highlight');

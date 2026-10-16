@@ -781,7 +781,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
     // 的 over 侧（横排上方、竖排右侧），「盖住振假名」就是往 over 侧加厚。笔划画在正文之下，振假名字
     // 本身仍压在笔划上面。随机抖动的种子取组名 + 行的局部坐标 + 样式：翻页、重画不变形，重排才换一笔。
     // Dart 侧设置页预览（favorite_highlight_preview.dart）按同一套参数画示意，两边改形状要一起改。
-    var MARK_KINDS = ['favorite', 'lookup', 'audio', 'search'];
+    var MARK_KINDS = ['audio', 'lookup', 'favorite', 'search'];
     var KIND_OF = { 'fushi-sentence-audio': 'audio', 'fushi-selection': 'lookup', 'fushi-search': 'search' };
     var kindOf = function(name) {
       return KIND_OF[name] || (/^fushi-hl-[a-z]+$/.test(name) ? 'favorite' : null);
@@ -1010,6 +1010,10 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       }
       return false;
     };
+    // 竖排的行是否从左往右排（vertical-lr）；vertical-rl 与未知一律当从右往左。
+    var readsLeftToRight = function() {
+      try { return getComputedStyle(document.body).writingMode.indexOf('vertical-lr') === 0; } catch (e) { return false; }
+    };
     // 有声书：上一次画过的行（组名 → { 行键: true }）。
     var paintedLines = {};
     // 查词 / 搜索：上一次画过的行几何（组名 → [{v, u0, u1, vc, em}]）。
@@ -1037,6 +1041,11 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       var nowLines = {};
       paintedLines[name] = nowLines;
       var prevGeom = paintedGeom[name] || [];
+      // 落笔按阅读顺序：lanes() 按中线坐标升序给行，横排即从上到下；竖排 vertical-rl 的行序是
+      // 从右往左（用户 2026-10-16「竖排是从右往左的，横排是上到下的」），中线降序。
+      if (list.length > 1 && list[0].v && !readsLeftToRight()) {
+        list = list.slice().sort(function(x, y) { return Math.abs(x.mid - y.mid) >= 1 ? y.mid - x.mid : x.a - y.a; });
+      }
       var geom = list.map(function(l) {
         return l.v
           ? { v: true, u0: l.a - origin.top, u1: l.b - origin.top, vc: -(l.mid - origin.left), em: l.em }

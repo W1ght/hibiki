@@ -81,7 +81,7 @@ class HighlightStylePage extends StatefulWidget {
     this.ink,
     this.initiallyVertical = false,
     this.lineHeight = 1.9,
-    this.initialKind = HighlightKind.favorite,
+    this.initialKind = HighlightKind.audio,
   });
 
   final ReaderFushiSource source;
