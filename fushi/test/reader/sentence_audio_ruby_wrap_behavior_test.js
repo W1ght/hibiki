@@ -623,4 +623,79 @@ const rangeText = (r) => (r.startContainer === r.endContainer
   liveRanges.length = 0;
 }
 
+// 19. BUG-3369 合并 #2213 后复核：批内一章多句跨段落、跨 ruby 的逐句包裹与整章拆包裹，收藏 live Range
+//     （跨两段）照样不塌；包裹与拆包裹各只读一次原生选区。批只省掉原生选区的读取，live Range 的
+//     钉住 / 写回仍逐次执行；倒序包裹让前一句的切开不影响后一句的「节点 + 偏移」。
+{
+  const t1 = new Text('前の文。学校で');
+  const r = ruby('稀', 'まれ');
+  const p1 = el('p', [t1, r, 'だ。']);
+  const t2 = new Text('次の段落です。');
+  el('p', [t2]);
+  const tail1 = p1.childNodes[2];
+  const R = makeReader({});
+  R.collectSentenceAudioCueRanges = () => [
+    { id: 'a', ranges: [{ node: t1, start: 0, end: 4 }] },
+    { id: 'b', ranges: [{ node: t1, start: 4, end: 7 }, { node: r.childNodes[0], start: 0, end: 1 },
+      { node: tail1, start: 0, end: 2 }] },
+    { id: 'c', ranges: [{ node: t2, start: 0, end: 7 }] },
+  ];
+  const favorite = new LiveRange(t1, 5, t2, 3);
+  R.testWindow.__fushiHighlightRangeMap = { fav: { color: 'yellow', ranges: [favorite], rubyElements: [] } };
+  let reads = 0;
+  R.testWindow.getSelection = () => { reads++; return { rangeCount: 0 }; };
+  R.applySentenceAudioCues([{ id: 'a' }, { id: 'b' }, { id: 'c' }]);
+  assert.strictEqual(reads, 1, 'one read for the whole chapter wrap');
+  assert.deepStrictEqual(Array.from(R.cueWrappers.get('a'), (w) => w.textContent), ['前の文。']);
+  assert.deepStrictEqual(Array.from(R.cueWrappers.get('b'), (w) => w.textContent), ['学校で', '稀', 'だ。']);
+  assert.deepStrictEqual(Array.from(R.cueWrappers.get('c'), (w) => w.textContent), ['次の段落です。']);
+  assert.strictEqual(R.cueWrappers.get('b')[1].parentNode, r, 'ruby base wrapped in place, ruby not moved');
+  assert.strictEqual(p1.textContent, '前の文。学校で稀まれだ。');
+  assert.strictEqual(favorite.startContainer.nodeType, 3, 'favourite start not collapsed onto an element');
+  assert.strictEqual(favorite.endContainer.nodeType, 3, 'favourite end not collapsed onto an element');
+  assert.strictEqual(favorite.startContainer.nodeValue.slice(favorite.startOffset), '校で');
+  assert.strictEqual(favorite.endContainer.nodeValue.slice(0, favorite.endOffset), '次の段');
+  assert.strictEqual(R.testWindow.__fushiLiveRanges.noNativeSelection, false);
+
+  // 整章拆包裹（分页 / 连续的 resetSentenceAudioCues）同样整批只读一次。合并文本节点不在 fake DOM
+  // 里建模（normalize 置空），这里只核读取次数、包裹全拆掉、收藏端点仍落在原文字上。
+  vm.runInContext('R.resetSentenceAudioCues = ' +
+    extractMethod('resetSentenceAudioCues').replace(/^resetSentenceAudioCues: /, '') +
+    ';\nR.unwrap = ' + extractMethod('unwrap').replace(/^unwrap: /, '') + ';', R.testSandbox);
+  R.cueRangesMap = new Map();
+  const savedNormalize = Element.prototype.normalize;
+  Element.prototype.normalize = function() {};
+  reads = 0;
+  try {
+    R.resetSentenceAudioCues();
+  } finally {
+    Element.prototype.normalize = savedNormalize;
+  }
+  assert.strictEqual(reads, 1, 'one read for the whole chapter unwrap');
+  assert.strictEqual(R.cueWrappers.size, 0);
+  assert.ok(!p1.childNodes.some((n) => n.className === 'fushi-sentence-audio-cue'), 'wrappers removed');
+  assert.ok(!r.childNodes.some((n) => n.className === 'fushi-sentence-audio-cue'), 'ruby wrapper removed');
+  assert.strictEqual(p1.textContent, '前の文。学校で稀まれだ。');
+  assert.strictEqual(favorite.startContainer.nodeValue.slice(favorite.startOffset), '校で');
+  assert.strictEqual(favorite.endContainer.nodeValue.slice(0, favorite.endOffset), '次の段');
+  liveRanges.length = 0;
+}
+
+// 20. VN 逐句包裹（wrapSentenceAudioCueRanges）同样整批只读一次原生选区。
+{
+  const N = 12;
+  const p = el('p', []);
+  const nodes = [];
+  for (let i = 0; i < N; i++) { const t = new Text('句' + i + '。'); nodes.push(t); p.appendChild(t); }
+  const R = makeVnReader();
+  let reads = 0;
+  R.testWindow.getSelection = () => { reads++; return { rangeCount: 0 }; };
+  R.wrapSentenceAudioCueRanges(nodes.map((t, i) => ({
+    id: 'v' + i, ranges: [{ node: t, start: 0, end: t.nodeValue.length }],
+  })));
+  assert.strictEqual(R.cueWrappers.size, N);
+  assert.strictEqual(reads, 1, 'VN wraps a screen of cues with one selection read');
+  liveRanges.length = 0;
+}
+
 console.log('all assertions passed');
