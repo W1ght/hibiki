@@ -2927,8 +2927,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     _openTrace.mark('charCounts');
 
     // 有声书槽（音频服务初始化 + 会话附着 + 全书 cue 预热）与书/spread 并行起跑。
-    // 普通开书在选首个恢复锚前必须等它：只要存在可映射的音频 cue，音频位置始终
-    // 是主位置；书签/收藏是用户显式跳转，仍保持最高优先级、不消费此槽。
+    // 普通开书在选首个恢复锚前等它：没有阅读存档时起点取自音频 cue（BUG-3367 起阅读
+    // 存档是主位置，音频 cue 只兜底）；书签/收藏是用户显式跳转，仍保持最高优先级、
+    // 不消费此槽。
     final Future<void> audioSlotFuture = _resolveAudioSlot().then((_) {
       _openTrace.markLate('audioSlot');
     });

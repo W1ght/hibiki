@@ -12,7 +12,10 @@ import 'package:flutter_test/flutter_test.dart';
 ///
 /// 两个实时读入口（`_refreshProgress` 与退出 / 切后台的
 /// `_syncPositionFromWebViewProgress`）写 `_lastProgress*` 与落库前都必须先过
-/// `shouldRevealCurrentCue` 这道门；这里按方法体切出源码钉住。
+/// `_cueOwnsReadingPosition` 这道门；这里按方法体切出源码钉住。
+///
+/// 门本身必须同时要求「跟读在驱动视口」与「当前句映射得出位置」：只看跟读门时，
+/// 音频停在没有句子的段落（片头、只对齐了部分章节的书）会让两边都不落库。
 void main() {
   final String source = File(
     'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
@@ -29,9 +32,9 @@ void main() {
   test('_refreshProgress leaves the position to the cue while following', () {
     final String body = methodBody('Future<void> _refreshProgress() async {');
     final int gate = body.indexOf(
-      '_audiobookController?.shouldRevealCurrentCue == true',
+      'final bool cueOwnsPosition = _cueOwnsReadingPosition;',
     );
-    expect(gate, isNonNegative, reason: 'follow gate must be read');
+    expect(gate, isNonNegative, reason: 'owner gate must be read');
     final int write = body.indexOf('_lastProgressValue = progress;');
     expect(write, greaterThan(gate), reason: 'cache write comes after gate');
     expect(
@@ -50,16 +53,39 @@ void main() {
     final String body = methodBody(
       'Future<void> _syncPositionFromWebViewProgress() async {',
     );
-    final int gate = body.indexOf(
-      'if (_audiobookController?.shouldRevealCurrentCue != true) {',
-    );
-    expect(gate, isNonNegative, reason: 'follow gate must guard the write');
+    final int gate = body.indexOf('if (!_cueOwnsReadingPosition) {');
+    expect(gate, isNonNegative, reason: 'owner gate must guard the write');
     final int write = body.indexOf('_lastProgressValue = snapshot.progress;');
     expect(write, greaterThan(gate), reason: 'cache write sits inside gate');
     expect(
       body.substring(gate, write),
       isNot(contains('\n    }')),
       reason: 'the gated block must still be open at the cache write',
+    );
+  });
+
+  test('the cue owns the position only when it maps to one', () {
+    final int start = source.indexOf('bool get _cueOwnsReadingPosition =>');
+    expect(start, isNonNegative, reason: 'owner gate must exist');
+    final int end = source.indexOf(';', start);
+    final String gate = source.substring(start, end);
+    expect(
+      gate,
+      contains('_audiobookController?.shouldRevealCurrentCue == true'),
+      reason: 'only while following does the cue drive the viewport',
+    );
+    expect(
+      gate,
+      contains('_readingPositionFromCurrentCue() != null'),
+      reason:
+          'an unmapped cue cannot write a position, so the viewport must '
+          'stay the owner instead of nobody persisting it',
+    );
+    final String sync = methodBody('void _syncPositionFromCurrentCue() {');
+    expect(
+      sync,
+      contains('_readingPositionFromCurrentCue()'),
+      reason: 'the gate and the cue save must share one mapping',
     );
   });
 }
