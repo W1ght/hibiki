@@ -8673,9 +8673,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srt_import_pick_subtitle_files => 'Pick subtitle files';
   String get srt_import_success => 'Book imported';
   String get srt_import_title_hint => 'Book title';
-  String get startup_default_dictionary_tab => 'Open lookup on startup';
-  String get startup_default_dictionary_tab_hint =>
-      'Start the home screen on the lookup tab instead of the current default.';
+  String get startup_module => 'Startup page';
+  String get startup_module_default => 'First page in the bar';
+  String get startup_module_hint =>
+      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
   String get stash => 'Stash';
   String get stash_added_multiple =>
       'Multiple items have been added to the Stash.';
@@ -25781,10 +25782,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'عنوان الكتاب';
   @override
-  String get startup_default_dictionary_tab => 'فتح البحث عند البدء';
+  String get startup_module => 'صفحة البدء';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'ابدأ الشاشة الرئيسية على تبويب البحث بدلًا من الافتراضي الحالي.';
+  String get startup_module_default => 'أول صفحة في الشريط';
+  @override
+  String get startup_module_hint =>
+      'الصفحة التي تظهر عند فتح التطبيق. يمكن اختيار الوحدات المفعّلة فقط؛ وإذا أُوقفت الوحدة المختارة تُستخدم أول صفحة في الشريط.';
   @override
   String get stash => 'المخزّن';
   @override
@@ -45074,10 +45077,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Buchtitel';
   @override
-  String get startup_default_dictionary_tab => 'Beim Start Nachschlagen öffnen';
+  String get startup_module => 'Startseite';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Startet den Startbildschirm im Nachschlagen-Tab statt mit dem aktuellen Standard.';
+  String get startup_module_default => 'Erste Seite in der Leiste';
+  @override
+  String get startup_module_hint =>
+      'Seite, die beim Öffnen der App angezeigt wird. Nur aktivierte Module sind wählbar; ist das gewählte Modul deaktiviert, wird die erste Seite in der Leiste verwendet.';
   @override
   String get stash => 'Merkliste';
   @override
@@ -64489,10 +64494,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Título del libro';
   @override
-  String get startup_default_dictionary_tab => 'Abrir la consulta al iniciar';
+  String get startup_module => 'Página de inicio';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Inicia la pantalla principal en la pestaña de consulta en lugar del valor predeterminado actual.';
+  String get startup_module_default => 'Primera página de la barra';
+  @override
+  String get startup_module_hint =>
+      'Página que se muestra al abrir la app. Solo se pueden elegir módulos activados; si el elegido se desactiva, se usa la primera página de la barra.';
   @override
   String get stash => 'Guardado rápido';
   @override
@@ -83993,11 +84000,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Titre du livre';
   @override
-  String get startup_default_dictionary_tab =>
-      'Ouvrir la recherche au démarrage';
+  String get startup_module => 'Page de démarrage';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Démarre l\'écran d\'accueil sur l\'onglet de recherche au lieu de la page par défaut actuelle.';
+  String get startup_module_default => 'Première page de la barre';
+  @override
+  String get startup_module_hint =>
+      'Page affichée à l’ouverture de l’app. Seuls les modules activés peuvent être choisis ; si celui choisi est désactivé, la première page de la barre est utilisée.';
   @override
   String get stash => 'Panier';
   @override
@@ -103259,10 +103267,12 @@ class _StringsId extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Judul buku';
   @override
-  String get startup_default_dictionary_tab => 'Buka pencarian kata saat mulai';
+  String get startup_module => 'Halaman awal';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Mulai layar beranda pada tab pencarian kata, bukan default saat ini.';
+  String get startup_module_default => 'Halaman pertama di bilah';
+  @override
+  String get startup_module_hint =>
+      'Halaman yang ditampilkan saat aplikasi dibuka. Hanya modul yang aktif yang bisa dipilih; jika modul yang dipilih dinonaktifkan, halaman pertama di bilah yang digunakan.';
   @override
   String get stash => 'Simpanan';
   @override
@@ -122570,10 +122580,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Titolo del libro';
   @override
-  String get startup_default_dictionary_tab => 'Apri la ricerca all\'avvio';
+  String get startup_module => 'Pagina iniziale';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Avvia la schermata Home sulla scheda di ricerca invece dell\'attuale predefinita.';
+  String get startup_module_default => 'Prima pagina della barra';
+  @override
+  String get startup_module_hint =>
+      'Pagina mostrata all’apertura dell’app. Si possono scegliere solo i moduli attivi; se quello scelto viene disattivato, si usa la prima pagina della barra.';
   @override
   String get stash => 'Raccolta';
   @override
@@ -141170,10 +141182,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get srt_import_title_hint => '本のタイトル';
   @override
-  String get startup_default_dictionary_tab => '起動時に辞書を開く';
+  String get startup_module => '起動ページ';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      '起動後すぐに辞書タブを表示します。オフにすると現在のデフォルトを維持します。';
+  String get startup_module_default => 'バーの最初のページ';
+  @override
+  String get startup_module_hint =>
+      'アプリを開いたときに表示するページです。有効なモジュールからのみ選べます。選んだモジュールがオフになると、バーの最初のページを使います。';
   @override
   String get stash => 'スタッシュ';
   @override
@@ -159521,10 +159535,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get srt_import_title_hint => '책 제목';
   @override
-  String get startup_default_dictionary_tab => '시작 시 단어 찾기 열기';
+  String get startup_module => '시작 페이지';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      '홈 화면을 현재 기본값 대신 단어 찾기 탭으로 시작합니다.';
+  String get startup_module_default => '바의 첫 번째 페이지';
+  @override
+  String get startup_module_hint =>
+      '앱을 열 때 표시할 페이지입니다. 켜져 있는 모듈만 선택할 수 있으며, 선택한 모듈이 꺼지면 바의 첫 번째 페이지를 사용합니다.';
   @override
   String get stash => '보관함 열기';
   @override
@@ -178567,10 +178583,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Boektitel';
   @override
-  String get startup_default_dictionary_tab => 'Opzoeken openen bij opstarten';
+  String get startup_module => 'Startpagina';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Start het beginscherm op het opzoektabblad in plaats van de huidige standaard.';
+  String get startup_module_default => 'Eerste pagina in de balk';
+  @override
+  String get startup_module_hint =>
+      'Pagina die wordt getoond bij het openen van de app. Alleen ingeschakelde modules kunnen worden gekozen; als de gekozen module is uitgeschakeld, wordt de eerste pagina in de balk gebruikt.';
   @override
   String get stash => 'Verzameling';
   @override
@@ -197907,10 +197925,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Título do livro';
   @override
-  String get startup_default_dictionary_tab => 'Abrir consulta ao iniciar';
+  String get startup_module => 'Página inicial';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Inicia a tela inicial na aba de consulta em vez do padrão atual.';
+  String get startup_module_default => 'Primeira página da barra';
+  @override
+  String get startup_module_hint =>
+      'Página exibida ao abrir o app. Só é possível escolher módulos ativados; se o escolhido for desativado, a primeira página da barra é usada.';
   @override
   String get stash => 'Reserva';
   @override
@@ -217224,10 +217244,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Название книги';
   @override
-  String get startup_default_dictionary_tab => 'Открывать поиск при запуске';
+  String get startup_module => 'Стартовая страница';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Открывать главный экран на вкладке поиска вместо текущего значения по умолчанию.';
+  String get startup_module_default => 'Первая страница на панели';
+  @override
+  String get startup_module_hint =>
+      'Страница, которая открывается при запуске приложения. Можно выбрать только включённые модули; если выбранный модуль отключён, открывается первая страница на панели.';
   @override
   String get stash => 'Закладки';
   @override
@@ -236292,10 +236314,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get srt_import_title_hint => 'ชื่อหนังสือ';
   @override
-  String get startup_default_dictionary_tab => 'เปิดหน้าค้นคำเมื่อเริ่มแอป';
+  String get startup_module => 'หน้าเริ่มต้น';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'เริ่มหน้าจอหลักที่แท็บค้นคำแทนค่าเริ่มต้นปัจจุบัน';
+  String get startup_module_default => 'หน้าแรกในแถบ';
+  @override
+  String get startup_module_hint =>
+      'หน้าที่แสดงเมื่อเปิดแอป เลือกได้เฉพาะโมดูลที่เปิดใช้อยู่ หากโมดูลที่เลือกถูกปิด จะใช้หน้าแรกในแถบแทน';
   @override
   String get stash => 'ที่เก็บชั่วคราว';
   @override
@@ -255428,10 +255452,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Kitap başlığı';
   @override
-  String get startup_default_dictionary_tab => 'Başlangıçta aramayı aç';
+  String get startup_module => 'Başlangıç sayfası';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Ana ekranı mevcut varsayılan yerine arama sekmesinde başlat.';
+  String get startup_module_default => 'Çubuktaki ilk sayfa';
+  @override
+  String get startup_module_hint =>
+      'Uygulama açıldığında gösterilen sayfa. Yalnızca etkin modüller seçilebilir; seçilen modül kapatılırsa çubuktaki ilk sayfa kullanılır.';
   @override
   String get stash => 'Depo';
   @override
@@ -274558,10 +274584,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Tên sách';
   @override
-  String get startup_default_dictionary_tab => 'Mở tra từ khi khởi động';
+  String get startup_module => 'Trang khởi động';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'Khởi động màn hình chính ở tab tra từ thay vì mặc định hiện tại.';
+  String get startup_module_default => 'Trang đầu tiên trên thanh';
+  @override
+  String get startup_module_hint =>
+      'Trang hiển thị khi mở ứng dụng. Chỉ chọn được các mô-đun đang bật; nếu mô-đun đã chọn bị tắt, trang đầu tiên trên thanh sẽ được dùng.';
   @override
   String get stash => 'Lưu tạm';
   @override
@@ -292432,9 +292460,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srt_import_title_hint => '书名';
   @override
-  String get startup_default_dictionary_tab => '启动时打开查词';
+  String get startup_module => '启动页';
   @override
-  String get startup_default_dictionary_tab_hint => '应用开屏后直接显示查词页；关闭时保留当前默认首页。';
+  String get startup_module_default => '底栏第一个页面';
+  @override
+  String get startup_module_hint =>
+      '打开应用时显示的页面，只能从已开启的功能模块里选；所选模块被关闭时改为底栏第一个页面。';
   @override
   String get stash => '暂存';
   @override
@@ -310124,10 +310155,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srt_import_title_hint => '書名';
   @override
-  String get startup_default_dictionary_tab => '啟動時開啟查詞';
+  String get startup_module => '啟動頁';
   @override
-  String get startup_default_dictionary_tab_hint =>
-      'App 開啟後直接顯示查詞分頁，而非目前的預設首頁。';
+  String get startup_module_default => '欄中第一個頁面';
+  @override
+  String get startup_module_hint =>
+      '開啟 App 時顯示的頁面，只能從已開啟的功能模組中選擇；所選模組被關閉時改為欄中第一個頁面。';
   @override
   String get stash => '暫存';
   @override
@@ -326746,10 +326779,12 @@ extension on _StringsEn {
         return 'Book imported';
       case 'srt_import_title_hint':
         return 'Book title';
-      case 'startup_default_dictionary_tab':
-        return 'Open lookup on startup';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Start the home screen on the lookup tab instead of the current default.';
+      case 'startup_module':
+        return 'Startup page';
+      case 'startup_module_default':
+        return 'First page in the bar';
+      case 'startup_module_hint':
+        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
       case 'stash':
         return 'Stash';
       case 'stash_added_multiple':
@@ -343034,10 +343069,12 @@ extension on _StringsAr {
         return 'تم الاستيراد بنجاح';
       case 'srt_import_title_hint':
         return 'عنوان الكتاب';
-      case 'startup_default_dictionary_tab':
-        return 'فتح البحث عند البدء';
-      case 'startup_default_dictionary_tab_hint':
-        return 'ابدأ الشاشة الرئيسية على تبويب البحث بدلًا من الافتراضي الحالي.';
+      case 'startup_module':
+        return 'صفحة البدء';
+      case 'startup_module_default':
+        return 'أول صفحة في الشريط';
+      case 'startup_module_hint':
+        return 'الصفحة التي تظهر عند فتح التطبيق. يمكن اختيار الوحدات المفعّلة فقط؛ وإذا أُوقفت الوحدة المختارة تُستخدم أول صفحة في الشريط.';
       case 'stash':
         return 'المخزّن';
       case 'stash_added_multiple':
@@ -359378,10 +359415,12 @@ extension on _StringsDe {
         return 'Buch importiert';
       case 'srt_import_title_hint':
         return 'Buchtitel';
-      case 'startup_default_dictionary_tab':
-        return 'Beim Start Nachschlagen öffnen';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Startet den Startbildschirm im Nachschlagen-Tab statt mit dem aktuellen Standard.';
+      case 'startup_module':
+        return 'Startseite';
+      case 'startup_module_default':
+        return 'Erste Seite in der Leiste';
+      case 'startup_module_hint':
+        return 'Seite, die beim Öffnen der App angezeigt wird. Nur aktivierte Module sind wählbar; ist das gewählte Modul deaktiviert, wird die erste Seite in der Leiste verwendet.';
       case 'stash':
         return 'Merkliste';
       case 'stash_added_multiple':
@@ -375726,10 +375765,12 @@ extension on _StringsEs {
         return 'Libro importado';
       case 'srt_import_title_hint':
         return 'Título del libro';
-      case 'startup_default_dictionary_tab':
-        return 'Abrir la consulta al iniciar';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Inicia la pantalla principal en la pestaña de consulta en lugar del valor predeterminado actual.';
+      case 'startup_module':
+        return 'Página de inicio';
+      case 'startup_module_default':
+        return 'Primera página de la barra';
+      case 'startup_module_hint':
+        return 'Página que se muestra al abrir la app. Solo se pueden elegir módulos activados; si el elegido se desactiva, se usa la primera página de la barra.';
       case 'stash':
         return 'Guardado rápido';
       case 'stash_added_multiple':
@@ -392085,10 +392126,12 @@ extension on _StringsFr {
         return 'Livre importé';
       case 'srt_import_title_hint':
         return 'Titre du livre';
-      case 'startup_default_dictionary_tab':
-        return 'Ouvrir la recherche au démarrage';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Démarre l\'écran d\'accueil sur l\'onglet de recherche au lieu de la page par défaut actuelle.';
+      case 'startup_module':
+        return 'Page de démarrage';
+      case 'startup_module_default':
+        return 'Première page de la barre';
+      case 'startup_module_hint':
+        return 'Page affichée à l’ouverture de l’app. Seuls les modules activés peuvent être choisis ; si celui choisi est désactivé, la première page de la barre est utilisée.';
       case 'stash':
         return 'Panier';
       case 'stash_added_multiple':
@@ -408404,10 +408447,12 @@ extension on _StringsId {
         return 'Buku diimpor';
       case 'srt_import_title_hint':
         return 'Judul buku';
-      case 'startup_default_dictionary_tab':
-        return 'Buka pencarian kata saat mulai';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Mulai layar beranda pada tab pencarian kata, bukan default saat ini.';
+      case 'startup_module':
+        return 'Halaman awal';
+      case 'startup_module_default':
+        return 'Halaman pertama di bilah';
+      case 'startup_module_hint':
+        return 'Halaman yang ditampilkan saat aplikasi dibuka. Hanya modul yang aktif yang bisa dipilih; jika modul yang dipilih dinonaktifkan, halaman pertama di bilah yang digunakan.';
       case 'stash':
         return 'Simpanan';
       case 'stash_added_multiple':
@@ -424732,10 +424777,12 @@ extension on _StringsIt {
         return 'Libro importato';
       case 'srt_import_title_hint':
         return 'Titolo del libro';
-      case 'startup_default_dictionary_tab':
-        return 'Apri la ricerca all\'avvio';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Avvia la schermata Home sulla scheda di ricerca invece dell\'attuale predefinita.';
+      case 'startup_module':
+        return 'Pagina iniziale';
+      case 'startup_module_default':
+        return 'Prima pagina della barra';
+      case 'startup_module_hint':
+        return 'Pagina mostrata all’apertura dell’app. Si possono scegliere solo i moduli attivi; se quello scelto viene disattivato, si usa la prima pagina della barra.';
       case 'stash':
         return 'Raccolta';
       case 'stash_added_multiple':
@@ -440993,10 +441040,12 @@ extension on _StringsJa {
         return '本をインポートしました';
       case 'srt_import_title_hint':
         return '本のタイトル';
-      case 'startup_default_dictionary_tab':
-        return '起動時に辞書を開く';
-      case 'startup_default_dictionary_tab_hint':
-        return '起動後すぐに辞書タブを表示します。オフにすると現在のデフォルトを維持します。';
+      case 'startup_module':
+        return '起動ページ';
+      case 'startup_module_default':
+        return 'バーの最初のページ';
+      case 'startup_module_hint':
+        return 'アプリを開いたときに表示するページです。有効なモジュールからのみ選べます。選んだモジュールがオフになると、バーの最初のページを使います。';
       case 'stash':
         return 'スタッシュ';
       case 'stash_added_multiple':
@@ -457213,10 +457262,12 @@ extension on _StringsKo {
         return '책 가져오기 완료';
       case 'srt_import_title_hint':
         return '책 제목';
-      case 'startup_default_dictionary_tab':
-        return '시작 시 단어 찾기 열기';
-      case 'startup_default_dictionary_tab_hint':
-        return '홈 화면을 현재 기본값 대신 단어 찾기 탭으로 시작합니다.';
+      case 'startup_module':
+        return '시작 페이지';
+      case 'startup_module_default':
+        return '바의 첫 번째 페이지';
+      case 'startup_module_hint':
+        return '앱을 열 때 표시할 페이지입니다. 켜져 있는 모듈만 선택할 수 있으며, 선택한 모듈이 꺼지면 바의 첫 번째 페이지를 사용합니다.';
       case 'stash':
         return '보관함 열기';
       case 'stash_added_multiple':
@@ -473514,10 +473565,12 @@ extension on _StringsNl {
         return 'Boek geïmporteerd';
       case 'srt_import_title_hint':
         return 'Boektitel';
-      case 'startup_default_dictionary_tab':
-        return 'Opzoeken openen bij opstarten';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Start het beginscherm op het opzoektabblad in plaats van de huidige standaard.';
+      case 'startup_module':
+        return 'Startpagina';
+      case 'startup_module_default':
+        return 'Eerste pagina in de balk';
+      case 'startup_module_hint':
+        return 'Pagina die wordt getoond bij het openen van de app. Alleen ingeschakelde modules kunnen worden gekozen; als de gekozen module is uitgeschakeld, wordt de eerste pagina in de balk gebruikt.';
       case 'stash':
         return 'Verzameling';
       case 'stash_added_multiple':
@@ -489846,10 +489899,12 @@ extension on _StringsPtBr {
         return 'Livro importado';
       case 'srt_import_title_hint':
         return 'Título do livro';
-      case 'startup_default_dictionary_tab':
-        return 'Abrir consulta ao iniciar';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Inicia a tela inicial na aba de consulta em vez do padrão atual.';
+      case 'startup_module':
+        return 'Página inicial';
+      case 'startup_module_default':
+        return 'Primeira página da barra';
+      case 'startup_module_hint':
+        return 'Página exibida ao abrir o app. Só é possível escolher módulos ativados; se o escolhido for desativado, a primeira página da barra é usada.';
       case 'stash':
         return 'Reserva';
       case 'stash_added_multiple':
@@ -506182,10 +506237,12 @@ extension on _StringsRu {
         return 'Книга импортирована';
       case 'srt_import_title_hint':
         return 'Название книги';
-      case 'startup_default_dictionary_tab':
-        return 'Открывать поиск при запуске';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Открывать главный экран на вкладке поиска вместо текущего значения по умолчанию.';
+      case 'startup_module':
+        return 'Стартовая страница';
+      case 'startup_module_default':
+        return 'Первая страница на панели';
+      case 'startup_module_hint':
+        return 'Страница, которая открывается при запуске приложения. Можно выбрать только включённые модули; если выбранный модуль отключён, открывается первая страница на панели.';
       case 'stash':
         return 'Закладки';
       case 'stash_added_multiple':
@@ -522478,10 +522535,12 @@ extension on _StringsTh {
         return 'นำเข้าหนังสือสำเร็จ';
       case 'srt_import_title_hint':
         return 'ชื่อหนังสือ';
-      case 'startup_default_dictionary_tab':
-        return 'เปิดหน้าค้นคำเมื่อเริ่มแอป';
-      case 'startup_default_dictionary_tab_hint':
-        return 'เริ่มหน้าจอหลักที่แท็บค้นคำแทนค่าเริ่มต้นปัจจุบัน';
+      case 'startup_module':
+        return 'หน้าเริ่มต้น';
+      case 'startup_module_default':
+        return 'หน้าแรกในแถบ';
+      case 'startup_module_hint':
+        return 'หน้าที่แสดงเมื่อเปิดแอป เลือกได้เฉพาะโมดูลที่เปิดใช้อยู่ หากโมดูลที่เลือกถูกปิด จะใช้หน้าแรกในแถบแทน';
       case 'stash':
         return 'ที่เก็บชั่วคราว';
       case 'stash_added_multiple':
@@ -538792,10 +538851,12 @@ extension on _StringsTr {
         return 'Kitap içe aktarıldı';
       case 'srt_import_title_hint':
         return 'Kitap başlığı';
-      case 'startup_default_dictionary_tab':
-        return 'Başlangıçta aramayı aç';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Ana ekranı mevcut varsayılan yerine arama sekmesinde başlat.';
+      case 'startup_module':
+        return 'Başlangıç sayfası';
+      case 'startup_module_default':
+        return 'Çubuktaki ilk sayfa';
+      case 'startup_module_hint':
+        return 'Uygulama açıldığında gösterilen sayfa. Yalnızca etkin modüller seçilebilir; seçilen modül kapatılırsa çubuktaki ilk sayfa kullanılır.';
       case 'stash':
         return 'Depo';
       case 'stash_added_multiple':
@@ -555101,10 +555162,12 @@ extension on _StringsVi {
         return 'Đã nhập sách';
       case 'srt_import_title_hint':
         return 'Tên sách';
-      case 'startup_default_dictionary_tab':
-        return 'Mở tra từ khi khởi động';
-      case 'startup_default_dictionary_tab_hint':
-        return 'Khởi động màn hình chính ở tab tra từ thay vì mặc định hiện tại.';
+      case 'startup_module':
+        return 'Trang khởi động';
+      case 'startup_module_default':
+        return 'Trang đầu tiên trên thanh';
+      case 'startup_module_hint':
+        return 'Trang hiển thị khi mở ứng dụng. Chỉ chọn được các mô-đun đang bật; nếu mô-đun đã chọn bị tắt, trang đầu tiên trên thanh sẽ được dùng.';
       case 'stash':
         return 'Lưu tạm';
       case 'stash_added_multiple':
@@ -571268,10 +571331,12 @@ extension on _StringsZhCn {
         return '导入成功';
       case 'srt_import_title_hint':
         return '书名';
-      case 'startup_default_dictionary_tab':
-        return '启动时打开查词';
-      case 'startup_default_dictionary_tab_hint':
-        return '应用开屏后直接显示查词页；关闭时保留当前默认首页。';
+      case 'startup_module':
+        return '启动页';
+      case 'startup_module_default':
+        return '底栏第一个页面';
+      case 'startup_module_hint':
+        return '打开应用时显示的页面，只能从已开启的功能模块里选；所选模块被关闭时改为底栏第一个页面。';
       case 'stash':
         return '暂存';
       case 'stash_added_multiple':
@@ -587425,10 +587490,12 @@ extension on _StringsZhHk {
         return '匯入成功';
       case 'srt_import_title_hint':
         return '書名';
-      case 'startup_default_dictionary_tab':
-        return '啟動時開啟查詞';
-      case 'startup_default_dictionary_tab_hint':
-        return 'App 開啟後直接顯示查詞分頁，而非目前的預設首頁。';
+      case 'startup_module':
+        return '啟動頁';
+      case 'startup_module_default':
+        return '欄中第一個頁面';
+      case 'startup_module_hint':
+        return '開啟 App 時顯示的頁面，只能從已開啟的功能模組中選擇；所選模組被關閉時改為欄中第一個頁面。';
       case 'stash':
         return '暫存';
       case 'stash_added_multiple':
