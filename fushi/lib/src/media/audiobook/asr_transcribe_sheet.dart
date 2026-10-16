@@ -32,6 +32,7 @@ import 'package:fushi/src/media/audiobook/asr_local_model_dialog.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/sync/interconnect_job_client.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
+import 'package:fushi/src/utils/components/fushi_animated_size.dart';
 import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/src/utils/misc/fushi_share.dart';
