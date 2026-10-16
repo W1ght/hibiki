@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132821 (7813 per locale)
+/// Strings: 133008 (7824 per locale)
 ///
-/// Built on 2026-10-16 at 10:33 UTC
+/// Built on 2026-10-16 at 11:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3127,10 +3127,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_stage_cbz => 'Downloading volume…';
   String get manga_online_stage_extract => 'Extracting…';
   String get manga_online_stage_mokuro => 'Downloading OCR data…';
-  String get manga_page_animation => 'Page turn animation';
-  String get manga_page_animation_fade => 'Fade';
-  String get manga_page_animation_none => 'None';
-  String get manga_page_animation_slide => 'Slide';
   String manga_page_number_hint({required Object total}) =>
       'Page number (1-${total})';
   String get manga_previous_page => 'Previous page';
@@ -11232,6 +11228,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  String home_continue_volume({required Object n}) => 'Vol. ${n}';
+  String get video_setting_subtitle_no_outline => 'No outline';
+  String get page_turn_animation => 'Page turn animation';
+  String get page_turn_animation_fade => 'Fade';
+  String get page_turn_animation_none => 'None';
+  String get page_turn_animation_slide => 'Slide';
+  String get page_turn_animation_cover => 'Cover';
+  String get page_turn_animation_speed => 'Animation speed';
+  String get page_turn_animation_speed_fast => 'Fast';
+  String get page_turn_animation_speed_normal => 'Normal';
+  String get page_turn_animation_speed_slow => 'Slow';
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
   String get reader_highlight_style_classic => 'Classic';
   String get reader_highlight_style_classic_hint =>
       'A one-character-high bar with an underline';
@@ -16356,14 +16370,6 @@ class _StringsAr extends _StringsEn {
   String get manga_online_stage_extract => 'جارٍ الاستخراج…';
   @override
   String get manga_online_stage_mokuro => 'جارٍ تحميل بيانات OCR…';
-  @override
-  String get manga_page_animation => 'حركة تقليب الصفحة';
-  @override
-  String get manga_page_animation_fade => 'تلاشي';
-  @override
-  String get manga_page_animation_none => 'بدون';
-  @override
-  String get manga_page_animation_slide => 'انزلاق';
   @override
   String manga_page_number_hint({required Object total}) =>
       'رقم الصفحة (1-${total})';
@@ -30087,6 +30093,39 @@ class _StringsAr extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'المجلد ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'بلا حدود للنص';
+  @override
+  String get page_turn_animation => 'حركة تقليب الصفحة';
+  @override
+  String get page_turn_animation_fade => 'تلاشي';
+  @override
+  String get page_turn_animation_none => 'بدون';
+  @override
+  String get page_turn_animation_slide => 'انزلاق';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'كلاسيكي';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -35365,14 +35404,6 @@ class _StringsDe extends _StringsEn {
   String get manga_online_stage_extract => 'Wird entpackt…';
   @override
   String get manga_online_stage_mokuro => 'OCR-Daten werden heruntergeladen…';
-  @override
-  String get manga_page_animation => 'Seitenumblätter-Animation';
-  @override
-  String get manga_page_animation_fade => 'Verblassen';
-  @override
-  String get manga_page_animation_none => 'Keine';
-  @override
-  String get manga_page_animation_slide => 'Gleiten';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Seitenzahl (1-${total})';
@@ -49368,6 +49399,39 @@ class _StringsDe extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Band ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Keine Kontur';
+  @override
+  String get page_turn_animation => 'Seitenumblätter-Animation';
+  @override
+  String get page_turn_animation_fade => 'Verblassen';
+  @override
+  String get page_turn_animation_none => 'Keine';
+  @override
+  String get page_turn_animation_slide => 'Gleiten';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Klassisch';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -54668,14 +54732,6 @@ class _StringsEs extends _StringsEn {
   String get manga_online_stage_extract => 'Extrayendo…';
   @override
   String get manga_online_stage_mokuro => 'Descargando datos de OCR…';
-  @override
-  String get manga_page_animation => 'Animación de paso de página';
-  @override
-  String get manga_page_animation_fade => 'Desvanecer';
-  @override
-  String get manga_page_animation_none => 'Ninguna';
-  @override
-  String get manga_page_animation_slide => 'Deslizar';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Número de página (1-${total})';
@@ -68710,6 +68766,39 @@ class _StringsEs extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Tomo ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Sin contorno';
+  @override
+  String get page_turn_animation => 'Animación de paso de página';
+  @override
+  String get page_turn_animation_fade => 'Desvanecer';
+  @override
+  String get page_turn_animation_none => 'Ninguna';
+  @override
+  String get page_turn_animation_slide => 'Deslizar';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Clásico';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -74028,14 +74117,6 @@ class _StringsFr extends _StringsEn {
   String get manga_online_stage_extract => 'Extraction…';
   @override
   String get manga_online_stage_mokuro => 'Téléchargement des données OCR…';
-  @override
-  String get manga_page_animation => 'Animation de changement de page';
-  @override
-  String get manga_page_animation_fade => 'Fondu';
-  @override
-  String get manga_page_animation_none => 'Aucune';
-  @override
-  String get manga_page_animation_slide => 'Glissement';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Numéro de page (1-${total})';
@@ -88133,6 +88214,39 @@ class _StringsFr extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Tome ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Sans contour';
+  @override
+  String get page_turn_animation => 'Animation de changement de page';
+  @override
+  String get page_turn_animation_fade => 'Fondu';
+  @override
+  String get page_turn_animation_none => 'Aucune';
+  @override
+  String get page_turn_animation_slide => 'Glissement';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Classique';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -93348,14 +93462,6 @@ class _StringsId extends _StringsEn {
   String get manga_online_stage_extract => 'Mengekstrak…';
   @override
   String get manga_online_stage_mokuro => 'Mengunduh data OCR…';
-  @override
-  String get manga_page_animation => 'Animasi pergantian halaman';
-  @override
-  String get manga_page_animation_fade => 'Pudar';
-  @override
-  String get manga_page_animation_none => 'Tidak ada';
-  @override
-  String get manga_page_animation_slide => 'Geser';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Nomor halaman (1-${total})';
@@ -107209,6 +107315,39 @@ class _StringsId extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Jilid ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Tanpa garis tepi';
+  @override
+  String get page_turn_animation => 'Animasi pergantian halaman';
+  @override
+  String get page_turn_animation_fade => 'Pudar';
+  @override
+  String get page_turn_animation_none => 'Tidak ada';
+  @override
+  String get page_turn_animation_slide => 'Geser';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Klasik';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -112469,14 +112608,6 @@ class _StringsIt extends _StringsEn {
   String get manga_online_stage_extract => 'Estrazione…';
   @override
   String get manga_online_stage_mokuro => 'Download dati OCR…';
-  @override
-  String get manga_page_animation => 'Animazione cambio pagina';
-  @override
-  String get manga_page_animation_fade => 'Dissolvenza';
-  @override
-  String get manga_page_animation_none => 'Nessuna';
-  @override
-  String get manga_page_animation_slide => 'Scorrimento';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Numero pagina (1-${total})';
@@ -126451,6 +126582,39 @@ class _StringsIt extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Volume ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Nessun contorno';
+  @override
+  String get page_turn_animation => 'Animazione cambio pagina';
+  @override
+  String get page_turn_animation_fade => 'Dissolvenza';
+  @override
+  String get page_turn_animation_none => 'Nessuna';
+  @override
+  String get page_turn_animation_slide => 'Scorrimento';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Classico';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -131415,14 +131579,6 @@ class _StringsJa extends _StringsEn {
   String get manga_online_stage_extract => '展開中…';
   @override
   String get manga_online_stage_mokuro => 'OCRデータをダウンロード中…';
-  @override
-  String get manga_page_animation => 'ページめくりアニメーション';
-  @override
-  String get manga_page_animation_fade => 'フェード';
-  @override
-  String get manga_page_animation_none => 'なし';
-  @override
-  String get manga_page_animation_slide => 'スライド';
   @override
   String manga_page_number_hint({required Object total}) => 'ページ番号（1-${total}）';
   @override
@@ -144693,6 +144849,39 @@ class _StringsJa extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '第${n}巻';
+  @override
+  String get video_setting_subtitle_no_outline => '縁取りなし';
+  @override
+  String get page_turn_animation => 'ページめくりアニメーション';
+  @override
+  String get page_turn_animation_fade => 'フェード';
+  @override
+  String get page_turn_animation_none => 'なし';
+  @override
+  String get page_turn_animation_slide => 'スライド';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'クラシック';
   @override
   String get reader_highlight_style_classic_hint => '1文字分の高さのバーと下線';
@@ -149647,14 +149836,6 @@ class _StringsKo extends _StringsEn {
   String get manga_online_stage_extract => '압축 해제 중…';
   @override
   String get manga_online_stage_mokuro => 'OCR 데이터 다운로드 중…';
-  @override
-  String get manga_page_animation => '페이지 넘김 애니메이션';
-  @override
-  String get manga_page_animation_fade => '페이드';
-  @override
-  String get manga_page_animation_none => '없음';
-  @override
-  String get manga_page_animation_slide => '슬라이드';
   @override
   String manga_page_number_hint({required Object total}) =>
       '페이지 번호 (1-${total})';
@@ -162962,6 +163143,39 @@ class _StringsKo extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '${n}권';
+  @override
+  String get video_setting_subtitle_no_outline => '외곽선 없음';
+  @override
+  String get page_turn_animation => '페이지 넘김 애니메이션';
+  @override
+  String get page_turn_animation_fade => '페이드';
+  @override
+  String get page_turn_animation_none => '없음';
+  @override
+  String get page_turn_animation_slide => '슬라이드';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => '클래식';
   @override
   String get reader_highlight_style_classic_hint => '글자 한 줄 높이의 막대와 밑줄';
@@ -168193,14 +168407,6 @@ class _StringsNl extends _StringsEn {
   String get manga_online_stage_extract => 'Uitpakken…';
   @override
   String get manga_online_stage_mokuro => 'OCR-gegevens downloaden…';
-  @override
-  String get manga_page_animation => 'Paginaomslag-animatie';
-  @override
-  String get manga_page_animation_fade => 'Vervagen';
-  @override
-  String get manga_page_animation_none => 'Geen';
-  @override
-  String get manga_page_animation_slide => 'Schuiven';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Paginanummer (1-${total})';
@@ -182143,6 +182349,39 @@ class _StringsNl extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Deel ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Geen omlijning';
+  @override
+  String get page_turn_animation => 'Paginaomslag-animatie';
+  @override
+  String get page_turn_animation_fade => 'Vervagen';
+  @override
+  String get page_turn_animation_none => 'Geen';
+  @override
+  String get page_turn_animation_slide => 'Schuiven';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Klassiek';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -187409,14 +187648,6 @@ class _StringsPtBr extends _StringsEn {
   String get manga_online_stage_extract => 'Extraindo…';
   @override
   String get manga_online_stage_mokuro => 'Baixando dados de OCR…';
-  @override
-  String get manga_page_animation => 'Animação de virada de página';
-  @override
-  String get manga_page_animation_fade => 'Desvanecer';
-  @override
-  String get manga_page_animation_none => 'Nenhuma';
-  @override
-  String get manga_page_animation_slide => 'Deslizar';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Número da página (1-${total})';
@@ -201402,6 +201633,39 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Volume ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Sem contorno';
+  @override
+  String get page_turn_animation => 'Animação de virada de página';
+  @override
+  String get page_turn_animation_fade => 'Desvanecer';
+  @override
+  String get page_turn_animation_none => 'Nenhuma';
+  @override
+  String get page_turn_animation_slide => 'Deslizar';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Clássico';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -206642,14 +206906,6 @@ class _StringsRu extends _StringsEn {
   String get manga_online_stage_extract => 'Извлечение…';
   @override
   String get manga_online_stage_mokuro => 'Загрузка данных OCR…';
-  @override
-  String get manga_page_animation => 'Анимация перелистывания';
-  @override
-  String get manga_page_animation_fade => 'Затухание';
-  @override
-  String get manga_page_animation_none => 'Нет';
-  @override
-  String get manga_page_animation_slide => 'Скольжение';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Номер страницы (1-${total})';
@@ -220606,6 +220862,39 @@ class _StringsRu extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Том ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Без обводки';
+  @override
+  String get page_turn_animation => 'Анимация перелистывания';
+  @override
+  String get page_turn_animation_fade => 'Затухание';
+  @override
+  String get page_turn_animation_none => 'Нет';
+  @override
+  String get page_turn_animation_slide => 'Скольжение';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Классический';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -225754,14 +226043,6 @@ class _StringsTh extends _StringsEn {
   String get manga_online_stage_extract => 'กำลังแตกไฟล์…';
   @override
   String get manga_online_stage_mokuro => 'กำลังดาวน์โหลดข้อมูล OCR…';
-  @override
-  String get manga_page_animation => 'แอนิเมชันการพลิกหน้า';
-  @override
-  String get manga_page_animation_fade => 'จางหาย';
-  @override
-  String get manga_page_animation_none => 'ไม่มี';
-  @override
-  String get manga_page_animation_slide => 'เลื่อน';
   @override
   String manga_page_number_hint({required Object total}) =>
       'หมายเลขหน้า (1-${total})';
@@ -239488,6 +239769,39 @@ class _StringsTh extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'เล่ม ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'ไม่มีขอบตัวอักษร';
+  @override
+  String get page_turn_animation => 'แอนิเมชันการพลิกหน้า';
+  @override
+  String get page_turn_animation_fade => 'จางหาย';
+  @override
+  String get page_turn_animation_none => 'ไม่มี';
+  @override
+  String get page_turn_animation_slide => 'เลื่อน';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'คลาสสิก';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -244707,14 +245021,6 @@ class _StringsTr extends _StringsEn {
   String get manga_online_stage_extract => 'Çıkarılıyor…';
   @override
   String get manga_online_stage_mokuro => 'OCR verileri indiriliyor…';
-  @override
-  String get manga_page_animation => 'Sayfa çevirme animasyonu';
-  @override
-  String get manga_page_animation_fade => 'Solma';
-  @override
-  String get manga_page_animation_none => 'Yok';
-  @override
-  String get manga_page_animation_slide => 'Kaydırma';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Sayfa numarası (1-${total})';
@@ -258573,6 +258879,39 @@ class _StringsTr extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '${n}. cilt';
+  @override
+  String get video_setting_subtitle_no_outline => 'Kontur yok';
+  @override
+  String get page_turn_animation => 'Sayfa çevirme animasyonu';
+  @override
+  String get page_turn_animation_fade => 'Solma';
+  @override
+  String get page_turn_animation_none => 'Yok';
+  @override
+  String get page_turn_animation_slide => 'Kaydırma';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Klasik';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -263779,14 +264118,6 @@ class _StringsVi extends _StringsEn {
   String get manga_online_stage_extract => 'Đang giải nén…';
   @override
   String get manga_online_stage_mokuro => 'Đang tải dữ liệu OCR…';
-  @override
-  String get manga_page_animation => 'Hiệu ứng lật trang';
-  @override
-  String get manga_page_animation_fade => 'Mờ dần';
-  @override
-  String get manga_page_animation_none => 'Không';
-  @override
-  String get manga_page_animation_slide => 'Trượt';
   @override
   String manga_page_number_hint({required Object total}) =>
       'Số trang (1-${total})';
@@ -277586,6 +277917,39 @@ class _StringsVi extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Quyển ${n}';
+  @override
+  String get video_setting_subtitle_no_outline => 'Không viền';
+  @override
+  String get page_turn_animation => 'Hiệu ứng lật trang';
+  @override
+  String get page_turn_animation_fade => 'Mờ dần';
+  @override
+  String get page_turn_animation_none => 'Không';
+  @override
+  String get page_turn_animation_slide => 'Trượt';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => 'Cổ điển';
   @override
   String get reader_highlight_style_classic_hint =>
@@ -282374,14 +282738,6 @@ class _StringsZhCn extends _StringsEn {
   String get manga_online_stage_extract => '解包中…';
   @override
   String get manga_online_stage_mokuro => '下载 OCR 数据…';
-  @override
-  String get manga_page_animation => '翻页动画';
-  @override
-  String get manga_page_animation_fade => '淡入淡出';
-  @override
-  String get manga_page_animation_none => '无';
-  @override
-  String get manga_page_animation_slide => '滑动';
   @override
   String manga_page_number_hint({required Object total}) => '页码（1-${total}）';
   @override
@@ -294947,6 +295303,38 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
   @override
+  String get download_remote_delete_files_host_default =>
+      '这台主机版本较旧，删除任务时无法选择是否保留文件：Fushi 应用当主机会保留文件，无头 fushi_server 会连文件一起删除。';
+  @override
+  String home_continue_volume({required Object n}) => '第 ${n} 卷';
+  @override
+  String get video_setting_subtitle_no_outline => '无描边';
+  @override
+  String get page_turn_animation => '翻页动画';
+  @override
+  String get page_turn_animation_fade => '淡入淡出';
+  @override
+  String get page_turn_animation_none => '无';
+  @override
+  String get page_turn_animation_slide => '滑动';
+  @override
+  String get page_turn_animation_cover => '覆盖';
+  @override
+  String get page_turn_animation_speed => '动画速度';
+  @override
+  String get page_turn_animation_speed_fast => '快';
+  @override
+  String get page_turn_animation_speed_normal => '标准';
+  @override
+  String get page_turn_animation_speed_slow => '慢';
+  @override
+  String get page_turn_follow_drag => '拖动跟手';
+  @override
+  String get page_turn_follow_drag_description =>
+      '页面随手指移动，松手时拖过四分之一宽度或快速甩动就翻页，否则回弹';
+  @override
+  String get page_turn_animation_paginated_only => '只在翻页模式下生效';
+  @override
   String get reader_highlight_style_classic => '经典';
   @override
   String get reader_highlight_style_classic_hint => '一个字高的色条加下划线';
@@ -299730,14 +300118,6 @@ class _StringsZhHk extends _StringsEn {
   String get manga_online_stage_extract => '解包中…';
   @override
   String get manga_online_stage_mokuro => '下載 OCR 數據…';
-  @override
-  String get manga_page_animation => '翻頁動畫';
-  @override
-  String get manga_page_animation_fade => '淡入淡出';
-  @override
-  String get manga_page_animation_none => '無';
-  @override
-  String get manga_page_animation_slide => '滑動';
   @override
   String manga_page_number_hint({required Object total}) => '頁碼（1-${total}）';
   @override
@@ -312617,6 +312997,39 @@ class _StringsZhHk extends _StringsEn {
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   @override
+  String get download_remote_delete_files_host_default =>
+      'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '第 ${n} 卷';
+  @override
+  String get video_setting_subtitle_no_outline => '無描邊';
+  @override
+  String get page_turn_animation => '翻頁動畫';
+  @override
+  String get page_turn_animation_fade => '淡入淡出';
+  @override
+  String get page_turn_animation_none => '無';
+  @override
+  String get page_turn_animation_slide => '滑動';
+  @override
+  String get page_turn_animation_cover => 'Cover';
+  @override
+  String get page_turn_animation_speed => 'Animation speed';
+  @override
+  String get page_turn_animation_speed_fast => 'Fast';
+  @override
+  String get page_turn_animation_speed_normal => 'Normal';
+  @override
+  String get page_turn_animation_speed_slow => 'Slow';
+  @override
+  String get page_turn_follow_drag => 'Follow finger while dragging';
+  @override
+  String get page_turn_follow_drag_description =>
+      'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+  @override
+  String get page_turn_animation_paginated_only =>
+      'Only applies in paginated mode';
+  @override
   String get reader_highlight_style_classic => '經典';
   @override
   String get reader_highlight_style_classic_hint => '一個字高的色條加底線';
@@ -317087,14 +317500,6 @@ extension on _StringsEn {
         return 'Extracting…';
       case 'manga_online_stage_mokuro':
         return 'Downloading OCR data…';
-      case 'manga_page_animation':
-        return 'Page turn animation';
-      case 'manga_page_animation_fade':
-        return 'Fade';
-      case 'manga_page_animation_none':
-        return 'None';
-      case 'manga_page_animation_slide':
-        return 'Slide';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Page number (1-${total})';
       case 'manga_previous_page':
@@ -328826,6 +329231,36 @@ extension on _StringsEn {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Vol. ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'No outline';
+      case 'page_turn_animation':
+        return 'Page turn animation';
+      case 'page_turn_animation_fade':
+        return 'Fade';
+      case 'page_turn_animation_none':
+        return 'None';
+      case 'page_turn_animation_slide':
+        return 'Slide';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Classic';
       case 'reader_highlight_style_classic_hint':
@@ -333290,14 +333725,6 @@ extension on _StringsAr {
         return 'جارٍ الاستخراج…';
       case 'manga_online_stage_mokuro':
         return 'جارٍ تحميل بيانات OCR…';
-      case 'manga_page_animation':
-        return 'حركة تقليب الصفحة';
-      case 'manga_page_animation_fade':
-        return 'تلاشي';
-      case 'manga_page_animation_none':
-        return 'بدون';
-      case 'manga_page_animation_slide':
-        return 'انزلاق';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'رقم الصفحة (1-${total})';
       case 'manga_previous_page':
@@ -345028,6 +345455,36 @@ extension on _StringsAr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'المجلد ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'بلا حدود للنص';
+      case 'page_turn_animation':
+        return 'حركة تقليب الصفحة';
+      case 'page_turn_animation_fade':
+        return 'تلاشي';
+      case 'page_turn_animation_none':
+        return 'بدون';
+      case 'page_turn_animation_slide':
+        return 'انزلاق';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'كلاسيكي';
       case 'reader_highlight_style_classic_hint':
@@ -349528,14 +349985,6 @@ extension on _StringsDe {
         return 'Wird entpackt…';
       case 'manga_online_stage_mokuro':
         return 'OCR-Daten werden heruntergeladen…';
-      case 'manga_page_animation':
-        return 'Seitenumblätter-Animation';
-      case 'manga_page_animation_fade':
-        return 'Verblassen';
-      case 'manga_page_animation_none':
-        return 'Keine';
-      case 'manga_page_animation_slide':
-        return 'Gleiten';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Seitenzahl (1-${total})';
       case 'manga_previous_page':
@@ -361306,6 +361755,36 @@ extension on _StringsDe {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Band ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Keine Kontur';
+      case 'page_turn_animation':
+        return 'Seitenumblätter-Animation';
+      case 'page_turn_animation_fade':
+        return 'Verblassen';
+      case 'page_turn_animation_none':
+        return 'Keine';
+      case 'page_turn_animation_slide':
+        return 'Gleiten';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Klassisch';
       case 'reader_highlight_style_classic_hint':
@@ -365794,14 +366273,6 @@ extension on _StringsEs {
         return 'Extrayendo…';
       case 'manga_online_stage_mokuro':
         return 'Descargando datos de OCR…';
-      case 'manga_page_animation':
-        return 'Animación de paso de página';
-      case 'manga_page_animation_fade':
-        return 'Desvanecer';
-      case 'manga_page_animation_none':
-        return 'Ninguna';
-      case 'manga_page_animation_slide':
-        return 'Deslizar';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Número de página (1-${total})';
       case 'manga_previous_page':
@@ -377566,6 +378037,36 @@ extension on _StringsEs {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Tomo ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Sin contorno';
+      case 'page_turn_animation':
+        return 'Animación de paso de página';
+      case 'page_turn_animation_fade':
+        return 'Desvanecer';
+      case 'page_turn_animation_none':
+        return 'Ninguna';
+      case 'page_turn_animation_slide':
+        return 'Deslizar';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Clásico';
       case 'reader_highlight_style_classic_hint':
@@ -382062,14 +382563,6 @@ extension on _StringsFr {
         return 'Extraction…';
       case 'manga_online_stage_mokuro':
         return 'Téléchargement des données OCR…';
-      case 'manga_page_animation':
-        return 'Animation de changement de page';
-      case 'manga_page_animation_fade':
-        return 'Fondu';
-      case 'manga_page_animation_none':
-        return 'Aucune';
-      case 'manga_page_animation_slide':
-        return 'Glissement';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Numéro de page (1-${total})';
       case 'manga_previous_page':
@@ -393844,6 +394337,36 @@ extension on _StringsFr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Tome ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Sans contour';
+      case 'page_turn_animation':
+        return 'Animation de changement de page';
+      case 'page_turn_animation_fade':
+        return 'Fondu';
+      case 'page_turn_animation_none':
+        return 'Aucune';
+      case 'page_turn_animation_slide':
+        return 'Glissement';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Classique';
       case 'reader_highlight_style_classic_hint':
@@ -398321,14 +398844,6 @@ extension on _StringsId {
         return 'Mengekstrak…';
       case 'manga_online_stage_mokuro':
         return 'Mengunduh data OCR…';
-      case 'manga_page_animation':
-        return 'Animasi pergantian halaman';
-      case 'manga_page_animation_fade':
-        return 'Pudar';
-      case 'manga_page_animation_none':
-        return 'Tidak ada';
-      case 'manga_page_animation_slide':
-        return 'Geser';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Nomor halaman (1-${total})';
       case 'manga_previous_page':
@@ -410066,6 +410581,36 @@ extension on _StringsId {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Jilid ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Tanpa garis tepi';
+      case 'page_turn_animation':
+        return 'Animasi pergantian halaman';
+      case 'page_turn_animation_fade':
+        return 'Pudar';
+      case 'page_turn_animation_none':
+        return 'Tidak ada';
+      case 'page_turn_animation_slide':
+        return 'Geser';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Klasik';
       case 'reader_highlight_style_classic_hint':
@@ -414552,14 +415097,6 @@ extension on _StringsIt {
         return 'Estrazione…';
       case 'manga_online_stage_mokuro':
         return 'Download dati OCR…';
-      case 'manga_page_animation':
-        return 'Animazione cambio pagina';
-      case 'manga_page_animation_fade':
-        return 'Dissolvenza';
-      case 'manga_page_animation_none':
-        return 'Nessuna';
-      case 'manga_page_animation_slide':
-        return 'Scorrimento';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Numero pagina (1-${total})';
       case 'manga_previous_page':
@@ -426324,6 +426861,36 @@ extension on _StringsIt {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Volume ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Nessun contorno';
+      case 'page_turn_animation':
+        return 'Animazione cambio pagina';
+      case 'page_turn_animation_fade':
+        return 'Dissolvenza';
+      case 'page_turn_animation_none':
+        return 'Nessuna';
+      case 'page_turn_animation_slide':
+        return 'Scorrimento';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Classico';
       case 'reader_highlight_style_classic_hint':
@@ -430771,14 +431338,6 @@ extension on _StringsJa {
         return '展開中…';
       case 'manga_online_stage_mokuro':
         return 'OCRデータをダウンロード中…';
-      case 'manga_page_animation':
-        return 'ページめくりアニメーション';
-      case 'manga_page_animation_fade':
-        return 'フェード';
-      case 'manga_page_animation_none':
-        return 'なし';
-      case 'manga_page_animation_slide':
-        return 'スライド';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'ページ番号（1-${total}）';
       case 'manga_previous_page':
@@ -442455,6 +443014,36 @@ extension on _StringsJa {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '第${n}巻';
+      case 'video_setting_subtitle_no_outline':
+        return '縁取りなし';
+      case 'page_turn_animation':
+        return 'ページめくりアニメーション';
+      case 'page_turn_animation_fade':
+        return 'フェード';
+      case 'page_turn_animation_none':
+        return 'なし';
+      case 'page_turn_animation_slide':
+        return 'スライド';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'クラシック';
       case 'reader_highlight_style_classic_hint':
@@ -446902,14 +447491,6 @@ extension on _StringsKo {
         return '압축 해제 중…';
       case 'manga_online_stage_mokuro':
         return 'OCR 데이터 다운로드 중…';
-      case 'manga_page_animation':
-        return '페이지 넘김 애니메이션';
-      case 'manga_page_animation_fade':
-        return '페이드';
-      case 'manga_page_animation_none':
-        return '없음';
-      case 'manga_page_animation_slide':
-        return '슬라이드';
       case 'manga_page_number_hint':
         return ({required Object total}) => '페이지 번호 (1-${total})';
       case 'manga_previous_page':
@@ -458594,6 +459175,36 @@ extension on _StringsKo {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '${n}권';
+      case 'video_setting_subtitle_no_outline':
+        return '외곽선 없음';
+      case 'page_turn_animation':
+        return '페이지 넘김 애니메이션';
+      case 'page_turn_animation_fade':
+        return '페이드';
+      case 'page_turn_animation_none':
+        return '없음';
+      case 'page_turn_animation_slide':
+        return '슬라이드';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return '클래식';
       case 'reader_highlight_style_classic_hint':
@@ -463081,14 +463692,6 @@ extension on _StringsNl {
         return 'Uitpakken…';
       case 'manga_online_stage_mokuro':
         return 'OCR-gegevens downloaden…';
-      case 'manga_page_animation':
-        return 'Paginaomslag-animatie';
-      case 'manga_page_animation_fade':
-        return 'Vervagen';
-      case 'manga_page_animation_none':
-        return 'Geen';
-      case 'manga_page_animation_slide':
-        return 'Schuiven';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Paginanummer (1-${total})';
       case 'manga_previous_page':
@@ -474847,6 +475450,36 @@ extension on _StringsNl {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Deel ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Geen omlijning';
+      case 'page_turn_animation':
+        return 'Paginaomslag-animatie';
+      case 'page_turn_animation_fade':
+        return 'Vervagen';
+      case 'page_turn_animation_none':
+        return 'Geen';
+      case 'page_turn_animation_slide':
+        return 'Schuiven';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Klassiek';
       case 'reader_highlight_style_classic_hint':
@@ -479332,14 +479965,6 @@ extension on _StringsPtBr {
         return 'Extraindo…';
       case 'manga_online_stage_mokuro':
         return 'Baixando dados de OCR…';
-      case 'manga_page_animation':
-        return 'Animação de virada de página';
-      case 'manga_page_animation_fade':
-        return 'Desvanecer';
-      case 'manga_page_animation_none':
-        return 'Nenhuma';
-      case 'manga_page_animation_slide':
-        return 'Deslizar';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Número da página (1-${total})';
       case 'manga_previous_page':
@@ -491092,6 +491717,36 @@ extension on _StringsPtBr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Volume ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Sem contorno';
+      case 'page_turn_animation':
+        return 'Animação de virada de página';
+      case 'page_turn_animation_fade':
+        return 'Desvanecer';
+      case 'page_turn_animation_none':
+        return 'Nenhuma';
+      case 'page_turn_animation_slide':
+        return 'Deslizar';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Clássico';
       case 'reader_highlight_style_classic_hint':
@@ -495585,14 +496240,6 @@ extension on _StringsRu {
         return 'Извлечение…';
       case 'manga_online_stage_mokuro':
         return 'Загрузка данных OCR…';
-      case 'manga_page_animation':
-        return 'Анимация перелистывания';
-      case 'manga_page_animation_fade':
-        return 'Затухание';
-      case 'manga_page_animation_none':
-        return 'Нет';
-      case 'manga_page_animation_slide':
-        return 'Скольжение';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Номер страницы (1-${total})';
       case 'manga_previous_page':
@@ -507342,6 +507989,36 @@ extension on _StringsRu {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Том ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Без обводки';
+      case 'page_turn_animation':
+        return 'Анимация перелистывания';
+      case 'page_turn_animation_fade':
+        return 'Затухание';
+      case 'page_turn_animation_none':
+        return 'Нет';
+      case 'page_turn_animation_slide':
+        return 'Скольжение';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Классический';
       case 'reader_highlight_style_classic_hint':
@@ -511811,14 +512488,6 @@ extension on _StringsTh {
         return 'กำลังแตกไฟล์…';
       case 'manga_online_stage_mokuro':
         return 'กำลังดาวน์โหลดข้อมูล OCR…';
-      case 'manga_page_animation':
-        return 'แอนิเมชันการพลิกหน้า';
-      case 'manga_page_animation_fade':
-        return 'จางหาย';
-      case 'manga_page_animation_none':
-        return 'ไม่มี';
-      case 'manga_page_animation_slide':
-        return 'เลื่อน';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'หมายเลขหน้า (1-${total})';
       case 'manga_previous_page':
@@ -523548,6 +524217,36 @@ extension on _StringsTh {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'เล่ม ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'ไม่มีขอบตัวอักษร';
+      case 'page_turn_animation':
+        return 'แอนิเมชันการพลิกหน้า';
+      case 'page_turn_animation_fade':
+        return 'จางหาย';
+      case 'page_turn_animation_none':
+        return 'ไม่มี';
+      case 'page_turn_animation_slide':
+        return 'เลื่อน';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'คลาสสิก';
       case 'reader_highlight_style_classic_hint':
@@ -528030,14 +528729,6 @@ extension on _StringsTr {
         return 'Çıkarılıyor…';
       case 'manga_online_stage_mokuro':
         return 'OCR verileri indiriliyor…';
-      case 'manga_page_animation':
-        return 'Sayfa çevirme animasyonu';
-      case 'manga_page_animation_fade':
-        return 'Solma';
-      case 'manga_page_animation_none':
-        return 'Yok';
-      case 'manga_page_animation_slide':
-        return 'Kaydırma';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Sayfa numarası (1-${total})';
       case 'manga_previous_page':
@@ -539785,6 +540476,36 @@ extension on _StringsTr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '${n}. cilt';
+      case 'video_setting_subtitle_no_outline':
+        return 'Kontur yok';
+      case 'page_turn_animation':
+        return 'Sayfa çevirme animasyonu';
+      case 'page_turn_animation_fade':
+        return 'Solma';
+      case 'page_turn_animation_none':
+        return 'Yok';
+      case 'page_turn_animation_slide':
+        return 'Kaydırma';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Klasik';
       case 'reader_highlight_style_classic_hint':
@@ -544262,14 +544983,6 @@ extension on _StringsVi {
         return 'Đang giải nén…';
       case 'manga_online_stage_mokuro':
         return 'Đang tải dữ liệu OCR…';
-      case 'manga_page_animation':
-        return 'Hiệu ứng lật trang';
-      case 'manga_page_animation_fade':
-        return 'Mờ dần';
-      case 'manga_page_animation_none':
-        return 'Không';
-      case 'manga_page_animation_slide':
-        return 'Trượt';
       case 'manga_page_number_hint':
         return ({required Object total}) => 'Số trang (1-${total})';
       case 'manga_previous_page':
@@ -556005,6 +556718,36 @@ extension on _StringsVi {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Quyển ${n}';
+      case 'video_setting_subtitle_no_outline':
+        return 'Không viền';
+      case 'page_turn_animation':
+        return 'Hiệu ứng lật trang';
+      case 'page_turn_animation_fade':
+        return 'Mờ dần';
+      case 'page_turn_animation_none':
+        return 'Không';
+      case 'page_turn_animation_slide':
+        return 'Trượt';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return 'Cổ điển';
       case 'reader_highlight_style_classic_hint':
@@ -560438,14 +561181,6 @@ extension on _StringsZhCn {
         return '解包中…';
       case 'manga_online_stage_mokuro':
         return '下载 OCR 数据…';
-      case 'manga_page_animation':
-        return '翻页动画';
-      case 'manga_page_animation_fade':
-        return '淡入淡出';
-      case 'manga_page_animation_none':
-        return '无';
-      case 'manga_page_animation_slide':
-        return '滑动';
       case 'manga_page_number_hint':
         return ({required Object total}) => '页码（1-${total}）';
       case 'manga_previous_page':
@@ -572041,6 +572776,36 @@ extension on _StringsZhCn {
         return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+      case 'download_remote_delete_files_host_default':
+        return '这台主机版本较旧，删除任务时无法选择是否保留文件：Fushi 应用当主机会保留文件，无头 fushi_server 会连文件一起删除。';
+      case 'home_continue_volume':
+        return ({required Object n}) => '第 ${n} 卷';
+      case 'video_setting_subtitle_no_outline':
+        return '无描边';
+      case 'page_turn_animation':
+        return '翻页动画';
+      case 'page_turn_animation_fade':
+        return '淡入淡出';
+      case 'page_turn_animation_none':
+        return '无';
+      case 'page_turn_animation_slide':
+        return '滑动';
+      case 'page_turn_animation_cover':
+        return '覆盖';
+      case 'page_turn_animation_speed':
+        return '动画速度';
+      case 'page_turn_animation_speed_fast':
+        return '快';
+      case 'page_turn_animation_speed_normal':
+        return '标准';
+      case 'page_turn_animation_speed_slow':
+        return '慢';
+      case 'page_turn_follow_drag':
+        return '拖动跟手';
+      case 'page_turn_follow_drag_description':
+        return '页面随手指移动，松手时拖过四分之一宽度或快速甩动就翻页，否则回弹';
+      case 'page_turn_animation_paginated_only':
+        return '只在翻页模式下生效';
       case 'reader_highlight_style_classic':
         return '经典';
       case 'reader_highlight_style_classic_hint':
@@ -576474,14 +577239,6 @@ extension on _StringsZhHk {
         return '解包中…';
       case 'manga_online_stage_mokuro':
         return '下載 OCR 數據…';
-      case 'manga_page_animation':
-        return '翻頁動畫';
-      case 'manga_page_animation_fade':
-        return '淡入淡出';
-      case 'manga_page_animation_none':
-        return '無';
-      case 'manga_page_animation_slide':
-        return '滑動';
       case 'manga_page_number_hint':
         return ({required Object total}) => '頁碼（1-${total}）';
       case 'manga_previous_page':
@@ -588117,6 +588874,36 @@ extension on _StringsZhHk {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'download_remote_delete_files_host_default':
+        return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '第 ${n} 卷';
+      case 'video_setting_subtitle_no_outline':
+        return '無描邊';
+      case 'page_turn_animation':
+        return '翻頁動畫';
+      case 'page_turn_animation_fade':
+        return '淡入淡出';
+      case 'page_turn_animation_none':
+        return '無';
+      case 'page_turn_animation_slide':
+        return '滑動';
+      case 'page_turn_animation_cover':
+        return 'Cover';
+      case 'page_turn_animation_speed':
+        return 'Animation speed';
+      case 'page_turn_animation_speed_fast':
+        return 'Fast';
+      case 'page_turn_animation_speed_normal':
+        return 'Normal';
+      case 'page_turn_animation_speed_slow':
+        return 'Slow';
+      case 'page_turn_follow_drag':
+        return 'Follow finger while dragging';
+      case 'page_turn_follow_drag_description':
+        return 'The page moves with your finger; release past a quarter of the width or flick to turn, otherwise it springs back';
+      case 'page_turn_animation_paginated_only':
+        return 'Only applies in paginated mode';
       case 'reader_highlight_style_classic':
         return '經典';
       case 'reader_highlight_style_classic_hint':
