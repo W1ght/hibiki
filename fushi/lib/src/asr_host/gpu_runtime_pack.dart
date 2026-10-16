@@ -1,5 +1,9 @@
-/// Windows GPU 推理环境：**按需下载、不随包**，在下模型阶段（转录模型 / Baberu
-/// OCR 模型）按显卡自动挑一种一起下。
+/// Windows GPU 推理环境：**按需下载、不随包**，在转录模型的下模型阶段按显卡自动
+/// 挑一种一起下。只有语音转录用得上它：OCR（漫画整卷 / 直读、gal 校准、分格检测）
+/// 在 Windows 上有意只走 CPU（`acceleratedProviderPreference` 对 Windows 返回
+/// 空表，BUG-2050 实测拍板），装不装 GPU 环境对它没有任何影响，所以 OCR 模型的
+/// 下载入口不接 `withGpuRuntimeDownload`、老用户补下判据也不看 OCR 模型。哪天 OCR
+/// 重新要 GPU，要先改那张偏好表，再把这两处一起接上。
 ///
 /// 随包的只有最新 ORT **CPU** core（`flutter_onnxruntime` 插件，见其 PATCHES.md
 /// 第 13 条）。两种环境：
