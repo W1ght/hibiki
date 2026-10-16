@@ -200,8 +200,12 @@ function makeEnv(opts) {
   assert(env.rootProps['--fushi-pt-duration'] === '240ms', 'duration var');
   assert(env.document.getElementById('fushi-page-turn-style'), 'page turn stylesheet injected');
   const css = env.document.getElementById('fushi-page-turn-style').textContent;
-  assert(css.indexOf('view-transition-name:fushi-page') >= 0, 'body view-transition-name rule');
-  assert(css.indexOf('::view-transition-old(root){display:none;}') >= 0, 'root old snapshot hidden');
+  // 快照对象是根（视口）而不是滚动容器 body：WebKit 对竖排 scrollTop 滚过的 body
+  // 截出的新页快照是空白（Mac WKWebView 实测），根快照与滚动轴无关。
+  assert(css.indexOf('view-transition-name') < 0, 'no element-level view-transition-name');
+  assert(css.indexOf('::view-transition-old(root)') >= 0, 'animates the root old snapshot');
+  assert(css.indexOf('::view-transition-new(root)') >= 0, 'animates the root new snapshot');
+  assert(css.indexOf('display:none') < 0, 'root snapshots are not hidden');
 }
 
 // ② 回调还没跑就有人读几何：同步落位并 skip（读方绝不看到旧页）。

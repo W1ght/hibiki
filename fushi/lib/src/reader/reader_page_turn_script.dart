@@ -10,12 +10,14 @@ import 'package:fushi/src/reader/page_turn_animation.dart';
 ///
 /// 翻页仍然是「把 scrollLeft / scrollTop 赋到相邻整页」，只是相邻翻页时这次赋值包进
 /// `document.startViewTransition(update)`：浏览器先截旧页快照、再跑 update 换到新页、
-/// 然后按 `::view-transition-old/new(fushi-page)` 的关键帧把两张快照动起来。竖排分栏
+/// 然后按 `::view-transition-old/new(root)` 的关键帧把两张快照动起来。竖排分栏
 /// 沿 y 轴排列，相邻页在屏外的纵向位置，平滑滚动做不出「左右翻」——快照式动画与分栏
 /// 轴无关，方向只看**阅读方向**（[pageTurnMoveDirection]）。
 ///
-/// - 只快照正文：`view-transition-name` 只在动画期间挂到 `body` 上（`html[data-fushi-pt]`
-///   门控）；根快照的旧图隐藏、新图不动画，控制栏（Flutter 层）不在 WebView 里。
+/// - 快照对象是**根（视口）**，规则只在动画期间生效（`html[data-fushi-pt]` 门控）。
+///   不给滚动容器 `body` 单独命名：WebKit 对竖排 `scrollTop` 滚过的 body 截出的新页
+///   快照是空白（Mac WKWebView 实测，Chromium 正常），根快照与滚动轴无关。控制栏在
+///   Flutter 层，不在 WebView 里，不会被截进去。
 /// - 位置**在动画开始时就落定**：update 回调里写死新位置并广播滚动，进度按新页算；
 ///   回调跑之前若有人读几何（[getScrollContext]），先同步落位并跳过这次动画
 ///   （[_flushPendingPageTurn]），读方绝不会看到旧位置。Dart 侧刷新进度的
@@ -166,24 +168,20 @@ const String kReaderPageTurnJs =
   _ensurePageTurnStyle: function() {
     var id = 'fushi-page-turn-style';
     if (document.getElementById(id)) return;
-    var pair = 'html[data-fushi-pt]::view-transition-old(fushi-page),' +
-      'html[data-fushi-pt]::view-transition-new(fushi-page)';
+    var pair = 'html[data-fushi-pt]::view-transition-old(root),' +
+      'html[data-fushi-pt]::view-transition-new(root)';
     var css = [
-      'html[data-fushi-pt] body{view-transition-name:fushi-page;}',
-      'html[data-fushi-pt]::view-transition-old(root){display:none;}',
-      'html[data-fushi-pt]::view-transition-new(root),' +
-        'html[data-fushi-pt]::view-transition-group(root),' +
-        'html[data-fushi-pt]::view-transition-group(fushi-page){animation:none;}',
+      'html[data-fushi-pt]::view-transition-group(root){animation:none;}',
       pair + '{animation-duration:var(--fushi-pt-duration,${kReaderPageTurnDefaultDurationMs}ms);' +
         'animation-timing-function:cubic-bezier(.2,.7,.2,1);animation-fill-mode:both;' +
         'mix-blend-mode:normal;background-color:var(--fushi-pt-bg,Canvas);}',
-      'html[data-fushi-pt-old="move"]::view-transition-old(fushi-page){animation-name:fushi-pt-old-move;}',
-      'html[data-fushi-pt-old="still"]::view-transition-old(fushi-page){animation:none;}',
-      'html[data-fushi-pt-new="move"]::view-transition-new(fushi-page){animation-name:fushi-pt-new-move;}',
-      'html[data-fushi-pt-new="fade"]::view-transition-new(fushi-page){animation-name:fushi-pt-fade-in;}',
-      'html[data-fushi-pt-new="still"]::view-transition-new(fushi-page){animation:none;}',
-      'html[data-fushi-pt-top="old"]::view-transition-old(fushi-page),' +
-        'html[data-fushi-pt-top="new"]::view-transition-new(fushi-page)' +
+      'html[data-fushi-pt-old="move"]::view-transition-old(root){animation-name:fushi-pt-old-move;}',
+      'html[data-fushi-pt-old="still"]::view-transition-old(root){animation:none;}',
+      'html[data-fushi-pt-new="move"]::view-transition-new(root){animation-name:fushi-pt-new-move;}',
+      'html[data-fushi-pt-new="fade"]::view-transition-new(root){animation-name:fushi-pt-fade-in;}',
+      'html[data-fushi-pt-new="still"]::view-transition-new(root){animation:none;}',
+      'html[data-fushi-pt-top="old"]::view-transition-old(root),' +
+        'html[data-fushi-pt-top="new"]::view-transition-new(root)' +
         '{z-index:1;box-shadow:0 0 28px rgba(0,0,0,0.35);}',
       '@keyframes fushi-pt-old-move{from{transform:translateX(var(--fushi-pt-old-from,0px));}' +
         'to{transform:translateX(var(--fushi-pt-old-to,0px));}}',
