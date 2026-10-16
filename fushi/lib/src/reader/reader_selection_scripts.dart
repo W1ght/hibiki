@@ -977,13 +977,14 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
         '<pattern id="' + base + 'stripe" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">' +
           '<rect width="2" height="6" fill="' + cfg.paper + '" fill-opacity="0.25"/></pattern>';
     };
-    // 落笔动画（SMIL，声明式、不需要帧循环），只有两类高亮有：
+    // 落笔动画（SMIL，声明式、不需要帧循环；时长与缓动同设置页预览 HighlightStrokePreviewPainter）：
     // - 收藏：刚收藏的句子由 HighlightBridge 在写入 CSS.highlights 之前把行片段登记进来（markFresh），
     //   下一次画收藏层时这几行沿书写方向展开。只用一次、2 秒过期；章节打开 / 重排后的重新应用不登记，
     //   所以翻页、重排永远不会重放。
     // - 有声书当前句：读到新的一句（这一组出现了上次没有的行）时画出新行。这一组第一次画（开章、刚切到
     //   笔触样式）不算新，避免一打开就扫一遍。
-    // 查词（拖选每帧都在重画）与搜索没有动画。
+    // - 查词 / 搜索：出现一处全新的高亮（与上次画的行没有任何重叠：点了另一个词、跳到下一个命中）时
+    //   整处画出来；拖选时每帧的新选区都与上一帧重叠，不重播。
     var fresh = [];
     var markFresh = function(ranges, elements) {
       if (!hostEl()) return;
@@ -1011,6 +1012,18 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
     };
     // 有声书：上一次画过的行（组名 → { 行键: true }）。
     var paintedLines = {};
+    // 查词 / 搜索：上一次画过的行几何（组名 → [{v, u0, u1, vc, em}]）。
+    var paintedGeom = {};
+    var overlapsAny = function(lines, prev) {
+      for (var i = 0; i < lines.length; i++) {
+        for (var j = 0; j < prev.length; j++) {
+          var a = lines[i], b = prev[j];
+          if (a.v !== b.v || Math.abs(a.vc - b.vc) > Math.max(a.em, b.em) * 0.5) continue;
+          if (a.u0 < b.u1 && a.u1 > b.u0) return true;
+        }
+      }
+      return false;
+    };
     var reducedMotion = function() {
       try { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; }
     };
@@ -1021,6 +1034,13 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       var prevLines = paintedLines[name];
       var nowLines = {};
       paintedLines[name] = nowLines;
+      var prevGeom = paintedGeom[name] || [];
+      var geom = list.map(function(l) {
+        return l.v
+          ? { v: true, u0: l.a - origin.top, u1: l.b - origin.top, vc: -(l.mid - origin.left), em: l.em }
+          : { v: false, u0: l.a - origin.left, u1: l.b - origin.left, vc: l.mid - origin.top, em: l.em };
+      });
+      paintedGeom[name] = geom;
       var empty = { ink: '', still: '' };
       if (!list.length) return empty;
       var fill = groupColor(name);
@@ -1029,14 +1049,13 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       var defs = markDefs(base, cfg);
       var clips = '';
       var still = '';
+      var whole = (cfg.kind === 'lookup' || cfg.kind === 'search') && !overlapsAny(geom, prevGeom);
       var animate = cfg.animate && !reducedMotion() &&
-        (cfg.kind === 'favorite' ? fresh.length > 0 : cfg.kind === 'audio' && !!prevLines);
+        (cfg.kind === 'favorite' ? fresh.length > 0 : cfg.kind === 'audio' ? !!prevLines : whole);
       var delay = 0;
       var out = '';
       list.forEach(function(l, i) {
-        var line = l.v
-          ? { v: true, u0: l.a - origin.top, u1: l.b - origin.top, vc: -(l.mid - origin.left), em: l.em }
-          : { v: false, u0: l.a - origin.left, u1: l.b - origin.left, vc: l.mid - origin.top, em: l.em };
+        var line = geom[i];
         var key = Math.round(line.u0) + ':' + Math.round(line.u1) + ':' + Math.round(line.vc);
         nowLines[key] = true;
         var c = {
@@ -1051,8 +1070,10 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
           isNew = isFresh(l.v
             ? { v: true, x: l.mid - origin.left, b0: line.u0, b1: line.u1 }
             : { v: false, y: l.mid - origin.top, b0: line.u0, b1: line.u1 });
-        } else if (animate) {
+        } else if (animate && cfg.kind === 'audio') {
           isNew = !prevLines[key];
+        } else {
+          isNew = animate;
         }
         if (!isNew) { out += shape; return; }
         var em = line.em, len = line.u1 - line.u0 + em * 2, dur = 0.14 + (len / em) * 0.026;
@@ -1098,6 +1119,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       }
       el.__fushiInk = null;
       delete paintedLines[group.name];
+      delete paintedGeom[group.name];
       var html = '';
       lanes(pieces, group.join).forEach(function(l) {
         var x = l.v ? l.mid - l.lane / 2 : l.a;

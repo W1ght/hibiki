@@ -92,15 +92,16 @@ void main() {
     expect(js, contains("'fushi-search': 'search'"));
   });
 
-  test('defaults: classic everywhere, favourite animation on', () async {
+  test('defaults: classic everywhere, stroke animation on', () async {
     final ReaderSettings s = await settingsWith((_) async {});
     for (final HighlightKind kind in HighlightKind.values) {
       final HighlightStrokeConfig c = s.highlightStrokeConfig(kind);
       expect(c, kind.defaults, reason: kind.name);
       expect(c.style, HighlightStrokeStyle.classic, reason: kind.name);
     }
-    expect(s.highlightStrokeConfig(HighlightKind.favorite).animate, isTrue);
-    expect(s.highlightStrokeConfig(HighlightKind.audio).animate, isFalse);
+    for (final HighlightKind kind in HighlightKind.values) {
+      expect(s.highlightStrokeConfig(kind).animate, isTrue, reason: kind.name);
+    }
   });
 
   test('each kind round-trips independently', () async {
@@ -167,7 +168,7 @@ void main() {
           opacity: 0.4,
           coverRuby: true,
           roughness: -1,
-          animate: true,
+          animate: false,
         ),
       });
       expect(css, contains('--fushi-mark-lookup-style: marker;'));
@@ -175,7 +176,6 @@ void main() {
       expect(css, contains('--fushi-mark-lookup-opacity: 0.4;'));
       expect(css, contains('--fushi-mark-lookup-cover-ruby: 1;'));
       expect(css, contains('--fushi-mark-lookup-roughness: 0;'));
-      // 查词没有动画开关：值被压成 0。
       expect(css, contains('--fushi-mark-lookup-animate: 0;'));
       // 没给的种类按默认（经典）。
       for (final HighlightKind k in <HighlightKind>[

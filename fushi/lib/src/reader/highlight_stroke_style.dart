@@ -57,23 +57,19 @@ enum HighlightStrokeStyle {
 
 /// 阅读器里的四类高亮。每类一套独立的 [HighlightStrokeConfig]。
 enum HighlightKind {
-  /// 收藏句（五色）：新收藏时可放一次落笔动画。
-  favorite('favorite', 'favorite_highlight', supportsAnimation: true),
+  /// 收藏句（五色）：新收藏时放一次落笔动画。
+  favorite('favorite', 'favorite_highlight'),
 
-  /// 查词选中（含拖选）。拖选时每帧都在重画，不提供动画。
+  /// 查词选中（含拖选）：选中一处新的词时画出来；拖选扩大选区不重播。
   lookup('lookup', 'lookup_highlight'),
 
-  /// 有声书当前句：可选「读到哪句就画出哪句」。
-  audio('audio', 'audio_highlight', supportsAnimation: true),
+  /// 有声书当前句：读到哪句就画出哪句。
+  audio('audio', 'audio_highlight'),
 
-  /// 搜索命中。
+  /// 搜索命中：跳到一处新的命中时画出来。
   search('search', 'search_highlight');
 
-  const HighlightKind(
-    this.cssName,
-    this.prefPrefix, {
-    this.supportsAnimation = false,
-  });
+  const HighlightKind(this.cssName, this.prefPrefix);
 
   /// CSS 变量里的种类名（`--fushi-mark-<cssName>-*`），与 JS 的 `KIND_OF` 对应。
   final String cssName;
@@ -82,13 +78,9 @@ enum HighlightKind {
   /// `_background` / `_text_color` 与这里的 `_style` / `_thickness` … 不重名。
   final String prefPrefix;
 
-  /// 这类高亮有没有落笔动画开关。
-  final bool supportsAnimation;
-
-  /// 这类高亮的默认配置：都从经典开始（不改变任何人的现状）；收藏的落笔动画默认开，
-  /// 有声书默认关（每句都扫一遍会分散注意力，要用户自己打开）。
-  HighlightStrokeConfig get defaults =>
-      HighlightStrokeConfig(animate: this == HighlightKind.favorite);
+  /// 这类高亮的默认配置：都从经典开始（不改变任何人的现状）；落笔动画默认开，和设置页的
+  /// 预览一样画出来（经典样式没有笔划，这个开关在选笔触样式之前不起作用）。
+  HighlightStrokeConfig get defaults => const HighlightStrokeConfig();
 }
 
 /// 一类高亮的完整笔触配置。各数值的取值范围见 `kHighlightStroke*` 常量。
@@ -99,7 +91,7 @@ class HighlightStrokeConfig {
     this.opacity = kHighlightStrokeOpacityDefault,
     this.coverRuby = false,
     this.roughness = kHighlightStrokeRoughnessDefault,
-    this.animate = false,
+    this.animate = true,
   });
 
   final HighlightStrokeStyle style;
@@ -116,7 +108,7 @@ class HighlightStrokeConfig {
   /// 笔触抖动：0 = 规整，1 = 最潦草。
   final double roughness;
 
-  /// 落笔动画（只对 [HighlightKind.supportsAnimation] 的种类生效）。
+  /// 落笔动画：新出现的高亮沿书写方向画出来（与设置页预览同一套时长与缓动）。
   final bool animate;
 
   HighlightStrokeConfig copyWith({
@@ -207,7 +199,7 @@ String highlightStrokeCssVariables(
       ..write(
         '$p-roughness: ${_n(c.roughness.clamp(kHighlightStrokeRoughnessMin, kHighlightStrokeRoughnessMax))};\n',
       )
-      ..write('$p-animate: ${c.animate && kind.supportsAnimation ? 1 : 0};\n');
+      ..write('$p-animate: ${c.animate ? 1 : 0};\n');
   }
   out
     ..write('  --fushi-mark-dark: ${darkBackground ? 1 : 0};\n')

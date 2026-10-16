@@ -144,7 +144,23 @@ const CHECK = String.raw`(async () => {
   await frames();
   covers('fushi-selection', Array.from(look.getClientRects()), 'lookup');
   covers('fushi-search', Array.from(search.getClientRects()), 'search');
-  ok(!group('fushi-selection').querySelector('clipPath animate'), 'lookup never animates');
+  ok(!!group('fushi-selection').querySelector('clipPath animate'), 'a new lookup selection sweeps in');
+  ok(!!group('fushi-search').querySelector('clipPath animate'), 'a new search hit sweeps in');
+  // Drag-extending the selection overlaps the previous frame: no replay.
+  const grown = rangeOf('がましい');
+  grown.setStart(look.startContainer, Math.max(0, look.startOffset - 2));
+  CSS.highlights.set('fushi-selection', new Highlight(grown));
+  await frames();
+  ok(!group('fushi-selection').querySelector('clipPath animate'), 'extending the selection does not sweep again');
+  const lookStill = ink('fushi-selection');
+  window.__fushiLanes.repaint();
+  await frames();
+  ok(ink('fushi-selection') === lookStill, 'a repaint of the same selection does not sweep');
+  // Jumping to another hit (no overlap with the last one) sweeps again.
+  const search2 = rangeOf('がましい');
+  CSS.highlights.set('fushi-search', new Highlight(search2));
+  await frames();
+  ok(!!group('fushi-search').querySelector('clipPath animate'), 'jumping to the next hit sweeps in');
 
   // ── audiobook current sentence ──
   const R = window.fushiReader;
@@ -160,9 +176,7 @@ const CHECK = String.raw`(async () => {
     return out;
   };
   covers('fushi-sentence-audio', activeRects(), 'audio');
-  ok(!group('fushi-sentence-audio').querySelector('clipPath animate'), 'audio sweep is off by default');
-  await setVar('--fushi-mark-audio-animate', '1');
-  ok(!group('fushi-sentence-audio').querySelector('clipPath animate'), 'turning the sweep on does not re-draw the current sentence');
+  ok(!group('fushi-sentence-audio').querySelector('clipPath animate'), 'the first sentence of a chapter does not sweep');
   R.highlightSentenceAudioCue('c2', true);
   await frames();
   await new Promise((r) => setTimeout(r, 300));

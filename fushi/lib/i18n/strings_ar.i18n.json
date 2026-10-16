@@ -7808,5 +7808,7 @@
   "reader_highlight_kind_lookup": "Lookup",
   "reader_highlight_kind_audio": "Audiobook",
   "reader_highlight_kind_search": "Search",
-  "reader_highlight_animate_audio_hint": "Draws each sentence along the text as the audio reaches it"
+  "reader_highlight_animate_audio_hint": "Draws each sentence along the text as the audio reaches it",
+  "reader_highlight_animate_lookup_hint": "Draws the stroke along the text when you select a new word",
+  "reader_highlight_animate_search_hint": "Draws the stroke along the text when you jump to a new match"
 }

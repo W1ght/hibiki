@@ -7808,5 +7808,7 @@
   "reader_highlight_kind_lookup": "查词",
   "reader_highlight_kind_audio": "有声书",
   "reader_highlight_kind_search": "搜索",
-  "reader_highlight_animate_audio_hint": "朗读到哪一句，就沿书写方向画出哪一句"
+  "reader_highlight_animate_audio_hint": "朗读到哪一句，就沿书写方向画出哪一句",
+  "reader_highlight_animate_lookup_hint": "选中新的词时沿书写方向画出来；拖动扩大选区时不重画",
+  "reader_highlight_animate_search_hint": "跳到新的搜索结果时沿书写方向画出来"
 }

@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132770 (7810 per locale)
+/// Strings: 132804 (7812 per locale)
 ///
-/// Built on 2026-10-15 at 05:57 UTC
+/// Built on 2026-10-16 at 06:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11280,6 +11280,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_highlight_kind_search => 'Search';
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -30162,6 +30166,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -49434,6 +49444,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -68765,6 +68781,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -88177,6 +88199,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -107242,6 +107270,12 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -126473,6 +126507,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -144704,6 +144744,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -162971,6 +163017,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -182150,6 +182202,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -201398,6 +201456,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -220591,6 +220655,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -239462,6 +239532,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -258537,6 +258613,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -277539,6 +277621,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 // Path: <root>
@@ -294878,6 +294966,11 @@ class _StringsZhCn extends _StringsEn {
   String get reader_highlight_kind_search => '搜索';
   @override
   String get reader_highlight_animate_audio_hint => '朗读到哪一句，就沿书写方向画出哪一句';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      '选中新的词时沿书写方向画出来；拖动扩大选区时不重画';
+  @override
+  String get reader_highlight_animate_search_hint => '跳到新的搜索结果时沿书写方向画出来';
 }
 
 // Path: <root>
@@ -312550,6 +312643,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_highlight_animate_audio_hint =>
       'Draws each sentence along the text as the audio reaches it';
+  @override
+  String get reader_highlight_animate_lookup_hint =>
+      'Draws the stroke along the text when you select a new word';
+  @override
+  String get reader_highlight_animate_search_hint =>
+      'Draws the stroke along the text when you jump to a new match';
 }
 
 /// Flat map(s) containing all translations.
@@ -328750,6 +328849,10 @@ extension on _StringsEn {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -344945,6 +345048,10 @@ extension on _StringsAr {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -361216,6 +361323,10 @@ extension on _StringsDe {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -377469,6 +377580,10 @@ extension on _StringsEs {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -393740,6 +393855,10 @@ extension on _StringsFr {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -409955,6 +410074,10 @@ extension on _StringsId {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -426206,6 +426329,10 @@ extension on _StringsIt {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -442330,6 +442457,10 @@ extension on _StringsJa {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -458462,6 +458593,10 @@ extension on _StringsKo {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -474708,6 +474843,10 @@ extension on _StringsNl {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -490946,6 +491085,10 @@ extension on _StringsPtBr {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -507189,6 +507332,10 @@ extension on _StringsRu {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -523388,6 +523535,10 @@ extension on _StringsTh {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -539618,6 +539769,10 @@ extension on _StringsTr {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -555831,6 +555986,10 @@ extension on _StringsVi {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }
@@ -571860,6 +572019,10 @@ extension on _StringsZhCn {
         return '搜索';
       case 'reader_highlight_animate_audio_hint':
         return '朗读到哪一句，就沿书写方向画出哪一句';
+      case 'reader_highlight_animate_lookup_hint':
+        return '选中新的词时沿书写方向画出来；拖动扩大选区时不重画';
+      case 'reader_highlight_animate_search_hint':
+        return '跳到新的搜索结果时沿书写方向画出来';
       default:
         return null;
     }
@@ -587929,6 +588092,10 @@ extension on _StringsZhHk {
         return 'Search';
       case 'reader_highlight_animate_audio_hint':
         return 'Draws each sentence along the text as the audio reaches it';
+      case 'reader_highlight_animate_lookup_hint':
+        return 'Draws the stroke along the text when you select a new word';
+      case 'reader_highlight_animate_search_hint':
+        return 'Draws the stroke along the text when you jump to a new match';
       default:
         return null;
     }

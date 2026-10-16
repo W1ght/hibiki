@@ -356,7 +356,7 @@ class _HighlightStylePageState extends State<HighlightStylePage>
                   classicUnderline: _kind == HighlightKind.favorite,
                   onTap: () => _commit(
                     _config.copyWith(style: style),
-                    replay: _kind.supportsAnimation && _config.animate,
+                    replay: _config.animate,
                   ),
                 ),
               ),
@@ -415,13 +415,16 @@ class _HighlightStylePageState extends State<HighlightStylePage>
             value: _config.coverRuby,
             onChanged: (bool v) => _commit(_config.copyWith(coverRuby: v)),
           ),
-        if (style.isStroke && _kind.supportsAnimation)
+        if (style.isStroke)
           AdaptiveSettingsSwitchRow(
             key: const ValueKey<String>('highlight_style_animate'),
             title: t.reader_highlight_animate,
-            subtitle: _kind == HighlightKind.audio
-                ? t.reader_highlight_animate_audio_hint
-                : t.reader_highlight_animate_hint,
+            subtitle: switch (_kind) {
+              HighlightKind.favorite => t.reader_highlight_animate_hint,
+              HighlightKind.lookup => t.reader_highlight_animate_lookup_hint,
+              HighlightKind.audio => t.reader_highlight_animate_audio_hint,
+              HighlightKind.search => t.reader_highlight_animate_search_hint,
+            },
             value: _config.animate,
             onChanged: (bool v) =>
                 _commit(_config.copyWith(animate: v), replay: v),
