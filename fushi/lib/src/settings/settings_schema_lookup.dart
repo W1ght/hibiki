@@ -42,10 +42,10 @@ void _showSettingsSnackBar(SettingsContext settingsContext, String message) {
 /// 端口冲突提示：说明占用者（默认端口时通常是浏览器拉起的 yomitan-api Python
 /// 进程），并在支持的桌面平台附「结束进程并重试」action——直接结束占用进程后
 /// 自动重试开启，免去用户去 Yomitan 高级设置绕一圈。
-void _showYomitanPortConflictSnackBar(SettingsContext settingsContext) {
+void _showFushiApiPortConflictSnackBar(SettingsContext settingsContext) {
   final BuildContext ctx = settingsContext.context;
   if (!ctx.mounted) return;
-  final int port = settingsContext.appModel.yomitanApiPort;
+  final int port = settingsContext.appModel.fushiApiPort;
   ScaffoldMessenger.of(ctx).showSnackBar(
     FushiSnackBar(
       content: Text(fushiApiPortInUseMessage(port)),
@@ -66,7 +66,7 @@ Future<void> _terminatePortOwnerAndRetry(
   int port,
 ) async {
   final AppModel appModel = settingsContext.appModel;
-  // 杀前必须确认：弹窗展示实际占用者（进程名 + PID + 路径；hibiki 旧实例
+  // 杀前必须确认：弹窗展示实际占用者（进程名 + PID + 路径；Fushi 旧实例
   // 特别标注），关键系统进程直接拒杀。端口是用户可配置偏好，占用者完全可能
   // 是 IDE 辅助进程/dev server，未经确认一键 taskkill 不可接受。
   final PortKillDecision decision = await decidePortKill(
@@ -86,7 +86,7 @@ Future<void> _terminatePortOwnerAndRetry(
       return;
     case PortKillDecisionKind.listenerChanged:
       // 占用者换人：重走冲突提示，让用户对新占用者重新发起并确认。
-      _showYomitanPortConflictSnackBar(settingsContext);
+      _showFushiApiPortConflictSnackBar(settingsContext);
       return;
     case PortKillDecisionKind.confirmed:
       final PortListenerInfo listener = decision.listener!;
@@ -103,10 +103,10 @@ Future<void> _terminatePortOwnerAndRetry(
   }
   // 占用进程已结束（或本就已退出）：重试开启。进程退出后 OS 释放端口可能有极短
   // 延迟，端口仍占时再等一拍重试一次，仍失败按端口冲突报出。
-  await appModel.setYomitanApiServerEnabled(true);
+  await appModel.setFushiApiServerEnabled(true);
   for (int attempt = 0;; attempt++) {
     try {
-      await appModel.startYomitanApiServer();
+      await appModel.startFushiApiServer();
       break;
     } on SyncServerPortInUseException {
       if (attempt >= 1) {
@@ -118,11 +118,11 @@ Future<void> _terminatePortOwnerAndRetry(
         return;
       }
       await Future<void>.delayed(const Duration(milliseconds: 500));
-      // startYomitanApiServer 抛出前把开关复位成 false，重试前需重新置位。
-      await appModel.setYomitanApiServerEnabled(true);
+      // startFushiApiServer 抛出前把开关复位成 false，重试前需重新置位。
+      await appModel.setFushiApiServerEnabled(true);
     }
   }
-  _showSettingsSnackBar(settingsContext, t.yomitan_api_server_started);
+  _showSettingsSnackBar(settingsContext, t.fushi_api_server_started);
   settingsContext.refresh();
 }
 
@@ -683,7 +683,7 @@ SettingsDestination buildLookupDestination() {
         presentation: SettingsSectionPresentation.alwaysExpanded,
         title: t.settings_section_lookup_audio,
         items: <SettingsItem>[
-          // 「管理音频来源」抽成共享 builder：查词分类与 Hibiki 互联分类都引用同一份
+          // 「管理音频来源」抽成共享 builder：查词分类与 Fushi 互联分类都引用同一份
           // 定义（互联音频源 fushiRemote 就在该对话框里管，故互联分类也提供入口）。
           buildManageAudioSourcesItem(),
           SettingsSwitchItem(
@@ -1155,27 +1155,27 @@ SettingsDestination buildLookupDestination() {
               );
             },
           ),
-          // 远端词典查询抽成共享 builder：查词分类与 Hibiki 互联分类都引用（它直连
+          // 远端词典查询抽成共享 builder：查词分类与 Fushi 互联分类都引用（它直连
           // 互联对端的词典，逻辑上属互联，故互联分类也提供入口）。
           buildRemoteDictionaryLookupItem(),
           SettingsSwitchItem(
-            id: 'lookup.yomitan_api_server',
-            title: t.yomitan_api_server,
-            subtitle: t.yomitan_api_server_hint,
+            id: 'lookup.fushi_api_server',
+            title: t.fushi_api_server,
+            subtitle: t.fushi_api_server_hint,
             icon: Icons.api_outlined,
             value: (SettingsContext settingsContext) =>
-                settingsContext.appModel.yomitanApiServerEnabled,
+                settingsContext.appModel.fushiApiServerEnabled,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel.setYomitanApiServerEnabled(value);
+              await settingsContext.appModel.setFushiApiServerEnabled(value);
               if (value) {
                 try {
-                  await settingsContext.appModel.startYomitanApiServer();
+                  await settingsContext.appModel.startFushiApiServer();
                 } on SyncServerPortInUseException {
-                  // startYomitanApiServer 已在抛出前把开关复位为 false。
-                  _showYomitanPortConflictSnackBar(settingsContext);
+                  // startFushiApiServer 已在抛出前把开关复位为 false。
+                  _showFushiApiPortConflictSnackBar(settingsContext);
                 }
               } else {
-                await settingsContext.appModel.stopYomitanApiServer();
+                await settingsContext.appModel.stopFushiApiServer();
               }
               settingsContext.refresh();
             },
@@ -1183,17 +1183,29 @@ SettingsDestination buildLookupDestination() {
           // 一等文本项（secret）：行尾自动获得眼睛显隐切换。写穿后重启 Yomitan
           // API 服务（若已开启）。
           SettingsTextItem(
-            id: 'lookup.yomitan_api_key',
-            visible: (SettingsContext c) => c.appModel.yomitanApiServerEnabled,
-            title: t.yomitan_api_key,
+            id: 'lookup.fushi_api_key',
+            visible: (SettingsContext c) => c.appModel.fushiApiServerEnabled,
+            title: t.fushi_api_key,
             icon: Icons.key_outlined,
             secret: true,
             value: (SettingsContext settingsContext) =>
-                settingsContext.appModel.yomitanApiKey,
+                settingsContext.appModel.fushiApiKey,
             onChanged: (SettingsContext settingsContext, String value) async {
-              await settingsContext.appModel.setYomitanApiKey(value);
-              await _restartYomitanApiServerIfEnabled(settingsContext);
+              await settingsContext.appModel.setFushiApiKey(value);
+              await _restartFushiApiServerIfEnabled(settingsContext);
             },
+          ),
+          // 复习模块（SRS，默认关）开着时，Fushi API 根路径同时是 AnkiConnect v6 兼容
+          // 端点：Yomitan / asbplayer 等只认 AnkiConnect 的工具填这个地址即可往 Fushi
+          // 复习里加卡（API key 与上面同一个）。模块关着时这一行不出现、端点也不存在。
+          SettingsStatusItem(
+            id: 'lookup.srs_ankiconnect',
+            visible: (SettingsContext c) =>
+                c.appModel.moduleVisibility.isEnabled(ModuleId.srs),
+            title: t.srs_ankiconnect_title,
+            icon: FushiIcons.hub,
+            subtitleBuilder: (SettingsContext c) =>
+                t.srs_ankiconnect_hint(port: c.appModel.fushiApiPort),
           ),
           SettingsSwitchItem(
             id: 'lookup.texthooker',
@@ -1225,7 +1237,7 @@ SettingsDestination buildLookupDestination() {
   );
 }
 
-/// 「管理音频来源」配置项。查词分类与 Hibiki 互联分类共享同一份定义（单一真相源）：
+/// 「管理音频来源」配置项。查词分类与 Fushi 互联分类共享同一份定义（单一真相源）：
 /// 音频来源对话框统管远端(含互联 fushiRemote)/本地音频源，逻辑上与互联相关，故两处
 /// 都用同一入口。id 沿用 `lookup.` 前缀（历史命名，非持久化 key，两处同 id 无冲突——
 /// 覆盖遍历按 `<destId>/<title>` 去重，action 型行不产生持久化断言）。
@@ -1347,8 +1359,8 @@ Future<void> showAudioSourcesManagerDialog({
   );
 }
 
-/// 远端词典查询开关。查词分类与 Hibiki 互联分类共享同一份定义：本地查不到时向已配置
-/// 的 Hibiki 互联对端查询，逻辑上属互联。id 沿用 `lookup.` 前缀（非持久化 key）。
+/// 远端词典查询开关。查词分类与 Fushi 互联分类共享同一份定义：本地查不到时向已配置
+/// 的 Fushi 互联对端查询，逻辑上属互联。id 沿用 `lookup.` 前缀（非持久化 key）。
 SettingsItem buildRemoteDictionaryLookupItem() {
   return SettingsSwitchItem(
     id: 'lookup.remote_lookup',
@@ -1365,14 +1377,14 @@ SettingsItem buildRemoteDictionaryLookupItem() {
   );
 }
 
-Future<void> _restartYomitanApiServerIfEnabled(
+Future<void> _restartFushiApiServerIfEnabled(
   SettingsContext settingsContext,
 ) async {
-  if (!settingsContext.appModel.yomitanApiServerEnabled) return;
-  await settingsContext.appModel.stopYomitanApiServer();
+  if (!settingsContext.appModel.fushiApiServerEnabled) return;
+  await settingsContext.appModel.stopFushiApiServer();
   try {
-    await settingsContext.appModel.startYomitanApiServer();
+    await settingsContext.appModel.startFushiApiServer();
   } on SyncServerPortInUseException {
-    _showYomitanPortConflictSnackBar(settingsContext);
+    _showFushiApiPortConflictSnackBar(settingsContext);
   }
 }

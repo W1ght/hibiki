@@ -59,16 +59,18 @@ void main() {
       expect(repo.onboardingCompleted, true);
     });
 
-    test('module toggles default to true and round-trip', () async {
-      // 「功能模块」显隐默认全开——升级用户底栏不变（Never break userspace）。
+    test('module toggles default per module and round-trip', () async {
+      // 「功能模块」显隐默认开——升级用户底栏不变（Never break userspace）；唯一
+      // 例外是复习（ModuleId.srs，用户 2026-10-14 拍板默认关，自己打开才出现）。
       // 按 [ModuleId.values] 遍历而非手抄七个模块：加模块时本用例自动覆盖到它，
       // 也钉住「一个模块一个键」（同键复用会在写全 false 后被读回暴露）。
       for (final ModuleId module in ModuleId.values) {
         expect(
           repo.moduleEnabled(module),
-          true,
-          reason: '${module.name} 默认应为开',
+          module != ModuleId.srs,
+          reason: '${module.name} 的出厂默认不对',
         );
+        expect(module.defaultEnabled, module != ModuleId.srs);
       }
       for (final ModuleId module in ModuleId.values) {
         await repo.setModuleEnabled(module, false);
@@ -587,23 +589,23 @@ void main() {
     });
 
     test('yomitan api server prefs round-trip', () async {
-      expect(repo.yomitanApiServerEnabled, false);
-      expect(repo.yomitanApiPort, 19633);
-      expect(repo.yomitanApiKey, '');
+      expect(repo.fushiApiServerEnabled, false);
+      expect(repo.fushiApiPort, 19633);
+      expect(repo.fushiApiKey, '');
 
-      await repo.setYomitanApiServerEnabled(true);
-      await repo.setYomitanApiPort(19999);
-      await repo.setYomitanApiKey('k');
+      await repo.setFushiApiServerEnabled(true);
+      await repo.setFushiApiPort(19999);
+      await repo.setFushiApiKey('k');
 
-      expect(repo.yomitanApiServerEnabled, true);
-      expect(repo.yomitanApiPort, 19999);
-      expect(repo.yomitanApiKey, 'k');
+      expect(repo.fushiApiServerEnabled, true);
+      expect(repo.fushiApiPort, 19999);
+      expect(repo.fushiApiKey, 'k');
 
       final repo2 = PreferencesRepository(db);
       await repo2.loadFromDb();
-      expect(repo2.yomitanApiServerEnabled, true);
-      expect(repo2.yomitanApiPort, 19999);
-      expect(repo2.yomitanApiKey, 'k');
+      expect(repo2.fushiApiServerEnabled, true);
+      expect(repo2.fushiApiPort, 19999);
+      expect(repo2.fushiApiKey, 'k');
       repo2.dispose();
     });
 

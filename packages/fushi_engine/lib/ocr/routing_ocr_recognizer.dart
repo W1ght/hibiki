@@ -1,8 +1,8 @@
 /// 按块方向路由的识别器：竖排块整块喂块识别器，横排块切行后横行走 PP-OCRv6。
 ///
 /// 命名说明：参数 / 字段名 `mangaOcr` 是历史名，指「整块识别器」——kha-white
-/// manga-ocr 本地模型已于 2026-10 删除，现在传进来的是逐列 CTC 或 Baberu。下文
-/// 的路由实测是当年在 manga-ocr 上做的，判据（块比它高还宽 → 横排路径）不变。
+/// manga-ocr 本地模型已于 2026-10 删除，现在传进来的是逐列 CTC。下文的路由实测
+/// 是当年在 manga-ocr 上做的，判据（块比它高还宽 → 横排路径）不变。
 ///
 /// 为什么不是「一律切行」：2026-09-13 用用户真实页复测（「週に一度クラスメイトを
 /// 買う話」mihon 下载 844×1200 + 「幼なじみが絶対に結ばれる百合アンソロジー」
@@ -59,10 +59,13 @@ bool routesToHorizontalPath(OcrRect box) => box.width >= box.height;
 /// `_routeBlock` 的结论：识别结果（`text` 为空 = 整块交 manga-ocr）+ 路由时已检出
 /// 的原始行框（页面坐标），供整块识别后的排版复用；null = 路由没跑行检测。
 class _RoutedBlock {
-  const _RoutedBlock(this.recognition, {this.lineHints});
+  const _RoutedBlock(this.recognition, {this.lineHints, this.lineTilt = 0});
 
   final OcrRecognition recognition;
   final List<OcrRect>? lineHints;
+
+  /// [lineHints] 那次检测估出的整块倾角（[ppBlockTilt]）；没检测时为 0。
+  final double lineTilt;
 }
 
 class RoutingOcrRecognizer
@@ -72,7 +75,7 @@ class RoutingOcrRecognizer
     required PpOcrLineDetector lineDetector,
     required PpOcrLineRecognizer lineRecognizer,
   }) {
-    // 只向 pipeline 暴露真实可用的批处理能力。原版 ONNX / Baberu 不因此
+    // 只向 pipeline 暴露真实可用的批处理能力。不支持批处理的块识别器不因此
     // 被合成一个假 batch，仍保留逐框调用和取消检查。
     if (mangaOcr is BatchOcrRecognizer) {
       return _BatchRoutingOcrRecognizer(
@@ -126,11 +129,14 @@ class RoutingOcrRecognizer
     final OcrRecognizer primary = _mangaOcr;
     if (primary is LineOcrRecognizer) {
       // 逐行识别的主识别器：逐行文本与行框直接采用，不再按列长估算切分。
-      return primary.recognizeWithLines(
-        page,
-        box,
-        vertical: routed.recognition.vertical,
-        lineHints: routed.lineHints,
+      return _withRoutedTilt(
+        await primary.recognizeWithLines(
+          page,
+          box,
+          vertical: routed.recognition.vertical,
+          lineHints: routed.lineHints,
+        ),
+        routed,
       );
     }
     final ScoredOcrText read = await _readScored(primary, page, box);
@@ -140,10 +146,21 @@ class RoutingOcrRecognizer
       read.text,
       vertical: routed.recognition.vertical,
       lineHints: routed.lineHints,
+      lineTilt: routed.lineTilt,
     )).withConfidence(read.confidence);
   }
 
-  /// 主识别器出分就取分，不出分的（Baberu 等）置信度为 null。
+  /// 行框是路由时检出的（[_RoutedBlock.lineHints]）就由路由挂上同一次检测的
+  /// 倾角；主识别器自己检测的（没给 hints）保留它自己估的。
+  static OcrRecognition _withRoutedTilt(
+    OcrRecognition recognition,
+    _RoutedBlock routed,
+  ) {
+    if (routed.lineHints == null) return recognition;
+    return recognition.withLineTilt(routed.lineTilt);
+  }
+
+  /// 主识别器出分就取分，不出分的置信度为 null。
   static Future<ScoredOcrText> _readScored(
     OcrRecognizer recognizer,
     img.Image page,
@@ -166,10 +183,13 @@ class RoutingOcrRecognizer
     String text, {
     required bool vertical,
     List<OcrRect>? lineHints,
+    double lineTilt = 0,
   }) async {
     if (text.isEmpty) return OcrRecognition(text: text, vertical: vertical);
-    final List<OcrRect> rects =
-        lineHints ?? await _lineDetector.detectInBlock(page, box);
+    final ({List<OcrRect> lines, double tilt}) detected = lineHints != null
+        ? (lines: lineHints, tilt: lineTilt)
+        : await _lineDetector.detectLayoutInBlock(page, box);
+    final List<OcrRect> rects = detected.lines;
     // 方向按检出行长度投票（宽扁的多列竖排常被外形或碎片带偏），没有明确的行时
     // 保持传入的方向；排版与块方向同一个结论。
     final bool layoutVertical = voteOcrLineOrientation(rects) ?? vertical;
@@ -190,6 +210,7 @@ class RoutingOcrRecognizer
       vertical: layoutVertical,
       lines: layout.lines,
       lineBoxes: layout.boxes,
+      lineTilt: detected.tilt,
     );
   }
 
@@ -219,6 +240,7 @@ class RoutingOcrRecognizer
       return _RoutedBlock(
         const OcrRecognition(text: '', vertical: true),
         lineHints: lineHints,
+        lineTilt: ppBlockTilt(raw),
       );
     }
     final List<PpTextLine> lines = orderLinesForReading(
@@ -269,9 +291,11 @@ class RoutingOcrRecognizer
         vertical: false,
         lines: text.isEmpty ? null : texts,
         lineBoxes: text.isEmpty ? null : boxes,
+        lineTilt: text.isEmpty ? 0 : ppBlockTilt(raw),
         confidence: text.isEmpty ? null : confidence,
       ),
       lineHints: lineHints,
+      lineTilt: ppBlockTilt(raw),
     );
   }
 }
@@ -346,11 +370,14 @@ class _BatchRoutingOcrRecognizer extends RoutingOcrRecognizer
     if (primary is LineOcrRecognizer) {
       // 逐行识别的主识别器不走整框批次：逐行文本与行框直接采用（同 _recognizeOne）。
       for (final int slot in mangaIndices) {
-        results[slot] = await primary.recognizeWithLines(
-          page,
-          boxes[slot],
-          vertical: results[slot].vertical,
-          lineHints: routed[slot].lineHints,
+        results[slot] = RoutingOcrRecognizer._withRoutedTilt(
+          await primary.recognizeWithLines(
+            page,
+            boxes[slot],
+            vertical: results[slot].vertical,
+            lineHints: routed[slot].lineHints,
+          ),
+          routed[slot],
         );
       }
       return results;
@@ -373,6 +400,7 @@ class _BatchRoutingOcrRecognizer extends RoutingOcrRecognizer
         mangaResults[index],
         vertical: results[slot].vertical,
         lineHints: routed[slot].lineHints,
+        lineTilt: routed[slot].lineTilt,
       );
     }
     return results;

@@ -40,12 +40,33 @@ extension _FushiSyncServerLookup on FushiSyncServer {
     if (service == null) return shelf.Response.notFound('Remote lookup off');
     final Map<String, dynamic>? body = await readJsonObjectBody(request);
     if (body == null) return shelf.Response(400, body: 'Invalid JSON');
-    // 契约与 YomitanApiServer 共享（BUG-530，单一真相源）。
+    // 契约与 FushiApiServer 共享（BUG-530，单一真相源）。
     return jsonResponse(await buildRemoteDictionaryLookupResponse(
       body,
       lookup: service,
       history: _historyService,
+      // BUG-3425：对端（游戏串流）在它那边渲染、导出本机的查词结果，必须用本机的
+      // 词典样式。与浏览器扩展同一套 `stylesRevision` 门控：请求不带该字段（老
+      // 客户端）一个字节都不多发；带了且指纹不同才整表下发一次。
+      popupDictionaryCssProvider:
+          _dictionaryStylesProvider == null ? null : _peerDictionaryCss,
     ));
+  }
+
+  /// 只含词典自带 CSS 的弹窗样式快照：用户自定义 CSS 属于**对端**自己的弹窗设置，
+  /// 不从 host 下发。按 provider 返回的 map 身份缓存（`FushiDicts.dictionaryStyles`
+  /// 只在词典集合变化时换实例），避免每次查词重新哈希数百 KB 的 CSS。
+  RemotePopupDictionaryCss _peerDictionaryCss() {
+    final Map<String, String> styles = _dictionaryStylesProvider!();
+    final RemotePopupDictionaryCss? cached = _peerPopupDictionaryCss;
+    if (cached != null && identical(cached.dictionaryStyles, styles)) {
+      return cached;
+    }
+    return _peerPopupDictionaryCss = RemotePopupDictionaryCss(
+      dictionaryStyles: styles,
+      globalDictCss: '',
+      customDictCss: const <String, String>{},
+    );
   }
 
   /// `POST /api/lookup/dictionary/styles {dictionaries:[name…]}` →
@@ -186,7 +207,7 @@ extension _FushiSyncServerLookup on FushiSyncServer {
 
   // /api/mine、/api/mine/forward、/api/anki/note-type/*、/api/duplicate、
   // /api/lookup/audio[/file] 的 handler 正文在 [RemoteLookupRoutes]（与
-  // YomitanApiServer 共用）；本文件只留互联独有的端点。
+  // FushiApiServer 共用）；本文件只留互联独有的端点。
 
   /// 互联媒体存储优化：客户端（手机）经互联对**主机端** collection.media 做字节级
   /// 去重——卡片落在主机的 Anki 上，重复媒体也堆在主机，客户端本机根本没有那个
