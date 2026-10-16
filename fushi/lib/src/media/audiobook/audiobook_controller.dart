@@ -1142,11 +1142,19 @@ class AudiobookPlayerController extends ChangeNotifier {
       snapReaderToAudio();
     }
     await _activateMainPlayer();
+    // BUG-3367：开书落在阅读存档，有声书位置在按播放这一刻接管（对齐 Hoshi 的
+    // togglePlayback → displayCue(reveal)）。当前句往往没变（暂停在句 X、重开后按播放
+    // 仍是句 X），不主动投影就要等下一句才翻过去；门控同跟读本身（跟随开、正在播）。
+    resyncReaderToAudio();
   }
 
   Future<void> _activateMainPlayer() {
     if (_stopRequested) return Future<void>.value();
     final Future<void> operation = _playActivationTail.then<void>((_) async {
+      // BUG-3367：开书慢时（Windows 尤甚）用户按播放可能早于「恢复上次播放位置」的
+      // seek 落定；此刻起播，播放器先从 0 报位置，当前句跳到全书第一句再跳回。等载入
+      // （含恢复 seek）完成再起播，与 [seekMs] 同一道门；从未载入时它本就已完成。
+      await _loadReady.future;
       if (_stopRequested) return;
       await playActivationSettled(_player.play(), _player.playingStream);
     });

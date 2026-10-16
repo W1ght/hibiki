@@ -1292,9 +1292,16 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // 晚到 reflow（cue 注入 / 大章 settle）由事件驱动重锚覆盖（见 _reanchorContinuousAfterRestore
     // 的再触发点）。这里不再做任何启发式判据，读到什么就如实落库。
 
-    _lastProgressSection = _currentChapter;
-    _lastProgressValue = progress;
-    _lastProgressCharOffset = charOffset;
+    // BUG-3368：播放跟读期间阅读位置只有一个所有者——当前句（`_syncPositionFromCurrentCue`）。
+    // 视口首字此时不是阅读位置：跟读把句子放在视口内侧，视口首边常残留上一句所在列 / 章首
+    // 半列，量出来的首字（章首附近恒为 0）与句位交替落库；进程恰在 0 时被回收，重开回章首。
+    final bool cueOwnsPosition =
+        _audiobookController?.shouldRevealCurrentCue == true;
+    if (!cueOwnsPosition) {
+      _lastProgressSection = _currentChapter;
+      _lastProgressValue = progress;
+      _lastProgressCharOffset = charOffset;
+    }
     // TODO-2603：实时进度既是「落库位置」也是「新建 WebView 的恢复目标」，两者必须
     // 同源。放在 _lastProgress* 之后、落库之前，顺序即契约。
     _adoptLiveProgressAsRestoreAnchor(progress, charOffset);
@@ -1338,7 +1345,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // JS stableProgressInvocation 返 null 拦在落库前；commit 清旗后的 settle 尾沿由 B-3 的
     // 250ms 窗在 _handleReaderScroll 拦掉）。B-4「无近期输入=伪」反而误伤惯性甩动到真章首
     // （momentum 期无新输入 → sinceUserInputMs 超窗 → 误判伪 → 丢位置），故移除。500ms 去抖落库。
-    _debouncedSavePosition(progress, charOffset);
+    if (!cueOwnsPosition) _debouncedSavePosition(progress, charOffset);
 
     if (mounted) {
       final int newTotal = _chapterCumulativeChars.isNotEmpty
@@ -1447,7 +1454,6 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     if (snapshot == null) {
       return;
     }
-
     // TODO-718：退出 / lifecycle flush 的这次**实时读**可能撞上自发 reflow 归零（cue 注入 /
     // settle 把 scrollY 瞬时归 0，stableProgress 返回**有效的 0**）。简单不变量（非启发式·无
     // userDriven·无时间窗·无重锚动作）：退出读不得用瞬时 ≈0 覆盖一个已知非章首的缓存位置。
@@ -1471,9 +1477,13 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       return;
     }
 
-    _lastProgressSection = _currentChapter;
-    _lastProgressValue = snapshot.progress;
-    _lastProgressCharOffset = snapshot.charOffset;
+    // BUG-3368：播放跟读期间位置归当前句所有（见 _refreshProgress），退出 / 切后台的
+    // 实时读也不得拿视口首字覆盖它；恢复锚照常跟随，规则与 _refreshProgress 相同。
+    if (_audiobookController?.shouldRevealCurrentCue != true) {
+      _lastProgressSection = _currentChapter;
+      _lastProgressValue = snapshot.progress;
+      _lastProgressCharOffset = snapshot.charOffset;
+    }
     // TODO-2603：本方法是实时进度的第二个所有者（退出 / lifecycle flush 的实时读），
     // 恢复锚同样跟随，规则与 _refreshProgress 逐字相同。
     _adoptLiveProgressAsRestoreAnchor(snapshot.progress, snapshot.charOffset);
