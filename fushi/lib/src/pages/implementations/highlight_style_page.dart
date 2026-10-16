@@ -15,6 +15,7 @@ import 'package:fushi/src/media/sources/reader_fushi_source.dart';
 import 'package:fushi/src/reader/highlight_stroke_preview.dart';
 import 'package:fushi/src/reader/highlight_stroke_style.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
+import 'package:fushi/src/utils/adaptive/adaptive_widgets.dart';
 import 'package:fushi/src/utils/components/fushi_m3e_list_card.dart';
 import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 import 'package:fushi/src/utils/components/settings_shared.dart';
@@ -196,18 +197,22 @@ class _HighlightStylePageState extends State<HighlightStylePage>
         ),
         SizedBox(
           width: double.infinity,
-          child: SegmentedButton<HighlightKind>(
+          // 分段选择一律走 adaptiveSegmentedButton（Material = M3E 胶囊分段、Apple = iOS 分段）。
+          child: KeyedSubtree(
             key: const ValueKey<String>('highlight_style_kind'),
-            showSelectedIcon: false,
-            segments: <ButtonSegment<HighlightKind>>[
-              for (final HighlightKind kind in HighlightKind.values)
-                ButtonSegment<HighlightKind>(
-                  value: kind,
-                  label: Text(highlightKindLabel(kind)),
-                ),
-            ],
-            selected: <HighlightKind>{_kind},
-            onSelectionChanged: (Set<HighlightKind> v) => _selectKind(v.first),
+            child: adaptiveSegmentedButton<HighlightKind>(
+              context: context,
+              segments: <ButtonSegment<HighlightKind>>[
+                for (final HighlightKind kind in HighlightKind.values)
+                  ButtonSegment<HighlightKind>(
+                    value: kind,
+                    label: Text(highlightKindLabel(kind)),
+                  ),
+              ],
+              selected: <HighlightKind>{_kind},
+              onSelectionChanged: (Set<HighlightKind> v) =>
+                  _selectKind(v.first),
+            ),
           ),
         ),
       ],
@@ -263,22 +268,24 @@ class _HighlightStylePageState extends State<HighlightStylePage>
           runSpacing: 8,
           crossAxisAlignment: WrapCrossAlignment.center,
           children: <Widget>[
-            SegmentedButton<bool>(
+            KeyedSubtree(
               key: const ValueKey<String>('highlight_style_orientation'),
-              showSelectedIcon: false,
-              segments: <ButtonSegment<bool>>[
-                ButtonSegment<bool>(
-                  value: false,
-                  label: Text(t.reader_highlight_horizontal),
-                ),
-                ButtonSegment<bool>(
-                  value: true,
-                  label: Text(t.reader_highlight_vertical),
-                ),
-              ],
-              selected: <bool>{_vertical},
-              onSelectionChanged: (Set<bool> v) =>
-                  setState(() => _vertical = v.first),
+              child: adaptiveSegmentedButton<bool>(
+                context: context,
+                segments: <ButtonSegment<bool>>[
+                  ButtonSegment<bool>(
+                    value: false,
+                    label: Text(t.reader_highlight_horizontal),
+                  ),
+                  ButtonSegment<bool>(
+                    value: true,
+                    label: Text(t.reader_highlight_vertical),
+                  ),
+                ],
+                selected: <bool>{_vertical},
+                onSelectionChanged: (Set<bool> v) =>
+                    setState(() => _vertical = v.first),
+              ),
             ),
             if (_kind == HighlightKind.favorite)
               Tooltip(
@@ -499,9 +506,7 @@ class _StyleTile extends StatelessWidget {
     final Duration duration = fushiMotionDuration(context, FushiMotion.short);
     // M3E 形状变化：选中时圆角从卡片档收到列表激活档。
     final BorderRadius radius = BorderRadius.all(
-      Radius.circular(
-        selected ? FushiM3eShape.listActive : FushiM3eShape.card,
-      ),
+      Radius.circular(selected ? FushiM3eShape.listActive : FushiM3eShape.card),
     );
     return Semantics(
       button: true,
