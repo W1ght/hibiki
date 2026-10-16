@@ -148,7 +148,7 @@
   // ② 定位方式 anchorMode(video)：视频在文档流里随页面滚动（绝大多数站点）→ absolute，文档
   //    滚动时浮层由合成器跟着视频一起走，不靠脚本追帧（fixed + 滚动监听在异步滚动下总晚一帧，
   //    看起来就是「字幕 / 按钮在飘」）；视频自己在 fixed 祖先里（全屏、迷你播放器、站点的
-  //    「伪全屏」）→ fixed，那时视频不随滚动动，absolute 反而会被滚走。
+  //    「伪全屏」）或 sticky 祖先里（吸顶播放器）→ fixed，那时视频不随滚动动，absolute 反而会被滚走。
   // ③ 重摆时机 watch()：一个共享的 rAF 循环，每帧只读一次正片矩形，变了才回调。尺寸、位置、
   //    全屏切换、站点 SPA 换掉 <video>、剧场模式、侧栏收起……任何让视频挪位的原因都在下一帧
   //    收敛，不再依赖「恰好有 scroll / resize 事件」或 200ms / 1s 轮询。
@@ -183,7 +183,11 @@
     for (var guard = 0; el && el !== root && guard < 64; guard++) {
       var pos = '';
       try { pos = window.getComputedStyle(el).position; } catch (_) { pos = ''; }
-      if (pos === 'fixed') return 'fixed';
+      // sticky 祖先（吸顶 / 吸底播放器）与 fixed 同归一类：吸住期间文档在滚、视频视口矩形不变，
+      // absolute 浮层会被合成器随文档滚走，而帧观察只在视频矩形变化时回调——没有任何信号把它
+      // 拉回来，只能等 200ms tick / 1s 轮询。fixed 在吸住时不动；未吸住随文档滚时视频矩形每帧
+      // 都在变，帧观察下一帧就重摆。
+      if (pos === 'fixed' || pos === 'sticky') return 'fixed';
       el = el.parentElement || null;
     }
     return 'absolute';

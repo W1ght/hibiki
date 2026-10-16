@@ -175,6 +175,12 @@ test('anchorMode：视频在文档流里 → absolute（滚动由合成器跟随
   assert.strictEqual(anchorWorld().VA.mode(null), 'fixed');
 });
 
+test('anchorMode：sticky 祖先（吸顶播放器）→ fixed——吸住时视频矩形不变，absolute 浮层会被文档滚走且帧观察收不到信号', () => {
+  const sticky = { tagName: 'DIV', parentElement: null };
+  const video = { tagName: 'VIDEO', parentElement: sticky };
+  assert.strictEqual(anchorWorld({ positions: [[sticky, 'sticky']] }).VA.mode(video), 'fixed');
+});
+
 test('placeAt：absolute 挂 <html>，文档滚动折进原点；位置与定位方式写内联 !important（压过站点通配规则）', () => {
   const video = { tagName: 'VIDEO', parentElement: null, getBoundingClientRect: () => rect(100, -200, 800, 450) };
   const w = anchorWorld({ scrollY: 300, videos: [video] });
