@@ -1195,10 +1195,11 @@ void main() {
             inlineSelectionJs: '',
             pageAnimation: animation,
           );
-      // 默认速度 normal = 240ms，缓动统一 cubic-bezier(.2,.7,.2,1)。
+      // 默认速度 normal（FushiMotion token），缓动统一 cubic-bezier(.2,.7,.2,1)。
+      final int normalMs = PageTurnAnimationSpeed.normal.durationMs;
       expect(
           docFor(MangaPageAnimation.slide).contains(
-              'transition:transform 240ms cubic-bezier(.2,.7,.2,1);'),
+              'transition:transform ${normalMs}ms cubic-bezier(.2,.7,.2,1);'),
           isTrue);
       // none = 完全不声明过渡（要极限响应的用户）。
       final String none = docFor(MangaPageAnimation.none);
@@ -1206,7 +1207,8 @@ void main() {
       expect(none.contains('transition:opacity '), isFalse);
       // fade 只过渡 opacity（淡出 / 淡入各半程），位移在淡出后瞬时完成。
       final String fade = docFor(MangaPageAnimation.fade);
-      expect(fade.contains('transition:opacity 120ms '), isTrue);
+      expect(fade.contains('transition:opacity ${(normalMs / 2).round()}ms '),
+          isTrue);
       expect(fade.contains('transition:transform '), isFalse);
       expect(fade.contains("if (PAGE_ANIM === 'fade') { _fadeTurn(ms); return; }"),
           isTrue);

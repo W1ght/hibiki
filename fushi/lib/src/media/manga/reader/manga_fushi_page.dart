@@ -1034,9 +1034,10 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   PageTurnAnimationSpeed _pageAnimationSpeed = PageTurnAnimationSpeed.normal;
   bool _pageTurnFollowDrag = kMangaPageTurnFollowDragDefault;
 
-  /// 系统「减弱动态效果」（`MediaQuery.disableAnimationsOf`），在
+  /// [pageTurnMotionEnabledOf]（墨水屏主题 / 系统「减弱动态效果」；阅读器自身的
+  /// 墨水屏开关在 [_effectivePageAnimation] 里另判，它随偏好变而非依赖变），在
   /// [didChangeDependencies] 里跟随系统设置变化。
-  bool _reduceMotion = false;
+  bool _motionEnabled = true;
   bool _tapZonePaging = true;
   MangaTapZoneLayout _tapZoneLayout = MangaTapZoneLayout.leftRight;
   MangaBackground _background = MangaBackground.black;
@@ -1396,11 +1397,10 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // 系统「减弱动态效果」切换要立即传到 WebView（有位移的效果降成淡入淡出）。
-    final bool reduceMotion =
-        MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (reduceMotion != _reduceMotion) {
-      _reduceMotion = reduceMotion;
+    // 系统「减弱动态效果」/ 墨水屏主题切换要立即传到 WebView（翻页动画降成无）。
+    final bool motionEnabled = pageTurnMotionEnabledOf(context, eink: false);
+    if (motionEnabled != _motionEnabled) {
+      _motionEnabled = motionEnabled;
       unawaited(_pushPageAnimationToJs());
     }
     final SourceReviewSession? session = SourceReviewScope.maybeOf(context);
@@ -5116,12 +5116,11 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     );
   }
 
-  /// 实际播放的翻页动画：墨水屏强制无、系统「减弱动态效果」把有位移的效果降成
-  /// 淡入淡出（规则只在 [effectivePageTurnAnimation] 写一次）。
+  /// 实际播放的翻页动画：墨水屏 / 系统「减弱动态效果」一律无（规则只在
+  /// [effectivePageTurnAnimation] 写一次）。
   MangaPageAnimation get _effectivePageAnimation => effectivePageTurnAnimation(
     _pageAnimation,
-    eink: _readerPreferences.einkMode,
-    reduceMotion: _reduceMotion,
+    motionEnabled: _motionEnabled && !_readerPreferences.einkMode,
   );
 
   /// 从全局偏好读翻页动画三项（效果 / 速度 / 跟手）。

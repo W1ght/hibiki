@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fushi/src/reader/page_turn_animation.dart';
-import 'package:fushi/src/reader/reader_page_turn_script.dart';
 import 'package:fushi/src/reader/reader_pagination_scripts.dart';
 
 /// 小说阅读器翻页动画（reader_page_turn_script.dart）的**生产 JS 行为测试**。
@@ -14,11 +12,11 @@ import 'package:fushi/src/reader/reader_pagination_scripts.dart';
 /// 揭示不走动画、有声书跟读相邻页固定淡入、连按 skipTransition、跟手提交 / 回弹阈值、
 /// 竖排前进方向标记。
 void main() {
-  test('JS 侧兜底时长与「正常」档同值', () {
-    expect(
-      kReaderPageTurnDefaultDurationMs,
-      PageTurnAnimationSpeed.normal.durationMs,
-    );
+  test('JS 侧不另立兜底时长：没有 Dart 下发的时长就不播动画', () {
+    final String source = ReaderPaginationScripts.paginatedShellSource();
+    expect(source, contains('return ms > 0 ? ms : 0;'));
+    expect(source, contains('if (!(this.pageTurnDurationMs() > 0)) return'));
+    expect(source, contains('var(--fushi-pt-duration,0ms)'));
   });
 
   test('只有分页 shell 带翻页动画片段', () {

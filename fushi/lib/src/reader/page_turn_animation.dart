@@ -5,8 +5,14 @@
 /// 「覆盖」在两边必须是同一个持久化字符串、同一档速度必须是同一个毫秒数，
 /// 墨水屏 / 系统减弱动态效果的降级也不能两边各写一套。
 ///
-/// 刻意做成无依赖的叶子文件：偏好仓库、设置 schema、JS 生成器都要用它。
+/// 时长不另立常量：三档速度直接取 [FushiMotion] token（墨水屏 / 系统「减弱动态
+/// 效果」的归零经 [effectivePageTurnAnimation] 降成 [PageTurnAnimation.none]，与
+/// [fushiMotionEnabled] 同一判据）。
 library;
+
+import 'package:material_ui/material_ui.dart' show BuildContext;
+
+import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 
 /// 翻页动画效果。存字符串 [key] 而非 index：重排枚举不得破坏已落盘的偏好。
 enum PageTurnAnimation {
@@ -36,18 +42,28 @@ enum PageTurnAnimation {
       this == PageTurnAnimation.slide || this == PageTurnAnimation.cover;
 }
 
-/// 翻页动画速度三档。
+/// 翻页动画速度三档，时长一律取 [FushiMotion] token（不在阅读器另立毫秒常量）：
+///
+/// - 快 = [FushiMotion.short]（effects default 弹簧落定时长 ≈ 165ms）；
+/// - 正常 = [FushiMotion.longReverse]（effects slow ≈ 235ms）；
+/// - 慢 = [FushiMotion.medium]（spatial default ≈ 325ms）。
+///
+/// 降级（墨水屏 / 减弱动态效果）不在这里归零：那时效果本身降成
+/// [PageTurnAnimation.none]，两个阅读器的 JS 在效果为无时完全不读时长。
 enum PageTurnAnimationSpeed {
-  fast('fast', 160),
-  normal('normal', 240),
-  slow('slow', 360);
+  fast('fast', FushiMotion.short),
+  normal('normal', FushiMotion.longReverse),
+  slow('slow', FushiMotion.medium);
 
-  const PageTurnAnimationSpeed(this.key, this.durationMs);
+  const PageTurnAnimationSpeed(this.key, this.duration);
 
   final String key;
 
-  /// 一次完整翻页动画的时长（毫秒）。
-  final int durationMs;
+  /// 一次完整翻页动画的时长（[FushiMotion] token）。
+  final Duration duration;
+
+  /// 传给 JS 的毫秒数（由 [duration] 派生）。
+  int get durationMs => duration.inMilliseconds;
 
   static PageTurnAnimationSpeed fromKey(String? raw) {
     for (final PageTurnAnimationSpeed value in PageTurnAnimationSpeed.values) {
@@ -59,18 +75,23 @@ enum PageTurnAnimationSpeed {
 
 /// 把用户选的效果按环境降级成实际播放的效果。
 ///
-/// - 墨水屏：一律 [PageTurnAnimation.none]（残影比动画更糟）。
-/// - 系统「减弱动态效果」（`MediaQuery.disableAnimationsOf`）：有位移的效果降成
-///   [PageTurnAnimation.fade]，淡入与无保持不变。
+/// [motionEnabled] 由调用方按 [fushiMotionEnabled]（墨水屏主题 + 系统「减弱动态
+/// 效果」）与阅读器自身的墨水屏开关合成。为 false 时**一律**
+/// [PageTurnAnimation.none]（动效时长归零，CLAUDE.md 动效硬规则）——淡入同样是动画，
+/// 不得作为减弱动态效果下的「替代动效」。
 PageTurnAnimation effectivePageTurnAnimation(
   PageTurnAnimation selected, {
-  required bool eink,
-  required bool reduceMotion,
+  required bool motionEnabled,
 }) {
-  if (eink) return PageTurnAnimation.none;
-  if (reduceMotion && selected.isDirectional) return PageTurnAnimation.fade;
+  if (!motionEnabled) return PageTurnAnimation.none;
   return selected;
 }
+
+/// 两个阅读器共用的「翻页动效是否可播」判据：阅读器自身的墨水屏开关 [eink] +
+/// [fushiMotionEnabled]（墨水屏主题 / 系统「减弱动态效果」）。结果喂给
+/// [effectivePageTurnAnimation] 的 `motionEnabled`。
+bool pageTurnMotionEnabledOf(BuildContext context, {required bool eink}) =>
+    !eink && fushiMotionEnabled(context);
 
 /// 跳过多少页以上不再播动画（目录 / 进度条 / 书签等长距离跳转一律瞬时）。
 const int kPageTurnAnimationMaxAnimatedDistance = 1;

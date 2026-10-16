@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/media.dart';
 import 'package:fushi/models.dart';
-import 'package:fushi/utils.dart' show t;
+import 'package:fushi/utils.dart' show FushiMotion, t;
 import 'package:fushi/src/pages/implementations/reader_fushi_page.dart'
     show readerChapterFadeInEnabled;
 import 'package:fushi/src/reader/page_turn_animation.dart';
@@ -85,37 +85,68 @@ void main() {
   });
 
   group('降级', () {
-    test('墨水屏一律无；减弱动态效果把平移 / 覆盖降成淡入', () {
+    test('动效不可播（墨水屏 / 减弱动态效果）时一律无，淡入也不例外', () {
       for (final PageTurnAnimation a in PageTurnAnimation.values) {
         expect(
-          effectivePageTurnAnimation(a, eink: true, reduceMotion: false),
+          effectivePageTurnAnimation(a, motionEnabled: false),
           PageTurnAnimation.none,
+          reason: '$a 在减弱动态效果 / 墨水屏下必须降成无（时长归零）',
+        );
+        expect(effectivePageTurnAnimation(a, motionEnabled: true), a);
+      }
+    });
+
+    testWidgets('系统「减弱动态效果」下两个阅读器共用的判据为 false → 实际效果为无', (
+      WidgetTester tester,
+    ) async {
+      Future<({bool motion, PageTurnAnimation effective})> probe({
+        required bool disableAnimations,
+        required bool eink,
+      }) async {
+        late bool motion;
+        await tester.pumpWidget(
+          MediaQuery(
+            data: MediaQueryData(disableAnimations: disableAnimations),
+            child: Theme(
+              data: ThemeData(),
+              child: Builder(
+                builder: (BuildContext context) {
+                  motion = pageTurnMotionEnabledOf(context, eink: eink);
+                  return const SizedBox.shrink();
+                },
+              ),
+            ),
+          ),
+        );
+        return (
+          motion: motion,
+          effective: effectivePageTurnAnimation(
+            PageTurnAnimation.slide,
+            motionEnabled: motion,
+          ),
         );
       }
-      expect(
-        effectivePageTurnAnimation(
-          PageTurnAnimation.slide,
-          eink: false,
-          reduceMotion: true,
-        ),
-        PageTurnAnimation.fade,
-      );
-      expect(
-        effectivePageTurnAnimation(
-          PageTurnAnimation.cover,
-          eink: false,
-          reduceMotion: true,
-        ),
-        PageTurnAnimation.fade,
-      );
-      expect(
-        effectivePageTurnAnimation(
-          PageTurnAnimation.none,
-          eink: false,
-          reduceMotion: true,
-        ),
-        PageTurnAnimation.none,
-      );
+
+      final reduced = await probe(disableAnimations: true, eink: false);
+      expect(reduced.motion, isFalse);
+      expect(reduced.effective, PageTurnAnimation.none);
+
+      final eink = await probe(disableAnimations: false, eink: true);
+      expect(eink.motion, isFalse);
+      expect(eink.effective, PageTurnAnimation.none);
+
+      final normal = await probe(disableAnimations: false, eink: false);
+      expect(normal.motion, isTrue);
+      expect(normal.effective, PageTurnAnimation.slide);
+    });
+
+    test('速度三档时长取 FushiMotion token，不另立毫秒常量', () {
+      expect(PageTurnAnimationSpeed.fast.duration, FushiMotion.short);
+      expect(PageTurnAnimationSpeed.normal.duration, FushiMotion.longReverse);
+      expect(PageTurnAnimationSpeed.slow.duration, FushiMotion.medium);
+      for (final PageTurnAnimationSpeed sp in PageTurnAnimationSpeed.values) {
+        expect(sp.durationMs, sp.duration.inMilliseconds);
+      }
     });
 
     test('跨章淡入只在翻页模式且效果非无', () {

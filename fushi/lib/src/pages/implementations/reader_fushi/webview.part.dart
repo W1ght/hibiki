@@ -801,9 +801,29 @@ extension _ReaderWebView on _ReaderFushiPageState {
   PageTurnAnimation get _effectivePageTurnAnimation =>
       effectivePageTurnAnimation(
         _settings?.pageTurnAnimation ?? ReaderSettings.defaultPageTurnAnimation,
-        eink: appModel.einkMode,
-        reduceMotion: MediaQuery.maybeDisableAnimationsOf(context) ?? false,
+        motionEnabled: _pageTurnMotionEnabled,
       );
+
+  /// 翻页动效是否可播：阅读器墨水屏开关 + [fushiMotionEnabled]（墨水屏主题 / 系统
+  /// 「减弱动态效果」）。[didChangeDependencies] 跟踪它的变化并热下发。
+  bool get _pageTurnMotionEnabled =>
+      pageTurnMotionEnabledOf(context, eink: appModel.einkMode);
+
+  /// 系统「减弱动态效果」（或墨水屏主题）切换时把降级后的翻页配置热下发给已加载的
+  /// 正文（与设置热更新同一份 [_liveEngineConfigJs]），不重建文档。
+  Future<void> _pushPageTurnMotionLive() async {
+    final InAppWebViewController? controller = _controller;
+    if (!mounted || controller == null || _settings == null) return;
+    try {
+      await controller.evaluateJavascript(source: _liveEngineConfigJs());
+    } catch (e, stack) {
+      ErrorLogService.instance.log(
+        'ReaderFushi.pushPageTurnMotionLive',
+        e,
+        stack,
+      );
+    }
+  }
 
   /// 与 onSwipe handler 同一判据（[swipeLeftIsForward]）；拖动跟手据此判断往哪边拖是
   /// 下一页。

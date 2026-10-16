@@ -40,9 +40,6 @@ import 'package:fushi/src/reader/page_turn_animation.dart';
 ///   → Dart `_paginate`（跨章 / 节流 / 统计全部一致）；随后到达的 `paginate` 从当前
 ///   偏移接着播，剩余时长按比例缩短。否则回弹。章首 / 章末阻尼 0.3×、回弹后仍返回方向，
 ///   跨章照旧。
-/// JS 侧读不到配置时的兜底时长，与 [PageTurnAnimationSpeed.normal] 同值（测试钉死）。
-const int kReaderPageTurnDefaultDurationMs = 240;
-
 const String kReaderPageTurnJs =
     '''
   _pageTurn: null,
@@ -52,15 +49,18 @@ const String kReaderPageTurnJs =
   _followRebound: null,
   _followSavedStyle: null,
   // 读当前配置的效果（Dart 已按墨水屏 / 系统减弱动态效果降级过；JS 再兜一道墨水屏）。
+  // 时长只认 Dart 下发的 C.pageTurnDurationMs（FushiMotion token），JS 不另立兜底时长：
+  // 没有有效时长 = 不播动画。
   pageTurnEffect: function() {
     var effect = (typeof C !== 'undefined' && C) ? C.pageTurnAnimation : null;
     if (effect !== 'slide' && effect !== 'cover' && effect !== 'fade') return 'none';
     if (this.isEinkMode()) return 'none';
+    if (!(this.pageTurnDurationMs() > 0)) return 'none';
     return effect;
   },
   pageTurnDurationMs: function() {
     var ms = (typeof C !== 'undefined' && C) ? Number(C.pageTurnDurationMs) : NaN;
-    return ms > 0 ? ms : $kReaderPageTurnDefaultDurationMs;
+    return ms > 0 ? ms : 0;
   },
   isEinkMode: function() {
     try {
@@ -172,7 +172,7 @@ const String kReaderPageTurnJs =
       'html[data-fushi-pt]::view-transition-new(root)';
     var css = [
       'html[data-fushi-pt]::view-transition-group(root){animation:none;}',
-      pair + '{animation-duration:var(--fushi-pt-duration,${kReaderPageTurnDefaultDurationMs}ms);' +
+      pair + '{animation-duration:var(--fushi-pt-duration,0ms);' +
         'animation-timing-function:cubic-bezier(.2,.7,.2,1);animation-fill-mode:both;' +
         'mix-blend-mode:normal;background-color:var(--fushi-pt-bg,Canvas);}',
       'html[data-fushi-pt-old="move"]::view-transition-old(root){animation-name:fushi-pt-old-move;}',

@@ -35,7 +35,7 @@ class ReaderEngineConfig {
     required this.swipeFastVelocity,
     required this.wheelGestureQuietMs,
     this.pageTurnAnimation = 'none',
-    this.pageTurnDurationMs = 240,
+    this.pageTurnDurationMs = 0,
     this.pageTurnFollowDrag = false,
     this.swipeLeftIsForward,
     required this.furiganaMode,
@@ -97,7 +97,8 @@ class ReaderEngineConfig {
   /// 系统「减弱动态效果」降级（`effectivePageTurnAnimation`）。
   final String pageTurnAnimation;
 
-  /// 一次完整翻页动画的毫秒数（速度档）。
+  /// 一次完整翻页动画的毫秒数（速度档，取自 `PageTurnAnimationSpeed` 的
+  /// FushiMotion token）。缺省 0 = 不播动画（与缺省效果 `none` 一致，不另立兜底时长）。
   final int pageTurnDurationMs;
 
   /// 拖动跟手开关（JS 侧再按效果是否有位移判一次）。

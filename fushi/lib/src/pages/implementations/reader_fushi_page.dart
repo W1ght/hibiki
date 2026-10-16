@@ -486,9 +486,6 @@ FushiReaderPalette? readerFollowThemePalette({
   return fushiReaderPaletteFor(scheme, scheme.brightness);
 }
 
-/// 翻页触发的跨章：新章恢复完位置后正文整体淡入的时长。
-const Duration kReaderChapterFadeInDuration = Duration(milliseconds: 120);
-
 /// 翻页触发的跨章是否让新章正文淡入：只在翻页（paginated）模式、且实际效果不是
 /// 「无」时（墨水屏已由 [effectivePageTurnAnimation] 降成无）。滚动与 VN 模式的跨章
 /// 观感不变。
@@ -3740,7 +3737,20 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     if (insetChanged) {
       unawaited(_applyChromeInsets());
     }
+    // 系统「减弱动态效果」/ 墨水屏主题切换：翻页效果按 [effectivePageTurnAnimation]
+    // 降级成「无」或恢复，必须立即热下发——否则已加载的正文仍按旧效果播动画。
+    // 首次（null）只记录，install 时的完整配置已带当前值。
+    final bool pageTurnMotion = _pageTurnMotionEnabled;
+    final bool? previousPageTurnMotion = _lastPageTurnMotionEnabled;
+    _lastPageTurnMotionEnabled = pageTurnMotion;
+    if (previousPageTurnMotion != null &&
+        previousPageTurnMotion != pageTurnMotion) {
+      unawaited(_pushPageTurnMotionLive());
+    }
   }
+
+  /// [didChangeDependencies] 上一次看到的 [_pageTurnMotionEnabled]；null = 尚未记录。
+  bool? _lastPageTurnMotionEnabled;
 
   // ── UI Build ──────────────────────────────────────────────────────
 
@@ -4065,8 +4075,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   }
 
   /// 翻页触发的跨章（翻页模式 + 有翻页动画，[readerChapterFadeInEnabled]）：加载期照旧
-  /// 整块底色遮住，内容就绪（位置已恢复）后这块底色在 [kReaderChapterFadeInDuration]
-  /// 内淡出 = 新章正文整体淡入。歌词模式切换 / 换字号重排不置 [_chapterFadeInPending]，
+  /// 整块底色遮住，内容就绪（位置已恢复）后这块底色在 [FushiMotion.micro]
+  /// （经 [fushiMotionDuration]，墨水屏 / 减弱动态效果归零）内淡出 = 新章正文整体淡入。歌词模式切换 / 换字号重排不置 [_chapterFadeInPending]，
   /// 仍走 [_buildChapterTransitionOverlay] 的瞬时纯色遮罩。
   Widget _buildChapterFadeInOverlay(Color backgroundColor) {
     return IgnorePointer(
@@ -4074,7 +4084,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       child: AnimatedOpacity(
         key: const ValueKey<String>('fushi_chapter_fade_in'),
         opacity: _readerContentReady ? 0 : 1,
-        duration: kReaderChapterFadeInDuration,
+        duration: fushiMotionDuration(context, FushiMotion.micro),
         curve: FushiMotion.exit,
         onEnd: () {
           if (!_readerContentReady || !_chapterFadeInPending) return;
