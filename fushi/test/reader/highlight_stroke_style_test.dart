@@ -8,6 +8,7 @@ import 'package:fushi/src/reader/highlight_stroke_style.dart';
 import 'package:fushi/src/reader/reader_content_styles.dart';
 import 'package:fushi/src/reader/reader_selection_scripts.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
+import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 import 'package:fushi_core/fushi_core.dart';
 
 /// 高亮条笔触样式（用户 2026-10-15「高亮条自定义做成配置」「全部高亮都要能选」）：偏好 →
@@ -153,12 +154,93 @@ void main() {
     String vars(
       Map<HighlightKind, HighlightStrokeConfig> c, {
       bool eink = false,
+      bool motion = true,
     }) => highlightStrokeCssVariables(
       c,
       einkMode: eink,
       darkBackground: false,
       paperColor: '#ffffff',
+      motionEnabled: motion,
     );
+
+    // CLAUDE.md 动效硬规则：落笔动画的时长取 FushiMotion，墨水屏与系统「减弱动态效果」下归零，
+    // JS 不另立时长常量、不自己读 prefers-reduced-motion。
+    test('sweep pacing comes from FushiMotion tokens', () {
+      final String css = vars(const <HighlightKind, HighlightStrokeConfig>{});
+      expect(
+        css,
+        contains(
+          '--fushi-mark-sweep-base-ms: ${FushiMotion.micro.inMilliseconds};',
+        ),
+      );
+      expect(
+        css,
+        contains(
+          '--fushi-mark-sweep-per-em-ms: '
+          '${FushiMotion.strokeSweepPerEm.inMilliseconds};',
+        ),
+      );
+      expect(
+        css,
+        contains(
+          '--fushi-mark-sweep-gap-ms: ${FushiMotion.staggerStep.inMilliseconds};',
+        ),
+      );
+      expect(
+        highlightStrokeSweepLineDuration(10),
+        FushiMotion.micro + FushiMotion.strokeSweepPerEm * 10,
+      );
+    });
+
+    test('reduced motion and e-ink switch every sweep off', () {
+      final Map<HighlightKind, HighlightStrokeConfig> all =
+          <HighlightKind, HighlightStrokeConfig>{
+            for (final HighlightKind k in HighlightKind.values)
+              k: const HighlightStrokeConfig(
+                style: HighlightStrokeStyle.marker,
+                animate: true,
+              ),
+          };
+      for (final String css in <String>[
+        vars(all, motion: false),
+        vars(all, eink: true),
+      ]) {
+        for (final HighlightKind k in HighlightKind.values) {
+          expect(css, contains('--fushi-mark-${k.cssName}-animate: 0;'));
+        }
+        expect(css, contains('--fushi-mark-sweep-base-ms: 0;'));
+        expect(css, contains('--fushi-mark-sweep-per-em-ms: 0;'));
+        expect(css, contains('--fushi-mark-sweep-gap-ms: 0;'));
+      }
+      // 动效开着时用户的开关照常生效。
+      expect(vars(all), contains('--fushi-mark-favorite-animate: 1;'));
+    });
+
+    test('the reader stylesheet threads motionEnabled through', () async {
+      final ReaderSettings s = await settingsWith(
+        (ReaderSettings s) => s.setHighlightStrokeConfig(
+          HighlightKind.audio,
+          const HighlightStrokeConfig(style: HighlightStrokeStyle.rough),
+        ),
+      );
+      expect(
+        ReaderContentStyles.css(settings: s),
+        contains('--fushi-mark-audio-animate: 1;'),
+      );
+      expect(
+        ReaderContentStyles.css(settings: s, motionEnabled: false),
+        contains('--fushi-mark-audio-animate: 0;'),
+      );
+    });
+
+    test('the lane script has no motion constants of its own', () {
+      // 时长只认 Dart 下发的 --fushi-mark-sweep-*；减弱动态效果只认 Dart 的 animate=0。
+      expect(js, isNot(contains('prefers-reduced-motion')));
+      expect(js, contains('--fushi-mark-sweep-base-ms'));
+      expect(js, contains('--fushi-mark-sweep-per-em-ms'));
+      expect(js, contains('--fushi-mark-sweep-gap-ms'));
+      expect(js, isNot(contains('0.026')));
+    });
 
     test('carry every field per kind, clamped', () {
       final String css = vars(<HighlightKind, HighlightStrokeConfig>{

@@ -7,8 +7,11 @@
 /// 变量（[highlightStrokeCssVariables]）传给 JS——改设置走现有的正文样式热替换，不需要
 /// 额外的桥调用。
 ///
-/// 这一份是纯 Dart（无 Flutter 依赖）：正文 CSS 生成器、偏好读写与设置页预览共用。
+/// 正文 CSS 生成器、偏好读写与设置页预览共用。落笔动画的节奏只取 [FushiMotion]
+/// token（[highlightStrokeSweepLineDuration]），减弱动态效果 / 墨水屏时归零。
 library;
+
+import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 
 /// 高亮条的笔触样式。[wireName] 同时是偏好值与 CSS 变量 `--fushi-mark-<种类>-style`
 /// 的值，与 JS 的 `MARK_STYLES` 逐字对应（测试钉住）。
@@ -171,16 +174,29 @@ const double kHighlightStrokeRoughnessMin = 0;
 const double kHighlightStrokeRoughnessMax = 1;
 const double kHighlightStrokeRoughnessDefault = 0.5;
 
+/// 落笔动画里一行的时长：[FushiMotion.micro] + 行长(em) × [FushiMotion.strokeSweepPerEm]。
+/// 正文（JS SMIL，经 [highlightStrokeCssVariables] 下发）与设置页预览同一公式。
+Duration highlightStrokeSweepLineDuration(double lengthEm) =>
+    FushiMotion.micro + FushiMotion.strokeSweepPerEm * lengthEm;
+
+/// 落笔动画相邻两行的间隔（[FushiMotion.staggerStep]）。
+const Duration kHighlightStrokeSweepGap = FushiMotion.staggerStep;
+
 /// 正文 CSS `:root` 里的笔触变量（窄条层 `markConfigs()` 读同名变量）。
 ///
 /// - 墨水屏强制经典：墨水屏把所有高亮改成线式标记、窄条层整层隐藏。
 /// - [darkBackground] 与 [paperColor] 给 JS 画荧光笔拖痕 / 胶带斜纹 / 彩铅颗粒用的「纸色」。
+/// - [motionEnabled]：页面的 `fushiMotionEnabled`（系统「减弱动态效果」/ 墨水屏为 false）。
+///   为 false 时各类 `-animate` 一律写 0、落笔节奏写 0，JS 不放落笔动画——动画开关与时长的
+///   唯一真相源在 Dart，JS 不自定时长、不自己读 `prefers-reduced-motion`。
 String highlightStrokeCssVariables(
   Map<HighlightKind, HighlightStrokeConfig> configs, {
   required bool einkMode,
   required bool darkBackground,
   required String paperColor,
+  bool motionEnabled = true,
 }) {
+  final bool sweep = motionEnabled && !einkMode;
   final StringBuffer out = StringBuffer();
   for (final HighlightKind kind in HighlightKind.values) {
     final HighlightStrokeConfig c = configs[kind] ?? kind.defaults;
@@ -202,9 +218,18 @@ String highlightStrokeCssVariables(
       ..write(
         '$p-roughness: ${_n(c.roughness.clamp(kHighlightStrokeRoughnessMin, kHighlightStrokeRoughnessMax))};\n',
       )
-      ..write('$p-animate: ${c.animate ? 1 : 0};\n');
+      ..write('$p-animate: ${sweep && c.animate ? 1 : 0};\n');
   }
   out
+    ..write(
+      '  --fushi-mark-sweep-base-ms: ${sweep ? highlightStrokeSweepLineDuration(0).inMilliseconds : 0};\n',
+    )
+    ..write(
+      '  --fushi-mark-sweep-per-em-ms: ${sweep ? FushiMotion.strokeSweepPerEm.inMilliseconds : 0};\n',
+    )
+    ..write(
+      '  --fushi-mark-sweep-gap-ms: ${sweep ? kHighlightStrokeSweepGap.inMilliseconds : 0};\n',
+    )
     ..write('  --fushi-mark-dark: ${darkBackground ? 1 : 0};\n')
     ..write('  --fushi-mark-paper: $paperColor;\n');
   return out.toString();

@@ -120,6 +120,37 @@ const CHECK = String.raw`(async () => {
   }
   await setVar('--fushi-mark-favorite-style', 'marker');
 
+  // A book paragraph with its own background (BUG-3421): the lane layer moves into that paragraph,
+  // and the stroke style must follow it there (with document-unique SVG ids).
+  const favP = fav.startContainer.parentElement.closest('p');
+  favP.style.backgroundColor = 'rgb(240, 230, 210)';
+  window.__fushiLanes.repaint();
+  await frames();
+  const bdGroup = favP.querySelector(':scope > fushi-hl-lanes > fushi-hl-lanes-group[data-hl-group="fushi-hl-yellow"]');
+  ok(!!bdGroup && bdGroup.querySelectorAll('svg.fushi-mark-ink path').length > 0 && bdGroup.querySelectorAll('fushi-hl-lane').length === 0,
+    'a stroke inside a book-coloured paragraph is painted into that paragraph\'s own layer');
+  const ids = Array.from(document.querySelectorAll('svg.fushi-mark-ink [id]')).map((e) => e.id);
+  ok(new Set(ids).size === ids.length, 'stroke SVG ids stay unique across lane layers');
+  favP.style.backgroundColor = '';
+  window.__fushiLanes.repaint();
+  await frames();
+  ok(!favP.querySelector(':scope > fushi-hl-lanes'), 'the paragraph layer is removed once its background is gone');
+
+  // The sweep pacing comes from Dart (FushiMotion tokens) through the stylesheet.
+  const sweepMs = (n) => parseFloat(cs.getPropertyValue('--fushi-mark-sweep-' + n + '-ms'));
+  ok(sweepMs('base') > 0 && sweepMs('per-em') > 0 && sweepMs('gap') > 0,
+    'the reader stylesheet carries the sweep pacing');
+  // Reduced motion / e-ink: Dart writes the pacing as 0 — a fresh favourite must not sweep.
+  CSS.highlights.delete('fushi-hl-yellow');
+  await frames();
+  for (const n of ['base', 'per-em', 'gap']) document.documentElement.style.setProperty('--fushi-mark-sweep-' + n + '-ms', '0');
+  window.__fushiLanes.markFresh([fav], []);
+  CSS.highlights.set('fushi-hl-yellow', new Highlight(fav));
+  await frames();
+  ok(strokes('fushi-hl-yellow').length > 0 && !group('fushi-hl-yellow').querySelector('clipPath animate'),
+    'with motion off the fresh favourite is painted without a sweep');
+  for (const n of ['base', 'per-em', 'gap']) document.documentElement.style.removeProperty('--fushi-mark-sweep-' + n + '-ms');
+
   // Same order as HighlightBridge: register the fresh lines, then write CSS.highlights.
   CSS.highlights.delete('fushi-hl-yellow');
   await frames();

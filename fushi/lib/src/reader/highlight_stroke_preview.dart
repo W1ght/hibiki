@@ -122,6 +122,77 @@ class _Rng {
   }
 }
 
+/// 落笔扫过的长度（em）：行长两端各多 1em（与 JS 的 clip 矩形同义）。
+double _sweepLengthEm(HighlightPreviewLine l) =>
+    (l.u1 - l.u0 + l.em * 2) / l.em;
+
+/// 逐字手排：每个字的方格中心（屏幕坐标）+ 高亮行段 + 每行字数。
+({List<Offset> centers, List<HighlightPreviewLine> lines, int perLine})
+_layoutPreview(
+  ({List<HighlightPreviewGlyph> glyphs, List<HighlightPreviewRuby> ruby})
+  parsed,
+  Size size, {
+  required double em,
+  required double lineHeight,
+  required bool vertical,
+  required double padding,
+}) {
+  final double pitch = em * lineHeight.clamp(1.2, 3.2);
+  final Rect box = Rect.fromLTRB(
+    padding,
+    padding,
+    size.width - padding,
+    size.height - padding,
+  );
+  final int perLine = math.max(
+    1,
+    ((vertical ? box.height : box.width) / em).floor(),
+  );
+
+  final List<Offset> centers = <Offset>[];
+  for (int i = 0; i < parsed.glyphs.length; i++) {
+    final int line = i ~/ perLine;
+    final int col = i % perLine;
+    centers.add(
+      vertical
+          ? Offset(box.right - pitch * (line + 0.5), box.top + em * (col + 0.5))
+          : Offset(box.left + em * (col + 0.5), box.top + pitch * (line + 0.5)),
+    );
+  }
+
+  final List<HighlightPreviewLine> lines = <HighlightPreviewLine>[];
+  int? runStart;
+  for (int i = 0; i <= parsed.glyphs.length; i++) {
+    final bool on = i < parsed.glyphs.length && parsed.glyphs[i].highlighted;
+    final bool sameLine =
+        runStart != null &&
+        i < parsed.glyphs.length &&
+        i ~/ perLine == runStart ~/ perLine;
+    if (runStart != null && (!on || !sameLine)) {
+      final Offset a = centers[runStart];
+      final Offset b = centers[i - 1];
+      lines.add(
+        vertical
+            ? HighlightPreviewLine(
+                u0: a.dy - em / 2,
+                u1: b.dy + em / 2,
+                vc: -a.dx,
+                em: em,
+              )
+            : HighlightPreviewLine(
+                u0: a.dx - em / 2,
+                u1: b.dx + em / 2,
+                vc: a.dy,
+                em: em,
+              ),
+      );
+      runStart = null;
+    }
+    if (on && runStart == null) runStart = i;
+  }
+  return (centers: centers, lines: lines, perLine: perLine);
+}
+
 /// 手排样文 + 笔触，画在给定尺寸里。
 class HighlightStrokePreviewPainter extends CustomPainter {
   HighlightStrokePreviewPainter({
@@ -156,6 +227,34 @@ class HighlightStrokePreviewPainter extends CustomPainter {
   /// 经典样式画不画下划线（只有收藏有下划线）。
   final bool classicUnderline;
 
+  /// 在 [size] 里画完 [sample] 全部高亮行的落笔总时长（与正文同一公式：
+  /// [highlightStrokeSweepLineDuration] 逐行 + [kHighlightStrokeSweepGap] 行间隔）。设置页
+  /// 拿它当预览动画控制器的时长，预览里每一行的速度就与正文一致。
+  static Duration sweepDurationFor({
+    required String sample,
+    required Size size,
+    required double fontSize,
+    required double lineHeight,
+    required bool vertical,
+    double padding = 14,
+  }) {
+    final List<HighlightPreviewLine> lines = _layoutPreview(
+      parseHighlightPreviewSample(sample),
+      size,
+      em: fontSize,
+      lineHeight: lineHeight,
+      vertical: vertical,
+      padding: padding,
+    ).lines;
+    Duration total = Duration.zero;
+    for (final HighlightPreviewLine l in lines) {
+      total +=
+          highlightStrokeSweepLineDuration(_sweepLengthEm(l)) +
+          kHighlightStrokeSweepGap;
+    }
+    return total;
+  }
+
   @override
   void paint(Canvas canvas, Size size) {
     final ({
@@ -164,79 +263,36 @@ class HighlightStrokePreviewPainter extends CustomPainter {
     })
     parsed = parseHighlightPreviewSample(sample);
     final double em = fontSize;
-    final double pitch = em * lineHeight.clamp(1.2, 3.2);
-    final Rect box = Rect.fromLTRB(
-      padding,
-      padding,
-      size.width - padding,
-      size.height - padding,
+    final ({
+      List<Offset> centers,
+      List<HighlightPreviewLine> lines,
+      int perLine,
+    })
+    layout = _layoutPreview(
+      parsed,
+      size,
+      em: em,
+      lineHeight: lineHeight,
+      vertical: vertical,
+      padding: padding,
     );
-    final int perLine = math.max(
-      1,
-      ((vertical ? box.height : box.width) / em).floor(),
-    );
-
-    // 每个字的方格中心（屏幕坐标）。
-    final List<Offset> centers = <Offset>[];
-    for (int i = 0; i < parsed.glyphs.length; i++) {
-      final int line = i ~/ perLine;
-      final int col = i % perLine;
-      centers.add(
-        vertical
-            ? Offset(
-                box.right - pitch * (line + 0.5),
-                box.top + em * (col + 0.5),
-              )
-            : Offset(
-                box.left + em * (col + 0.5),
-                box.top + pitch * (line + 0.5),
-              ),
-      );
-    }
-
-    // 高亮行段。
-    final List<HighlightPreviewLine> lines = <HighlightPreviewLine>[];
-    int? runStart;
-    for (int i = 0; i <= parsed.glyphs.length; i++) {
-      final bool on = i < parsed.glyphs.length && parsed.glyphs[i].highlighted;
-      final bool sameLine =
-          runStart != null &&
-          i < parsed.glyphs.length &&
-          i ~/ perLine == runStart ~/ perLine;
-      if (runStart != null && (!on || !sameLine)) {
-        final Offset a = centers[runStart];
-        final Offset b = centers[i - 1];
-        lines.add(
-          vertical
-              ? HighlightPreviewLine(
-                  u0: a.dy - em / 2,
-                  u1: b.dy + em / 2,
-                  vc: -a.dx,
-                  em: em,
-                )
-              : HighlightPreviewLine(
-                  u0: a.dx - em / 2,
-                  u1: b.dx + em / 2,
-                  vc: a.dy,
-                  em: em,
-                ),
-        );
-        runStart = null;
-      }
-      if (on && runStart == null) runStart = i;
-    }
+    final List<Offset> centers = layout.centers;
+    final List<HighlightPreviewLine> lines = layout.lines;
+    final int perLine = layout.perLine;
 
     // 笔触（在字下面）。
     if (config.style == HighlightStrokeStyle.classic) {
       _paintClassic(canvas, lines);
     } else {
+      final double gap = kHighlightStrokeSweepGap.inMicroseconds / 1e6;
       double total = 0;
       final List<double> durations = <double>[
         for (final HighlightPreviewLine l in lines)
-          0.14 + ((l.u1 - l.u0 + l.em * 2) / l.em) * 0.026,
+          highlightStrokeSweepLineDuration(_sweepLengthEm(l)).inMicroseconds /
+              1e6,
       ];
       for (final double d in durations) {
-        total += d + 0.06;
+        total += d + gap;
       }
       double start = 0;
       for (int i = 0; i < lines.length; i++) {
@@ -244,7 +300,7 @@ class HighlightStrokePreviewPainter extends CustomPainter {
         final double f = progress >= 1 || total <= 0
             ? 1
             : ((progress * total - start) / durations[i]).clamp(0.0, 1.0);
-        start += durations[i] + 0.06;
+        start += durations[i] + gap;
         if (f <= 0) continue;
         canvas.save();
         if (f < 1) {

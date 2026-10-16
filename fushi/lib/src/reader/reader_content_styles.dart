@@ -161,6 +161,7 @@ class ReaderContentStyles {
     bool einkMode = false,
     bool einkDark = false,
     String? contentLanguage,
+    bool motionEnabled = true,
   }) {
     return '<style>\n${css(
       settings: settings,
@@ -178,6 +179,7 @@ class ReaderContentStyles {
       themeOverride: themeOverride,
       einkMode: einkMode,
       einkDark: einkDark,
+      motionEnabled: motionEnabled,
     )}\n</style>';
   }
 
@@ -431,6 +433,10 @@ body::after {
     /// 正文的内容语言（BCP-47，来自 EpubBooks.language：OPF 的 dc:language
     /// 回填或用户手动指定）。null = 未知，此时不写语言字体链，保持既有行为。
     String? contentLanguage,
+
+    /// 页面的 `fushiMotionEnabled`（系统「减弱动态效果」/ 墨水屏为 false）：为 false 时
+    /// 高亮笔触不放落笔动画（见 [highlightStrokeCssVariables]）。
+    bool motionEnabled = true,
   }) {
     final _ThemeColors themedColors = _themeColors(
         themeOverride ?? settings.theme,
@@ -693,7 +699,7 @@ $pageBreakCss
 :root {
   --fushi-sentence-audio-text-color: ${sentenceAudioTextColor ?? colors.textColor};
   --fushi-sentence-audio-background-color: ${sentenceAudioHighlightColor ?? colors.sentenceAudioHighlightColor};
-${highlightStrokeCssVariables(settings.highlightStrokeConfigs, einkMode: einkMode, darkBackground: isDarkBackground(colors.backgroundColor), paperColor: colors.backgroundColor)}}
+${highlightStrokeCssVariables(settings.highlightStrokeConfigs, einkMode: einkMode, darkBackground: isDarkBackground(colors.backgroundColor), paperColor: colors.backgroundColor, motionEnabled: motionEnabled)}}
 html {
   /* TODO-1308 (BUG): the legacy WebKit property
      `-webkit-line-box-contain: block glyphs replaced` (cargo-ported from Hoshi
@@ -989,6 +995,12 @@ fushi-hl-lanes {
 }
 fushi-hl-lanes-group {
   display: block !important;
+}
+/* BUG-3421：书自带底色的段落 / 块（p { background } 等）的底色画在 body 层之后，会盖住窄条。这种元素里
+   的字由窄条层画进元素自己的一层（同上 z-index:-1 的 fushi-hl-lanes，挂在元素末尾），元素自成层叠上下文，
+   于是窄条在它的底色之上、它的字之下。isolation 不改包含块、不改几何；书的底色本身不动。 */
+[data-fushi-hl-backdrop] {
+  isolation: isolate !important;
 }
 fushi-hl-lane {
   position: absolute !important;

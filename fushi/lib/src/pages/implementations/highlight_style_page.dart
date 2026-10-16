@@ -18,6 +18,8 @@ import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_widgets.dart';
 import 'package:fushi/src/utils/components/fushi_m3e_list_card.dart';
 import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
+import 'package:fushi/src/utils/components/fushi_press_scale.dart';
+import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
 import 'package:fushi/src/utils/components/settings_shared.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 
@@ -52,15 +54,20 @@ String highlightKindLabel(HighlightKind kind) => switch (kind) {
   HighlightKind.search => t.reader_highlight_kind_search,
 };
 
-/// 设置行副标题：哪几类改了样式（「收藏：斜切马克笔、有声书：手绘双笔」），全经典时「全部经典」。
+/// 设置行副标题：哪几类改了样式（「收藏：斜切马克笔 · 有声书：手绘双笔」），全经典时「全部经典」。
+/// 「种类：样式」的标点随语言走 i18n（中文全角冒号、其余半角），条目间用语言中立的 ` · `。
 String highlightStyleSummary(ReaderFushiSource source) {
   final List<String> parts = <String>[
     for (final HighlightKind kind in HighlightKind.values)
       if (source.highlightStrokeConfig(kind).style.isStroke)
-        '${highlightKindLabel(kind)}：'
-            '${highlightStrokeStyleLabel(source.highlightStrokeConfig(kind).style)}',
+        t.reader_highlight_summary_entry(
+          kind: highlightKindLabel(kind),
+          style: highlightStrokeStyleLabel(
+            source.highlightStrokeConfig(kind).style,
+          ),
+        ),
   ];
-  return parts.isEmpty ? t.reader_highlight_all_classic : parts.join('、');
+  return parts.isEmpty ? t.reader_highlight_all_classic : parts.join(' · ');
 }
 
 String _styleHint(HighlightStrokeStyle style) => switch (style) {
@@ -106,11 +113,20 @@ class _HighlightStylePageState extends State<HighlightStylePage>
   late bool _vertical = widget.initiallyVertical;
   String _favoriteColor = 'yellow';
   int _seedSalt = 0;
+
+  /// 预览框当前的尺寸（LayoutBuilder 维护）：落笔总时长按它排出来的行数算。
+  Size? _previewSize;
+
+  /// 预览落笔进度（0–1）。时长不在这里定：每次重播按预览的实际行段由
+  /// [HighlightStrokePreviewPainter.sweepDurationFor] 现算（FushiMotion token），
+  /// 与正文的落笔节奏一致。
   late final AnimationController _stroke = AnimationController(
     vsync: this,
-    duration: const Duration(milliseconds: 1500),
     value: 1,
   );
+
+  static const double _previewFontSize = 20;
+  static const double _previewPadding = 18;
 
   @override
   void dispose() {
@@ -140,10 +156,26 @@ class _HighlightStylePageState extends State<HighlightStylePage>
   }
 
   void _replay() {
-    if (MediaQuery.of(context).disableAnimations || isEinkTheme(context)) {
+    // 墨水屏与系统「减弱动态效果」下不放落笔动画（与正文同一判据）。
+    if (!fushiMotionEnabled(context)) {
+      _stroke.value = 1;
       return;
     }
-    if (!_config.style.isStroke) return;
+    final Size? size = _previewSize;
+    if (!_config.style.isStroke || size == null) return;
+    final Duration duration = HighlightStrokePreviewPainter.sweepDurationFor(
+      sample: kHighlightPreviewSample,
+      size: size,
+      fontSize: _previewFontSize,
+      lineHeight: widget.lineHeight,
+      vertical: _vertical,
+      padding: _previewPadding,
+    );
+    if (duration <= Duration.zero) {
+      _stroke.value = 1;
+      return;
+    }
+    _stroke.duration = duration;
     _stroke.forward(from: 0);
   }
 
@@ -240,25 +272,30 @@ class _HighlightStylePageState extends State<HighlightStylePage>
           ),
           clipBehavior: Clip.antiAlias,
           child: ExcludeFocus(
-            child: AnimatedBuilder(
-              animation: _stroke,
-              builder: (BuildContext context, _) => CustomPaint(
-                painter: HighlightStrokePreviewPainter(
-                  sample: kHighlightPreviewSample,
-                  config: _config,
-                  color: _previewColor,
-                  paper: paper,
-                  ink: ink,
-                  vertical: _vertical,
-                  fontSize: 20,
-                  lineHeight: widget.lineHeight,
-                  progress: _stroke.value,
-                  padding: 18,
-                  seedSalt: _seedSalt,
-                  classicUnderline: _kind == HighlightKind.favorite,
-                ),
-                child: const SizedBox.expand(),
-              ),
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                _previewSize = constraints.biggest;
+                return AnimatedBuilder(
+                  animation: _stroke,
+                  builder: (BuildContext context, _) => CustomPaint(
+                    painter: HighlightStrokePreviewPainter(
+                      sample: kHighlightPreviewSample,
+                      config: _config,
+                      color: _previewColor,
+                      paper: paper,
+                      ink: ink,
+                      vertical: _vertical,
+                      fontSize: _previewFontSize,
+                      lineHeight: widget.lineHeight,
+                      progress: _stroke.value,
+                      padding: _previewPadding,
+                      seedSalt: _seedSalt,
+                      classicUnderline: _kind == HighlightKind.favorite,
+                    ),
+                    child: const SizedBox.expand(),
+                  ),
+                );
+              },
             ),
           ),
         ),
@@ -335,32 +372,41 @@ class _HighlightStylePageState extends State<HighlightStylePage>
         const double gap = 10;
         final double width =
             (constraints.maxWidth - gap * (columns - 1)) / columns;
-        return Wrap(
-          spacing: gap,
-          runSpacing: gap,
-          children: <Widget>[
-            for (final HighlightStrokeStyle style
-                in HighlightStrokeStyle.values)
-              SizedBox(
-                width: width,
-                child: _StyleTile(
-                  key: ValueKey<String>(
-                    'highlight_style_tile_${style.wireName}',
-                  ),
-                  style: style,
-                  selected: style == _config.style,
-                  config: _config.copyWith(style: style),
-                  color: _previewColor,
-                  paper: paper,
-                  ink: ink,
-                  classicUnderline: _kind == HighlightKind.favorite,
-                  onTap: () => _commit(
-                    _config.copyWith(style: style),
-                    replay: _config.animate,
+        // 新页面动效（CLAUDE.md 2026-10-04）：样式块错峰进场 + 按压缩放，时长都走
+        // FushiMotion，墨水屏 / 减弱动态效果下由组件自己归零。
+        return FushiEntranceScope(
+          child: Wrap(
+            spacing: gap,
+            runSpacing: gap,
+            children: <Widget>[
+              for (final (int index, HighlightStrokeStyle style)
+                  in HighlightStrokeStyle.values.indexed)
+                SizedBox(
+                  width: width,
+                  child: FushiStaggeredEntrance(
+                    index: index,
+                    child: FushiPressScale(
+                      child: _StyleTile(
+                        key: ValueKey<String>(
+                          'highlight_style_tile_${style.wireName}',
+                        ),
+                        style: style,
+                        selected: style == _config.style,
+                        config: _config.copyWith(style: style),
+                        color: _previewColor,
+                        paper: paper,
+                        ink: ink,
+                        classicUnderline: _kind == HighlightKind.favorite,
+                        onTap: () => _commit(
+                          _config.copyWith(style: style),
+                          replay: _config.animate,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-          ],
+            ],
+          ),
         );
       },
     );
