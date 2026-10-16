@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133501 (7853 per locale)
+/// Strings: 133569 (7857 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10219,12 +10219,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Show or hide subtitles';
   String get video_remote_control_unfavorite => 'Remove from favorites';
   String get video_remote_current => 'Return to current subtitle';
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   String get video_remote_error_controller_busy =>
       'Another device is controlling this video';
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
   String get video_remote_error_favorite_missing =>
@@ -10250,6 +10254,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remote control was closed on the computer';
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
   String get video_remote_error_task_missing =>
@@ -28460,6 +28468,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -28468,6 +28479,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -28506,6 +28520,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -47799,6 +47819,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -47807,6 +47830,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -47845,6 +47871,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -67229,6 +67261,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -67237,6 +67272,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -67275,6 +67313,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -86735,6 +86779,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -86743,6 +86790,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -86781,6 +86831,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -105962,6 +106018,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -105970,6 +106029,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -106008,6 +106070,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -125281,6 +125349,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -125289,6 +125360,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -125327,6 +125401,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -143735,6 +143815,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -143743,6 +143826,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -143781,6 +143867,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -162092,6 +162184,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -162100,6 +162195,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -162138,6 +162236,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -181278,6 +181382,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -181286,6 +181393,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -181324,6 +181434,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -200622,6 +200738,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -200630,6 +200749,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -200668,6 +200790,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -219927,6 +220055,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -219935,6 +220066,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -219973,6 +220107,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -238957,6 +239097,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -238965,6 +239108,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -239003,6 +239149,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -258115,6 +258267,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -258123,6 +258278,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -258161,6 +258319,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -277239,6 +277403,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -277247,6 +277414,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -277285,6 +277455,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -294876,11 +295052,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_remote_current => '回到当前字幕';
   @override
+  String get video_remote_error_action_unsupported =>
+      '电脑上的 Fushi 还不支持这个操作，请更新后再试';
+  @override
   String get video_remote_error_certificate_mismatch => '电脑证书与配对时不一致，请重新配对';
   @override
   String get video_remote_error_controller_busy => '另一台设备正在遥控这个视频';
   @override
   String get video_remote_error_controller_lease_lost => '遥控已超时或被接管，正在重新连接';
+  @override
+  String get video_remote_error_episode_unavailable => '无法切换到这一集';
   @override
   String get video_remote_error_favorite_ambiguous => '有多条字幕与这条收藏匹配，无法确定';
   @override
@@ -294908,6 +295089,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_error_remote_closed => '电脑已关闭遥控';
   @override
   String get video_remote_error_requests_busy => '电脑忙，请稍后再试';
+  @override
+  String get video_remote_error_subtitle_busy => '电脑上的字幕还在加载，请稍后再试';
+  @override
+  String get video_remote_error_subtitle_track_unavailable => '这条字幕当前无法选择';
   @override
   String get video_remote_error_subtitles_changed => '电脑上的字幕已变化，正在刷新';
   @override
@@ -312596,6 +312781,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -312604,6 +312792,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -312642,6 +312833,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -329055,12 +329252,16 @@ extension on _StringsEn {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -329088,6 +329289,10 @@ extension on _StringsEn {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -345339,12 +345544,16 @@ extension on _StringsAr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -345372,6 +345581,10 @@ extension on _StringsAr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -361699,12 +361912,16 @@ extension on _StringsDe {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -361732,6 +361949,10 @@ extension on _StringsDe {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -378044,12 +378265,16 @@ extension on _StringsEs {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -378077,6 +378302,10 @@ extension on _StringsEs {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -394405,12 +394634,16 @@ extension on _StringsFr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -394438,6 +394671,10 @@ extension on _StringsFr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -410714,12 +410951,16 @@ extension on _StringsId {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -410747,6 +410988,10 @@ extension on _StringsId {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -427053,12 +427298,16 @@ extension on _StringsIt {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -427086,6 +427335,10 @@ extension on _StringsIt {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -443278,12 +443531,16 @@ extension on _StringsJa {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -443311,6 +443568,10 @@ extension on _StringsJa {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -459503,12 +459764,16 @@ extension on _StringsKo {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -459536,6 +459801,10 @@ extension on _StringsKo {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -475827,12 +476096,16 @@ extension on _StringsNl {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -475860,6 +476133,10 @@ extension on _StringsNl {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -492158,12 +492435,16 @@ extension on _StringsPtBr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -492191,6 +492472,10 @@ extension on _StringsPtBr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -508493,12 +508778,16 @@ extension on _StringsRu {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -508526,6 +508815,10 @@ extension on _StringsRu {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -524785,12 +525078,16 @@ extension on _StringsTh {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -524818,6 +525115,10 @@ extension on _StringsTh {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -541103,12 +541404,16 @@ extension on _StringsTr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -541136,6 +541441,10 @@ extension on _StringsTr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -557410,12 +557719,16 @@ extension on _StringsVi {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -557443,6 +557756,10 @@ extension on _StringsVi {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -573546,12 +573863,16 @@ extension on _StringsZhCn {
         return '取消收藏';
       case 'video_remote_current':
         return '回到当前字幕';
+      case 'video_remote_error_action_unsupported':
+        return '电脑上的 Fushi 还不支持这个操作，请更新后再试';
       case 'video_remote_error_certificate_mismatch':
         return '电脑证书与配对时不一致，请重新配对';
       case 'video_remote_error_controller_busy':
         return '另一台设备正在遥控这个视频';
       case 'video_remote_error_controller_lease_lost':
         return '遥控已超时或被接管，正在重新连接';
+      case 'video_remote_error_episode_unavailable':
+        return '无法切换到这一集';
       case 'video_remote_error_favorite_ambiguous':
         return '有多条字幕与这条收藏匹配，无法确定';
       case 'video_remote_error_favorite_missing':
@@ -573579,6 +573900,10 @@ extension on _StringsZhCn {
         return '电脑已关闭遥控';
       case 'video_remote_error_requests_busy':
         return '电脑忙，请稍后再试';
+      case 'video_remote_error_subtitle_busy':
+        return '电脑上的字幕还在加载，请稍后再试';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return '这条字幕当前无法选择';
       case 'video_remote_error_subtitles_changed':
         return '电脑上的字幕已变化，正在刷新';
       case 'video_remote_error_task_missing':
@@ -589704,12 +590029,16 @@ extension on _StringsZhHk {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -589737,6 +590066,10 @@ extension on _StringsZhHk {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
