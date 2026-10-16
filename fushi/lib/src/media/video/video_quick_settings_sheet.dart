@@ -534,7 +534,11 @@ class _VideoQuickSettingsSheetState extends State<VideoQuickSettingsSheet>
         // 逃生口，与其它分类页的分组同一形态。
         for (final SettingsSection s in base.sections) {
           for (final SettingsItem item in s.items) {
-            if (item is SettingsCustomItem && item.id == _shaderManagerItemId) {
+            // 从 schema 行里取出来后不再经 section 的 visibleCopy 过滤，
+            // 可见谓词在这里照样生效。
+            if (item is SettingsCustomItem &&
+                item.id == _shaderManagerItemId &&
+                item.isVisible(settingsContext)) {
               shaderBody = item.builder;
             }
           }
@@ -549,6 +553,7 @@ class _VideoQuickSettingsSheetState extends State<VideoQuickSettingsSheet>
                 visible: s.visible,
                 presentation: s.presentation,
                 summaryBuilder: s.summaryBuilder,
+                liveListenable: s.liveListenable,
                 items: <SettingsItem>[
                   for (final SettingsItem i in s.items)
                     if (i.id != _shaderManagerItemId) i,
