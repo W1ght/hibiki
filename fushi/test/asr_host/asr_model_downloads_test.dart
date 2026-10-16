@@ -83,11 +83,14 @@ class _FailingGpuStore extends GpuRuntimeStore {
         ),
       );
 
+  int installs = 0;
+
   @override
   int get pendingDownloadBytes => 1000;
 
   @override
   Stream<GpuRuntimeInstallProgress> install() async* {
+    installs++;
     yield const GpuRuntimeInstallProgress(
       phase: GpuRuntimeInstallPhase.download,
       received: 400,
@@ -288,5 +291,29 @@ void main() {
     // 重新下载时清掉上一次的 GPU 失败原因。
     downloads.start(pack, plan: _plan());
     expect(downloads.lastGpuRuntimeErrorOf(pack.id), isNull);
+  });
+
+  test('模型下载失败：以失败结束，不再去装 GPU 环境', () async {
+    final List<Object?> finished = <Object?>[];
+    final _FailingGpuStore gpu = _FailingGpuStore(tmp);
+    final AsrModelDownloads downloads = registry(
+      onFinished: (AsrModelPack _, {Object? error}) => finished.add(error),
+      gpu: gpu,
+    );
+    downloads.start(pack, plan: _plan());
+    await _settle();
+    stores.controller!.addError(const SocketException('model boom'));
+    await _settle();
+    expect(finished.single, isA<SocketException>());
+    expect(downloads.lastErrorOf(pack.id), contains('model boom'));
+    expect(gpu.installs, 0);
+  });
+
+  test('顺带 GPU 环境时下载卡住也能立刻取消', () async {
+    final AsrModelDownloads downloads = registry(gpu: _FailingGpuStore(tmp));
+    downloads.start(pack, plan: _plan());
+    await _settle();
+    await downloads.cancel(pack.id);
+    expect(downloads.isActive(pack.id), isFalse);
   });
 }
