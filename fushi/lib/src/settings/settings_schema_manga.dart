@@ -139,15 +139,59 @@ SettingsSection _mangaPagingSection() {
             label: t.page_turn_animation_slide,
           ),
           SettingsSegmentOption<String>(
+            value: MangaPageAnimation.cover.key,
+            label: t.page_turn_animation_cover,
+          ),
+          SettingsSegmentOption<String>(
             value: MangaPageAnimation.fade.key,
             label: t.page_turn_animation_fade,
           ),
         ],
         selected: (SettingsContext c) =>
-            MangaPageAnimationKey.fromKey(c.appModel.mangaPageAnimation).key,
+            mangaPageAnimationFromKey(c.appModel.mangaPageAnimation).key,
         onChanged: (SettingsContext c, String value) =>
             c.appModel.setMangaPageAnimation(value),
-        defaultValue: MangaPageAnimation.slide.key,
+        defaultValue: kMangaPageAnimationDefault.key,
+      ),
+      // 速度 / 跟手只在有动画时才有意义，随效果显隐（同点击热区布局的口径）。
+      SettingsSegmentedItem<String>(
+        id: 'manga.page_animation_speed',
+        title: t.page_turn_animation_speed,
+        icon: Icons.speed_outlined,
+        visible: (SettingsContext c) =>
+            mangaPageAnimationFromKey(c.appModel.mangaPageAnimation) !=
+            PageTurnAnimation.none,
+        options: <SettingsSegmentOption<String>>[
+          SettingsSegmentOption<String>(
+            value: PageTurnAnimationSpeed.fast.key,
+            label: t.page_turn_animation_speed_fast,
+          ),
+          SettingsSegmentOption<String>(
+            value: PageTurnAnimationSpeed.normal.key,
+            label: t.page_turn_animation_speed_normal,
+          ),
+          SettingsSegmentOption<String>(
+            value: PageTurnAnimationSpeed.slow.key,
+            label: t.page_turn_animation_speed_slow,
+          ),
+        ],
+        selected: (SettingsContext c) => c.appModel.mangaPageAnimationSpeed,
+        onChanged: (SettingsContext c, String value) =>
+            c.appModel.setMangaPageAnimationSpeed(value),
+        defaultValue: PageTurnAnimationSpeed.normal.key,
+      ),
+      SettingsSwitchItem(
+        id: 'manga.page_turn_follow_drag',
+        title: t.page_turn_follow_drag,
+        subtitle: t.page_turn_follow_drag_description,
+        icon: Icons.swipe_outlined,
+        visible: (SettingsContext c) => mangaPageAnimationFromKey(
+          c.appModel.mangaPageAnimation,
+        ).isDirectional,
+        value: (SettingsContext c) => c.appModel.mangaPageTurnFollowDrag,
+        onChanged: (SettingsContext c, bool value) =>
+            c.appModel.setMangaPageTurnFollowDrag(value),
+        defaultValue: kMangaPageTurnFollowDragDefault,
       ),
       SettingsSwitchItem(
         id: 'manga.tap_zone_paging',

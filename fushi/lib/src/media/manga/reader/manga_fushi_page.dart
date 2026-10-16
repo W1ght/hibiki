@@ -1027,7 +1027,16 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   /// 观看偏好快照（打开书时从 [AppModel] 读一次，随文档注入 WebView）。
   /// 与 [_zoomPercent] 不同，这三项没有页内切换入口，只在设置里改。
   int _zoomSensitivity = kMangaZoomSensitivityDefault;
-  MangaPageAnimation _pageAnimation = MangaPageAnimation.slide;
+
+  /// 用户选的翻页动画（全局 `manga_page_animation`）；实际播放的是按墨水屏 /
+  /// 系统「减弱动态效果」降级后的 [_effectivePageAnimation]。
+  MangaPageAnimation _pageAnimation = kMangaPageAnimationDefault;
+  PageTurnAnimationSpeed _pageAnimationSpeed = PageTurnAnimationSpeed.normal;
+  bool _pageTurnFollowDrag = kMangaPageTurnFollowDragDefault;
+
+  /// 系统「减弱动态效果」（`MediaQuery.disableAnimationsOf`），在
+  /// [didChangeDependencies] 里跟随系统设置变化。
+  bool _reduceMotion = false;
   bool _tapZonePaging = true;
   MangaTapZoneLayout _tapZoneLayout = MangaTapZoneLayout.leftRight;
   MangaBackground _background = MangaBackground.black;
@@ -1387,6 +1396,13 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    // 系统「减弱动态效果」切换要立即传到 WebView（有位移的效果降成淡入淡出）。
+    final bool reduceMotion =
+        MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (reduceMotion != _reduceMotion) {
+      _reduceMotion = reduceMotion;
+      unawaited(_pushPageAnimationToJs());
+    }
     final SourceReviewSession? session = SourceReviewScope.maybeOf(context);
     if (identical(session, _sourceReviewSession)) return;
     _sourceReviewSession?.removeListener(_onSourceReviewChanged);
@@ -1789,7 +1805,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       kMangaZoomSensitivityMin,
       kMangaZoomSensitivityMax,
     );
-    _pageAnimation = MangaPageAnimationKey.fromKey(appModel.mangaPageAnimation);
+    _readPageTurnPreferences();
     _tapZonePaging = appModel.mangaTapZonePaging;
     _tapZoneLayout = MangaTapZoneLayoutKey.fromKey(appModel.mangaTapZoneLayout);
     _background = MangaBackgroundKey.fromKey(appModel.mangaBackground);
@@ -1851,9 +1867,6 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     }
     if (!mounted) return;
     _showOcrBoxes = readerPreferences.showOcrBoxes;
-    if (!readerPreferences.animateTransitions) {
-      _pageAnimation = MangaPageAnimation.none;
-    }
     _spreadDirection = readerPreferences.direction == 'ltr' ? 'ltr' : 'rtl';
     _background = MangaBackgroundKey.fromKey(readerPreferences.background);
     _zoomPercent = readerPreferences.zoomStart.clamp(
@@ -2730,7 +2743,9 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       documentGeneration: documentGeneration,
       ocrPageIndices: keptPages,
       zoomSensitivity: _zoomSensitivity,
-      pageAnimation: _pageAnimation,
+      pageAnimation: _effectivePageAnimation,
+      pageAnimationSpeed: _pageAnimationSpeed,
+      followDrag: _pageTurnFollowDrag,
       tapZonePaging: _tapZonePaging,
       tapZoneLayout: _tapZoneLayout,
       backgroundCss: _backgroundCssValue,
@@ -5101,6 +5116,59 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     );
   }
 
+  /// 实际播放的翻页动画：墨水屏强制无、系统「减弱动态效果」把有位移的效果降成
+  /// 淡入淡出（规则只在 [effectivePageTurnAnimation] 写一次）。
+  MangaPageAnimation get _effectivePageAnimation => effectivePageTurnAnimation(
+    _pageAnimation,
+    eink: _readerPreferences.einkMode,
+    reduceMotion: _reduceMotion,
+  );
+
+  /// 从全局偏好读翻页动画三项（效果 / 速度 / 跟手）。
+  void _readPageTurnPreferences() {
+    _pageAnimation = mangaPageAnimationFromKey(appModel.mangaPageAnimation);
+    _pageAnimationSpeed = PageTurnAnimationSpeed.fromKey(
+      appModel.mangaPageAnimationSpeed,
+    );
+    _pageTurnFollowDrag = appModel.mangaPageTurnFollowDrag;
+  }
+
+  /// 把当前生效的翻页动画推给已加载的文档（不重建 WebView 文档）。窗口重载时
+  /// 文档生成器直接读同一组字段，两条路径同源。
+  Future<void> _pushPageAnimationToJs() async {
+    final InAppWebViewController? controller = _controller;
+    if (controller == null) return;
+    final MangaPageAnimation effective = _effectivePageAnimation;
+    try {
+      await controller.evaluateJavascript(
+        source:
+            'window.__mangaSetPageAnimation && '
+            "window.__mangaSetPageAnimation('${effective.key}', "
+            '${_pageAnimationSpeed.durationMs}, $_pageTurnFollowDrag);',
+      );
+    } on Object catch (error, stack) {
+      ErrorLogService.instance.log(
+        'MangaFushiPage.pushPageAnimation',
+        error,
+        stack,
+      );
+    }
+  }
+
+  /// 阅读器面板改了翻页动画三项：写全局偏好，立即推给当前文档。
+  Future<void> _setPageTurnSettings(MangaPageTurnSettings value) async {
+    await appModel.setMangaPageAnimation(value.animation.key);
+    await appModel.setMangaPageAnimationSpeed(value.speed.key);
+    await appModel.setMangaPageTurnFollowDrag(value.followDrag);
+    if (!mounted) return;
+    setState(() {
+      _pageAnimation = value.animation;
+      _pageAnimationSpeed = value.speed;
+      _pageTurnFollowDrag = value.followDrag;
+    });
+    await _pushPageAnimationToJs();
+  }
+
   Future<void> _jumpToPage(int oneBasedPage) async {
     final MokuroPayload? payload = _payload;
     if (payload == null || payload.images.isEmpty) return;
@@ -5219,6 +5287,12 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       if (!mounted) return;
       await showMangaReaderSettingsSheet(
         context: context,
+        pageTurn: MangaPageTurnSettings(
+          animation: _pageAnimation,
+          speed: _pageAnimationSpeed,
+          followDrag: _pageTurnFollowDrag,
+        ),
+        onPageTurnChanged: _setPageTurnSettings,
         globalDefaults: appModel.mangaReaderPreferences
             .copyWithJson(<String, Object?>{
               if (desktopWindowFullscreenSupported)
@@ -5374,9 +5448,9 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     setState(() {
       _readerPreferences = prefs;
       _showOcrBoxes = prefs.showOcrBoxes;
-      _pageAnimation = prefs.animateTransitions
-          ? MangaPageAnimationKey.fromKey(appModel.mangaPageAnimation)
-          : MangaPageAnimation.none;
+      // 翻页动画只认全局 `manga_page_animation`（animateTransitions 是它的旧投影，
+      // 作品覆盖里残留的旧值不再生效）；墨水屏的降级在 _effectivePageAnimation。
+      _readPageTurnPreferences();
       _spreadDirection = prefs.direction == 'ltr' ? 'ltr' : 'rtl';
       _background = MangaBackgroundKey.fromKey(prefs.background);
       if (resetSessionZoom) {

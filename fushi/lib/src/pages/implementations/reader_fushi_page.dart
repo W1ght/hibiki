@@ -107,6 +107,7 @@ import 'package:fushi/src/reader/reader_audiobook_panel.dart'
     show AudiobookSleepTimer;
 import 'package:fushi/src/reader/reader_chapter_perf_trace.dart';
 import 'package:fushi/src/reader/reader_engine_config.dart';
+import 'package:fushi/src/reader/page_turn_animation.dart';
 import 'package:fushi/src/reader/reader_script_compactor.dart';
 import 'package:fushi/src/reader/reader_chrome_scaler.dart';
 import 'package:fushi/src/reader/reader_lyrics_caret_scripts.dart';
@@ -484,6 +485,19 @@ FushiReaderPalette? readerFollowThemePalette({
   }
   return fushiReaderPaletteFor(scheme, scheme.brightness);
 }
+
+/// 翻页触发的跨章：新章恢复完位置后正文整体淡入的时长。
+const Duration kReaderChapterFadeInDuration = Duration(milliseconds: 120);
+
+/// 翻页触发的跨章是否让新章正文淡入：只在翻页（paginated）模式、且实际效果不是
+/// 「无」时（墨水屏已由 [effectivePageTurnAnimation] 降成无）。滚动与 VN 模式的跨章
+/// 观感不变。
+bool readerChapterFadeInEnabled({
+  required String? viewMode,
+  required PageTurnAnimation effect,
+}) =>
+    (viewMode ?? 'paginated') == 'paginated' &&
+    effect != PageTurnAnimation.none;
 
 /// 墨水屏下阅读器的 Dart 侧角色色：底 / 字 / 链接与正文 CSS 的墨水屏分支
 /// （[ReaderContentStyles.css] `einkMode`）同值——纯黑白、方向跟 app 明暗，
@@ -2063,6 +2077,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   // 非翻页导航作废积压——用户已显式换了目的地。由 _handlePageTurnLimit 置位、
   // _beginNavigation 消费并复位。
   bool _navigationFromPageTurn = false;
+  // 翻页动画（跨章）：本次导航落定后正文是否整体淡入（[readerChapterFadeInEnabled]）。
+  // _beginNavigation 写、淡入结束（AnimatedOpacity.onEnd）清。
+  bool _chapterFadeInPending = false;
   // BUG-2424：_replayPendingPageTurn 的重入闸。它在 await _paginate 期间可能被另一个
   // content-ready 完成点再次调用，两个循环同时消费同一个队列会让意图乱序落到不同章上。
   bool _replayingPageTurns = false;
@@ -3855,9 +3872,14 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                       children: <Widget>[
                         Positioned.fill(child: _buildBody()),
                         if (!_readerContentReady ||
-                            _chapterTransitionSnapshot != null)
+                            _chapterTransitionSnapshot != null ||
+                            _chapterFadeInPending)
                           Positioned.fill(
-                            child: _buildChapterTransitionOverlay(bgColor),
+                            child:
+                                _chapterFadeInPending &&
+                                    _chapterTransitionSnapshot == null
+                                ? _buildChapterFadeInOverlay(bgColor)
+                                : _buildChapterTransitionOverlay(bgColor),
                           ),
                         if (_readerContentReady)
                           const SizedBox.shrink(
@@ -4031,6 +4053,27 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     );
     if (independentDocumentPadding == EdgeInsets.zero) return webView;
     return Padding(padding: independentDocumentPadding, child: webView);
+  }
+
+  /// 翻页触发的跨章（翻页模式 + 有翻页动画，[readerChapterFadeInEnabled]）：加载期照旧
+  /// 整块底色遮住，内容就绪（位置已恢复）后这块底色在 [kReaderChapterFadeInDuration]
+  /// 内淡出 = 新章正文整体淡入。歌词模式切换 / 换字号重排不置 [_chapterFadeInPending]，
+  /// 仍走 [_buildChapterTransitionOverlay] 的瞬时纯色遮罩。
+  Widget _buildChapterFadeInOverlay(Color backgroundColor) {
+    return IgnorePointer(
+      ignoring: _readerContentReady,
+      child: AnimatedOpacity(
+        key: const ValueKey<String>('fushi_chapter_fade_in'),
+        opacity: _readerContentReady ? 0 : 1,
+        duration: kReaderChapterFadeInDuration,
+        curve: Curves.easeOut,
+        onEnd: () {
+          if (!_readerContentReady || !_chapterFadeInPending) return;
+          _rebuild(() => _chapterFadeInPending = false);
+        },
+        child: ColoredBox(color: backgroundColor),
+      ),
+    );
   }
 
   Widget _buildChapterTransitionOverlay(Color backgroundColor) {

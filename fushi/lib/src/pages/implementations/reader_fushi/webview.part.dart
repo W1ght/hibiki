@@ -722,6 +722,10 @@ extension _ReaderWebView on _ReaderFushiPageState {
       swipeFastVelocity: swipeThresholds.fastVelocity,
       wheelGestureQuietMs: ReaderFushiSource.instance.wheelPageTurnInterval
           .clamp(150, 800),
+      pageTurnAnimation: _effectivePageTurnAnimation.key,
+      pageTurnDurationMs: s.pageTurnAnimationSpeed.durationMs,
+      pageTurnFollowDrag: s.pageTurnFollowDrag,
+      swipeLeftIsForward: _readerSwipeLeftIsForward,
       furiganaMode: s.furiganaMode,
       caretColor: _caretRingColorCss(),
       caretInsetTop: _readerTopOffset,
@@ -777,8 +781,28 @@ extension _ReaderWebView on _ReaderFushiPageState {
       wheelGestureQuietMs: ReaderFushiSource.instance.wheelPageTurnInterval
           .clamp(150, 800),
       scanNonJapaneseText: appModel.scanNonJapaneseText,
+      pageTurnAnimation: _effectivePageTurnAnimation.key,
+      pageTurnDurationMs: s.pageTurnAnimationSpeed.durationMs,
+      pageTurnFollowDrag: s.pageTurnFollowDrag,
+      swipeLeftIsForward: _readerSwipeLeftIsForward,
     );
   }
+
+  /// 实际播放的翻页效果：用户所选按墨水屏 / 系统「减弱动态效果」降级（规则唯一出处
+  /// [effectivePageTurnAnimation]）。JS 侧只认这个结果，不再自己判减弱动态效果。
+  PageTurnAnimation get _effectivePageTurnAnimation =>
+      effectivePageTurnAnimation(
+        _settings?.pageTurnAnimation ?? ReaderSettings.defaultPageTurnAnimation,
+        eink: appModel.einkMode,
+        reduceMotion: MediaQuery.maybeDisableAnimationsOf(context) ?? false,
+      );
+
+  /// 与 onSwipe handler 同一判据（[swipeLeftIsForward]）；拖动跟手据此判断往哪边拖是
+  /// 下一页。
+  bool get _readerSwipeLeftIsForward => swipeLeftIsForward(
+    invert: ReaderFushiSource.instance.invertSwipeDirection,
+    rtl: _isRtlReading,
+  );
 
   /// 阅读器引擎的**静态**源码（零 per-nav 插值），按 view-mode 分三份。
   ///
@@ -893,6 +917,58 @@ install: function(C) {
   var _fushiReaderMouseDragPageDirection = null;
   var _fushiReaderMouseDragSwipeSent = false;
   var _fushiReaderMouseDragIgnoreTouchEnd = false;
+  // 翻页动画「拖动跟手」（核心在分页 shell 的 fushiReader.followDrag*，见
+  // reader_page_turn_script.dart）。只在分页模式、效果为平移 / 覆盖且开关打开时生效；
+  // 触摸横向位移超过 6px 且以横向为主才进入。进入后本次手势不再判 tap / 普通滑动，
+  // 松手由 followDragEnd 决定提交（回传 onSwipe，与普通滑动走同一条 Dart 路径）或回弹。
+  var _fushiFollowActive = false;
+  var _fushiFollowSamples = [];
+  function _fushiFollowReader() {
+    var r = window.fushiReader;
+    if (fushiContinuousMode || fushiVnMode || !r) return null;
+    if (typeof r.followDragEnabled !== 'function' || !r.followDragEnabled()) return null;
+    return r;
+  }
+  function _fushiFollowSample(x) {
+    var now = Date.now();
+    _fushiFollowSamples.push({x: x, t: now});
+    while (_fushiFollowSamples.length > 2 && now - _fushiFollowSamples[0].t > 100) {
+      _fushiFollowSamples.shift();
+    }
+  }
+  // 末段（约 100ms）横向速度，px/ms，带符号。
+  function _fushiFollowVelocity(x) {
+    var first = _fushiFollowSamples.length ? _fushiFollowSamples[0] : null;
+    var elapsed = first ? Date.now() - first.t : 0;
+    if (!first || elapsed <= 0) return 0;
+    return (x - first.x) / elapsed;
+  }
+  function _fushiFollowCancel() {
+    _fushiFollowActive = false;
+    _fushiFollowSamples = [];
+    var r = window.fushiReader;
+    if (r && typeof r.followDragCancel === 'function') r.followDragCancel();
+  }
+  function _fushiFollowMove(x, y) {
+    if (!hasStart || window.__fushiTextSelectDragActive || imageLongPressConsumed) {
+      if (_fushiFollowActive) _fushiFollowCancel();
+      return;
+    }
+    var dx = x - startX;
+    var dy = y - startY;
+    if (!_fushiFollowActive) {
+      if (Math.abs(dx) <= 6 || Math.abs(dx) <= Math.abs(dy)) return;
+      var r = _fushiFollowReader();
+      if (!r) return;
+      _fushiFollowSamples = [];
+      if (!r.followDragUpdate(dx)) return;
+      _fushiFollowActive = true;
+      clearImageLongPressTimer();
+    } else {
+      window.fushiReader.followDragUpdate(dx);
+    }
+    _fushiFollowSample(x);
+  }
   function _gestureStart(x, y) {
     hasStart = true;
     startX = x;
@@ -1163,6 +1239,7 @@ install: function(C) {
     // by the drag-select IIFE); suppress tap / swipe / image-tap so there is
     // no double lookup or accidental page turn.
     if (window.__fushiTextSelectDragActive) {
+      if (_fushiFollowActive) _fushiFollowCancel();
       clearImageLongPressTimer();
       imageLongPressConsumed = false;
       hasStart = false;
@@ -1170,9 +1247,24 @@ install: function(C) {
     }
     clearImageLongPressTimer();
     if (imageLongPressConsumed) {
+      if (_fushiFollowActive) _fushiFollowCancel();
       imageLongPressConsumed = false;
       hasStart = false;
       if (e && e.preventDefault) e.preventDefault();
+      return;
+    }
+    // 拖动跟手接管了本次手势：松手由 followDragEnd 按「位移 > 视口宽 × 比例 或 末段速度
+    // 够快」判提交，提交即回传 onSwipe（跨章 / 节流 / 统计与普通滑动一致），否则回弹。
+    if (_fushiFollowActive) {
+      _fushiFollowActive = false;
+      hasStart = false;
+      var followDx = x - startX;
+      var followVelocity = _fushiFollowVelocity(x);
+      _fushiFollowSamples = [];
+      var followDir = window.fushiReader && window.fushiReader.followDragEnd
+        ? window.fushiReader.followDragEnd(followDx, followVelocity) : null;
+      if (e && e.preventDefault) e.preventDefault();
+      if (followDir) window.flutter_inappwebview.callHandler('onSwipe', followDir);
       return;
     }
     // BUG-iPhone 滑动误查词：必须在 hasStart 清掉前记录松手点，并结合每次
@@ -1277,6 +1369,12 @@ install: function(C) {
     var t = e.touches[0];
     imageLongPressConsumed = false;
     clearImageLongPressTimer();
+    if (_fushiFollowActive) _fushiFollowCancel();
+    // 按下即结束正在播的翻页动画（落点早已写死）：随后的点词 / 滑动都基于新页几何。
+    if (!fushiContinuousMode && !fushiVnMode && window.fushiReader &&
+        typeof window.fushiReader.finishPageTurnAnimation === 'function') {
+      window.fushiReader.finishPageTurnAnimation();
+    }
     _gestureStart(t.clientX, t.clientY);
     var imgUrl = _fushiBlockImageUrl(e.target || document.elementFromPoint(t.clientX, t.clientY));
     if (!imgUrl) return;
@@ -1299,6 +1397,11 @@ install: function(C) {
     // WKWebView 的 PointerEvent 序列不可作为唯一真相；直接从 TouchEvent 记录完整
     // 轨迹，确保连续滚动/短促 flick 都会取消 tap 查词候选。
     _gestureTrackMovement(t.clientX, t.clientY);
+    if (e.touches.length === 1) {
+      _fushiFollowMove(t.clientX, t.clientY);
+    } else if (_fushiFollowActive) {
+      _fushiFollowCancel();
+    }
     if (!imageLongPressTimer) return;
     var dx = t.clientX - imageLongPressStartX;
     var dy = t.clientY - imageLongPressStartY;
@@ -1313,6 +1416,7 @@ install: function(C) {
     var t = e.changedTouches[0]; _gestureEnd(t.clientX, t.clientY, e);
   }, {passive: false});
   document.addEventListener('touchcancel', function(e) {
+    if (_fushiFollowActive) _fushiFollowCancel();
     clearImageLongPressTimer();
     imageLongPressConsumed = false;
     _fushiReaderMouseDragIgnoreTouchEnd = false;
@@ -1690,6 +1794,9 @@ ${webViewKeyBridgeScript(handlerName: 'onSpaceKey', keys: const <String>[' '])}
           + ' hasBridge=' + !!(window.flutter_inappwebview && window.flutter_inappwebview.callHandler));
       }
       if (r && r._reanchorPending === true) return;
+      // 翻页动画回调未落位 / 拖动跟手中（scroll 停在两页之间）：不回传，落定时
+      // _applyPageTurn 会主动补一发 onReaderScroll。
+      if (r && typeof r.pageTurnBusy === 'function' && r.pageTurnBusy()) return;
       if (window.flutter_inappwebview && window.flutter_inappwebview.callHandler) {
         window.flutter_inappwebview.callHandler('onReaderScroll');
       }
