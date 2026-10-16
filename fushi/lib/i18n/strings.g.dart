@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133501 (7853 per locale)
+/// Strings: 133518 (7854 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -29125,7 +29125,7 @@ class _StringsAr extends _StringsEn {
   String get video_setting_seek_seconds => 'ثوانٍ الانتقال';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'عرض اختصارات لوحة المفاتيح وذراع التحكم الخاصة بالمشغّل وتخصيصها';
   @override
   String get video_setting_slim_progress_bar => 'شريط تقدّم رفيع في الأسفل';
   @override
@@ -48483,7 +48483,7 @@ class _StringsDe extends _StringsEn {
   String get video_setting_seek_seconds => 'Spulschritt (Sekunden)';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Tastatur- und Gamepad-Kurzbefehle des Players anzeigen und anpassen';
   @override
   String get video_setting_slim_progress_bar =>
       'Schmale Fortschrittsleiste unten';
@@ -67916,7 +67916,7 @@ class _StringsEs extends _StringsEn {
   String get video_setting_seek_seconds => 'Segundos de salto';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Ver y personalizar los atajos de teclado y mando del reproductor';
   @override
   String get video_setting_slim_progress_bar =>
       'Barra de progreso fina en la parte inferior';
@@ -87429,7 +87429,7 @@ class _StringsFr extends _StringsEn {
   String get video_setting_seek_seconds => 'Pas d\'avance/recul (secondes)';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Afficher et personnaliser les raccourcis clavier et manette du lecteur';
   @override
   String get video_setting_slim_progress_bar =>
       'Fine barre de progression en bas';
@@ -106644,7 +106644,7 @@ class _StringsId extends _StringsEn {
   String get video_setting_seek_seconds => 'Detik lompatan';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Lihat dan sesuaikan pintasan keyboard dan gamepad pemutar';
   @override
   String get video_setting_slim_progress_bar => 'Bilah progres tipis di bawah';
   @override
@@ -125975,7 +125975,7 @@ class _StringsIt extends _StringsEn {
   String get video_setting_seek_seconds => 'Secondi di spostamento';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Visualizza e personalizza le scorciatoie da tastiera e gamepad del lettore';
   @override
   String get video_setting_slim_progress_bar =>
       'Barra di avanzamento sottile in basso';
@@ -144396,7 +144396,7 @@ class _StringsJa extends _StringsEn {
   String get video_setting_seek_seconds => 'シークの秒数';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'プレーヤーのキーボード／ゲームパッドのショートカットを確認・カスタマイズ';
   @override
   String get video_setting_slim_progress_bar => '下部に細いプログレスバーを表示';
   @override
@@ -162757,8 +162757,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_seek_seconds => '이동 간격(초)';
   @override
-  String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+  String get video_setting_shortcuts_hint => '플레이어의 키보드 및 게임패드 단축키 보기 및 사용자 지정';
   @override
   String get video_setting_slim_progress_bar => '하단 얇은 진행 막대';
   @override
@@ -181977,7 +181976,7 @@ class _StringsNl extends _StringsEn {
   String get video_setting_seek_seconds => 'Spoelstap (seconden)';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Toetsenbord- en gamepadsnelkoppelingen van de speler bekijken en aanpassen';
   @override
   String get video_setting_slim_progress_bar => 'Dunne voortgangsbalk onderaan';
   @override
@@ -201330,7 +201329,7 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_seek_seconds => 'Segundos para avançar/retroceder';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Ver e personalizar os atalhos de teclado e controle do player';
   @override
   String get video_setting_slim_progress_bar =>
       'Barra de progresso fina na parte inferior';
@@ -220634,7 +220633,7 @@ class _StringsRu extends _StringsEn {
   String get video_setting_seek_seconds => 'Шаг перемотки (с)';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Просмотр и настройка сочетаний клавиш клавиатуры и геймпада для плеера';
   @override
   String get video_setting_slim_progress_bar => 'Тонкая полоса прогресса внизу';
   @override
@@ -239653,7 +239652,7 @@ class _StringsTh extends _StringsEn {
   String get video_setting_seek_seconds => 'ระยะเลื่อนเวลา (วินาที)';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'ดูและปรับแต่งปุ่มลัดแป้นพิมพ์และเกมแพดของเครื่องเล่น';
   @override
   String get video_setting_slim_progress_bar => 'แถบความคืบหน้าบางที่ด้านล่าง';
   @override
@@ -258827,7 +258826,7 @@ class _StringsTr extends _StringsEn {
   String get video_setting_seek_seconds => 'Sarma saniyesi';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Oynatıcının klavye ve oyun kumandası kısayollarını görüntüleyin ve özelleştirin';
   @override
   String get video_setting_slim_progress_bar => 'Altta ince ilerleme çubuğu';
   @override
@@ -277946,7 +277945,7 @@ class _StringsVi extends _StringsEn {
   String get video_setting_seek_seconds => 'Bước tua (giây)';
   @override
   String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+      'Xem và tùy chỉnh phím tắt bàn phím và tay cầm của trình phát';
   @override
   String get video_setting_slim_progress_bar =>
       'Thanh tiến độ mảnh ở dưới cùng';
@@ -313267,8 +313266,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_seek_seconds => '快進／快退步長（秒）';
   @override
-  String get video_setting_shortcuts_hint =>
-      'View and customize the player\'s keyboard and gamepad shortcuts';
+  String get video_setting_shortcuts_hint => '查看並自訂播放器的鍵盤 / 手掣快捷鍵';
   @override
   String get video_setting_slim_progress_bar => '底部細進度條';
   @override
@@ -345947,7 +345945,7 @@ extension on _StringsAr {
       case 'video_setting_seek_seconds':
         return 'ثوانٍ الانتقال';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'عرض اختصارات لوحة المفاتيح وذراع التحكم الخاصة بالمشغّل وتخصيصها';
       case 'video_setting_slim_progress_bar':
         return 'شريط تقدّم رفيع في الأسفل';
       case 'video_setting_slim_progress_bar_hint':
@@ -362309,7 +362307,7 @@ extension on _StringsDe {
       case 'video_setting_seek_seconds':
         return 'Spulschritt (Sekunden)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Tastatur- und Gamepad-Kurzbefehle des Players anzeigen und anpassen';
       case 'video_setting_slim_progress_bar':
         return 'Schmale Fortschrittsleiste unten';
       case 'video_setting_slim_progress_bar_hint':
@@ -378656,7 +378654,7 @@ extension on _StringsEs {
       case 'video_setting_seek_seconds':
         return 'Segundos de salto';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Ver y personalizar los atajos de teclado y mando del reproductor';
       case 'video_setting_slim_progress_bar':
         return 'Barra de progreso fina en la parte inferior';
       case 'video_setting_slim_progress_bar_hint':
@@ -395020,7 +395018,7 @@ extension on _StringsFr {
       case 'video_setting_seek_seconds':
         return 'Pas d\'avance/recul (secondes)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Afficher et personnaliser les raccourcis clavier et manette du lecteur';
       case 'video_setting_slim_progress_bar':
         return 'Fine barre de progression en bas';
       case 'video_setting_slim_progress_bar_hint':
@@ -411329,7 +411327,7 @@ extension on _StringsId {
       case 'video_setting_seek_seconds':
         return 'Detik lompatan';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Lihat dan sesuaikan pintasan keyboard dan gamepad pemutar';
       case 'video_setting_slim_progress_bar':
         return 'Bilah progres tipis di bawah';
       case 'video_setting_slim_progress_bar_hint':
@@ -427671,7 +427669,7 @@ extension on _StringsIt {
       case 'video_setting_seek_seconds':
         return 'Secondi di spostamento';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Visualizza e personalizza le scorciatoie da tastiera e gamepad del lettore';
       case 'video_setting_slim_progress_bar':
         return 'Barra di avanzamento sottile in basso';
       case 'video_setting_slim_progress_bar_hint':
@@ -443896,7 +443894,7 @@ extension on _StringsJa {
       case 'video_setting_seek_seconds':
         return 'シークの秒数';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'プレーヤーのキーボード／ゲームパッドのショートカットを確認・カスタマイズ';
       case 'video_setting_slim_progress_bar':
         return '下部に細いプログレスバーを表示';
       case 'video_setting_slim_progress_bar_hint':
@@ -460122,7 +460120,7 @@ extension on _StringsKo {
       case 'video_setting_seek_seconds':
         return '이동 간격(초)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return '플레이어의 키보드 및 게임패드 단축키 보기 및 사용자 지정';
       case 'video_setting_slim_progress_bar':
         return '하단 얇은 진행 막대';
       case 'video_setting_slim_progress_bar_hint':
@@ -476452,7 +476450,7 @@ extension on _StringsNl {
       case 'video_setting_seek_seconds':
         return 'Spoelstap (seconden)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Toetsenbord- en gamepadsnelkoppelingen van de speler bekijken en aanpassen';
       case 'video_setting_slim_progress_bar':
         return 'Dunne voortgangsbalk onderaan';
       case 'video_setting_slim_progress_bar_hint':
@@ -492784,7 +492782,7 @@ extension on _StringsPtBr {
       case 'video_setting_seek_seconds':
         return 'Segundos para avançar/retroceder';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Ver e personalizar os atalhos de teclado e controle do player';
       case 'video_setting_slim_progress_bar':
         return 'Barra de progresso fina na parte inferior';
       case 'video_setting_slim_progress_bar_hint':
@@ -509121,7 +509119,7 @@ extension on _StringsRu {
       case 'video_setting_seek_seconds':
         return 'Шаг перемотки (с)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Просмотр и настройка сочетаний клавиш клавиатуры и геймпада для плеера';
       case 'video_setting_slim_progress_bar':
         return 'Тонкая полоса прогресса внизу';
       case 'video_setting_slim_progress_bar_hint':
@@ -525414,7 +525412,7 @@ extension on _StringsTh {
       case 'video_setting_seek_seconds':
         return 'ระยะเลื่อนเวลา (วินาที)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'ดูและปรับแต่งปุ่มลัดแป้นพิมพ์และเกมแพดของเครื่องเล่น';
       case 'video_setting_slim_progress_bar':
         return 'แถบความคืบหน้าบางที่ด้านล่าง';
       case 'video_setting_slim_progress_bar_hint':
@@ -541736,7 +541734,7 @@ extension on _StringsTr {
       case 'video_setting_seek_seconds':
         return 'Sarma saniyesi';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Oynatıcının klavye ve oyun kumandası kısayollarını görüntüleyin ve özelleştirin';
       case 'video_setting_slim_progress_bar':
         return 'Altta ince ilerleme çubuğu';
       case 'video_setting_slim_progress_bar_hint':
@@ -558044,7 +558042,7 @@ extension on _StringsVi {
       case 'video_setting_seek_seconds':
         return 'Bước tua (giây)';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return 'Xem và tùy chỉnh phím tắt bàn phím và tay cầm của trình phát';
       case 'video_setting_slim_progress_bar':
         return 'Thanh tiến độ mảnh ở dưới cùng';
       case 'video_setting_slim_progress_bar_hint':
@@ -590338,7 +590336,7 @@ extension on _StringsZhHk {
       case 'video_setting_seek_seconds':
         return '快進／快退步長（秒）';
       case 'video_setting_shortcuts_hint':
-        return 'View and customize the player\'s keyboard and gamepad shortcuts';
+        return '查看並自訂播放器的鍵盤 / 手掣快捷鍵';
       case 'video_setting_slim_progress_bar':
         return '底部細進度條';
       case 'video_setting_slim_progress_bar_hint':

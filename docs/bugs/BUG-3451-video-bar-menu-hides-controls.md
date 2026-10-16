@@ -1,4 +1,4 @@
-## BUG-3450 · 视频控制条「⋯」只有一项仍弹菜单、点开菜单时控制条消失
+## BUG-3451 · 视频控制条「⋯」只有一项仍弹菜单、点开菜单时控制条消失
 - **报告**：2026-10-16（用户：应用内反馈 eeWvjG93_d，Windows）
 - **真实性**：✅ 真 bug，两处根因：
   1. 菜单打开时控制条消失：`⋯` 菜单是 popup 路由，modal barrier 盖满整页；`MouseTracker` 帧尾对静止鼠标重新命中，media_kit 桌面控制条的 `MouseRegion` 不再在命中链上 → `onExit` → `onExit()` 把 `visible` 置 false（`third_party/media_kit_video/lib/media_kit_video_controls/src/controls/material_desktop.dart:980` 改前的 `onExit: (_) => onExit(),`）。移动端则是自动隐藏 Timer 在菜单开着时照样到点（`material.dart` 的四个 hide Timer）。页面侧 `_videoBarMoreButton` 只 `_pokeControlsVisible()` 续一次命，挡不住 barrier 引起的 exit。
