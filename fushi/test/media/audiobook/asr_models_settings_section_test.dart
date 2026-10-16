@@ -4,6 +4,7 @@ import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_asr_core/asr_core.dart';
+import 'package:fushi/src/asr_host/asr_model_downloads.dart';
 import 'package:fushi/src/media/audiobook/asr_models_settings_section.dart';
 import 'package:fushi/utils.dart';
 import 'package:path/path.dart' as p;
@@ -122,10 +123,14 @@ void main() {
     downloads,
   );
 
+  // 独立登记表：按包开假目录、不带 GPU 环境（不碰插件 / 数据根）。
   Widget section(AsrTranscriptionService service) => AsrModelsSettingsSection(
     service: service,
     showGpuRuntime: false,
-    openPackStore: openPackStore,
+    downloads: AsrModelDownloads(
+      openPackStore: openPackStore,
+      gpuRuntimeToDownload: () async => null,
+    ),
   );
 
   Widget wrap(Widget child) {
