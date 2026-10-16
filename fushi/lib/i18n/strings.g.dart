@@ -25780,12 +25780,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'عنوان الكتاب';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'صفحة البدء';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'أول صفحة في الشريط';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'الصفحة التي تظهر عند فتح التطبيق. يمكن اختيار الوحدات المفعّلة فقط؛ وإذا أُوقفت الوحدة المختارة تُستخدم أول صفحة في الشريط.';
   @override
   String get stash => 'المخزّن';
   @override
@@ -45072,12 +45072,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Buchtitel';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Startseite';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Erste Seite in der Leiste';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Seite, die beim Öffnen der App angezeigt wird. Nur aktivierte Module sind wählbar; ist das gewählte Modul deaktiviert, wird die erste Seite in der Leiste verwendet.';
   @override
   String get stash => 'Merkliste';
   @override
@@ -64486,12 +64486,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Título del libro';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Página de inicio';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Primera página de la barra';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Página que se muestra al abrir la app. Solo se pueden elegir módulos activados; si el elegido se desactiva, se usa la primera página de la barra.';
   @override
   String get stash => 'Guardado rápido';
   @override
@@ -83989,12 +83989,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Titre du livre';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Page de démarrage';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Première page de la barre';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Page affichée à l’ouverture de l’app. Seuls les modules activés peuvent être choisis ; si celui choisi est désactivé, la première page de la barre est utilisée.';
   @override
   String get stash => 'Panier';
   @override
@@ -103253,12 +103253,12 @@ class _StringsId extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Judul buku';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Halaman awal';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Halaman pertama di bilah';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Halaman yang ditampilkan saat aplikasi dibuka. Hanya modul yang aktif yang bisa dipilih; jika modul yang dipilih dinonaktifkan, halaman pertama di bilah yang digunakan.';
   @override
   String get stash => 'Simpanan';
   @override
@@ -122563,12 +122563,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Titolo del libro';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Pagina iniziale';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Prima pagina della barra';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Pagina mostrata all’apertura dell’app. Si possono scegliere solo i moduli attivi; se quello scelto viene disattivato, si usa la prima pagina della barra.';
   @override
   String get stash => 'Raccolta';
   @override
@@ -141162,12 +141162,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get srt_import_title_hint => '本のタイトル';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => '起動ページ';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'バーの最初のページ';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'アプリを開いたときに表示するページです。有効なモジュールからのみ選べます。選んだモジュールがオフになると、バーの最初のページを使います。';
   @override
   String get stash => 'スタッシュ';
   @override
@@ -159512,12 +159512,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get srt_import_title_hint => '책 제목';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => '시작 페이지';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => '바의 첫 번째 페이지';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      '앱을 열 때 표시할 페이지입니다. 켜져 있는 모듈만 선택할 수 있으며, 선택한 모듈이 꺼지면 바의 첫 번째 페이지를 사용합니다.';
   @override
   String get stash => '보관함 열기';
   @override
@@ -178557,12 +178557,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Boektitel';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Startpagina';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Eerste pagina in de balk';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Pagina die wordt getoond bij het openen van de app. Alleen ingeschakelde modules kunnen worden gekozen; als de gekozen module is uitgeschakeld, wordt de eerste pagina in de balk gebruikt.';
   @override
   String get stash => 'Verzameling';
   @override
@@ -197896,12 +197896,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Título do livro';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Página inicial';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Primeira página da barra';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Página exibida ao abrir o app. Só é possível escolher módulos ativados; se o escolhido for desativado, a primeira página da barra é usada.';
   @override
   String get stash => 'Reserva';
   @override
@@ -217212,12 +217212,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Название книги';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Стартовая страница';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Первая страница на панели';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Страница, которая открывается при запуске приложения. Можно выбрать только включённые модули; если выбранный модуль отключён, открывается первая страница на панели.';
   @override
   String get stash => 'Закладки';
   @override
@@ -236279,12 +236279,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get srt_import_title_hint => 'ชื่อหนังสือ';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'หน้าเริ่มต้น';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'หน้าแรกในแถบ';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'หน้าที่แสดงเมื่อเปิดแอป เลือกได้เฉพาะโมดูลที่เปิดใช้อยู่ หากโมดูลที่เลือกถูกปิด จะใช้หน้าแรกในแถบแทน';
   @override
   String get stash => 'ที่เก็บชั่วคราว';
   @override
@@ -255414,12 +255414,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Kitap başlığı';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Başlangıç sayfası';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Çubuktaki ilk sayfa';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Uygulama açıldığında gösterilen sayfa. Yalnızca etkin modüller seçilebilir; seçilen modül kapatılırsa çubuktaki ilk sayfa kullanılır.';
   @override
   String get stash => 'Depo';
   @override
@@ -274543,12 +274543,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get srt_import_title_hint => 'Tên sách';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => 'Trang khởi động';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => 'Trang đầu tiên trên thanh';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      'Trang hiển thị khi mở ứng dụng. Chỉ chọn được các mô-đun đang bật; nếu mô-đun đã chọn bị tắt, trang đầu tiên trên thanh sẽ được dùng.';
   @override
   String get stash => 'Lưu tạm';
   @override
@@ -310109,12 +310109,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srt_import_title_hint => '書名';
   @override
-  String get startup_module => 'Startup page';
+  String get startup_module => '啟動頁';
   @override
-  String get startup_module_default => 'First page in the bar';
+  String get startup_module_default => '欄中第一個頁面';
   @override
   String get startup_module_hint =>
-      'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+      '開啟 App 時顯示的頁面，只能從已開啟的功能模組中選擇；所選模組被關閉時改為欄中第一個頁面。';
   @override
   String get stash => '暫存';
   @override
@@ -343019,11 +343019,11 @@ extension on _StringsAr {
       case 'srt_import_title_hint':
         return 'عنوان الكتاب';
       case 'startup_module':
-        return 'Startup page';
+        return 'صفحة البدء';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'أول صفحة في الشريط';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'الصفحة التي تظهر عند فتح التطبيق. يمكن اختيار الوحدات المفعّلة فقط؛ وإذا أُوقفت الوحدة المختارة تُستخدم أول صفحة في الشريط.';
       case 'stash':
         return 'المخزّن';
       case 'stash_added_multiple':
@@ -359363,11 +359363,11 @@ extension on _StringsDe {
       case 'srt_import_title_hint':
         return 'Buchtitel';
       case 'startup_module':
-        return 'Startup page';
+        return 'Startseite';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Erste Seite in der Leiste';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Seite, die beim Öffnen der App angezeigt wird. Nur aktivierte Module sind wählbar; ist das gewählte Modul deaktiviert, wird die erste Seite in der Leiste verwendet.';
       case 'stash':
         return 'Merkliste';
       case 'stash_added_multiple':
@@ -375711,11 +375711,11 @@ extension on _StringsEs {
       case 'srt_import_title_hint':
         return 'Título del libro';
       case 'startup_module':
-        return 'Startup page';
+        return 'Página de inicio';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Primera página de la barra';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Página que se muestra al abrir la app. Solo se pueden elegir módulos activados; si el elegido se desactiva, se usa la primera página de la barra.';
       case 'stash':
         return 'Guardado rápido';
       case 'stash_added_multiple':
@@ -392070,11 +392070,11 @@ extension on _StringsFr {
       case 'srt_import_title_hint':
         return 'Titre du livre';
       case 'startup_module':
-        return 'Startup page';
+        return 'Page de démarrage';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Première page de la barre';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Page affichée à l’ouverture de l’app. Seuls les modules activés peuvent être choisis ; si celui choisi est désactivé, la première page de la barre est utilisée.';
       case 'stash':
         return 'Panier';
       case 'stash_added_multiple':
@@ -408389,11 +408389,11 @@ extension on _StringsId {
       case 'srt_import_title_hint':
         return 'Judul buku';
       case 'startup_module':
-        return 'Startup page';
+        return 'Halaman awal';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Halaman pertama di bilah';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Halaman yang ditampilkan saat aplikasi dibuka. Hanya modul yang aktif yang bisa dipilih; jika modul yang dipilih dinonaktifkan, halaman pertama di bilah yang digunakan.';
       case 'stash':
         return 'Simpanan';
       case 'stash_added_multiple':
@@ -424717,11 +424717,11 @@ extension on _StringsIt {
       case 'srt_import_title_hint':
         return 'Titolo del libro';
       case 'startup_module':
-        return 'Startup page';
+        return 'Pagina iniziale';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Prima pagina della barra';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Pagina mostrata all’apertura dell’app. Si possono scegliere solo i moduli attivi; se quello scelto viene disattivato, si usa la prima pagina della barra.';
       case 'stash':
         return 'Raccolta';
       case 'stash_added_multiple':
@@ -440978,11 +440978,11 @@ extension on _StringsJa {
       case 'srt_import_title_hint':
         return '本のタイトル';
       case 'startup_module':
-        return 'Startup page';
+        return '起動ページ';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'バーの最初のページ';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'アプリを開いたときに表示するページです。有効なモジュールからのみ選べます。選んだモジュールがオフになると、バーの最初のページを使います。';
       case 'stash':
         return 'スタッシュ';
       case 'stash_added_multiple':
@@ -457198,11 +457198,11 @@ extension on _StringsKo {
       case 'srt_import_title_hint':
         return '책 제목';
       case 'startup_module':
-        return 'Startup page';
+        return '시작 페이지';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return '바의 첫 번째 페이지';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return '앱을 열 때 표시할 페이지입니다. 켜져 있는 모듈만 선택할 수 있으며, 선택한 모듈이 꺼지면 바의 첫 번째 페이지를 사용합니다.';
       case 'stash':
         return '보관함 열기';
       case 'stash_added_multiple':
@@ -473499,11 +473499,11 @@ extension on _StringsNl {
       case 'srt_import_title_hint':
         return 'Boektitel';
       case 'startup_module':
-        return 'Startup page';
+        return 'Startpagina';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Eerste pagina in de balk';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Pagina die wordt getoond bij het openen van de app. Alleen ingeschakelde modules kunnen worden gekozen; als de gekozen module is uitgeschakeld, wordt de eerste pagina in de balk gebruikt.';
       case 'stash':
         return 'Verzameling';
       case 'stash_added_multiple':
@@ -489831,11 +489831,11 @@ extension on _StringsPtBr {
       case 'srt_import_title_hint':
         return 'Título do livro';
       case 'startup_module':
-        return 'Startup page';
+        return 'Página inicial';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Primeira página da barra';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Página exibida ao abrir o app. Só é possível escolher módulos ativados; se o escolhido for desativado, a primeira página da barra é usada.';
       case 'stash':
         return 'Reserva';
       case 'stash_added_multiple':
@@ -506167,11 +506167,11 @@ extension on _StringsRu {
       case 'srt_import_title_hint':
         return 'Название книги';
       case 'startup_module':
-        return 'Startup page';
+        return 'Стартовая страница';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Первая страница на панели';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Страница, которая открывается при запуске приложения. Можно выбрать только включённые модули; если выбранный модуль отключён, открывается первая страница на панели.';
       case 'stash':
         return 'Закладки';
       case 'stash_added_multiple':
@@ -522463,11 +522463,11 @@ extension on _StringsTh {
       case 'srt_import_title_hint':
         return 'ชื่อหนังสือ';
       case 'startup_module':
-        return 'Startup page';
+        return 'หน้าเริ่มต้น';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'หน้าแรกในแถบ';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'หน้าที่แสดงเมื่อเปิดแอป เลือกได้เฉพาะโมดูลที่เปิดใช้อยู่ หากโมดูลที่เลือกถูกปิด จะใช้หน้าแรกในแถบแทน';
       case 'stash':
         return 'ที่เก็บชั่วคราว';
       case 'stash_added_multiple':
@@ -538777,11 +538777,11 @@ extension on _StringsTr {
       case 'srt_import_title_hint':
         return 'Kitap başlığı';
       case 'startup_module':
-        return 'Startup page';
+        return 'Başlangıç sayfası';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Çubuktaki ilk sayfa';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Uygulama açıldığında gösterilen sayfa. Yalnızca etkin modüller seçilebilir; seçilen modül kapatılırsa çubuktaki ilk sayfa kullanılır.';
       case 'stash':
         return 'Depo';
       case 'stash_added_multiple':
@@ -555086,11 +555086,11 @@ extension on _StringsVi {
       case 'srt_import_title_hint':
         return 'Tên sách';
       case 'startup_module':
-        return 'Startup page';
+        return 'Trang khởi động';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return 'Trang đầu tiên trên thanh';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return 'Trang hiển thị khi mở ứng dụng. Chỉ chọn được các mô-đun đang bật; nếu mô-đun đã chọn bị tắt, trang đầu tiên trên thanh sẽ được dùng.';
       case 'stash':
         return 'Lưu tạm';
       case 'stash_added_multiple':
@@ -587410,11 +587410,11 @@ extension on _StringsZhHk {
       case 'srt_import_title_hint':
         return '書名';
       case 'startup_module':
-        return 'Startup page';
+        return '啟動頁';
       case 'startup_module_default':
-        return 'First page in the bar';
+        return '欄中第一個頁面';
       case 'startup_module_hint':
-        return 'Page shown when the app opens. Only enabled modules can be picked; if the chosen one is turned off, the first page in the bar is used.';
+        return '開啟 App 時顯示的頁面，只能從已開啟的功能模組中選擇；所選模組被關閉時改為欄中第一個頁面。';
       case 'stash':
         return '暫存';
       case 'stash_added_multiple':
