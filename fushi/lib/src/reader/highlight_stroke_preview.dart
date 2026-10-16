@@ -370,6 +370,9 @@ class HighlightStrokePreviewPainter extends CustomPainter {
     );
   }
 
+  /// 当前样式的自然粗细（em），与 JS `MARK_NATURAL_EM` 同表。
+  double get _natural => kHighlightStrokeNaturalEm[config.style] ?? 1;
+
   Paint _fill(double opacity) => Paint()
     ..color = color.withValues(alpha: opacity.clamp(0.0, 1.0))
     ..isAntiAlias = true;
@@ -403,7 +406,7 @@ class HighlightStrokePreviewPainter extends CustomPainter {
       case HighlightStrokeStyle.classic:
         return;
       case HighlightStrokeStyle.marker:
-        final ({double top, double bot}) b = _band(l, 1, r);
+        final ({double top, double bot}) b = _band(l, _natural, r);
         final double h = b.bot - b.top;
         final double s = h * (0.18 + 0.22 * rough);
         final double a = l.u0 - em * (0.06 + r.next() * 0.1 * rough);
@@ -433,7 +436,7 @@ class HighlightStrokePreviewPainter extends CustomPainter {
           _fill(op * 0.28),
         );
       case HighlightStrokeStyle.fluo:
-        final ({double top, double bot}) b = _band(l, 1, r);
+        final ({double top, double bot}) b = _band(l, _natural, r);
         final double h = b.bot - b.top;
         final double s = h * 0.18;
         final double a = l.u0 - em * 0.1;
@@ -480,7 +483,7 @@ class HighlightStrokePreviewPainter extends CustomPainter {
           );
         }
       case HighlightStrokeStyle.rough:
-        final ({double top, double bot}) b = _band(l, 1, r);
+        final ({double top, double bot}) b = _band(l, _natural, r);
         final double w = b.bot - b.top;
         final double vc = (b.top + b.bot) / 2;
         for (int k = 0; k < 2; k++) {
@@ -523,7 +526,7 @@ class HighlightStrokePreviewPainter extends CustomPainter {
           _fill(math.min(0.9, op * 1.35)),
         );
       case HighlightStrokeStyle.crayon:
-        final ({double top, double bot}) b = _band(l, 1.04, r);
+        final ({double top, double bot}) b = _band(l, _natural, r);
         final double h = b.bot - b.top;
         final double a = l.u0 - em * 0.1;
         final double z = l.u1 + em * (0.05 + r.next() * 0.12 * rough);
@@ -555,7 +558,7 @@ class HighlightStrokePreviewPainter extends CustomPainter {
         }
         canvas.restore();
       case HighlightStrokeStyle.tape:
-        final ({double top, double bot}) b = _band(l, 1.08, r);
+        final ({double top, double bot}) b = _band(l, _natural, r);
         final double h = b.bot - b.top;
         final double a = l.u0 - em * 0.16;
         final double z = l.u1 + em * 0.16;

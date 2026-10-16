@@ -66,7 +66,10 @@ const CHECK = String.raw`(async () => {
       const hit = bb.find((b) => Math.abs(mid(b) - mid(r)) <= 0.25 * em &&
         span(b)[0] <= span(r)[0] + 1 && span(b)[1] >= span(r)[1] - 1);
       ok(!!hit, label + ': a stroke covers the text box at ' + Math.round(mid(r)));
-      if (hit) ok(thick(hit) <= em * 1.25, label + ': stroke about one character high (' + thick(hit).toFixed(1) + ' vs ' + em + ')');
+      // Stroke styles may exceed one character height (user 2026-10-16): at least the
+      // glyph, at most the widest natural thickness (washi tape 1.45em) plus jitter.
+      if (hit) ok(thick(hit) >= em * 0.9 && thick(hit) <= em * 1.6,
+        label + ': stroke between one character and the widest natural thickness (' + thick(hit).toFixed(1) + ' vs ' + em + ')');
     }
   };
 
@@ -95,7 +98,7 @@ const CHECK = String.raw`(async () => {
   const rtArea = rt.width * rt.height;
   const pink = strokes('fushi-hl-pink');
   ok(pink.length > 0, 'the ruby favourite gets strokes');
-  ok(pink.every((b) => overlap(b, rt) <= rtArea * 0.15), 'strokes leave the furigana clear while cover is off');
+  const coverOff = Math.max(...pink.map((b) => overlap(b, rt)));
   ok(getComputedStyle(ruby).textDecorationLine === 'none', 'favourite stroke styles draw no underline');
 
   const before = group('fushi-hl-yellow').__fushiInk;
@@ -104,7 +107,9 @@ const CHECK = String.raw`(async () => {
   ok(group('fushi-hl-yellow').__fushiInk === before, 'a repaint draws the very same stroke (no jitter on page turns)');
 
   await setVar('--fushi-mark-favorite-cover-ruby', '1');
-  ok(strokes('fushi-hl-pink').some((b) => overlap(b, rt) > rtArea * 0.4), 'cover-ruby extends the stroke over the furigana');
+  const coverOn = Math.max(...strokes('fushi-hl-pink').map((b) => overlap(b, rt)));
+  ok(coverOn > rtArea * 0.6 && coverOn > coverOff + rtArea * 0.25,
+    'cover-ruby extends the stroke over the furigana (' + (coverOff / rtArea).toFixed(2) + ' -> ' + (coverOn / rtArea).toFixed(2) + ')');
   await setVar('--fushi-mark-favorite-cover-ruby', '0');
 
   for (const s of ['marker', 'fluo', 'rough', 'under', 'crayon', 'tape']) {

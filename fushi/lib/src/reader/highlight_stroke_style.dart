@@ -104,7 +104,7 @@ class HighlightStrokeConfig {
 
   final HighlightStrokeStyle style;
 
-  /// 笔划粗细，相对「一个字高」（1em）的倍数。
+  /// 笔划粗细：乘在该样式自然粗细（[kHighlightStrokeNaturalEm]）上的倍数。
   final double thickness;
 
   /// 颜色浓度（0–1 的不透明度）。颜色本身仍由各类高亮原有的颜色设置决定。
@@ -150,8 +150,22 @@ class HighlightStrokeConfig {
       Object.hash(style, thickness, opacity, coverRuby, roughness, animate);
 }
 
-const double kHighlightStrokeThicknessMin = 0.6;
-const double kHighlightStrokeThicknessMax = 1.6;
+/// 各笔触的自然粗细（em，粗细倍数 1.0 时的笔划厚度）。经典窄条守「一个字高」；笔触样式以
+/// 好看为先，允许超过字高、擦到甚至盖到振假名（用户 2026-10-16 拍板），默认取几乎填满行距
+/// 的粗细。与窄条层 JS 的 `MARK_NATURAL_EM` 逐项相同（测试钉住）。半截荧光只涂字的下半截，
+/// 不在表里。
+const Map<HighlightStrokeStyle, double> kHighlightStrokeNaturalEm =
+    <HighlightStrokeStyle, double>{
+      HighlightStrokeStyle.marker: 1.35,
+      HighlightStrokeStyle.fluo: 1.3,
+      HighlightStrokeStyle.rough: 1.25,
+      HighlightStrokeStyle.crayon: 1.38,
+      HighlightStrokeStyle.tape: 1.45,
+    };
+
+/// 粗细倍数（乘在 [kHighlightStrokeNaturalEm] 上）。
+const double kHighlightStrokeThicknessMin = 0.5;
+const double kHighlightStrokeThicknessMax = 1.8;
 const double kHighlightStrokeThicknessDefault = 1.0;
 
 const double kHighlightStrokeOpacityMin = 0.15;

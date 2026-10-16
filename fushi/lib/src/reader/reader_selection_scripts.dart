@@ -863,7 +863,12 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       for (var i = 1; i < n; i++) out.push([from + (to - from) * i / n, v + (rnd() - 0.5) * 2 * amp]);
       return out;
     };
-    // 笔划的跨行上下沿：thickness 以 1em（「一个字高」，与经典窄条同宽）为基准缩放，居中于墨迹中线；
+    // 各笔触的自然粗细（em）。经典窄条守「一个字高」；选了笔触样式就以好看为先，允许超过字高、
+    // 擦到甚至盖到振假名（用户 2026-10-16「使用了这种自定义样式应该可付出一点代价可以超过字高，
+    // 主要是要更美观」），默认取参考图那种几乎填满行距的粗细。与 Dart 的 kHighlightStrokeNaturalEm
+    // 逐项相同（测试钉住）。半截荧光只涂下半截，不在表里。
+    var MARK_NATURAL_EM = { marker: 1.35, fluo: 1.3, rough: 1.25, crayon: 1.38, tape: 1.45 };
+    // 笔划的跨行上下沿：自然粗细 × 用户粗细倍数，居中于墨迹中线；
     // 盖住振假名时 over 侧多加一个注音高（约 0.6em）。
     var markBand = function(line, k, cfg, rnd) {
       var half = line.em * k * cfg.thickness / 2;
@@ -874,7 +879,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
     var MARKERS = {
       // 斜切马克笔：逐行一条，两端平行斜切，收笔端微毛并略积墨。
       marker: function(l, c) {
-        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1, cfg, r), h = b.bot - b.top;
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, MARK_NATURAL_EM.marker, cfg, r), h = b.bot - b.top;
         var s = h * (0.18 + 0.22 * cfg.rough);
         var a = l.u0 - em * (0.06 + r() * 0.1 * cfg.rough), z = l.u1 + em * (0.04 + r() * 0.16 * cfg.rough);
         var amp = h * 0.025 * cfg.rough;
@@ -888,7 +893,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       },
       // 水性荧光笔：边缘被纸纤维晕开（位移滤镜），起笔收笔更深（渐变），中段几道浅色拖痕。
       fluo: function(l, c) {
-        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1, cfg, r), h = b.bot - b.top, s = h * 0.18;
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, MARK_NATURAL_EM.fluo, cfg, r), h = b.bot - b.top, s = h * 0.18;
         var a = l.u0 - em * 0.1, z = l.u1 + em * (0.04 + r() * 0.14 * cfg.rough);
         var gid = c.uid + 'g';
         c.defs.push('<linearGradient id="' + gid + '" x1="0" y1="0" x2="' + (l.v ? 0 : 1) + '" y2="' + (l.v ? 1 : 0) + '">' +
@@ -909,7 +914,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       },
       // 手绘双笔：两道略带弧度的粗笔叠画，重叠处更深（rough-notation 的 highlight 画法）。
       rough: function(l, c) {
-        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1, cfg, r), w = b.bot - b.top, vc = (b.top + b.bot) / 2;
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, MARK_NATURAL_EM.rough, cfg, r), w = b.bot - b.top, vc = (b.top + b.bot) / 2;
         var out = '';
         for (var k = 0; k < 2; k++) {
           var a = l.u0 - em * (0.04 + r() * 0.14 * cfg.rough), z = l.u1 + em * r() * 0.18 * cfg.rough;
@@ -933,7 +938,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       },
       // 彩铅涂抹：纸面颗粒把颜色打散（颗粒滤镜），边缘不规则。
       crayon: function(l, c) {
-        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1.04, cfg, r), h = b.bot - b.top;
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, MARK_NATURAL_EM.crayon, cfg, r), h = b.bot - b.top;
         var a = l.u0 - em * 0.1, z = l.u1 + em * (0.05 + r() * 0.12 * cfg.rough);
         var amp = h * (0.02 + 0.06 * cfg.rough);
         var pts = [[a, b.top + h * 0.08]].concat(wobble(a, z, b.top, amp, em * 0.5, r),
@@ -944,7 +949,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       },
       // 和纸胶带：半透明胶带，两端锯齿撕口、略微歪斜，叠一层细斜纹。
       tape: function(l, c) {
-        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, 1.08, cfg, r), h = b.bot - b.top;
+        var r = c.rnd, cfg = c.cfg, em = l.em, b = markBand(l, MARK_NATURAL_EM.tape, cfg, r), h = b.bot - b.top;
         var a = l.u0 - em * 0.16, z = l.u1 + em * 0.16, tilt = (r() - 0.5) * h * 0.2 * cfg.rough;
         var torn = function(u, top, bot, dir) {
           var out = [];

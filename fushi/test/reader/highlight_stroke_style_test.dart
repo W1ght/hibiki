@@ -60,6 +60,29 @@ void main() {
     }
   });
 
+  test('JS MARK_NATURAL_EM equals the Dart natural thickness table', () {
+    final RegExpMatch? m = RegExp(
+      r'var MARK_NATURAL_EM = \{([^}]*)\};',
+    ).firstMatch(js);
+    expect(m, isNotNull, reason: 'MARK_NATURAL_EM not found');
+    final Map<String, double> jsTable = <String, double>{
+      for (final RegExpMatch e in RegExp(
+        r'([a-z]+): ([0-9.]+)',
+      ).allMatches(m!.group(1)!))
+        e.group(1)!: double.parse(e.group(2)!),
+    };
+    expect(jsTable, <String, double>{
+      for (final MapEntry<HighlightStrokeStyle, double> e
+          in kHighlightStrokeNaturalEm.entries)
+        e.key.wireName: e.value,
+    });
+    // 笔触样式以好看为先：除半截外，自然粗细都超过一个字高（用户 2026-10-16）。
+    for (final HighlightStrokeStyle s in HighlightStrokeStyle.values) {
+      if (!s.isStroke || s == HighlightStrokeStyle.under) continue;
+      expect(kHighlightStrokeNaturalEm[s], greaterThan(1), reason: s.wireName);
+    }
+  });
+
   test('JS MARK_KINDS and group mapping cover every Dart kind', () {
     expect(jsList('MARK_KINDS'), <String>[
       for (final HighlightKind k in HighlightKind.values) k.cssName,
@@ -148,7 +171,7 @@ void main() {
         ),
       });
       expect(css, contains('--fushi-mark-lookup-style: marker;'));
-      expect(css, contains('--fushi-mark-lookup-thickness: 1.6;'));
+      expect(css, contains('--fushi-mark-lookup-thickness: 1.8;'));
       expect(css, contains('--fushi-mark-lookup-opacity: 0.4;'));
       expect(css, contains('--fushi-mark-lookup-cover-ruby: 1;'));
       expect(css, contains('--fushi-mark-lookup-roughness: 0;'));
