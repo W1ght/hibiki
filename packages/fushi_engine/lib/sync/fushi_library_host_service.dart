@@ -26,18 +26,70 @@ import 'package:path/path.dart' as p;
 //
 // `PUT /api/library/books/<title>` 的 body 是**裸 .epub 字节流**（无 multipart、
 // 无 sidecar、无 query），所以随行元数据只能走自定义 header——沿用视频推送
-// `X-Hibiki-Video-Title` 的既有先例。两侧共用这两个常量，避免字面量各写一份漂开。
+// [kVideoTitleHeader] 的既有先例。两侧共用这两个常量，避免字面量各写一份漂开。
 //
 // ⚠️ header 值只收 ASCII：写侧必须 `Uri.encodeComponent`，读侧 `Uri.decodeComponent`
 // （日文书名直接塞进 header 会抛）。additive：没改过名就不发，旧 host 对未知 header
 // 静默忽略，旧 client 不发 → 新 host 读到 null，两个方向都零破坏。
 
 /// 本机用户给这本书改的显示名（`Uri.encodeComponent` 编码）。
-const String kBookDisplayTitleHeader = 'X-Hibiki-Book-Display-Title';
+const String kBookDisplayTitleHeader = 'X-Fushi-Book-Display-Title';
 
 /// [kBookDisplayTitleHeader] 的 LWW 毫秒戳（十进制 ASCII）。缺失 = 0 =「时刻未知」，
 /// 收下的一方按 LWW 平局处理（保留本机），见 `FushiDatabase.setPrefIfNewer`。
-const String kBookDisplayTitleAtHeader = 'X-Hibiki-Book-Display-Title-At';
+const String kBookDisplayTitleAtHeader = 'X-Fushi-Book-Display-Title-At';
+
+// ── 视频 / 字幕 push 的元数据 header ─────────────────────────────────────────
+
+/// `PUT /api/library/videos/<id>` 的视频标题（`Uri.encodeComponent` 编码）。
+const String kVideoTitleHeader = 'X-Fushi-Video-Title';
+
+/// `PUT /api/library/videos/<id>` 的原始文件名（`Uri.encodeComponent` 编码）。
+const String kVideoFilenameHeader = 'X-Fushi-Video-Filename';
+
+/// `PUT /api/library/videos/<id>/subtitle` 的字幕后缀（`.srt` / `.ja.srt` …）。
+/// 同名也用作「设为默认字幕」上传的**响应头**：host 回报实际落盘后缀（BUG-2728）。
+const String kSubtitleSuffixHeader = 'X-Fushi-Subtitle-Suffix';
+
+/// `PUT /api/library/videos/<id>/subtitle` 带 `1` = 设为这一集的默认字幕（BUG-2728）。
+const String kSubtitleDefaultHeader = 'X-Fushi-Subtitle-Default';
+
+// ── 改名前的旧 header 名（Hibiki → Fushi，2026-10）─────────────────────────────
+//
+// 互联两端可能跑不同版本：改名前的 client / host 只认 `X-Hibiki-*`。旧名照样**发**
+// 也照样**读**：
+// * **发送**新旧两个名字都发（[setInterconnectHeader]）：改名前的 host 只读旧名，
+//   只发新名会让字幕后缀读成空串、上传直接 400，视频标题 / 书名也静默丢失。
+//   host 的「设为默认字幕」响应头同理新旧都回（见 video.part）。
+// * **接收**先读新名、读不到再读旧名（[interconnectHeaderNameCandidates]）。
+//
+// 清理条件：确认不再有改名前（2026-10 之前）的 app / fushi_server 在用后，删掉
+// 本表、[setInterconnectHeader] 的旧名双发、[interconnectHeaderNameCandidates] 的
+// 旧名回退与那条双发响应头。
+
+/// 新 header 名 → 改名前的旧名。
+const Map<String, String> kLegacyInterconnectHeaderNames = <String, String>{
+  kBookDisplayTitleHeader: 'X-Hibiki-Book-Display-Title',
+  kBookDisplayTitleAtHeader: 'X-Hibiki-Book-Display-Title-At',
+  kVideoTitleHeader: 'X-Hibiki-Video-Title',
+  kVideoFilenameHeader: 'X-Hibiki-Video-Filename',
+  kSubtitleSuffixHeader: 'X-Hibiki-Subtitle-Suffix',
+  kSubtitleDefaultHeader: 'X-Hibiki-Subtitle-Default',
+};
+
+/// 发送一个互联自定义 header：新名与改名前的旧名（若有）各写一份同值。
+/// 所有请求头发送点都必须走这里，不得直接 `headers.set(kXxxHeader, …)`。
+void setInterconnectHeader(HttpHeaders headers, String name, String value) {
+  headers.set(name, value);
+  final String? legacy = kLegacyInterconnectHeaderNames[name];
+  if (legacy != null) headers.set(legacy, value);
+}
+
+/// 接收 [name] 时按顺序尝试的 header 名：新名在前，改名前的旧名（若有）在后。
+List<String> interconnectHeaderNameCandidates(String name) {
+  final String? legacy = kLegacyInterconnectHeaderNames[name];
+  return legacy == null ? <String>[name] : <String>[name, legacy];
+}
 
 // ── 键集 union diff（本地音频 / 有声书 / 词典共享）──────────────────────────
 
@@ -229,7 +281,7 @@ abstract interface class AudiobookSubtitleHost {
 /// host 端「client 导入的字幕设为该视频默认字幕」的**可选**能力（远端视频导入 /
 /// 重定时字幕自动上传）。与 [AudiobookDelayHost] 同范式：不并进主接口，免得十余个
 /// 测试 fake 全量补桩；server 用 `is` 探测，实现了才在 `/api/capabilities` 声明
-/// `liveLibrary.videoSubtitleDefault`；不实现时带 `X-Hibiki-Subtitle-Default` 的 PUT
+/// `liveLibrary.videoSubtitleDefault`；不实现时带 [kSubtitleDefaultHeader] 的 PUT
 /// 回 409、不落盘——**不能**退回 [FushiLibraryHostService.importVideoSubtitle]，那条
 /// 按 client 报的后缀覆盖同名旧字幕且不留备份（BUG-2728）。
 ///
@@ -1723,6 +1775,78 @@ class VideoPlaybackSyncState {
       remotePositionMs: remotePositionMs,
       remoteUpdatedAtMs: remoteUpdatedAtMs,
     );
+
+/// host 接收对端时间戳时允许的「未来」余量：超过 host 当前时刻 + 本值的时间戳视为
+/// 设备时钟错误。不截断的话，一台时钟走快的设备写下的戳会在所有 LWW 比较里永远
+/// 胜出，之后任何端的正常写入都盖不过它（BUG-3367）。
+const int kSyncFutureStampToleranceMs = 5 * 60 * 1000;
+
+/// 把对端上报的时间戳 [atMs] 截到 `nowMs + kSyncFutureStampToleranceMs`。纯函数。
+int capFutureSyncStamp(int atMs, {required int nowMs}) {
+  final int cap = nowMs + kSyncFutureStampToleranceMs;
+  return atMs > cap ? cap : atMs;
+}
+
+/// host 已存时间戳 [storedAtMs] 在比较时的有效值：超出未来余量的旧毒戳（截断规则
+/// 上线前写入的）不可信，按 0（「无时间戳」）参与比较，让下一次正常上报直接覆盖、
+/// 自愈；正常戳原样返回。纯函数。
+int trustedStoredSyncStamp(int storedAtMs, {required int nowMs}) =>
+    storedAtMs > nowMs + kSyncFutureStampToleranceMs ? 0 : storedAtMs;
+
+/// 互联播放位置（视频 / 有声书）的三方判定（BUG-3367）。纯函数。
+///
+/// 与书籍进度 [resolveBookProgressThreeWay]（BUG-2506）同口径，只是位置是单维
+/// 毫秒：此前这里是纯「取较新时间戳」（[resolvePositionLww]），两台设备在两次同步
+/// 之间各自看 / 听过同一条目时，后同步的一端会被静默盖掉，用户毫无察觉。判定看的
+/// 是**位置基线**（上次两端达成一致的位置，`sync_baselines` 一行），不看时间戳：
+/// - 一端「无记录」（updatedAtMs<=0，含没带时间戳的旧数据）→ 另一端直接胜出；
+/// - 两端位置相同 → [BookProgressSyncAction.synced]（调用方只对齐时间戳）；
+/// - 没有基线且两端位置不同 → 退回旧口径 LWW（较新时间戳胜，平局取较远位置）一次，
+///   胜出端落地时调用方顺带记下基线，此后才走三方判定。升级前从没记过基线，若这里
+///   直接判冲突，升级后首轮会把每条「只有一端动过」的条目全弹出来；
+
+/// - 有基线：只一端偏离 → 那端胜；两端都偏离 → [BookProgressSyncAction.conflict]，
+///   谁都不覆盖。
+///
+/// 结论枚举复用 [BookProgressSyncAction]：四个结论的含义与书籍完全相同。
+BookProgressSyncAction resolvePlaybackPositionThreeWay({
+  required ({int positionMs, int updatedAtMs}) local,
+  required ({int positionMs, int updatedAtMs}) remote,
+  required int? basePositionMs,
+}) {
+  final bool localEmpty = local.updatedAtMs <= 0;
+  final bool remoteEmpty = remote.updatedAtMs <= 0;
+  if (localEmpty && remoteEmpty) {
+    // 两端都没有时间戳（旧数据）：沿用 LWW 的平局规则「取较远位置」。
+    if (local.positionMs == remote.positionMs) {
+      return BookProgressSyncAction.synced;
+    }
+    return local.positionMs > remote.positionMs
+        ? BookProgressSyncAction.pushLocal
+        : BookProgressSyncAction.applyRemote;
+  }
+  if (remoteEmpty) return BookProgressSyncAction.pushLocal;
+  if (localEmpty) return BookProgressSyncAction.applyRemote;
+  if (local.positionMs == remote.positionMs) {
+    return BookProgressSyncAction.synced;
+  }
+  if (basePositionMs == null) {
+    if (local.updatedAtMs > remote.updatedAtMs) {
+      return BookProgressSyncAction.pushLocal;
+    }
+    if (remote.updatedAtMs > local.updatedAtMs) {
+      return BookProgressSyncAction.applyRemote;
+    }
+    return local.positionMs > remote.positionMs
+        ? BookProgressSyncAction.pushLocal
+        : BookProgressSyncAction.applyRemote;
+  }
+  final bool localMoved = local.positionMs != basePositionMs;
+  final bool remoteMoved = remote.positionMs != basePositionMs;
+  if (localMoved && remoteMoved) return BookProgressSyncAction.conflict;
+  if (localMoved) return BookProgressSyncAction.pushLocal;
+  return BookProgressSyncAction.applyRemote;
+}
 
 // ── 有声书进度（BUG-471）──────────────────────────────────────────────────────
 

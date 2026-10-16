@@ -1,4 +1,4 @@
-// Hibiki fork: pick which onnxruntime.dll this process uses, before anything
+// Fushi fork: pick which onnxruntime.dll this process uses, before anything
 // touches ONNX Runtime.
 //
 // The app bundles the latest CPU core (Microsoft.ML.OnnxRuntime, matched to the

@@ -1,4 +1,4 @@
-// Hibiki fork: see ort_runtime_loader.h.
+// Fushi fork: see ort_runtime_loader.h.
 
 #include "src/ort_runtime_loader.h"
 

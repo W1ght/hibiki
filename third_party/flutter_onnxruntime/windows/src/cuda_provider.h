@@ -1,4 +1,4 @@
-// Hibiki fork: CUDA support for the Windows plugin.
+// Fushi fork: CUDA support for the Windows plugin.
 //
 // Two independent pieces live here:
 //

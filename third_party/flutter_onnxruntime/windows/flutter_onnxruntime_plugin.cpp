@@ -100,7 +100,7 @@ class FlutterOnnxruntimePluginImpl {
 public:
   FlutterOnnxruntimePluginImpl() = default;
 
-  // Manager instances. Hibiki fork: created on the first call that needs ONNX
+  // Manager instances. Fushi fork: created on the first call that needs ONNX
   // Runtime (EnsureRuntime), not at plugin registration — both constructors
   // call into ORT, and the core must stay unbound until the app has had the
   // chance to selectRuntime() a downloaded DirectML core.
@@ -121,13 +121,13 @@ public:
     return std::string();
   }
 
-  // Hibiki fork: replies are marshalled back here; heavy ORT work runs on the
+  // Fushi fork: replies are marshalled back here; heavy ORT work runs on the
   // two worker queues (declared after the dispatcher so they are joined before
   // the dispatcher window goes away).
   PlatformThreadDispatcher dispatcher_;
   WorkQueue gpuQueue_{"flutter_onnxruntime gpu"};
   WorkQueue cpuQueue_{"flutter_onnxruntime cpu"};
-  // Hibiki delta #11: every CPU session gets its own worker thread (created on
+  // Fushi delta #11: every CPU session gets its own worker thread (created on
   // first use, dropped after close) so independent CPU sessions run
   // concurrently — e.g. two greedy-search graphs each taking half of a batch.
   // ORT sessions are safe to Run from different threads; only GPU (DirectML)
@@ -201,7 +201,7 @@ void FlutterOnnxruntimePlugin::HandleMethodCall(
     return;
   }
 
-  // Hibiki fork: methods that must not bind ONNX Runtime.
+  // Fushi fork: methods that must not bind ONNX Runtime.
   if (method_name == "probeCuda") {
     HandleProbeCuda(method_call, std::move(result));
     return;
@@ -607,7 +607,7 @@ void FlutterOnnxruntimePlugin::HandleCreateSession(
         session_options.SetInterOpNumThreads(std::get<int32_t>(inter_threads_it->second));
       }
 
-      // Hibiki: pin named free dimensions (see OrtSessionOptions.freeDimensionOverrides).
+      // Fushi: pin named free dimensions (see OrtSessionOptions.freeDimensionOverrides).
       auto free_dims_it = options_map.find(flutter::EncodableValue("freeDimensionOverrides"));
       if (free_dims_it != options_map.end() && std::holds_alternative<flutter::EncodableMap>(free_dims_it->second)) {
         const auto &free_dims = std::get<flutter::EncodableMap>(free_dims_it->second);
@@ -671,7 +671,7 @@ void FlutterOnnxruntimePlugin::HandleCreateSession(
             // No specific options needed here usually.
             continue;
           } else if (provider == "CUDA") {
-            // Hibiki fork: CUDA is the runtime-registered plugin EP
+            // Fushi fork: CUDA is the runtime-registered plugin EP
             // (registerCudaRuntime), appended through
             // SessionOptionsAppendExecutionProvider_V2. The DirectML build of
             // the core has no built-in CUDA provider, and the legacy
@@ -757,7 +757,7 @@ void FlutterOnnxruntimePlugin::HandleCreateSession(
   }
 }
 
-// Hibiki: DXGI budget for adapter `deviceId` (default 0). Errors as
+// Fushi: DXGI budget for adapter `deviceId` (default 0). Errors as
 // UNAVAILABLE so the Dart side can treat "unknown" distinctly from a number.
 void FlutterOnnxruntimePlugin::HandleGetDeviceMemoryInfo(
     const flutter::MethodCall<flutter::EncodableValue> &method_call,
@@ -790,7 +790,7 @@ void FlutterOnnxruntimePlugin::HandleGetAvailableProviders(
   try {
     // Get available providers from ONNX Runtime
     std::vector<std::string> providers = Ort::GetAvailableProviders();
-    // Hibiki fork: plugin EPs registered at runtime (CUDA) are not reported by
+    // Fushi fork: plugin EPs registered at runtime (CUDA) are not reported by
     // GetAvailableProviders; merge the EP names GetEpDevices returned when the
     // plugin was registered.
     for (const auto &ep_name : impl_->sessionManager_->registeredEpNames()) {
@@ -840,9 +840,9 @@ void FlutterOnnxruntimePlugin::HandleGetAvailableProviders(
   }
 }
 
-// Hibiki: CUDA driver probe (nvcuda.dll only; works before the CUDA runtime is
+// Fushi: CUDA driver probe (nvcuda.dll only; works before the CUDA runtime is
 // downloaded). Runs on the CPU creation queue: cuInit can take a while.
-// Hibiki: map a downloaded onnxruntime.dll (the DirectML core) before ORT is
+// Fushi: map a downloaded onnxruntime.dll (the DirectML core) before ORT is
 // first bound. Platform thread, synchronous: LoadLibrary of a ~17 MB DLL. The
 // reply is {ok, error}; an already-bound process answers ok only for the same
 // path (switching needs a restart).
@@ -903,7 +903,7 @@ void FlutterOnnxruntimePlugin::HandleProbeCuda(
   });
 }
 
-// Hibiki: register the CUDA plugin EP from args["dir"]. Runs on the GPU queue
+// Fushi: register the CUDA plugin EP from args["dir"]. Runs on the GPU queue
 // so it is ordered with GPU session creation. A registration problem does not
 // fail the call: the reply carries {ok, error, deviceCount}.
 void FlutterOnnxruntimePlugin::HandleRegisterCudaRuntime(

@@ -1,4 +1,4 @@
-// Hibiki fork: see cuda_provider.h.
+// Fushi fork: see cuda_provider.h.
 
 #include "src/cuda_provider.h"
 

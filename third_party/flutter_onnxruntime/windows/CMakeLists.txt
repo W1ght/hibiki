@@ -9,7 +9,7 @@ project(${PROJECT_NAME} LANGUAGES CXX)
 # This value is used when generating builds using this plugin, so it must not be changed.
 set(PLUGIN_NAME "flutter_onnxruntime_plugin")
 
-# === ONNX Runtime configuration (Hibiki fork) ===
+# === ONNX Runtime configuration (Fushi fork) ===
 # Bundled: the latest CPU core (Microsoft.ML.OnnxRuntime). It is the revision the
 # official CUDA plugin EP is built against, so CUDA (plugin-ep-cuda + cuBLAS /
 # cuDNN, downloaded by the app and registered at runtime, src/cuda_provider.cc)
@@ -92,7 +92,7 @@ set(flutter_onnxruntime_bundled_libraries "${ONNXRUNTIME_DLL}" "${ONNXRUNTIME_PR
 
 # Define Windows-specific preprocessor macros
 add_definitions(-DWIN32_LEAN_AND_MEAN -DNOMINMAX -DUNICODE -D_UNICODE)
-# Hibiki fork: the C++ API is bound explicitly once the core is chosen
+# Fushi fork: the C++ API is bound explicitly once the core is chosen
 # (OrtRuntimeLoader::Ensure), never by a static initializer at DLL load.
 add_definitions(-DORT_API_MANUAL_INIT)
 

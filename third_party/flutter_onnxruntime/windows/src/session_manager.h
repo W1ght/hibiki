@@ -23,7 +23,7 @@ class TensorManager;
 
 // Session information structure
 struct SessionInfo {
-  // shared_ptr (Hibiki fork): a run in flight on a worker thread keeps the
+  // shared_ptr (Fushi fork): a run in flight on a worker thread keeps the
   // session alive even if closeSession() erases the map entry meanwhile.
   std::shared_ptr<Ort::Session> session;
   std::vector<std::string> input_names;
@@ -88,7 +88,7 @@ public:
                                        const std::vector<std::string> &input_names,
                                        Ort::RunOptions *run_options = nullptr);
 
-  // Hibiki fork: CUDA plugin execution provider on this manager's env (see
+  // Fushi fork: CUDA plugin execution provider on this manager's env (see
   // cuda_provider.h). Registration is process-wide state of env_.
   CudaRegistrationResult registerCudaPlugin(const std::wstring &dir);
   bool isCudaRegistered();
@@ -115,7 +115,7 @@ private:
   // ONNX Runtime environment
   Ort::Env env_;
 
-  // Hibiki fork: CUDA plugin EP registered on env_. Torn down in the
+  // Fushi fork: CUDA plugin EP registered on env_. Torn down in the
   // destructor after every session and before env_ goes away.
   CudaPluginRegistry cuda_;
 };
