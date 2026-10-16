@@ -122,7 +122,8 @@ const int kAsrHeavyModelInt8Bytes = 700 * 1024 * 1024;
 /// [mobile] 由调用方给（`Platform.isAndroid || Platform.isIOS`，测试直接传），
 /// 本函数不碰平台单例。
 AsrModelFit asrModelFitFor(AsrModelPack pack, {required bool mobile}) {
-  final bool heavy = pack.fp32GpuMinBudgetBytes != null ||
+  final bool heavy =
+      pack.fp32GpuMinBudgetBytes != null ||
       pack.totalBytes(AsrEncoderVariant.int8) > kAsrHeavyModelInt8Bytes;
   if (!heavy) return AsrModelFit.light;
   return mobile ? AsrModelFit.heavyOnMobile : AsrModelFit.desktop;
@@ -146,6 +147,9 @@ List<AsrModelPack> fushiAsrBasePacks() {
         ])
       else
         pack,
+    // 不进默认注册表的可选包（Kitsune 0.1B，CC BY-NC）：排在最后，所以没做过
+    // 选择的用户默认包一个都不变；选中后按 choices 置顶（不变式 2）。
+    ...kAsrOptionalModelPacks,
   ];
 }
 
@@ -219,11 +223,11 @@ class AsrModelCatalog {
   }
 
   Object toJson() => <String, Object?>{
-        'packs': <Object>[
-          for (final AsrModelPack pack in customPacks) pack.toJson()
-        ],
-        'choices': choices,
-      };
+    'packs': <Object>[
+      for (final AsrModelPack pack in customPacks) pack.toJson(),
+    ],
+    'choices': choices,
+  };
 
   /// 选中某语言用哪个包。[packId] 为 null 表示回到默认（删掉这条选择）。
   AsrModelCatalog withChoice(AsrLanguage language, String? packId) {
@@ -247,7 +251,7 @@ class AsrModelCatalog {
     AsrModelPack pack,
   ) {
     String id = pack.id;
-    for (int n = 2;; n++) {
+    for (int n = 2; ; n++) {
       final AsrModelPack? existing = _packById(customPacks, id);
       if (existing == null || existing.sourceUrl == pack.sourceUrl) break;
       id = '${pack.id}-$n';
@@ -258,26 +262,26 @@ class AsrModelCatalog {
 
   /// 接入（或按 id 覆盖）一个自带包。
   AsrModelCatalog withCustomPack(AsrModelPack pack) => AsrModelCatalog(
-        customPacks: <AsrModelPack>[
-          for (final AsrModelPack existing in customPacks)
-            if (existing.id != pack.id) existing,
-          pack,
-        ],
-        choices: choices,
-      );
+    customPacks: <AsrModelPack>[
+      for (final AsrModelPack existing in customPacks)
+        if (existing.id != pack.id) existing,
+      pack,
+    ],
+    choices: choices,
+  );
 
   /// 移除一个自带包，并把指向它的选择一起清掉——留着会让那些语言在下一次组装时
   /// 找不到包，退化成「选择静默失效」这种查不出来的状态。
   AsrModelCatalog withoutCustomPack(String packId) => AsrModelCatalog(
-        customPacks: <AsrModelPack>[
-          for (final AsrModelPack existing in customPacks)
-            if (existing.id != packId) existing,
-        ],
-        choices: <String, String>{
-          for (final MapEntry<String, String> e in choices.entries)
-            if (e.value != packId) e.key: e.value,
-        },
-      );
+    customPacks: <AsrModelPack>[
+      for (final AsrModelPack existing in customPacks)
+        if (existing.id != packId) existing,
+    ],
+    choices: <String, String>{
+      for (final MapEntry<String, String> e in choices.entries)
+        if (e.value != packId) e.key: e.value,
+    },
+  );
 }
 
 /// 纯函数：目录 → 注册表。规则见文件头两条不变式。
@@ -370,8 +374,8 @@ AsrLocalModelScan scanLocalAsrModelDirectory({
   final File? vad = pick((String n) => n.contains('silero') && isOnnx(n));
 
   File? role(String stem, {required bool wantInt8}) => pick(
-        (String n) => isOnnx(n) && n.startsWith(stem) && int8(n) == wantInt8,
-      );
+    (String n) => isOnnx(n) && n.startsWith(stem) && int8(n) == wantInt8,
+  );
 
   final File? encoderFp32 = role('encoder', wantInt8: false);
   final File? encoderInt8 = role('encoder', wantInt8: true);
@@ -380,22 +384,24 @@ AsrLocalModelScan scanLocalAsrModelDirectory({
   final File? joinerFp32 = role('joiner', wantInt8: false);
   final File? joinerInt8 = role('joiner', wantInt8: true);
 
-  final String packId = id ??
+  final String packId =
+      id ??
       '$kAsrCustomPackIdPrefix${_slug(displayName.isEmpty ? p.basename(dir.path) : displayName)}';
   final String name = displayName.isEmpty ? p.basename(dir.path) : displayName;
 
   AsrModelFile entry(File file, AsrModelRole modelRole) => AsrModelFile(
-        fileName: p.basename(file.path),
-        url: Uri.file(file.path).toString(),
-        expectedBytes: file.existsSync() ? file.lengthSync() : 0,
-        role: modelRole,
-      );
+    fileName: p.basename(file.path),
+    url: Uri.file(file.path).toString(),
+    expectedBytes: file.existsSync() ? file.lengthSync() : 0,
+    role: modelRole,
+  );
 
   // 判据是「认出**任意一个** transducer 角色」而不是「认出 encoder」：只有
   // decoder / joiner 的目录（下载中断、导出脚本没写出 encoder）若落到下面的 CTC
   // 分支，`decoder-*.onnx` 会被当成 CTC 模型收下，用户拿到一个「加成功了」但必定
   // 跑不通的包。正确答案是 incompleteTransducer。
-  final bool looksTransducer = encoderFp32 != null ||
+  final bool looksTransducer =
+      encoderFp32 != null ||
       encoderInt8 != null ||
       decoderFp32 != null ||
       decoderInt8 != null ||
@@ -494,8 +500,9 @@ Future<AsrModelCatalog> readAsrModelCatalog() async {
 /// 解析失败，[loadAsrModelCatalog] 吞掉退回内置表，用户的自带模型配置就无声消失
 /// 了。rename 在同一文件系统上是原子的。
 Future<void> writeAsrModelCatalog(AsrModelCatalog catalog) async {
-  final String text =
-      const JsonEncoder.withIndent('  ').convert(catalog.toJson());
+  final String text = const JsonEncoder.withIndent(
+    '  ',
+  ).convert(catalog.toJson());
   final File file = await asrModelCatalogFile();
   await file.parent.create(recursive: true);
   final File tmp = File('${file.path}.tmp');
@@ -537,17 +544,17 @@ AsrModelPack _withLanguages(AsrModelPack pack, List<AsrLanguage> languages) =>
 
 /// 换一个 id，其余字段逐字照抄（见 [_withLanguages] 同样的理由）。
 AsrModelPack _withId(AsrModelPack pack, String id) => AsrModelPack(
-      languages: pack.languages,
-      id: id,
-      displayName: pack.displayName,
-      sourceUrl: pack.sourceUrl,
-      files: pack.files,
-      architecture: pack.architecture,
-      decoderContextSize: pack.decoderContextSize,
-      indexType: pack.indexType,
-      blankToken: pack.blankToken,
-      fp32GpuMinBudgetBytes: pack.fp32GpuMinBudgetBytes,
-    );
+  languages: pack.languages,
+  id: id,
+  displayName: pack.displayName,
+  sourceUrl: pack.sourceUrl,
+  files: pack.files,
+  architecture: pack.architecture,
+  decoderContextSize: pack.decoderContextSize,
+  indexType: pack.indexType,
+  blankToken: pack.blankToken,
+  fp32GpuMinBudgetBytes: pack.fp32GpuMinBudgetBytes,
+);
 
 AsrModelPack? _packById(List<AsrModelPack> packs, String id) {
   for (final AsrModelPack pack in packs) {

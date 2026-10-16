@@ -7,7 +7,12 @@ import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi_asr_core/asr_core.dart';
 import 'package:fushi/src/asr_host/asr_host.dart';
 import 'package:fushi/src/asr_host/asr_model_catalog.dart';
+import 'package:fushi/src/asr_host/gpu_acceleration.dart';
+import 'package:fushi/src/asr_host/gpu_runtime_pack.dart';
 import 'package:fushi/src/media/audiobook/asr_transcribe_sheet.dart';
+import 'package:fushi/src/media/audiobook/gpu_acceleration_settings_card.dart';
+import 'package:flutter/foundation.dart'
+    show TargetPlatform, defaultTargetPlatform;
 import 'package:fushi/src/utils/components/fushi_staggered_entrance.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/utils.dart';
@@ -24,9 +29,22 @@ import 'package:fushi/utils.dart';
 /// 服务经构造参数注入，最小 widget 测试注 fake；真实接线在
 /// `settings_schema_listening.dart`。
 class AsrModelsSettingsSection extends StatefulWidget {
-  const AsrModelsSettingsSection({required this.service, super.key});
+  const AsrModelsSettingsSection({
+    required this.service,
+    this.showGpuRuntime = true,
+    this.openPackStore = openAsrModelStoreForPack,
+    super.key,
+  });
 
   final AsrTranscriptionService service;
+
+  /// 按包开模型目录。每一行的状态 / 下载 / 删除都只认这一行的包——同一语言
+  /// 有多行时，按语言走 [service] 拿到的永远是当前选中的那个包。
+  final Future<AsrModelStore> Function(AsrModelPack pack) openPackStore;
+
+  /// 是否在 Windows 上附带「GPU 加速环境」一行。它直接读数据根与插件，最小
+  /// widget 测试（只注 fake 服务）传 false。
+  final bool showGpuRuntime;
 
   @override
   State<AsrModelsSettingsSection> createState() =>
@@ -107,9 +125,19 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
     if (mounted) setState(() => row.loading = true);
     AsrTranscribePlan? plan;
     try {
-      plan = await widget.service.plan(
+      // 变体与 EP 推荐按语言取（与转录弹层同一口径）；模型状态换成本行包自己的。
+      final AsrTranscribePlan byLanguage = await widget.service.plan(
         language: row.pack.language,
         preference: AsrAccelerationPreference.auto,
+      );
+      final AsrModelStore store = await widget.openPackStore(row.pack);
+      plan = AsrTranscribePlan(
+        language: byLanguage.language,
+        variant: byLanguage.variant,
+        expectedProvider: byLanguage.expectedProvider,
+        modelStatus: await store.status(byLanguage.variant),
+        probeError: byLanguage.probeError,
+        availableProviders: byLanguage.availableProviders,
       );
     } catch (_) {
       plan = null;
@@ -121,48 +149,59 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
     });
   }
 
-  void _startDownload(_PackRow row) {
+  Future<void> _startDownload(_PackRow row) async {
     final AsrTranscribePlan? plan = row.plan;
     if (plan == null || row.downloading) return;
+    // 下模型阶段顺带下这台机器显卡对应的 GPU 环境（见 gpuRuntimeToDownload）。
+    final GpuRuntimeStore? gpu = await gpuRuntimeToDownloadForUi();
+    final AsrModelStore store = await widget.openPackStore(row.pack);
+    if (!mounted || row.downloading) return;
     int completedBytes = 0;
     String lastFile = '';
     int lastFileTotal = 0;
     setState(() {
-      row.downloadTotal = plan.modelStatus.totalBytes;
+      row.downloadTotal =
+          plan.modelStatus.totalBytes + (gpu?.pendingDownloadBytes ?? 0);
       row.downloadReceived = plan.modelStatus.obtainedBytes;
       row.downloadFile = '';
     });
-    row.downloadSub = widget.service
-        .downloadModel(language: row.pack.language, variant: plan.variant)
-        .listen(
-      (ModelDownloadEvent e) {
-        if (e.fileName != lastFile) {
-          completedBytes += lastFileTotal;
-          lastFile = e.fileName;
-          lastFileTotal = e.totalBytes;
-        }
-        if (!mounted) return;
-        setState(() {
-          row.downloadFile = e.fileName;
-          row.downloadReceived = completedBytes + e.receivedBytes;
-        });
-      },
-      onError: (Object e, StackTrace _) {
-        row.downloadSub = null;
-        if (!mounted) return;
-        setState(() {});
-        FushiToast.show(
-          msg: t.asr_models_download_failed(error: '$e'),
-          severity: ToastSeverity.error,
+    row.downloadSub =
+        withGpuRuntimeDownload(
+          store.download(plan.variant),
+          gpu,
+          onGpuRuntimeError: (Object error) => FushiToast.show(
+            msg: t.audiobook_transcribe_gpu_failed(reason: '$error'),
+            severity: ToastSeverity.warning,
+          ),
+        ).listen(
+          (ModelDownloadEvent e) {
+            if (e.fileName != lastFile) {
+              completedBytes += lastFileTotal;
+              lastFile = e.fileName;
+              lastFileTotal = e.totalBytes;
+            }
+            if (!mounted) return;
+            setState(() {
+              row.downloadFile = e.fileName;
+              row.downloadReceived = completedBytes + e.receivedBytes;
+            });
+          },
+          onError: (Object e, StackTrace _) {
+            row.downloadSub = null;
+            if (!mounted) return;
+            setState(() {});
+            FushiToast.show(
+              msg: t.asr_models_download_failed(error: '$e'),
+              severity: ToastSeverity.error,
+            );
+            unawaited(_refresh(row));
+          },
+          onDone: () {
+            row.downloadSub = null;
+            if (!mounted) return;
+            unawaited(_refresh(row));
+          },
         );
-        unawaited(_refresh(row));
-      },
-      onDone: () {
-        row.downloadSub = null;
-        if (!mounted) return;
-        unawaited(_refresh(row));
-      },
-    );
     setState(() {});
   }
 
@@ -194,9 +233,7 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
       ),
     );
     if (ok != true || !mounted) return;
-    await saveAsrModelCatalog(
-      asrModelCatalog.withoutCustomPack(row.pack.id),
-    );
+    await saveAsrModelCatalog(asrModelCatalog.withoutCustomPack(row.pack.id));
     if (!mounted) return;
     await row.cancelDownload();
     setState(() {
@@ -232,8 +269,7 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
     setState(() => row.deleting = true);
     int freed = 0;
     try {
-      final AsrModelStore store =
-          await widget.service.modelStore(row.pack.language);
+      final AsrModelStore store = await widget.openPackStore(row.pack);
       freed = await store.deleteAll();
     } finally {
       if (mounted) setState(() => row.deleting = false);
@@ -251,8 +287,9 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
   /// 副标题：语言 + 状态（三态都给真实字节数）。
   String _subtitle(_PackRow row) {
     // 多语言包（Omnilingual）把它服务的语言全列出来。
-    final String language =
-        row.pack.languages.map(asrLanguageLabel).join(' · ');
+    final String language = row.pack.languages
+        .map(asrLanguageLabel)
+        .join(' · ');
     final AsrModelStatus? status = row.plan?.modelStatus;
     if (status == null) return language;
     final String state = status.ready
@@ -260,13 +297,13 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
             size: FushiByteFormat.bytes(status.diskBytes),
           )
         : status.obtainedBytes > 0
-            ? t.asr_models_status_partial(
-                obtained: FushiByteFormat.bytes(status.obtainedBytes),
-                total: FushiByteFormat.bytes(status.totalBytes),
-              )
-            : t.asr_models_status_missing(
-                size: FushiByteFormat.bytes(status.totalBytes),
-              );
+        ? t.asr_models_status_partial(
+            obtained: FushiByteFormat.bytes(status.obtainedBytes),
+            total: FushiByteFormat.bytes(status.totalBytes),
+          )
+        : t.asr_models_status_missing(
+            size: FushiByteFormat.bytes(status.totalBytes),
+          );
     return '$language · $state';
   }
 
@@ -318,7 +355,7 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
       children: <Widget>[
         FushiFilledButton.icon(
           key: ValueKey<String>('asr-models-download-${row.pack.id}'),
-          onPressed: row.deleting ? null : () => _startDownload(row),
+          onPressed: row.deleting ? null : () => unawaited(_startDownload(row)),
           icon: const FushiIcon(FushiIcons.download, size: 18),
           label: Text(t.asr_models_download),
         ),
@@ -339,28 +376,20 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
             FushiTagTone.accent,
           )
         : status == null
-            ? (
-                t.download_task_status_error,
-                FushiIcons.error,
-                FushiTagTone.error,
-              )
-            : status.ready
-                ? (
-                    t.manga_panel_model_ready,
-                    FushiIcons.downloadDone,
-                    FushiTagTone.success,
-                  )
-                : status.obtainedBytes > 0
-                    ? (
-                        t.asr_models_badge_partial,
-                        FushiIcons.pending,
-                        FushiTagTone.warning,
-                      )
-                    : (
-                        t.manga_panel_model_missing,
-                        FushiIcons.cloudDownload,
-                        FushiTagTone.neutral,
-                      );
+        ? (t.download_task_status_error, FushiIcons.error, FushiTagTone.error)
+        : status.ready
+        ? (
+            t.manga_panel_model_ready,
+            FushiIcons.downloadDone,
+            FushiTagTone.success,
+          )
+        : status.obtainedBytes > 0
+        ? (t.asr_models_badge_partial, FushiIcons.pending, FushiTagTone.warning)
+        : (
+            t.manga_panel_model_missing,
+            FushiIcons.cloudDownload,
+            FushiTagTone.neutral,
+          );
     return FushiTag(
       key: ValueKey<String>('asr-models-status-${row.pack.id}'),
       text: text,
@@ -399,8 +428,8 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
                 tone: ready
                     ? FushiCardTone.tertiary
                     : row.downloading
-                        ? FushiCardTone.primary
-                        : FushiCardTone.secondary,
+                    ? FushiCardTone.primary
+                    : FushiCardTone.secondary,
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -449,15 +478,16 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
                         FushiLinearProgressIndicator(
                           value: row.downloadTotal > 0
                               ? (row.downloadReceived / row.downloadTotal)
-                                  .clamp(0.0, 1.0)
+                                    .clamp(0.0, 1.0)
                               : null,
                         ),
                         const SizedBox(height: 6),
                         Text(
                           t.audiobook_transcribe_model_downloading(
                             name: row.downloadFile,
-                            received:
-                                FushiByteFormat.bytes(row.downloadReceived),
+                            received: FushiByteFormat.bytes(
+                              row.downloadReceived,
+                            ),
                             total: FushiByteFormat.bytes(row.downloadTotal),
                           ),
                           style: type.bodySmall.tabular.copyWith(
@@ -482,6 +512,11 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
     );
   }
 
+  bool get _showGpu =>
+      widget.showGpuRuntime &&
+      defaultTargetPlatform == TargetPlatform.windows &&
+      isGpuRuntimeSupported;
+
   @override
   Widget build(BuildContext context) {
     // 透明 Material：cupertino 桌面嵌入渲染下设置正文没有 Material 祖先，而本组
@@ -505,8 +540,19 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
                   index: i,
                   child: FushiGroupedListItem(
                     index: i,
-                    count: _rows.length,
+                    count: _rows.length + (_showGpu ? 1 : 0),
                     child: _row(context, _rows[i]),
+                  ),
+                ),
+              // Windows：GPU 加速环境（CUDA / DirectML 都不随包，按需下载）。
+              if (_showGpu)
+                FushiStaggeredEntrance(
+                  key: const ValueKey<String>('asr-models-entry-cuda'),
+                  index: _rows.length,
+                  child: FushiGroupedListItem(
+                    index: _rows.length,
+                    count: _rows.length + 1,
+                    child: const GpuAccelerationSettingsCard(),
                   ),
                 ),
             ],

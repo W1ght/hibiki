@@ -23,6 +23,8 @@
 library;
 
 import 'package:fushi/src/asr_host/asr_host.dart';
+import 'package:fushi/src/onnx/onnx_inference_ort.dart'
+    show probeCuda, registerCudaRuntime, selectOrtRuntime;
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -51,6 +53,9 @@ String _param(String name, {String defaultValue = ''}) {
     'ASR_GREEDY_THREADS' => const String.fromEnvironment('ASR_GREEDY_THREADS'),
     'ASR_PCM_PARALLEL' => const String.fromEnvironment('ASR_PCM_PARALLEL'),
     'ASR_MODEL_ID' => const String.fromEnvironment('ASR_MODEL_ID'),
+    'ASR_CUDA_RT_DIR' => const String.fromEnvironment('ASR_CUDA_RT_DIR'),
+    'ASR_DML_CORE' => const String.fromEnvironment('ASR_DML_CORE'),
+    'ASR_ACCEL' => const String.fromEnvironment('ASR_ACCEL'),
     _ => '',
   };
   if (fromDefine.isNotEmpty) return fromDefine;
@@ -60,6 +65,13 @@ String _param(String name, {String defaultValue = ''}) {
 }
 
 final String _kSeed = _param('ASR_MODEL_SEED');
+
+/// ASR_ACCEL=cuda|directml：GPU 用例显式指定后端（缺省 auto = CUDA > DirectML）。
+final AsrAccelerationPreference _gpuPreference = switch (_param('ASR_ACCEL')) {
+  'cuda' => AsrAccelerationPreference.cuda,
+  'directml' => AsrAccelerationPreference.directml,
+  _ => AsrAccelerationPreference.auto,
+};
 final AsrLanguage _kLang =
     AsrLanguage.fromTag(_param('ASR_LANG', defaultValue: 'ja')) ??
     AsrLanguage.japanese;
@@ -209,6 +221,23 @@ void main() {
   late String audio;
 
   setUpAll(() async {
+    // ASR_DML_CORE=<DirectML 版 onnxruntime.dll>：任何 ORT 调用之前选中它（生产
+    // 里由 main() 的 selectGpuRuntimeAtStartup 做）。
+    final String dmlCore = _param('ASR_DML_CORE');
+    if (dmlCore.isNotEmpty) {
+      // ignore: avoid_print
+      print('[asr-e2e][dml] select=${await selectOrtRuntime(dmlCore)}');
+    }
+    // ASR_CUDA_RT_DIR=<目录>：先把 CUDA 插件 EP 注册进本进程（生产里由
+    // GpuAwareOnnxSessionFactory 在探测前做；本测试自建服务，手动注册）。
+    final String cudaDir = _param('ASR_CUDA_RT_DIR');
+    if (cudaDir.isNotEmpty) {
+      // ignore: avoid_print
+      print(
+        '[asr-e2e][cuda] probe=${await probeCuda()} '
+        'register=${await registerCudaRuntime(cudaDir)}',
+      );
+    }
     expect(
       _kSeed,
       isNotEmpty,
@@ -298,7 +327,7 @@ void main() {
       store: store,
       jobsRoot: jobsRoot,
       audio: audio,
-      preference: AsrAccelerationPreference.auto,
+      preference: _gpuPreference,
       variant: AsrEncoderVariant.fp32,
     );
     // ignore: avoid_print
@@ -338,7 +367,7 @@ void main() {
       await _phaseBenchmark(
         store: store,
         audio: audio,
-        preference: AsrAccelerationPreference.auto,
+        preference: _gpuPreference,
         variant: AsrEncoderVariant.fp32,
         label: 'gpu-fp32',
       );
