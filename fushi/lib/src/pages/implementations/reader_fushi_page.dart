@@ -36,6 +36,7 @@ import 'package:fushi/src/utils/adaptive/adaptive_widgets.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/epub/epub_book.dart';
 import 'package:fushi_engine/epub/epub_parser.dart';
+import 'package:fushi_engine/epub/epub_image_index_cache.dart';
 import 'package:fushi/src/epub/epub_spread_analyzer.dart';
 import 'package:fushi/src/epub/epub_spread_map.dart';
 import 'package:fushi_engine/epub/epub_storage.dart';
@@ -1275,15 +1276,30 @@ EpubBook parseBookOnly(String extractDir) {
   return EpubParser.parseFromExtracted(extractDir);
 }
 
-/// isolate 入口：在书的副本上建插图表。[EpubBook.images] 逐章同步读文件 +
-/// html_parser 整章解析，放在 UI isolate 上长篇会卡上百毫秒到秒级。
-List<EpubImageRef> _epubBookImagesOf(EpubBook book) => book.images;
+/// isolate 入口：在书的副本上取插图表。[EpubBook.images] 逐章同步读文件 +
+/// html_parser 整章解析，放在 UI isolate 上长篇会卡上百毫秒到秒级；有解压目录时
+/// 先读盘上缓存（[loadEpubImagesWithCache]），命中就不再解析。
+List<EpubImageRef> _epubBookImagesOf(
+  ({EpubBook book, String? cacheFile}) args,
+) {
+  final String? cacheFile = args.cacheFile;
+  if (cacheFile == null) return args.book.images;
+  return loadEpubImagesWithCache(args.book, File(cacheFile));
+}
 
-/// 取 [book] 的插图表：已建好直接返回，否则在后台 isolate 建好再回填到 [book]，
-/// 之后同一本书的读取（插图册 / 歌词模式插图）都不再重扫。
-Future<List<EpubImageRef>> _loadBookImagesOffUiIsolate(EpubBook book) async {
+/// 取 [book] 的插图表：已建好直接返回，否则在后台 isolate 取好（优先读缓存）再回填
+/// 到 [book]，之后同一本书的读取（插图册 / 歌词模式插图）都不再重扫。缓存路径要在
+/// 根 isolate 解析（装配点带不进后台 isolate）。
+Future<List<EpubImageRef>> _loadBookImagesOffUiIsolate(
+  EpubBook book,
+  String? extractDir,
+) async {
   if (book.hasImages) return book.images;
-  book.adoptImages(await compute(_epubBookImagesOf, book));
+  final File? cacheFile =
+      extractDir == null ? null : await epubImageIndexCacheFileFor(extractDir);
+  book.adoptImages(
+    await compute(_epubBookImagesOf, (book: book, cacheFile: cacheFile?.path)),
+  );
   return book.images;
 }
 

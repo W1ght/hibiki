@@ -1005,7 +1005,8 @@ extension _ReaderChrome on _ReaderFushiPageState {
     if (book == null) return;
     await _clearReaderAppSelection();
     if (!mounted) return;
-    final List<EpubImageRef> images = await _loadBookImagesOffUiIsolate(book);
+    final List<EpubImageRef> images =
+        await _loadBookImagesOffUiIsolate(book, _extractDir);
     if (!mounted || !identical(_book, book)) return;
     final int currentChapter = _currentChapter;
     final List<TtuTocEntry> toc = _buildTtuToc();

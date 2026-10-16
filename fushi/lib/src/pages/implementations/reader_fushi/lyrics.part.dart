@@ -779,7 +779,8 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     final EpubBook? book = _book;
     final String? extractDir = _extractDir;
     if (book == null || extractDir == null) return;
-    final List<EpubImageRef> refs = await _loadBookImagesOffUiIsolate(book);
+    final List<EpubImageRef> refs =
+        await _loadBookImagesOffUiIsolate(book, _extractDir);
     if (!mounted || !_lyricsMode || generation != _lyricsIllustrationGeneration) {
       return;
     }

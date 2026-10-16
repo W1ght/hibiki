@@ -12,6 +12,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart' show compute;
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi_engine/epub/epub_book.dart';
+import 'package:fushi_engine/epub/epub_image_index_cache.dart';
 import 'package:fushi_engine/epub/epub_parser.dart';
 import 'package:path/path.dart' as p;
 
@@ -120,10 +121,28 @@ List<TtuTocEntry> buildTtuTocForBook(
 
 /// isolate 入口：解析兄弟卷并把插图表也在 isolate 里算好（`EpubBook.images`
 /// 惰性解析整本章节 HTML，放主 isolate 会卡 UI；算过的缓存随对象一起传回）。
-EpubBook parseVolumeBookForPeek(String extractDir) {
-  final EpubBook book = EpubParser.parseFromExtracted(extractDir);
-  book.images; // 触发并缓存。
+EpubBook parseVolumeBookForPeek(
+  ({String extractDir, String? cacheFile}) args,
+) {
+  final EpubBook book = EpubParser.parseFromExtracted(args.extractDir);
+  // 触发并缓存；优先读盘上插图表缓存（BUG-3370），与阅读器共用同一份。
+  final String? cacheFile = args.cacheFile;
+  if (cacheFile == null) {
+    book.images;
+  } else {
+    loadEpubImagesWithCache(book, File(cacheFile));
+  }
   return book;
+}
+
+/// 在后台 isolate 跑 [parseVolumeBookForPeek]。插图表缓存路径读全局装配点，只能在
+/// 根 isolate 解析，所以在这里算好再传进去。
+Future<EpubBook> parseVolumeBookForPeekOffUi(String extractDir) async {
+  final File? cacheFile = await epubImageIndexCacheFileFor(extractDir);
+  return compute(
+    parseVolumeBookForPeek,
+    (extractDir: extractDir, cacheFile: cacheFile?.path),
+  );
 }
 
 /// 兄弟卷 EPUB 结构缓存：同一卷只解析一次，失败不缓存（下次再试）。
@@ -133,7 +152,7 @@ class ReaderVolumeBookCache {
   Future<EpubBook> bookFor(ReaderVolume volume) {
     return _pending.putIfAbsent(volume.uid, () {
       final Future<EpubBook> parsed =
-          compute(parseVolumeBookForPeek, volume.extractDir);
+          parseVolumeBookForPeekOffUi(volume.extractDir);
       unawaited(
         parsed.then<void>((_) {}, onError: (Object _) {
           _pending.remove(volume.uid);
