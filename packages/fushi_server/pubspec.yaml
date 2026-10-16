@@ -44,12 +44,12 @@ dependencies:
     git:
       url: https://github.com/hajisensai/fushi-subtitles.git
       path: packages/asr_core
-      ref: 3d42e045376fd1d5bf6dee431bfd2fba26e38e26
+      ref: 15dba871eab3a8e722cfd8d914cd9fba4778695d
   fushi_asr_onnx_ffi:
     git:
       url: https://github.com/hajisensai/fushi-subtitles.git
       path: packages/asr_onnx_ffi
-      ref: 3d42e045376fd1d5bf6dee431bfd2fba26e38e26
+      ref: 15dba871eab3a8e722cfd8d914cd9fba4778695d
   args: ^2.4.0
   crypto: ^3.0.0
   drift: ">=2.33.0 <2.34.0"
