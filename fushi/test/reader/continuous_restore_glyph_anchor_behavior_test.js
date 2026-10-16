@@ -1,4 +1,4 @@
-// BUG-3368 behavior test: the continuous shell's scrollToCharOffset aligns the
+// BUG-3431 behavior test: the continuous shell's scrollToCharOffset aligns the
 // target character's own glyph box, not its collapsed caret.
 //
 // Regression context (Android tablet, vertical-rl scroll mode, 2026-10-15):

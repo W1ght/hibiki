@@ -8,7 +8,7 @@ import 'package:fushi_core/fushi_core.dart';
 
 import '../../pages/reader_fushi_page_source_corpus.dart';
 
-/// BUG-3367（取代 BUG-2390 的「开书时音频位置为主」，对齐 Hoshi）：普通开书时阅读
+/// BUG-3430（取代 BUG-2390 的「开书时音频位置为主」，对齐 Hoshi）：普通开书时阅读
 /// 存档是恢复主位置；音频 cue 只在没有阅读存档时定起点，有声书位置改由首次按播放
 /// 时的跟读把正文带过去。恢复锚在首个 WebView 文档之前决定，程序化跨过的正文不进入
 /// 读字账本。
@@ -181,7 +181,7 @@ void main() {
           restoreSaved,
           lessThan(restoreAudio),
           reason:
-              'BUG-3367: the live player position must never override a '
+              'BUG-3430: the live player position must never override a '
               'reader save (it reads 0 until the restore seek lands)',
         );
         expect(

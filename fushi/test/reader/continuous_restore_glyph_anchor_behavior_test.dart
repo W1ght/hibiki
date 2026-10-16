@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/reader/reader_pagination_scripts.dart';
 import 'package:fushi/src/reader/reader_study_unit_script.dart';
 
-/// BUG-3368：滚动（连续）模式每次杀进程重开都回退一列（竖排 912 → 874 → 837）。
+/// BUG-3431：滚动（连续）模式每次杀进程重开都回退一列（竖排 912 → 874 → 837）。
 ///
 /// 恢复目标恰是一列的列首时，Chromium 把软换行处的塌缩光标算到**上一列末尾**；
 /// 连续 shell 的 `scrollToCharOffset` 拿光标矩形对齐视口首边，视口首边就成了上一列，

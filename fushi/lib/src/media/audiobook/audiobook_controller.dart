@@ -835,7 +835,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     // 提前放开新一轮的门（也不能对新 Completer 二次 complete 抛 StateError）。
     final Completer<void> ready = Completer<void>();
     _loadReady = ready;
-    // 门必须在 load 的每条退出路径上打开：seek 与 play（BUG-3367 起 play 也等这道门，
+    // 门必须在 load 的每条退出路径上打开：seek 与 play（BUG-3430 起 play 也等这道门，
     // 且串在 _playActivationTail 上）都在等它。载入中途抛错（stop / 音频会话配置 /
     // setAudioSource）若漏开门，此后每一次播放都永远挂起。
     try {
@@ -1149,7 +1149,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       snapReaderToAudio();
     }
     await _activateMainPlayer();
-    // BUG-3367：开书落在阅读存档，有声书位置在按播放这一刻接管（对齐 Hoshi 的
+    // BUG-3430：开书落在阅读存档，有声书位置在按播放这一刻接管（对齐 Hoshi 的
     // togglePlayback → displayCue(reveal)）。当前句往往没变（暂停在句 X、重开后按播放
     // 仍是句 X），不主动投影就要等下一句才翻过去；门控同跟读本身（跟随开、正在播）。
     resyncReaderToAudio();
@@ -1158,7 +1158,7 @@ class AudiobookPlayerController extends ChangeNotifier {
   Future<void> _activateMainPlayer() {
     if (_stopRequested) return Future<void>.value();
     final Future<void> operation = _playActivationTail.then<void>((_) async {
-      // BUG-3367：开书慢时（Windows 尤甚）用户按播放可能早于「恢复上次播放位置」的
+      // BUG-3430：开书慢时（Windows 尤甚）用户按播放可能早于「恢复上次播放位置」的
       // seek 落定；此刻起播，播放器先从 0 报位置，当前句跳到全书第一句再跳回。等载入
       // （含恢复 seek）完成再起播，与 [seekMs] 同一道门；从未载入时它本就已完成。
       await _loadReady.future;

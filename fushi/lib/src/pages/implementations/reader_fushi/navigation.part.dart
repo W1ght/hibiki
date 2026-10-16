@@ -1292,7 +1292,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // 晚到 reflow（cue 注入 / 大章 settle）由事件驱动重锚覆盖（见 _reanchorContinuousAfterRestore
     // 的再触发点）。这里不再做任何启发式判据，读到什么就如实落库。
 
-    // BUG-3368：播放跟读期间阅读位置只有一个所有者——当前句（`_syncPositionFromCurrentCue`）。
+    // BUG-3431：播放跟读期间阅读位置只有一个所有者——当前句（`_syncPositionFromCurrentCue`）。
     // 视口首字此时不是阅读位置：跟读把句子放在视口内侧，视口首边常残留上一句所在列 / 章首
     // 半列，量出来的首字（章首附近恒为 0）与句位交替落库；进程恰在 0 时被回收，重开回章首。
     // 当前句映射不出位置时视口照常是所有者（见 [_cueOwnsReadingPosition]）。
@@ -1477,7 +1477,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       return;
     }
 
-    // BUG-3368：播放跟读期间位置归当前句所有（见 _refreshProgress），退出 / 切后台的
+    // BUG-3431：播放跟读期间位置归当前句所有（见 _refreshProgress），退出 / 切后台的
     // 实时读也不得拿视口首字覆盖它；恢复锚照常跟随，规则与 _refreshProgress 相同。
     if (!_cueOwnsReadingPosition) {
       _lastProgressSection = _currentChapter;
@@ -1650,7 +1650,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     return null;
   }
 
-  /// BUG-3368：播放跟读期间阅读位置只有一个所有者——当前句。判据是「跟读在驱动视口」
+  /// BUG-3431：播放跟读期间阅读位置只有一个所有者——当前句。判据是「跟读在驱动视口」
   /// （[AudiobookPlayerController.shouldRevealCurrentCue]）**且**当前句真能映射成阅读
   /// 位置：音频停在没有句子的段落（片头、只对齐了部分章节的书、句子反查不到正文）时
   /// 当前句写不出任何位置，视口仍是唯一真值；只看跟读门会让两边都不落库，用户此时

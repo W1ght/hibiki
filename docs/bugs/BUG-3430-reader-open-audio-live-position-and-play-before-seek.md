@@ -1,4 +1,4 @@
-## BUG-3367 · 带有声书开书只信播放器实时位置 + 播放不等恢复 seek：先跳到书首句再跳回
+## BUG-3430 · 带有声书开书只信播放器实时位置 + 播放不等恢复 seek：先跳到书首句再跳回
 - **报告**：2026-10-15（用户：「Windows 现在打开书很慢，但是打开书后立刻进歌词模式播放就能发现青春恋爱物语播放的时候会跳回『小学館 book』然后再跳回当前句子。而且每次关掉书后打开书都稳定复现」；「字的位置和播放位置不都得是一一对应的吗，不要只依据音频的位置」）
 - **真实性**：✅ 沿真实代码路径确认两处缺陷，Windows 实测见下方验证记录。
   - ① 开书定位（`fushi/lib/src/pages/implementations/reader_fushi_page.dart` 恢复分支，原 BUG-2390 规则）：只要有声书能映射到正文，就按 `_restoreFromCurrentAudioCue()`（`reader_fushi/audiobook.part.dart`）取**播放器实时位置**所在句定位，阅读存档只做兜底。恢复 seek 落定前，实时位置可能是 0，开书就落到全书第一句。另外，暂停态手动往后读过的存档也会被音频位置盖回去：真机实测滚动模式读到 747，重开落回音频句 36。
@@ -8,6 +8,7 @@
   - 开书一律落在阅读存档；只有没有存档（首次打开 / 进度被清）时才用音频 cue 定起点。
   - `play()` 起播后调 `resyncReaderToAudio()`，按播放的那一刻正文跟到音频句。门控与跟读本身相同：跟随开、正在播。
   - `_activateMainPlayer` 先 `await _loadReady.future`（含恢复 seek）再起播；从未载入时 `_loadReady` 本就已完成。
+  - 审查补修（2026-10-16）：play 现在依赖这道门且串在 `_playActivationTail` 上，`load()` 改为持有本轮局部 Completer 并在 `finally` 里于每条退出路径开门；complete 一律判 `isCompleted`，并发的下一轮 load 先替本轮补完门后，本轮收尾不再二次 complete 抛 StateError、也不会提前放开新一轮的门。（未加自动化测试：`preload: false` 下载入阶段没有可注入的失败点，结论来自代码路径推理。）
 - **[x] ② 已加自动化测试**：
   - `fushi/test/media/audiobook/audiobook_play_waits_for_restore_seek_test.dart`：把载入卡在音频会话配置上，这时按播放，断言平台的 play 只在载入（含恢复 seek）完成后发出，发出时位置已是恢复点 65000。
   - `fushi/test/media/audiobook/audiobook_resume_point_test.dart`：源码守卫改为「存档在前、音频 cue 仅兜底」。

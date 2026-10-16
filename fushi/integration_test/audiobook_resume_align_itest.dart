@@ -38,7 +38,7 @@ import 'test_helpers.dart';
 /// 真 app 两段：
 ///
 ///   A. 正文存档停在 5%，音频位置写到第 90 句（≈ 90%）→ 重开书，起点落在阅读存档
-///      （BUG-3367 对齐 Hoshi，取代 BUG-2390「开书时音频位置为主」），诊断流水记
+///      （BUG-3430 对齐 Hoshi，取代 BUG-2390「开书时音频位置为主」），诊断流水记
 ///      `open resume point … source=saved position`；**首次按播放**后跟读把正文
 ///      带到音频处，落库的阅读位置收敛到 > 50%。
 ///   C. 播种一段 30 分钟 / 6000 字的会话 → 统计中心总览顶部卡与会话行都显示
@@ -243,7 +243,7 @@ void main() {
             expect(
               posA!.normCharOffset,
               lessThan(2000),
-              reason: 'BUG-3367：开书落在阅读存档（5%），不被音频位置盖掉',
+              reason: 'BUG-3430：开书落在阅读存档（5%），不被音频位置盖掉',
             );
             expect(
               appModel.audiobookSession.controller?.isPlaying ?? false,

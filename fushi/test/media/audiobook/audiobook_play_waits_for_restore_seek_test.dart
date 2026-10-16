@@ -7,7 +7,7 @@ import 'package:fushi/src/media/audiobook/audiobook_controller.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:just_audio_platform_interface/just_audio_platform_interface.dart';
 
-/// BUG-3367：开书慢时用户按播放早于「恢复上次播放位置」落定。旧实现 `play()`
+/// BUG-3430：开书慢时用户按播放早于「恢复上次播放位置」落定。旧实现 `play()`
 /// 不等载入：just_audio 先记下播放请求，随后 `setAudioSource` 按**当时位置 0**
 /// 激活平台并起播，恢复 seek 之后才跟上——当前句先跳到全书第一句（Windows 歌词
 /// 模式里看到的「小学館」那句），再跳回。

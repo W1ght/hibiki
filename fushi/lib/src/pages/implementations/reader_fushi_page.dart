@@ -2927,7 +2927,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     _openTrace.mark('charCounts');
 
     // 有声书槽（音频服务初始化 + 会话附着 + 全书 cue 预热）与书/spread 并行起跑。
-    // 普通开书在选首个恢复锚前等它：没有阅读存档时起点取自音频 cue（BUG-3367 起阅读
+    // 普通开书在选首个恢复锚前等它：没有阅读存档时起点取自音频 cue（BUG-3430 起阅读
     // 存档是主位置，音频 cue 只兜底）；书签/收藏是用户显式跳转，仍保持最高优先级、
     // 不消费此槽。
     final Future<void> audioSlotFuture = _resolveAudioSlot().then((_) {
@@ -2986,7 +2986,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
               saved.sectionIndex >= _book!.chapters.length)) {
         saved = null;
       }
-      // BUG-3367（取代 BUG-2390 的「开书时音频位置为主」，用户 2026-10-15 拍板对齐
+      // BUG-3430（取代 BUG-2390 的「开书时音频位置为主」，用户 2026-10-15 拍板对齐
       // Hoshi）：开书一律落在阅读存档；有声书的位置在**首次按播放**时由跟读把正文
       // 带过去（play → 跟读揭示 / 跨章，程序化跨过的正文照旧不入账）。开书时问播放器
       // 「此刻在哪句」不可靠：Windows 开书慢，恢复 seek 落定前它报的是 0，书就被定位到

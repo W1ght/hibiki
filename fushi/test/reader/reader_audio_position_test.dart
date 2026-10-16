@@ -166,7 +166,7 @@ void main() {
         contains('_navigateToChapter(newSection, charOffset: studyOffset)'),
       );
       // 跟读落库（_syncPositionFromCurrentCue）经 _readingPositionFromCurrentCue 取位置
-      // （BUG-3368：同一份映射也决定跟读是否独占位置），字符锚必须是映射出的 studyOffset。
+      // （BUG-3431：同一份映射也决定跟读是否独占位置），字符锚必须是映射出的 studyOffset。
       expect(
         navigation,
         matches(RegExp(r'charOffset:\s*studyOffset')),

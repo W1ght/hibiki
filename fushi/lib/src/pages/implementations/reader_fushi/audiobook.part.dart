@@ -598,7 +598,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
   }
 
   /// 以播放器**当前位置**对应的 cue 作开书起点。返回 false = 算不出（无控制器 /
-  /// 无 cue / cue 反查不到章）。BUG-3367 起只在没有阅读存档时调用（阅读存档是主
+  /// 无 cue / cue 反查不到章）。BUG-3430 起只在没有阅读存档时调用（阅读存档是主
   /// 位置，这里只兜底首次打开 / 进度被清的书）。
   ///
   /// 三条反查路径（sasayaki fragment → SRT 切章表 → href/正文兜底）统一由

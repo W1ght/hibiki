@@ -1396,7 +1396,7 @@ window.__fushiInstallShell = function(C) {
     if (rect.width > 0 || rect.height > 0) return rect;
     return this.characterGlyphRect(range);
   },
-  // BUG-3368：量 range 起点那个字本身的字形盒。塌缩光标落在软换行处时，Chromium 把它
+  // BUG-3431：量 range 起点那个字本身的字形盒。塌缩光标落在软换行处时，Chromium 把它
   // 算到上一列 / 上一行的末尾；拿它对齐视口首边，恢复就整列落在上一列，重开一次退一列。
   characterGlyphRect: function(range) {
     var node = range.startContainer;
@@ -2858,7 +2858,7 @@ $kSentenceAudioRubyGapJs
   },
   // 与 exploredCharsBeforeScroll 同口径（节点粒度、含锚字所在节点全部），但按章内
   // 字符偏移查而不按滚动位置：几何锚持有期间进度要描述锚，不描述临时排版的页
-  // （BUG-3366）。progressStops 按滚动序排列，exploredChars 单调不减。
+  // （BUG-3429）。progressStops 按滚动序排列，exploredChars 单调不减。
   exploredCharsThroughCharOffset: function(charOffset) {
     var metrics = this.paginationMetrics || this.buildPaginationMetrics();
     var stops = metrics.progressStops;
@@ -4015,7 +4015,7 @@ $kSentenceAudioRubyGapJs
     }
     var startRange = this.collapsedRangeAtCharOffset(charOffset);
     if (!startRange) return;
-    // BUG-3368：对齐的是目标字自己的字形盒，不是塌缩光标（软换行处光标归上一列末）。
+    // BUG-3431：对齐的是目标字自己的字形盒，不是塌缩光标（软换行处光标归上一列末）。
     var rect = this.characterGlyphRect(startRange) ||
         this.characterAnchorRect(startRange);
     if (!rect) return;

@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-/// BUG-3368：有声书播放跟读期间，阅读位置只能有一个所有者——当前句
+/// BUG-3431：有声书播放跟读期间，阅读位置只能有一个所有者——当前句
 /// （`_syncPositionFromCurrentCue`）。
 ///
 /// 旧实现里视口首字也照常落库：跟读把句子放在视口内侧，视口首边残留章首半列，量出
