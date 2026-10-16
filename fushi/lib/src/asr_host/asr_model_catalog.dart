@@ -525,27 +525,26 @@ AsrModelCatalog readAsrModelCatalogSync(File file) {
 // ── 内部 ─────────────────────────────────────────────────────────────────────
 
 /// 换一份语言列表，其余字段逐字照抄。
-///
-/// 包里没有 `copyWith`，字段又全是 final public，所以手写一份——加字段时这里会
-/// 编译报错，正好逼着来同步。
 AsrModelPack _withLanguages(AsrModelPack pack, List<AsrLanguage> languages) =>
-    AsrModelPack(
-      languages: languages,
-      id: pack.id,
-      displayName: pack.displayName,
-      sourceUrl: pack.sourceUrl,
-      files: pack.files,
-      architecture: pack.architecture,
-      decoderContextSize: pack.decoderContextSize,
-      indexType: pack.indexType,
-      blankToken: pack.blankToken,
-      fp32GpuMinBudgetBytes: pack.fp32GpuMinBudgetBytes,
-    );
+    _copyPack(pack, languages: languages);
 
-/// 换一个 id，其余字段逐字照抄（见 [_withLanguages] 同样的理由）。
-AsrModelPack _withId(AsrModelPack pack, String id) => AsrModelPack(
-  languages: pack.languages,
-  id: id,
+/// 换一个 id，其余字段逐字照抄。
+AsrModelPack _withId(AsrModelPack pack, String id) => _copyPack(pack, id: id);
+
+/// 包的唯一一份手写拷贝（包里没有 `copyWith`，字段全是 final public）。
+///
+/// **新增的可选字段不会让这里编译报错**——`AsrModelPack` 的构造参数除了必填
+/// 几项都有默认值，漏抄一个就静默回到默认值。上游加 `ctcFrontend` 时正是这样：
+/// 选中 Kitsune 后置顶的窄包丢了 `nemoMel80`，装载器按波形 CTC 去喂 `x`，
+/// 转录必失败。守卫在 `asr_model_catalog_test.dart`「窄包与原包除语言外
+/// toJson 逐字相同」：`toJson` 是持久化契约，新字段一定会出现在里面。
+AsrModelPack _copyPack(
+  AsrModelPack pack, {
+  List<AsrLanguage>? languages,
+  String? id,
+}) => AsrModelPack(
+  languages: languages ?? pack.languages,
+  id: id ?? pack.id,
   displayName: pack.displayName,
   sourceUrl: pack.sourceUrl,
   files: pack.files,
@@ -554,6 +553,8 @@ AsrModelPack _withId(AsrModelPack pack, String id) => AsrModelPack(
   indexType: pack.indexType,
   blankToken: pack.blankToken,
   fp32GpuMinBudgetBytes: pack.fp32GpuMinBudgetBytes,
+  ctcFrontend: pack.ctcFrontend,
+  license: pack.license,
 );
 
 AsrModelPack? _packById(List<AsrModelPack> packs, String id) {
