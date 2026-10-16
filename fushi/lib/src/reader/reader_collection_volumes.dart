@@ -121,7 +121,10 @@ List<TtuTocEntry> buildTtuTocForBook(
 
 /// isolate 入口：解析兄弟卷并把插图表也在 isolate 里算好（`EpubBook.images`
 /// 惰性解析整本章节 HTML，放主 isolate 会卡 UI；算过的缓存随对象一起传回）。
-EpubBook parseVolumeBookForPeek(
+///
+/// 缓存读写失败随结果带回（后台 isolate 没有日志装配点），由
+/// [parseVolumeBookForPeekOffUi] 在根 isolate 记日志。
+VolumePeekParse parseVolumeBookForPeek(
   ({String extractDir, String? cacheFile}) args,
 ) {
   final EpubBook book = EpubParser.parseFromExtracted(args.extractDir);
@@ -129,20 +132,32 @@ EpubBook parseVolumeBookForPeek(
   final String? cacheFile = args.cacheFile;
   if (cacheFile == null) {
     book.images;
-  } else {
-    loadEpubImagesWithCache(book, File(cacheFile));
+    return (book: book, cacheFailures: const <EpubImageIndexCacheFailure>[]);
   }
-  return book;
+  final EpubImageIndexLoad load =
+      loadEpubImagesWithCache(book, File(cacheFile));
+  return (book: book, cacheFailures: load.failures);
 }
 
+/// [parseVolumeBookForPeek] 的结果：解析好的书 + 插图表缓存读写失败。
+typedef VolumePeekParse = ({
+  EpubBook book,
+  List<EpubImageIndexCacheFailure> cacheFailures,
+});
+
 /// 在后台 isolate 跑 [parseVolumeBookForPeek]。插图表缓存路径读全局装配点，只能在
-/// 根 isolate 解析，所以在这里算好再传进去。
+/// 根 isolate 解析，所以在这里算好再传进去；带回的缓存失败也在这里记日志。
 Future<EpubBook> parseVolumeBookForPeekOffUi(String extractDir) async {
   final File? cacheFile = await epubImageIndexCacheFileFor(extractDir);
-  return compute(
+  final VolumePeekParse parsed = await compute(
     parseVolumeBookForPeek,
     (extractDir: extractDir, cacheFile: cacheFile?.path),
   );
+  reportEpubImageIndexCacheFailures(
+    'parseVolumeBookForPeek',
+    parsed.cacheFailures,
+  );
+  return parsed.book;
 }
 
 /// 兄弟卷 EPUB 结构缓存：同一卷只解析一次，失败不缓存（下次再试）。

@@ -30,7 +30,7 @@ void main() {
             '_loadBookImagesOffUiIsolate',
       );
       expect(
-        src.contains('_loadBookImagesOffUiIsolate(book, _extractDir)'),
+        RegExp(r'_loadBookImagesOffUiIsolate\(\s*book,').hasMatch(src),
         isTrue,
         reason: '$path must load the illustration list off the UI isolate',
       );
