@@ -152,6 +152,14 @@ void main() {
     for (final AsrModelPack pack in kAsrModelPacks) {
       expect(find.text(pack.displayName), findsOneWidget);
     }
+    // 可选包能直接点下载：非宽松许可必须写在行名里，下载前看得见。
+    for (final AsrModelPack pack in kAsrOptionalModelPacks) {
+      if (pack.license == null) continue;
+      expect(
+        find.text('${pack.displayName} · ${pack.license}'),
+        findsOneWidget,
+      );
+    }
     // 日语已下载：副标题报占用，只有删除。
     expect(
       find.textContaining(

@@ -35,8 +35,24 @@ void main() {
       );
       expect(omni.languages, contains(AsrLanguage.japanese));
       expect(omni.languages, contains(AsrLanguage.english));
-      // 位置必须还在末尾：排到前面就会顶掉那 8 种语言的默认 transducer 包。
-      expect(packs.last.id, kAsrOmnilingualPack.id);
+      // 位置必须在默认包的末尾：排到前面就会顶掉那 8 种语言的默认 transducer
+      // 包。之后只许跟不进默认注册表的可选包（Kitsune 等）——它们同样排在所有
+      // 默认包之后，没做过选择的用户默认一个都不变。
+      final List<String> optionalIds = <String>[
+        for (final AsrModelPack p in kAsrOptionalModelPacks) p.id,
+      ];
+      final List<AsrModelPack> defaults = <AsrModelPack>[
+        for (final AsrModelPack p in packs)
+          if (!optionalIds.contains(p.id)) p,
+      ];
+      expect(defaults.last.id, kAsrOmnilingualPack.id);
+      expect(
+        <String>[
+          for (final AsrModelPack p in packs.skip(defaults.length)) p.id,
+        ],
+        optionalIds,
+        reason: '可选包必须整体排在全部默认包之后',
+      );
     });
 
     test('给日语选 Omnilingual：只有日语变，英语等其余语言不受影响', () {

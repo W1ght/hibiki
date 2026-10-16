@@ -1802,7 +1802,7 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         segments,
-        AnimatedSize(
+        FushiAnimatedSize(
           duration: context.fushiMotion.spatialDefault.duration,
           curve: context.fushiMotion.spatialDefault.curve,
           alignment: Alignment.topCenter,

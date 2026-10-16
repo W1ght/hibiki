@@ -441,7 +441,13 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
                       children: <Widget>[
                         Expanded(
                           child: Text(
-                            row.pack.displayName,
+                            // 非宽松许可（Kitsune 是 CC BY-NC）与转录弹层的
+                            // 引擎选项同口径写进名字：这一行能直接点下载，
+                            // 下载前必须看得见许可。
+                            row.pack.license == null
+                                ? row.pack.displayName
+                                : '${row.pack.displayName} · '
+                                      '${row.pack.license}',
                             style: type.titleMediumEmphasized,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
