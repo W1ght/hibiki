@@ -1014,6 +1014,8 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
     var paintedLines = {};
     // 查词 / 搜索：上一次画过的行几何（组名 → [{v, u0, u1, vc, em}]）。
     var paintedGeom = {};
+    // 有声书：这一组画出过句子没有（空列表的重画不算）。第一次画出句子不放动画。
+    var paintedAny = {};
     var overlapsAny = function(lines, prev) {
       for (var i = 0; i < lines.length; i++) {
         for (var j = 0; j < prev.length; j++) {
@@ -1043,6 +1045,8 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       paintedGeom[name] = geom;
       var empty = { ink: '', still: '' };
       if (!list.length) return empty;
+      var seenBefore = !!paintedAny[name];
+      paintedAny[name] = true;
       var fill = groupColor(name);
       if (!fill) return empty;
       var base = 'fushi-mark-' + name.replace(/^fushi-/, '') + '-';
@@ -1051,7 +1055,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       var still = '';
       var whole = (cfg.kind === 'lookup' || cfg.kind === 'search') && !overlapsAny(geom, prevGeom);
       var animate = cfg.animate && !reducedMotion() &&
-        (cfg.kind === 'favorite' ? fresh.length > 0 : cfg.kind === 'audio' ? !!prevLines : whole);
+        (cfg.kind === 'favorite' ? fresh.length > 0 : cfg.kind === 'audio' ? seenBefore && !!prevLines : whole);
       var delay = 0;
       var out = '';
       list.forEach(function(l, i) {
@@ -1120,6 +1124,7 @@ if (typeof window.__fushiLanes !== 'object' || !window.__fushiLanes) {
       el.__fushiInk = null;
       delete paintedLines[group.name];
       delete paintedGeom[group.name];
+      delete paintedAny[group.name];
       var html = '';
       lanes(pieces, group.join).forEach(function(l) {
         var x = l.v ? l.mid - l.lane / 2 : l.a;

@@ -146,12 +146,15 @@ const CHECK = String.raw`(async () => {
   covers('fushi-search', Array.from(search.getClientRects()), 'search');
   ok(!!group('fushi-selection').querySelector('clipPath animate'), 'a new lookup selection sweeps in');
   ok(!!group('fushi-search').querySelector('clipPath animate'), 'a new search hit sweeps in');
-  // Drag-extending the selection overlaps the previous frame: no replay.
-  const grown = rangeOf('がましい');
-  grown.setStart(look.startContainer, Math.max(0, look.startOffset - 2));
+  // Drag-extending the selection overlaps the previous frame: no replay (the stroke DOM is either
+  // kept as is, or rebuilt without a sweep).
+  const lookInk = ink('fushi-selection');
+  const grown = look.cloneRange();
+  grown.setEnd(look.endContainer, look.endOffset - 1);
   CSS.highlights.set('fushi-selection', new Highlight(grown));
   await frames();
-  ok(!group('fushi-selection').querySelector('clipPath animate'), 'extending the selection does not sweep again');
+  ok(ink('fushi-selection') !== lookInk, 'the shrunk selection is redrawn');
+  ok(!group('fushi-selection').querySelector('clipPath animate'), 'changing the selection by dragging does not sweep again');
   const lookStill = ink('fushi-selection');
   window.__fushiLanes.repaint();
   await frames();
